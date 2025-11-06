@@ -6,7 +6,9 @@
 
 int main(int argc, char *argv[]) {
 
-    int fd = atoi(argv[1]);
+    int fd_r_input, fd_w_input;
+    sprintf(argv[1], "%d %d", fd_r_input, fd_w_input);
+
     char str[80];
 	int ch, ax, ay;
 
@@ -68,16 +70,17 @@ int main(int argc, char *argv[]) {
         if(!wrongKey)
         {
             sprintf(str, "%d %d", ax, ay);
-            write(fd, str, strlen(str) + 1);
+            write(fd_w_input, str, strlen(str) + 1);
         }
         wrongKey = false;
         
     }
     
     strcpy(str, "quit");
-    write(fd, str, strlen(str) + 1);
+    write(fd_w_input, str, strlen(str) + 1);
 
     endwin();
-    close(fd);           
+    close(fd_r_input);
+    close(fd_w_input);           
     return 0;
 }

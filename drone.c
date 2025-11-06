@@ -1,6 +1,7 @@
 #include <ncurses.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define init_x 1    //Initial position x
 #define init_y 1    //Initial position y
@@ -46,10 +47,13 @@ typedef struct
 /// @return 
 int main(int argc, char *argv[])
 {
+    int fd_r_drone, fd_w_drone;
+    sprintf(argv[1], "%d %d", fd_r_drone, fd_w_drone);
+    
     int startx, starty, width, height;
     char str[80], ch;
-    
-    int fd = atoi(argv[1]);
+    char request[80] = "request";
+     
 
     WINDOW *my_win;
 
@@ -88,7 +92,8 @@ int main(int argc, char *argv[])
 
     while(1)
     {
-        read(fd, str, sizeof(str));
+        write(fd_w_drone, request, strlen(str) + 1);
+        read(fd_r_drone, str, sizeof(str));
         if (str[0]=='q') break;
         sscanf(str, "%d %d", &drn.Fx, &drn.Fy);
         mvwprintw(my_win, drn.y, drn.x, " ");
@@ -109,6 +114,7 @@ int main(int argc, char *argv[])
         usleep(100);
     }
     endwin();
-    close(fd);
+    close(fd_r_drone);
+    close(fd_w_drone);
     return 0;
 }

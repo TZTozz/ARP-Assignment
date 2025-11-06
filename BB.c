@@ -2,6 +2,7 @@
 #include <sys/time.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <string.h>
 
 int max(int a, int b) {
     return (a > b) ? a : b;
@@ -9,11 +10,8 @@ int max(int a, int b) {
 
 int main(int argc, char *argv[])
 {
-    int fd_r_drone = atoi(argv[1]);
-    int fd_w_drone = atoi(argv[2]);
-
-    int fd_r_input = atoi(argv[3]);
-    int fd_w_input = atoi(argv[4]);
+    int fd_r_drone, fd_w_drone, fd_r_input, fd_w_input;
+    sprintf(argv[1], "%d %d %d %d", fd_r_drone, fd_w_drone, fd_r_input, fd_w_input);
 
     int max_fd = max(fd_r_drone, fd_w_drone);
 
@@ -41,17 +39,17 @@ int main(int argc, char *argv[])
         if (retval == -1) perror("select()");
         else if (retval) 
         {
-            if(FD_ISSET(fd_r_drone, &r_fds))
+            if(FD_ISSET(fd_w_drone, &r_fds))
             {
-                read(fd_r_drone, message_in, sizeof(message_in));
+                read(fd_w_drone, message_in, sizeof(message_in));
                 sprintf(message_out, "%d %d", xDrone, yDrone);
-                write(fd_w_drone, message_out, strlen(message_out) + 1);
+                write(fd_r_drone, message_out, strlen(message_out) + 1);
 
             }
 
-            if(FD_ISSET(fd_r_input, &r_fds))
+            if(FD_ISSET(fd_w_input, &r_fds))
             {
-                read(fd_r_input, message_in, sizeof(message_in));
+                read(fd_w_input, message_in, sizeof(message_in));
                 sscanf(message_in, "%d %d", &Fx, &Fy);
 
             }
