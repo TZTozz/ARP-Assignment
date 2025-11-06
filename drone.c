@@ -5,7 +5,7 @@
 
 #define init_x 1    //Initial position x
 #define init_y 1    //Initial position y
-#define T 10        //Integration time value
+#define T 0.1        //Integration time value (s)
 
 WINDOW *create_newwin(int height, int width, int starty, int startx){	
 
@@ -48,12 +48,12 @@ typedef struct
 int main(int argc, char *argv[])
 {
     int fd_r_drone, fd_w_drone;
-    sprintf(argv[1], "%d %d", fd_r_drone, fd_w_drone);
+    sscanf(argv[1], "%d %d", &fd_r_drone, &fd_w_drone);
     
     int startx, starty, width, height;
     char str[80], ch;
     char request[80] = "request";
-     
+
 
     WINDOW *my_win;
 
@@ -92,7 +92,7 @@ int main(int argc, char *argv[])
 
     while(1)
     {
-        write(fd_w_drone, request, strlen(str) + 1);
+        write(fd_w_drone, request, strlen(request) + 1);
         read(fd_r_drone, str, sizeof(str));
         if (str[0]=='q') break;
         sscanf(str, "%d %d", &drn.Fx, &drn.Fy);

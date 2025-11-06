@@ -7,7 +7,7 @@
 int main(int argc, char *argv[]) {
 
     int fd_r_input, fd_w_input;
-    sprintf(argv[1], "%d %d", fd_r_input, fd_w_input);
+    sscanf(argv[1], "%d %d", &fd_r_input, &fd_w_input);
 
     char str[80];
 	int ch, ax, ay;
