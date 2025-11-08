@@ -1,0 +1,1852 @@
+[2025-11-08 23:01:15] [DEBUG] [drone.c:96] Inizio il ciclo
+[2025-11-08 23:01:15] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:15] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:16] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:16] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:16] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:16] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:16] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:16] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:16] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:16] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:16] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:16] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:16] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:16] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:16] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:16] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:16] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:16] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:16] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:16] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:16] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:16] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:17] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:17] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:17] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:17] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:17] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:17] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:17] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:17] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:17] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:17] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:17] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:17] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:17] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:17] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:17] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:17] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:17] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:17] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:17] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:17] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:18] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:18] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:18] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:18] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:18] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:18] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:18] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:18] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:18] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:18] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:19] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:19] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:19] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:19] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:19] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:19] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:19] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:19] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:19] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:19] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:20] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:20] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:20] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:20] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:20] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:20] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:20] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:20] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:20] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:20] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:21] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:21] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:21] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:21] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:21] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:21] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:21] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:21] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:21] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:21] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:21] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:21] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:21] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:21] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:21] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:21] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:21] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:21] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:21] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:21] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:22] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:22] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:22] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:22] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:22] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:22] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:22] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:22] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:22] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:22] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:22] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:22] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:22] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:22] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:22] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:22] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:22] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:22] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:22] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:22] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:23] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:23] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:23] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:23] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:23] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:23] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:23] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:23] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:23] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:23] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:23] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:23] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:23] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:23] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:23] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:23] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:23] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:23] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:23] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:23] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:24] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:24] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:24] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:24] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:24] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:24] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:01:24] [DEBUG] [I_process.c:76] New forze: 1 0
+[2025-11-08 23:01:24] [DEBUG] [BB.c:49] Leggo input: Fx: 1 Fy: 0
+[2025-11-08 23:01:24] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:24] [DEBUG] [drone.c:119] Position: X: 1.166667 Y: 1.000000
+[2025-11-08 23:01:24] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:24] [DEBUG] [drone.c:119] Position: X: 1.444444 Y: 1.000000
+[2025-11-08 23:01:24] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:24] [DEBUG] [drone.c:119] Position: X: 1.796296 Y: 1.000000
+[2025-11-08 23:01:24] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:24] [DEBUG] [drone.c:119] Position: X: 2.197531 Y: 1.000000
+[2025-11-08 23:01:24] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:24] [DEBUG] [drone.c:119] Position: X: 2.631687 Y: 1.000000
+[2025-11-08 23:01:24] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:24] [DEBUG] [drone.c:119] Position: X: 3.087791 Y: 1.000000
+[2025-11-08 23:01:24] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:24] [DEBUG] [drone.c:119] Position: X: 3.558528 Y: 1.000000
+[2025-11-08 23:01:25] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:25] [DEBUG] [drone.c:119] Position: X: 4.039019 Y: 1.000000
+[2025-11-08 23:01:25] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:25] [DEBUG] [drone.c:119] Position: X: 4.526012 Y: 1.000000
+[2025-11-08 23:01:25] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:25] [DEBUG] [drone.c:119] Position: X: 5.017342 Y: 1.000000
+[2025-11-08 23:01:25] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:25] [DEBUG] [drone.c:119] Position: X: 5.511561 Y: 1.000000
+[2025-11-08 23:01:25] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:25] [DEBUG] [drone.c:119] Position: X: 6.007707 Y: 1.000000
+[2025-11-08 23:01:25] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:25] [DEBUG] [drone.c:119] Position: X: 6.505138 Y: 1.000000
+[2025-11-08 23:01:25] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:25] [DEBUG] [drone.c:119] Position: X: 7.003425 Y: 1.000000
+[2025-11-08 23:01:25] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:25] [DEBUG] [drone.c:119] Position: X: 7.502283 Y: 1.000000
+[2025-11-08 23:01:25] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:25] [DEBUG] [drone.c:119] Position: X: 8.001522 Y: 1.000000
+[2025-11-08 23:01:26] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:26] [DEBUG] [drone.c:119] Position: X: 8.501015 Y: 1.000000
+[2025-11-08 23:01:26] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:26] [DEBUG] [drone.c:119] Position: X: 9.000676 Y: 1.000000
+[2025-11-08 23:01:26] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:26] [DEBUG] [drone.c:119] Position: X: 9.500450 Y: 1.000000
+[2025-11-08 23:01:26] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:26] [DEBUG] [drone.c:119] Position: X: 10.000299 Y: 1.000000
+[2025-11-08 23:01:26] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:26] [DEBUG] [drone.c:119] Position: X: 10.500199 Y: 1.000000
+[2025-11-08 23:01:26] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:26] [DEBUG] [drone.c:119] Position: X: 11.000133 Y: 1.000000
+[2025-11-08 23:01:26] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:26] [DEBUG] [drone.c:119] Position: X: 11.500088 Y: 1.000000
+[2025-11-08 23:01:26] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:26] [DEBUG] [drone.c:119] Position: X: 12.000058 Y: 1.000000
+[2025-11-08 23:01:26] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:26] [DEBUG] [drone.c:119] Position: X: 12.500038 Y: 1.000000
+[2025-11-08 23:01:26] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:26] [DEBUG] [drone.c:119] Position: X: 13.000025 Y: 1.000000
+[2025-11-08 23:01:27] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:27] [DEBUG] [drone.c:119] Position: X: 13.500016 Y: 1.000000
+[2025-11-08 23:01:27] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:27] [DEBUG] [drone.c:119] Position: X: 14.000010 Y: 1.000000
+[2025-11-08 23:01:27] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:27] [DEBUG] [drone.c:119] Position: X: 14.500007 Y: 1.000000
+[2025-11-08 23:01:27] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:27] [DEBUG] [drone.c:119] Position: X: 15.000004 Y: 1.000000
+[2025-11-08 23:01:27] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:27] [DEBUG] [drone.c:119] Position: X: 15.500002 Y: 1.000000
+[2025-11-08 23:01:27] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:27] [DEBUG] [drone.c:119] Position: X: 16.000000 Y: 1.000000
+[2025-11-08 23:01:27] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:27] [DEBUG] [drone.c:119] Position: X: 16.499998 Y: 1.000000
+[2025-11-08 23:01:27] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:27] [DEBUG] [drone.c:119] Position: X: 16.999996 Y: 1.000000
+[2025-11-08 23:01:27] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:27] [DEBUG] [drone.c:119] Position: X: 17.499994 Y: 1.000000
+[2025-11-08 23:01:27] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:27] [DEBUG] [drone.c:119] Position: X: 17.999992 Y: 1.000000
+[2025-11-08 23:01:28] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:28] [DEBUG] [drone.c:119] Position: X: 18.499990 Y: 1.000000
+[2025-11-08 23:01:28] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:28] [DEBUG] [drone.c:119] Position: X: 18.999989 Y: 1.000000
+[2025-11-08 23:01:28] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:28] [DEBUG] [drone.c:119] Position: X: 19.499987 Y: 1.000000
+[2025-11-08 23:01:28] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:28] [DEBUG] [drone.c:119] Position: X: 19.999985 Y: 1.000000
+[2025-11-08 23:01:28] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:28] [DEBUG] [drone.c:119] Position: X: 20.499983 Y: 1.000000
+[2025-11-08 23:01:28] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:28] [DEBUG] [drone.c:119] Position: X: 20.999981 Y: 1.000000
+[2025-11-08 23:01:28] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:28] [DEBUG] [drone.c:119] Position: X: 21.499979 Y: 1.000000
+[2025-11-08 23:01:28] [DEBUG] [I_process.c:76] New forze: 2 0
+[2025-11-08 23:01:28] [DEBUG] [BB.c:49] Leggo input: Fx: 2 Fy: 0
+[2025-11-08 23:01:28] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:28] [DEBUG] [drone.c:119] Position: X: 22.166645 Y: 1.000000
+[2025-11-08 23:01:28] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:28] [DEBUG] [drone.c:119] Position: X: 22.944422 Y: 1.000000
+[2025-11-08 23:01:28] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:28] [DEBUG] [drone.c:119] Position: X: 23.796272 Y: 1.000000
+[2025-11-08 23:01:29] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:29] [DEBUG] [drone.c:119] Position: X: 24.697506 Y: 1.000000
+[2025-11-08 23:01:29] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:29] [DEBUG] [drone.c:119] Position: X: 25.631662 Y: 1.000000
+[2025-11-08 23:01:29] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:29] [DEBUG] [drone.c:119] Position: X: 26.587767 Y: 1.000000
+[2025-11-08 23:01:29] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:29] [DEBUG] [drone.c:119] Position: X: 27.558502 Y: 1.000000
+[2025-11-08 23:01:29] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:29] [DEBUG] [drone.c:119] Position: X: 28.538992 Y: 1.000000
+[2025-11-08 23:01:29] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:29] [DEBUG] [drone.c:119] Position: X: 29.525986 Y: 1.000000
+[2025-11-08 23:01:29] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:29] [DEBUG] [drone.c:119] Position: X: 30.517315 Y: 1.000000
+[2025-11-08 23:01:29] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:29] [DEBUG] [drone.c:119] Position: X: 31.511534 Y: 1.000000
+[2025-11-08 23:01:29] [DEBUG] [I_process.c:76] New forze: 1 0
+[2025-11-08 23:01:29] [DEBUG] [BB.c:49] Leggo input: Fx: 1 Fy: 0
+[2025-11-08 23:01:29] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:29] [DEBUG] [drone.c:119] Position: X: 32.341011 Y: 1.000000
+[2025-11-08 23:01:29] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:29] [DEBUG] [drone.c:119] Position: X: 33.060661 Y: 1.000000
+[2025-11-08 23:01:30] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:30] [DEBUG] [drone.c:119] Position: X: 33.707096 Y: 1.000000
+[2025-11-08 23:01:30] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:30] [DEBUG] [drone.c:119] Position: X: 34.304718 Y: 1.000000
+[2025-11-08 23:01:30] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:30] [DEBUG] [drone.c:119] Position: X: 34.869801 Y: 1.000000
+[2025-11-08 23:01:30] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:30] [DEBUG] [drone.c:119] Position: X: 35.413189 Y: 1.000000
+[2025-11-08 23:01:30] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:30] [DEBUG] [drone.c:119] Position: X: 35.942116 Y: 1.000000
+[2025-11-08 23:01:30] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:30] [DEBUG] [drone.c:119] Position: X: 36.461399 Y: 1.000000
+[2025-11-08 23:01:30] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:30] [DEBUG] [drone.c:119] Position: X: 36.974255 Y: 1.000000
+[2025-11-08 23:01:30] [DEBUG] [I_process.c:76] New forze: 0 0
+[2025-11-08 23:01:30] [DEBUG] [BB.c:49] Leggo input: Fx: 0 Fy: 0
+[2025-11-08 23:01:30] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:30] [DEBUG] [drone.c:119] Position: X: 37.316158 Y: 1.000000
+[2025-11-08 23:01:30] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:30] [DEBUG] [drone.c:119] Position: X: 37.544094 Y: 1.000000
+[2025-11-08 23:01:30] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:30] [DEBUG] [drone.c:119] Position: X: 37.696053 Y: 1.000000
+[2025-11-08 23:01:31] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:31] [DEBUG] [drone.c:119] Position: X: 37.797359 Y: 1.000000
+[2025-11-08 23:01:31] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:31] [DEBUG] [drone.c:119] Position: X: 37.864899 Y: 1.000000
+[2025-11-08 23:01:31] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:31] [DEBUG] [drone.c:119] Position: X: 37.909924 Y: 1.000000
+[2025-11-08 23:01:31] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:31] [DEBUG] [drone.c:119] Position: X: 37.939941 Y: 1.000000
+[2025-11-08 23:01:31] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:31] [DEBUG] [drone.c:119] Position: X: 37.959953 Y: 1.000000
+[2025-11-08 23:01:31] [DEBUG] [I_process.c:76] New forze: -1 0
+[2025-11-08 23:01:31] [DEBUG] [BB.c:49] Leggo input: Fx: -1 Fy: 0
+[2025-11-08 23:01:31] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:31] [DEBUG] [drone.c:119] Position: X: 37.806629 Y: 1.000000
+[2025-11-08 23:01:31] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:31] [DEBUG] [drone.c:119] Position: X: 37.537746 Y: 1.000000
+[2025-11-08 23:01:31] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:31] [DEBUG] [drone.c:119] Position: X: 37.191826 Y: 1.000000
+[2025-11-08 23:01:31] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:31] [DEBUG] [drone.c:119] Position: X: 36.794544 Y: 1.000000
+[2025-11-08 23:01:31] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:31] [DEBUG] [drone.c:119] Position: X: 36.363022 Y: 1.000000
+[2025-11-08 23:01:32] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:32] [DEBUG] [drone.c:119] Position: X: 35.908672 Y: 1.000000
+[2025-11-08 23:01:32] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:32] [DEBUG] [drone.c:119] Position: X: 35.439106 Y: 1.000000
+[2025-11-08 23:01:32] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:32] [DEBUG] [drone.c:119] Position: X: 34.959396 Y: 1.000000
+[2025-11-08 23:01:32] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:32] [DEBUG] [drone.c:119] Position: X: 34.472923 Y: 1.000000
+[2025-11-08 23:01:32] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:32] [DEBUG] [drone.c:119] Position: X: 33.981941 Y: 1.000000
+[2025-11-08 23:01:32] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:32] [DEBUG] [drone.c:119] Position: X: 33.487953 Y: 1.000000
+[2025-11-08 23:01:32] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:32] [DEBUG] [drone.c:119] Position: X: 32.991962 Y: 1.000000
+[2025-11-08 23:01:32] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:32] [DEBUG] [drone.c:119] Position: X: 32.494637 Y: 1.000000
+[2025-11-08 23:01:32] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:32] [DEBUG] [drone.c:119] Position: X: 31.996420 Y: 1.000000
+[2025-11-08 23:01:32] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:32] [DEBUG] [drone.c:119] Position: X: 31.497608 Y: 1.000000
+[2025-11-08 23:01:33] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:33] [DEBUG] [drone.c:119] Position: X: 30.998400 Y: 1.000000
+[2025-11-08 23:01:33] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:33] [DEBUG] [drone.c:119] Position: X: 30.498928 Y: 1.000000
+[2025-11-08 23:01:33] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:33] [DEBUG] [drone.c:119] Position: X: 29.999281 Y: 1.000000
+[2025-11-08 23:01:33] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:33] [DEBUG] [drone.c:119] Position: X: 29.499516 Y: 1.000000
+[2025-11-08 23:01:33] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:33] [DEBUG] [drone.c:119] Position: X: 28.999672 Y: 1.000000
+[2025-11-08 23:01:33] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:33] [DEBUG] [drone.c:119] Position: X: 28.499777 Y: 1.000000
+[2025-11-08 23:01:33] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:33] [DEBUG] [drone.c:119] Position: X: 27.999847 Y: 1.000000
+[2025-11-08 23:01:33] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:33] [DEBUG] [drone.c:119] Position: X: 27.499895 Y: 1.000000
+[2025-11-08 23:01:33] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:33] [DEBUG] [drone.c:119] Position: X: 26.999928 Y: 1.000000
+[2025-11-08 23:01:33] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:33] [DEBUG] [drone.c:119] Position: X: 26.499949 Y: 1.000000
+[2025-11-08 23:01:34] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:34] [DEBUG] [drone.c:119] Position: X: 25.999962 Y: 1.000000
+[2025-11-08 23:01:34] [DEBUG] [I_process.c:76] New forze: 0 0
+[2025-11-08 23:01:34] [DEBUG] [BB.c:49] Leggo input: Fx: 0 Fy: 0
+[2025-11-08 23:01:34] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:34] [DEBUG] [drone.c:119] Position: X: 25.666637 Y: 1.000000
+[2025-11-08 23:01:34] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:34] [DEBUG] [drone.c:119] Position: X: 25.444422 Y: 1.000000
+[2025-11-08 23:01:34] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:34] [DEBUG] [drone.c:119] Position: X: 25.296278 Y: 1.000000
+[2025-11-08 23:01:34] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:34] [DEBUG] [drone.c:119] Position: X: 25.197515 Y: 1.000000
+[2025-11-08 23:01:34] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:34] [DEBUG] [drone.c:119] Position: X: 25.131674 Y: 1.000000
+[2025-11-08 23:01:34] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:34] [DEBUG] [drone.c:119] Position: X: 25.087780 Y: 1.000000
+[2025-11-08 23:01:34] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:34] [DEBUG] [drone.c:119] Position: X: 25.058517 Y: 1.000000
+[2025-11-08 23:01:34] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:34] [DEBUG] [drone.c:119] Position: X: 25.039009 Y: 1.000000
+[2025-11-08 23:01:34] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:34] [DEBUG] [drone.c:119] Position: X: 25.026003 Y: 1.000000
+[2025-11-08 23:01:35] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:35] [DEBUG] [drone.c:119] Position: X: 25.017332 Y: 1.000000
+[2025-11-08 23:01:35] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:35] [DEBUG] [drone.c:119] Position: X: 25.011551 Y: 1.000000
+[2025-11-08 23:01:35] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:35] [DEBUG] [drone.c:119] Position: X: 25.007696 Y: 1.000000
+[2025-11-08 23:01:35] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:35] [DEBUG] [drone.c:119] Position: X: 25.005127 Y: 1.000000
+[2025-11-08 23:01:35] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:35] [DEBUG] [drone.c:119] Position: X: 25.003414 Y: 1.000000
+[2025-11-08 23:01:35] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:35] [DEBUG] [drone.c:119] Position: X: 25.002272 Y: 1.000000
+[2025-11-08 23:01:35] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:35] [DEBUG] [drone.c:119] Position: X: 25.001511 Y: 1.000000
+[2025-11-08 23:01:35] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:35] [DEBUG] [drone.c:119] Position: X: 25.001003 Y: 1.000000
+[2025-11-08 23:01:35] [DEBUG] [I_process.c:76] New forze: 0 1
+[2025-11-08 23:01:35] [DEBUG] [BB.c:49] Leggo input: Fx: 0 Fy: 1
+[2025-11-08 23:01:35] [DEBUG] [drone.c:114] Fx: 0, Fy: 1
+[2025-11-08 23:01:35] [DEBUG] [drone.c:119] Position: X: 25.000666 Y: 1.166667
+[2025-11-08 23:01:35] [DEBUG] [drone.c:114] Fx: 0, Fy: 1
+[2025-11-08 23:01:35] [DEBUG] [drone.c:119] Position: X: 25.000441 Y: 1.444444
+[2025-11-08 23:01:36] [DEBUG] [drone.c:114] Fx: 0, Fy: 1
+[2025-11-08 23:01:36] [DEBUG] [drone.c:119] Position: X: 25.000290 Y: 1.796296
+[2025-11-08 23:01:36] [DEBUG] [drone.c:114] Fx: 0, Fy: 1
+[2025-11-08 23:01:36] [DEBUG] [drone.c:119] Position: X: 25.000189 Y: 2.197531
+[2025-11-08 23:01:36] [DEBUG] [drone.c:114] Fx: 0, Fy: 1
+[2025-11-08 23:01:36] [DEBUG] [drone.c:119] Position: X: 25.000122 Y: 2.631687
+[2025-11-08 23:01:36] [DEBUG] [drone.c:114] Fx: 0, Fy: 1
+[2025-11-08 23:01:36] [DEBUG] [drone.c:119] Position: X: 25.000078 Y: 3.087791
+[2025-11-08 23:01:36] [DEBUG] [drone.c:114] Fx: 0, Fy: 1
+[2025-11-08 23:01:36] [DEBUG] [drone.c:119] Position: X: 25.000050 Y: 3.558528
+[2025-11-08 23:01:36] [DEBUG] [drone.c:114] Fx: 0, Fy: 1
+[2025-11-08 23:01:36] [DEBUG] [drone.c:119] Position: X: 25.000031 Y: 4.039019
+[2025-11-08 23:01:36] [DEBUG] [drone.c:114] Fx: 0, Fy: 1
+[2025-11-08 23:01:36] [DEBUG] [drone.c:119] Position: X: 25.000017 Y: 4.526012
+[2025-11-08 23:01:36] [DEBUG] [drone.c:114] Fx: 0, Fy: 1
+[2025-11-08 23:01:36] [DEBUG] [drone.c:119] Position: X: 25.000008 Y: 5.017342
+[2025-11-08 23:01:36] [DEBUG] [drone.c:114] Fx: 0, Fy: 1
+[2025-11-08 23:01:36] [DEBUG] [drone.c:119] Position: X: 25.000002 Y: 5.511561
+[2025-11-08 23:01:36] [DEBUG] [drone.c:114] Fx: 0, Fy: 1
+[2025-11-08 23:01:36] [DEBUG] [drone.c:119] Position: X: 24.999998 Y: 6.007707
+[2025-11-08 23:01:37] [DEBUG] [drone.c:114] Fx: 0, Fy: 1
+[2025-11-08 23:01:37] [DEBUG] [drone.c:119] Position: X: 24.999996 Y: 6.505138
+[2025-11-08 23:01:37] [DEBUG] [drone.c:114] Fx: 0, Fy: 1
+[2025-11-08 23:01:37] [DEBUG] [drone.c:119] Position: X: 24.999994 Y: 7.003425
+[2025-11-08 23:01:37] [DEBUG] [drone.c:114] Fx: 0, Fy: 1
+[2025-11-08 23:01:37] [DEBUG] [drone.c:119] Position: X: 24.999992 Y: 7.502283
+[2025-11-08 23:01:37] [DEBUG] [drone.c:114] Fx: 0, Fy: 1
+[2025-11-08 23:01:37] [DEBUG] [drone.c:119] Position: X: 24.999990 Y: 8.001522
+[2025-11-08 23:01:37] [DEBUG] [drone.c:114] Fx: 0, Fy: 1
+[2025-11-08 23:01:37] [DEBUG] [drone.c:119] Position: X: 24.999989 Y: 8.501015
+[2025-11-08 23:01:37] [DEBUG] [drone.c:114] Fx: 0, Fy: 1
+[2025-11-08 23:01:37] [DEBUG] [drone.c:119] Position: X: 24.999987 Y: 9.000676
+[2025-11-08 23:01:37] [DEBUG] [I_process.c:76] New forze: 1 1
+[2025-11-08 23:01:37] [DEBUG] [BB.c:49] Leggo input: Fx: 1 Fy: 1
+[2025-11-08 23:01:37] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:01:37] [DEBUG] [drone.c:119] Position: X: 25.166653 Y: 9.500450
+[2025-11-08 23:01:37] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:01:37] [DEBUG] [drone.c:119] Position: X: 25.444429 Y: 10.000299
+[2025-11-08 23:01:37] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:01:37] [DEBUG] [drone.c:119] Position: X: 25.796280 Y: 10.500199
+[2025-11-08 23:01:37] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:01:37] [DEBUG] [drone.c:119] Position: X: 26.197514 Y: 11.000133
+[2025-11-08 23:01:38] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:01:38] [DEBUG] [drone.c:119] Position: X: 26.631670 Y: 11.500088
+[2025-11-08 23:01:38] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:01:38] [DEBUG] [drone.c:119] Position: X: 27.087774 Y: 12.000058
+[2025-11-08 23:01:38] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:01:38] [DEBUG] [drone.c:119] Position: X: 27.558510 Y: 12.500038
+[2025-11-08 23:01:38] [DEBUG] [I_process.c:76] New forze: 2 0
+[2025-11-08 23:01:38] [DEBUG] [BB.c:49] Leggo input: Fx: 2 Fy: 0
+[2025-11-08 23:01:38] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:38] [DEBUG] [drone.c:119] Position: X: 28.205667 Y: 12.833358
+[2025-11-08 23:01:38] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:38] [DEBUG] [drone.c:119] Position: X: 28.970440 Y: 13.055571
+[2025-11-08 23:01:38] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:38] [DEBUG] [drone.c:119] Position: X: 29.813622 Y: 13.203712
+[2025-11-08 23:01:38] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:38] [DEBUG] [drone.c:119] Position: X: 30.709076 Y: 13.302474
+[2025-11-08 23:01:38] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:38] [DEBUG] [drone.c:119] Position: X: 31.639380 Y: 13.368315
+[2025-11-08 23:01:38] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:38] [DEBUG] [drone.c:119] Position: X: 32.592915 Y: 13.412209
+[2025-11-08 23:01:38] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:38] [DEBUG] [drone.c:119] Position: X: 33.561939 Y: 13.441471
+[2025-11-08 23:01:39] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:39] [DEBUG] [drone.c:119] Position: X: 34.541290 Y: 13.460979
+[2025-11-08 23:01:39] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:39] [DEBUG] [drone.c:119] Position: X: 35.527523 Y: 13.473985
+[2025-11-08 23:01:39] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:39] [DEBUG] [drone.c:119] Position: X: 36.518345 Y: 13.482655
+[2025-11-08 23:01:39] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:39] [DEBUG] [drone.c:119] Position: X: 37.512226 Y: 13.488435
+[2025-11-08 23:01:39] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:39] [DEBUG] [drone.c:119] Position: X: 38.508148 Y: 13.492289
+[2025-11-08 23:01:39] [DEBUG] [I_process.c:76] New forze: 1 -1
+[2025-11-08 23:01:39] [DEBUG] [BB.c:49] Leggo input: Fx: 1 Fy: -1
+[2025-11-08 23:01:39] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:01:39] [DEBUG] [drone.c:119] Position: X: 39.338764 Y: 13.328191
+[2025-11-08 23:01:39] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:01:39] [DEBUG] [drone.c:119] Position: X: 40.059174 Y: 13.052126
+[2025-11-08 23:01:39] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:01:39] [DEBUG] [drone.c:119] Position: X: 40.706112 Y: 12.701416
+[2025-11-08 23:01:39] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:01:39] [DEBUG] [drone.c:119] Position: X: 41.304070 Y: 12.300942
+[2025-11-08 23:01:39] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:01:39] [DEBUG] [drone.c:119] Position: X: 41.869373 Y: 11.867293
+[2025-11-08 23:01:40] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:01:40] [DEBUG] [drone.c:119] Position: X: 42.412910 Y: 11.411528
+[2025-11-08 23:01:40] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:01:40] [DEBUG] [drone.c:119] Position: X: 42.941936 Y: 10.941017
+[2025-11-08 23:01:40] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:01:40] [DEBUG] [drone.c:119] Position: X: 43.461288 Y: 10.460677
+[2025-11-08 23:01:40] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:01:40] [DEBUG] [drone.c:119] Position: X: 43.974190 Y: 9.973783
+[2025-11-08 23:01:40] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:01:40] [DEBUG] [drone.c:119] Position: X: 44.482792 Y: 9.482521
+[2025-11-08 23:01:40] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:01:40] [DEBUG] [drone.c:119] Position: X: 44.988525 Y: 8.988346
+[2025-11-08 23:01:40] [DEBUG] [I_process.c:76] New forze: 0 -1
+[2025-11-08 23:01:40] [DEBUG] [BB.c:49] Leggo input: Fx: 0 Fy: -1
+[2025-11-08 23:01:40] [DEBUG] [drone.c:114] Fx: 0, Fy: -1
+[2025-11-08 23:01:40] [DEBUG] [drone.c:119] Position: X: 45.325680 Y: 8.492229
+[2025-11-08 23:01:40] [DEBUG] [drone.c:114] Fx: 0, Fy: -1
+[2025-11-08 23:01:40] [DEBUG] [drone.c:119] Position: X: 45.550449 Y: 7.994818
+[2025-11-08 23:01:40] [DEBUG] [drone.c:114] Fx: 0, Fy: -1
+[2025-11-08 23:01:40] [DEBUG] [drone.c:119] Position: X: 45.700294 Y: 7.496544
+[2025-11-08 23:01:40] [DEBUG] [drone.c:114] Fx: 0, Fy: -1
+[2025-11-08 23:01:40] [DEBUG] [drone.c:119] Position: X: 45.800190 Y: 6.997694
+[2025-11-08 23:01:41] [DEBUG] [drone.c:114] Fx: 0, Fy: -1
+[2025-11-08 23:01:41] [DEBUG] [drone.c:119] Position: X: 45.866787 Y: 6.498462
+[2025-11-08 23:01:41] [DEBUG] [drone.c:114] Fx: 0, Fy: -1
+[2025-11-08 23:01:41] [DEBUG] [drone.c:119] Position: X: 45.911186 Y: 5.998973
+[2025-11-08 23:01:41] [DEBUG] [drone.c:114] Fx: 0, Fy: -1
+[2025-11-08 23:01:41] [DEBUG] [drone.c:119] Position: X: 45.940784 Y: 5.499314
+[2025-11-08 23:01:41] [DEBUG] [drone.c:114] Fx: 0, Fy: -1
+[2025-11-08 23:01:41] [DEBUG] [drone.c:119] Position: X: 45.960518 Y: 4.999542
+[2025-11-08 23:01:41] [DEBUG] [drone.c:114] Fx: 0, Fy: -1
+[2025-11-08 23:01:41] [DEBUG] [drone.c:119] Position: X: 45.973675 Y: 4.499693
+[2025-11-08 23:01:41] [DEBUG] [I_process.c:76] New forze: -1 0
+[2025-11-08 23:01:41] [DEBUG] [BB.c:49] Leggo input: Fx: -1 Fy: 0
+[2025-11-08 23:01:41] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:41] [DEBUG] [drone.c:119] Position: X: 45.815781 Y: 4.166461
+[2025-11-08 23:01:41] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:41] [DEBUG] [drone.c:119] Position: X: 45.543850 Y: 3.944306
+[2025-11-08 23:01:41] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:41] [DEBUG] [drone.c:119] Position: X: 45.195896 Y: 3.796203
+[2025-11-08 23:01:41] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:41] [DEBUG] [drone.c:119] Position: X: 44.797260 Y: 3.697467
+[2025-11-08 23:01:41] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:41] [DEBUG] [drone.c:119] Position: X: 44.364838 Y: 3.631644
+[2025-11-08 23:01:42] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:42] [DEBUG] [drone.c:119] Position: X: 43.909889 Y: 3.587761
+[2025-11-08 23:01:42] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:42] [DEBUG] [drone.c:119] Position: X: 43.439922 Y: 3.558506
+[2025-11-08 23:01:42] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:42] [DEBUG] [drone.c:119] Position: X: 42.959946 Y: 3.539002
+[2025-11-08 23:01:42] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:42] [DEBUG] [drone.c:119] Position: X: 42.473293 Y: 3.526000
+[2025-11-08 23:01:42] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:42] [DEBUG] [drone.c:119] Position: X: 41.982193 Y: 3.517332
+[2025-11-08 23:01:42] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:42] [DEBUG] [drone.c:119] Position: X: 41.488125 Y: 3.511553
+[2025-11-08 23:01:42] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:42] [DEBUG] [drone.c:119] Position: X: 40.992081 Y: 3.507701
+[2025-11-08 23:01:42] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:42] [DEBUG] [drone.c:119] Position: X: 40.494717 Y: 3.505132
+[2025-11-08 23:01:42] [DEBUG] [I_process.c:76] New forze: -1 1
+[2025-11-08 23:01:42] [DEBUG] [BB.c:49] Leggo input: Fx: -1 Fy: 1
+[2025-11-08 23:01:42] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:01:42] [DEBUG] [drone.c:119] Position: X: 39.996475 Y: 3.670087
+[2025-11-08 23:01:42] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:01:42] [DEBUG] [drone.c:119] Position: X: 39.497646 Y: 3.946723
+[2025-11-08 23:01:43] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:01:43] [DEBUG] [drone.c:119] Position: X: 38.998428 Y: 4.297814
+[2025-11-08 23:01:43] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:01:43] [DEBUG] [drone.c:119] Position: X: 38.498951 Y: 4.698541
+[2025-11-08 23:01:43] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:01:43] [DEBUG] [drone.c:119] Position: X: 37.999298 Y: 5.132360
+[2025-11-08 23:01:43] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:01:43] [DEBUG] [drone.c:119] Position: X: 37.499531 Y: 5.588238
+[2025-11-08 23:01:43] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:01:43] [DEBUG] [drone.c:119] Position: X: 36.999687 Y: 6.058824
+[2025-11-08 23:01:43] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:01:43] [DEBUG] [drone.c:119] Position: X: 36.499790 Y: 6.539215
+[2025-11-08 23:01:43] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:01:43] [DEBUG] [drone.c:119] Position: X: 35.999859 Y: 7.026142
+[2025-11-08 23:01:43] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:01:43] [DEBUG] [drone.c:119] Position: X: 35.499905 Y: 7.517426
+[2025-11-08 23:01:43] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:01:43] [DEBUG] [drone.c:119] Position: X: 34.999935 Y: 8.011617
+[2025-11-08 23:01:43] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:01:43] [DEBUG] [drone.c:119] Position: X: 34.499954 Y: 8.507744
+[2025-11-08 23:01:44] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:01:44] [DEBUG] [drone.c:119] Position: X: 33.999966 Y: 9.005162
+[2025-11-08 23:01:44] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:01:44] [DEBUG] [drone.c:119] Position: X: 33.499973 Y: 9.503441
+[2025-11-08 23:01:44] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:01:44] [DEBUG] [drone.c:119] Position: X: 32.999977 Y: 10.002294
+[2025-11-08 23:01:44] [DEBUG] [I_process.c:76] New forze: 0 0
+[2025-11-08 23:01:44] [DEBUG] [BB.c:49] Leggo input: Fx: 0 Fy: 0
+[2025-11-08 23:01:44] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:44] [DEBUG] [drone.c:119] Position: X: 32.666645 Y: 10.334862
+[2025-11-08 23:01:44] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:44] [DEBUG] [drone.c:119] Position: X: 32.444424 Y: 10.556574
+[2025-11-08 23:01:44] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:44] [DEBUG] [drone.c:119] Position: X: 32.296276 Y: 10.704382
+[2025-11-08 23:01:44] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:44] [DEBUG] [drone.c:119] Position: X: 32.197510 Y: 10.802920
+[2025-11-08 23:01:44] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:44] [DEBUG] [drone.c:119] Position: X: 32.131664 Y: 10.868612
+[2025-11-08 23:01:44] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:44] [DEBUG] [drone.c:119] Position: X: 32.087769 Y: 10.912407
+[2025-11-08 23:01:44] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:44] [DEBUG] [drone.c:119] Position: X: 32.058506 Y: 10.941604
+[2025-11-08 23:01:45] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:45] [DEBUG] [drone.c:119] Position: X: 32.038998 Y: 10.961068
+[2025-11-08 23:01:45] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:45] [DEBUG] [drone.c:119] Position: X: 32.025993 Y: 10.974045
+[2025-11-08 23:01:45] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:45] [DEBUG] [drone.c:119] Position: X: 32.017323 Y: 10.982696
+[2025-11-08 23:01:45] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:45] [DEBUG] [drone.c:119] Position: X: 32.011543 Y: 10.988462
+[2025-11-08 23:01:45] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:45] [DEBUG] [drone.c:119] Position: X: 32.007690 Y: 10.992307
+[2025-11-08 23:01:45] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:45] [DEBUG] [drone.c:119] Position: X: 32.005123 Y: 10.994869
+[2025-11-08 23:01:45] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:45] [DEBUG] [drone.c:119] Position: X: 32.003410 Y: 10.996577
+[2025-11-08 23:01:45] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:45] [DEBUG] [drone.c:119] Position: X: 32.002270 Y: 10.997716
+[2025-11-08 23:01:45] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:45] [DEBUG] [drone.c:119] Position: X: 32.001511 Y: 10.998475
+[2025-11-08 23:01:45] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:45] [DEBUG] [drone.c:119] Position: X: 32.001003 Y: 10.998981
+[2025-11-08 23:01:46] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:46] [DEBUG] [drone.c:119] Position: X: 32.000664 Y: 10.999319
+[2025-11-08 23:01:46] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:46] [DEBUG] [drone.c:119] Position: X: 32.000439 Y: 10.999544
+[2025-11-08 23:01:46] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:46] [DEBUG] [drone.c:119] Position: X: 32.000290 Y: 10.999694
+[2025-11-08 23:01:46] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:46] [DEBUG] [drone.c:119] Position: X: 32.000191 Y: 10.999794
+[2025-11-08 23:01:46] [DEBUG] [I_process.c:76] New forze: 1 0
+[2025-11-08 23:01:46] [DEBUG] [BB.c:49] Leggo input: Fx: 1 Fy: 0
+[2025-11-08 23:01:46] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:46] [DEBUG] [drone.c:119] Position: X: 32.166790 Y: 10.999861
+[2025-11-08 23:01:46] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:46] [DEBUG] [drone.c:119] Position: X: 32.444523 Y: 10.999906
+[2025-11-08 23:01:46] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:46] [DEBUG] [drone.c:119] Position: X: 32.796345 Y: 10.999935
+[2025-11-08 23:01:46] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:46] [DEBUG] [drone.c:119] Position: X: 33.197559 Y: 10.999955
+[2025-11-08 23:01:46] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:46] [DEBUG] [drone.c:119] Position: X: 33.631702 Y: 10.999969
+[2025-11-08 23:01:47] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:47] [DEBUG] [drone.c:119] Position: X: 34.087799 Y: 10.999977
+[2025-11-08 23:01:47] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:47] [DEBUG] [drone.c:119] Position: X: 34.558529 Y: 10.999983
+[2025-11-08 23:01:47] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:47] [DEBUG] [drone.c:119] Position: X: 35.039017 Y: 10.999987
+[2025-11-08 23:01:47] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:47] [DEBUG] [drone.c:119] Position: X: 35.526009 Y: 10.999990
+[2025-11-08 23:01:47] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:47] [DEBUG] [drone.c:119] Position: X: 36.017338 Y: 10.999991
+[2025-11-08 23:01:47] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:47] [DEBUG] [drone.c:119] Position: X: 36.511559 Y: 10.999992
+[2025-11-08 23:01:47] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:47] [DEBUG] [drone.c:119] Position: X: 37.007706 Y: 10.999993
+[2025-11-08 23:01:47] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:47] [DEBUG] [drone.c:119] Position: X: 37.505138 Y: 10.999994
+[2025-11-08 23:01:47] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:47] [DEBUG] [drone.c:119] Position: X: 38.003426 Y: 10.999995
+[2025-11-08 23:01:47] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:47] [DEBUG] [drone.c:119] Position: X: 38.502285 Y: 10.999996
+[2025-11-08 23:01:48] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:48] [DEBUG] [drone.c:119] Position: X: 39.001526 Y: 10.999997
+[2025-11-08 23:01:48] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:48] [DEBUG] [drone.c:119] Position: X: 39.501019 Y: 10.999998
+[2025-11-08 23:01:48] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:48] [DEBUG] [drone.c:119] Position: X: 40.000679 Y: 10.999999
+[2025-11-08 23:01:48] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:48] [DEBUG] [drone.c:119] Position: X: 40.500454 Y: 11.000000
+[2025-11-08 23:01:48] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:48] [DEBUG] [drone.c:119] Position: X: 41.000305 Y: 11.000001
+[2025-11-08 23:01:48] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:48] [DEBUG] [drone.c:119] Position: X: 41.500206 Y: 11.000002
+[2025-11-08 23:01:48] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:48] [DEBUG] [drone.c:119] Position: X: 42.000141 Y: 11.000003
+[2025-11-08 23:01:48] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:48] [DEBUG] [drone.c:119] Position: X: 42.500099 Y: 11.000004
+[2025-11-08 23:01:48] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:48] [DEBUG] [drone.c:119] Position: X: 43.000072 Y: 11.000005
+[2025-11-08 23:01:48] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:48] [DEBUG] [drone.c:119] Position: X: 43.500053 Y: 11.000006
+[2025-11-08 23:01:49] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:49] [DEBUG] [drone.c:119] Position: X: 44.000042 Y: 11.000007
+[2025-11-08 23:01:49] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:49] [DEBUG] [drone.c:119] Position: X: 44.500034 Y: 11.000008
+[2025-11-08 23:01:49] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:49] [DEBUG] [drone.c:119] Position: X: 45.000031 Y: 11.000009
+[2025-11-08 23:01:49] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:49] [DEBUG] [drone.c:119] Position: X: 45.500027 Y: 11.000010
+[2025-11-08 23:01:49] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:49] [DEBUG] [drone.c:119] Position: X: 46.000023 Y: 11.000010
+[2025-11-08 23:01:49] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:49] [DEBUG] [drone.c:119] Position: X: 46.500019 Y: 11.000011
+[2025-11-08 23:01:49] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:49] [DEBUG] [drone.c:119] Position: X: 47.000015 Y: 11.000012
+[2025-11-08 23:01:49] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:49] [DEBUG] [drone.c:119] Position: X: 47.500011 Y: 11.000013
+[2025-11-08 23:01:49] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:49] [DEBUG] [drone.c:119] Position: X: 48.000008 Y: 11.000014
+[2025-11-08 23:01:49] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:49] [DEBUG] [drone.c:119] Position: X: 48.500004 Y: 11.000015
+[2025-11-08 23:01:50] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:50] [DEBUG] [drone.c:119] Position: X: 49.000000 Y: 11.000016
+[2025-11-08 23:01:50] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:50] [DEBUG] [drone.c:119] Position: X: 49.499996 Y: 11.000017
+[2025-11-08 23:01:50] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:50] [DEBUG] [drone.c:119] Position: X: 49.999992 Y: 11.000018
+[2025-11-08 23:01:50] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:50] [DEBUG] [drone.c:119] Position: X: 50.499989 Y: 11.000019
+[2025-11-08 23:01:50] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:50] [DEBUG] [drone.c:119] Position: X: 50.999985 Y: 11.000020
+[2025-11-08 23:01:50] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:50] [DEBUG] [drone.c:119] Position: X: 51.499981 Y: 11.000021
+[2025-11-08 23:01:50] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:50] [DEBUG] [drone.c:119] Position: X: 51.999977 Y: 11.000022
+[2025-11-08 23:01:50] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:50] [DEBUG] [drone.c:119] Position: X: 52.499973 Y: 11.000023
+[2025-11-08 23:01:50] [DEBUG] [I_process.c:76] New forze: 2 0
+[2025-11-08 23:01:50] [DEBUG] [BB.c:49] Leggo input: Fx: 2 Fy: 0
+[2025-11-08 23:01:50] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:50] [DEBUG] [drone.c:119] Position: X: 53.166637 Y: 11.000024
+[2025-11-08 23:01:50] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:50] [DEBUG] [drone.c:119] Position: X: 53.944412 Y: 11.000025
+[2025-11-08 23:01:51] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:51] [DEBUG] [drone.c:119] Position: X: 54.796261 Y: 11.000026
+[2025-11-08 23:01:51] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:51] [DEBUG] [drone.c:119] Position: X: 55.697495 Y: 11.000027
+[2025-11-08 23:01:51] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:51] [DEBUG] [drone.c:119] Position: X: 56.631649 Y: 11.000028
+[2025-11-08 23:01:51] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:51] [DEBUG] [drone.c:119] Position: X: 57.587753 Y: 11.000029
+[2025-11-08 23:01:51] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:51] [DEBUG] [drone.c:119] Position: X: 58.558491 Y: 11.000030
+[2025-11-08 23:01:51] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:51] [DEBUG] [drone.c:119] Position: X: 59.538982 Y: 11.000031
+[2025-11-08 23:01:51] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:51] [DEBUG] [drone.c:119] Position: X: 60.525978 Y: 11.000031
+[2025-11-08 23:01:51] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:51] [DEBUG] [drone.c:119] Position: X: 61.517307 Y: 11.000032
+[2025-11-08 23:01:51] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:51] [DEBUG] [drone.c:119] Position: X: 62.511528 Y: 11.000033
+[2025-11-08 23:01:51] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:51] [DEBUG] [drone.c:119] Position: X: 63.507675 Y: 11.000034
+[2025-11-08 23:01:52] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:52] [DEBUG] [drone.c:119] Position: X: 64.505104 Y: 11.000035
+[2025-11-08 23:01:52] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:52] [DEBUG] [drone.c:119] Position: X: 65.503387 Y: 11.000036
+[2025-11-08 23:01:52] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:52] [DEBUG] [drone.c:119] Position: X: 66.502243 Y: 11.000037
+[2025-11-08 23:01:52] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:52] [DEBUG] [drone.c:119] Position: X: 67.501480 Y: 11.000038
+[2025-11-08 23:01:52] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:52] [DEBUG] [drone.c:119] Position: X: 68.500969 Y: 11.000039
+[2025-11-08 23:01:52] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:01:52] [DEBUG] [drone.c:119] Position: X: 69.500626 Y: 11.000040
+[2025-11-08 23:01:52] [DEBUG] [I_process.c:76] New forze: 1 0
+[2025-11-08 23:01:52] [DEBUG] [BB.c:49] Leggo input: Fx: 1 Fy: 0
+[2025-11-08 23:01:52] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:52] [DEBUG] [drone.c:119] Position: X: 70.333733 Y: 11.000041
+[2025-11-08 23:01:52] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:52] [DEBUG] [drone.c:119] Position: X: 71.055801 Y: 11.000042
+[2025-11-08 23:01:52] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:52] [DEBUG] [drone.c:119] Position: X: 71.703850 Y: 11.000043
+[2025-11-08 23:01:52] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:52] [DEBUG] [drone.c:119] Position: X: 72.302551 Y: 11.000044
+[2025-11-08 23:01:53] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:53] [DEBUG] [drone.c:119] Position: X: 72.868355 Y: 11.000045
+[2025-11-08 23:01:53] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:53] [DEBUG] [drone.c:119] Position: X: 73.412224 Y: 11.000046
+[2025-11-08 23:01:53] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:53] [DEBUG] [drone.c:119] Position: X: 73.941467 Y: 11.000047
+[2025-11-08 23:01:53] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:01:53] [DEBUG] [drone.c:119] Position: X: 74.460960 Y: 11.000048
+[2025-11-08 23:01:53] [DEBUG] [I_process.c:76] New forze: 0 0
+[2025-11-08 23:01:53] [DEBUG] [BB.c:49] Leggo input: Fx: 0 Fy: 0
+[2025-11-08 23:01:53] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:53] [DEBUG] [drone.c:119] Position: X: 74.807289 Y: 11.000049
+[2025-11-08 23:01:53] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:53] [DEBUG] [drone.c:119] Position: X: 75.038177 Y: 11.000050
+[2025-11-08 23:01:53] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:53] [DEBUG] [drone.c:119] Position: X: 75.192101 Y: 11.000051
+[2025-11-08 23:01:53] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:53] [DEBUG] [drone.c:119] Position: X: 75.294716 Y: 11.000051
+[2025-11-08 23:01:53] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:53] [DEBUG] [drone.c:119] Position: X: 75.363129 Y: 11.000052
+[2025-11-08 23:01:53] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:53] [DEBUG] [drone.c:119] Position: X: 75.408737 Y: 11.000053
+[2025-11-08 23:01:54] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:54] [DEBUG] [drone.c:119] Position: X: 75.439140 Y: 11.000054
+[2025-11-08 23:01:54] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:01:54] [DEBUG] [drone.c:119] Position: X: 75.459412 Y: 11.000055
+[2025-11-08 23:01:54] [DEBUG] [I_process.c:76] New forze: -1 0
+[2025-11-08 23:01:54] [DEBUG] [BB.c:49] Leggo input: Fx: -1 Fy: 0
+[2025-11-08 23:01:54] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:54] [DEBUG] [drone.c:119] Position: X: 75.306259 Y: 11.000056
+[2025-11-08 23:01:54] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:54] [DEBUG] [drone.c:119] Position: X: 75.037491 Y: 11.000057
+[2025-11-08 23:01:54] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:54] [DEBUG] [drone.c:119] Position: X: 74.691643 Y: 11.000058
+[2025-11-08 23:01:54] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:54] [DEBUG] [drone.c:119] Position: X: 74.294411 Y: 11.000059
+[2025-11-08 23:01:54] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:54] [DEBUG] [drone.c:119] Position: X: 73.862923 Y: 11.000060
+[2025-11-08 23:01:54] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:54] [DEBUG] [drone.c:119] Position: X: 73.408600 Y: 11.000061
+[2025-11-08 23:01:54] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:01:54] [DEBUG] [drone.c:119] Position: X: 72.939049 Y: 11.000062
+[2025-11-08 23:01:54] [DEBUG] [I_process.c:76] New forze: -1 -1
+[2025-11-08 23:01:54] [DEBUG] [BB.c:49] Leggo input: Fx: -1 Fy: -1
+[2025-11-08 23:01:54] [DEBUG] [drone.c:114] Fx: -1, Fy: -1
+[2025-11-08 23:01:54] [DEBUG] [drone.c:119] Position: X: 72.459351 Y: 10.833396
+[2025-11-08 23:01:55] [DEBUG] [drone.c:114] Fx: -1, Fy: -1
+[2025-11-08 23:01:55] [DEBUG] [drone.c:119] Position: X: 71.972885 Y: 10.555618
+[2025-11-08 23:01:55] [DEBUG] [drone.c:114] Fx: -1, Fy: -1
+[2025-11-08 23:01:55] [DEBUG] [drone.c:119] Position: X: 71.481911 Y: 10.203767
+[2025-11-08 23:01:55] [DEBUG] [drone.c:114] Fx: -1, Fy: -1
+[2025-11-08 23:01:55] [DEBUG] [drone.c:119] Position: X: 70.987930 Y: 9.802532
+[2025-11-08 23:01:55] [DEBUG] [drone.c:114] Fx: -1, Fy: -1
+[2025-11-08 23:01:55] [DEBUG] [drone.c:119] Position: X: 70.491943 Y: 9.368376
+[2025-11-08 23:01:55] [DEBUG] [drone.c:114] Fx: -1, Fy: -1
+[2025-11-08 23:01:55] [DEBUG] [drone.c:119] Position: X: 69.994621 Y: 8.912271
+[2025-11-08 23:01:55] [DEBUG] [drone.c:114] Fx: -1, Fy: -1
+[2025-11-08 23:01:55] [DEBUG] [drone.c:119] Position: X: 69.496407 Y: 8.441535
+[2025-11-08 23:01:55] [DEBUG] [drone.c:114] Fx: -1, Fy: -1
+[2025-11-08 23:01:55] [DEBUG] [drone.c:119] Position: X: 68.997597 Y: 7.961044
+[2025-11-08 23:01:55] [DEBUG] [drone.c:114] Fx: -1, Fy: -1
+[2025-11-08 23:01:55] [DEBUG] [drone.c:119] Position: X: 68.498390 Y: 7.474050
+[2025-11-08 23:01:55] [DEBUG] [drone.c:114] Fx: -1, Fy: -1
+[2025-11-08 23:01:55] [DEBUG] [drone.c:119] Position: X: 67.998917 Y: 6.982720
+[2025-11-08 23:01:55] [DEBUG] [drone.c:114] Fx: -1, Fy: -1
+[2025-11-08 23:01:55] [DEBUG] [drone.c:119] Position: X: 67.499268 Y: 6.488500
+[2025-11-08 23:01:56] [DEBUG] [drone.c:114] Fx: -1, Fy: -1
+[2025-11-08 23:01:56] [DEBUG] [drone.c:119] Position: X: 66.999504 Y: 5.992353
+[2025-11-08 23:01:56] [DEBUG] [drone.c:114] Fx: -1, Fy: -1
+[2025-11-08 23:01:56] [DEBUG] [drone.c:119] Position: X: 66.499664 Y: 5.494922
+[2025-11-08 23:01:56] [DEBUG] [drone.c:114] Fx: -1, Fy: -1
+[2025-11-08 23:01:56] [DEBUG] [drone.c:119] Position: X: 65.999771 Y: 4.996634
+[2025-11-08 23:01:56] [DEBUG] [drone.c:114] Fx: -1, Fy: -1
+[2025-11-08 23:01:56] [DEBUG] [drone.c:119] Position: X: 65.499840 Y: 4.497776
+[2025-11-08 23:01:56] [DEBUG] [drone.c:114] Fx: -1, Fy: -1
+[2025-11-08 23:01:56] [DEBUG] [drone.c:119] Position: X: 64.999886 Y: 3.998537
+[2025-11-08 23:01:56] [DEBUG] [I_process.c:76] New forze: -2 -1
+[2025-11-08 23:01:56] [DEBUG] [BB.c:49] Leggo input: Fx: -2 Fy: -1
+[2025-11-08 23:01:56] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:56] [DEBUG] [drone.c:119] Position: X: 64.333252 Y: 3.499044
+[2025-11-08 23:01:56] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:56] [DEBUG] [drone.c:119] Position: X: 63.555496 Y: 2.999383
+[2025-11-08 23:01:56] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:56] [DEBUG] [drone.c:119] Position: X: 62.703659 Y: 2.499608
+[2025-11-08 23:01:56] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:56] [DEBUG] [drone.c:119] Position: X: 61.802433 Y: 1.999759
+[2025-11-08 23:01:56] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:56] [DEBUG] [drone.c:119] Position: X: 60.868282 Y: 1.499859
+[2025-11-08 23:01:57] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:57] [DEBUG] [drone.c:119] Position: X: 59.912182 Y: 1.000000
+[2025-11-08 23:01:57] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:57] [DEBUG] [drone.c:119] Position: X: 58.941448 Y: 1.000000
+[2025-11-08 23:01:57] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:57] [DEBUG] [drone.c:119] Position: X: 57.960960 Y: 1.000000
+[2025-11-08 23:01:57] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:57] [DEBUG] [drone.c:119] Position: X: 56.973969 Y: 1.000000
+[2025-11-08 23:01:57] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:57] [DEBUG] [drone.c:119] Position: X: 55.982639 Y: 1.000000
+[2025-11-08 23:01:57] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:57] [DEBUG] [drone.c:119] Position: X: 54.988419 Y: 1.000000
+[2025-11-08 23:01:57] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:57] [DEBUG] [drone.c:119] Position: X: 53.992271 Y: 1.000000
+[2025-11-08 23:01:57] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:57] [DEBUG] [drone.c:119] Position: X: 52.994839 Y: 1.000000
+[2025-11-08 23:01:57] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:57] [DEBUG] [drone.c:119] Position: X: 51.996552 Y: 1.000000
+[2025-11-08 23:01:57] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:57] [DEBUG] [drone.c:119] Position: X: 50.997692 Y: 1.000000
+[2025-11-08 23:01:58] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:58] [DEBUG] [drone.c:119] Position: X: 49.998451 Y: 1.000000
+[2025-11-08 23:01:58] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:58] [DEBUG] [drone.c:119] Position: X: 48.998959 Y: 1.000000
+[2025-11-08 23:01:58] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:58] [DEBUG] [drone.c:119] Position: X: 47.999298 Y: 1.000000
+[2025-11-08 23:01:58] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:58] [DEBUG] [drone.c:119] Position: X: 46.999523 Y: 1.000000
+[2025-11-08 23:01:58] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:58] [DEBUG] [drone.c:119] Position: X: 45.999672 Y: 1.000000
+[2025-11-08 23:01:58] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:58] [DEBUG] [drone.c:119] Position: X: 44.999771 Y: 1.000000
+[2025-11-08 23:01:58] [DEBUG] [drone.c:114] Fx: -2, Fy: -1
+[2025-11-08 23:01:58] [DEBUG] [drone.c:119] Position: X: 43.999836 Y: 1.000000
+[2025-11-08 23:01:58] [DEBUG] [I_process.c:76] New forze: -2 0
+[2025-11-08 23:01:58] [DEBUG] [BB.c:49] Leggo input: Fx: -2 Fy: 0
+[2025-11-08 23:01:58] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:01:58] [DEBUG] [drone.c:119] Position: X: 42.999878 Y: 1.000000
+[2025-11-08 23:01:58] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:01:58] [DEBUG] [drone.c:119] Position: X: 41.999905 Y: 1.000000
+[2025-11-08 23:01:58] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:01:58] [DEBUG] [drone.c:119] Position: X: 40.999924 Y: 1.000000
+[2025-11-08 23:01:59] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:01:59] [DEBUG] [drone.c:119] Position: X: 39.999935 Y: 1.000000
+[2025-11-08 23:01:59] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:01:59] [DEBUG] [drone.c:119] Position: X: 38.999943 Y: 1.000000
+[2025-11-08 23:01:59] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:01:59] [DEBUG] [drone.c:119] Position: X: 37.999947 Y: 1.000000
+[2025-11-08 23:01:59] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:01:59] [DEBUG] [drone.c:119] Position: X: 36.999950 Y: 1.000000
+[2025-11-08 23:01:59] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:01:59] [DEBUG] [drone.c:119] Position: X: 35.999954 Y: 1.000000
+[2025-11-08 23:01:59] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:01:59] [DEBUG] [drone.c:119] Position: X: 34.999958 Y: 1.000000
+[2025-11-08 23:01:59] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:01:59] [DEBUG] [drone.c:119] Position: X: 33.999962 Y: 1.000000
+[2025-11-08 23:01:59] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:01:59] [DEBUG] [drone.c:119] Position: X: 32.999966 Y: 1.000000
+[2025-11-08 23:01:59] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:01:59] [DEBUG] [drone.c:119] Position: X: 31.999968 Y: 1.000000
+[2025-11-08 23:01:59] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:01:59] [DEBUG] [drone.c:119] Position: X: 30.999969 Y: 1.000000
+[2025-11-08 23:02:00] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:02:00] [DEBUG] [drone.c:119] Position: X: 29.999971 Y: 1.000000
+[2025-11-08 23:02:00] [DEBUG] [I_process.c:76] New forze: -2 1
+[2025-11-08 23:02:00] [DEBUG] [BB.c:49] Leggo input: Fx: -2 Fy: 1
+[2025-11-08 23:02:00] [DEBUG] [drone.c:114] Fx: -2, Fy: 1
+[2025-11-08 23:02:00] [DEBUG] [drone.c:119] Position: X: 28.999973 Y: 1.166667
+[2025-11-08 23:02:00] [DEBUG] [drone.c:114] Fx: -2, Fy: 1
+[2025-11-08 23:02:00] [DEBUG] [drone.c:119] Position: X: 27.999975 Y: 1.444444
+[2025-11-08 23:02:00] [DEBUG] [drone.c:114] Fx: -2, Fy: 1
+[2025-11-08 23:02:00] [DEBUG] [drone.c:119] Position: X: 26.999977 Y: 1.796296
+[2025-11-08 23:02:00] [DEBUG] [drone.c:114] Fx: -2, Fy: 1
+[2025-11-08 23:02:00] [DEBUG] [drone.c:119] Position: X: 25.999979 Y: 2.197531
+[2025-11-08 23:02:00] [DEBUG] [drone.c:114] Fx: -2, Fy: 1
+[2025-11-08 23:02:00] [DEBUG] [drone.c:119] Position: X: 24.999981 Y: 2.631687
+[2025-11-08 23:02:00] [DEBUG] [I_process.c:76] New forze: -1 1
+[2025-11-08 23:02:00] [DEBUG] [BB.c:49] Leggo input: Fx: -1 Fy: 1
+[2025-11-08 23:02:00] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:02:00] [DEBUG] [drone.c:119] Position: X: 24.166649 Y: 3.087791
+[2025-11-08 23:02:00] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:02:00] [DEBUG] [drone.c:119] Position: X: 23.444427 Y: 3.558528
+[2025-11-08 23:02:00] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:02:00] [DEBUG] [drone.c:119] Position: X: 22.796280 Y: 4.039019
+[2025-11-08 23:02:00] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:02:00] [DEBUG] [drone.c:119] Position: X: 22.197515 Y: 4.526012
+[2025-11-08 23:02:01] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:02:01] [DEBUG] [drone.c:119] Position: X: 21.631672 Y: 5.017342
+[2025-11-08 23:02:01] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:02:01] [DEBUG] [drone.c:119] Position: X: 21.087776 Y: 5.511561
+[2025-11-08 23:02:01] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:02:01] [DEBUG] [drone.c:119] Position: X: 20.558512 Y: 6.007707
+[2025-11-08 23:02:01] [DEBUG] [drone.c:114] Fx: -1, Fy: 1
+[2025-11-08 23:02:01] [DEBUG] [drone.c:119] Position: X: 20.039001 Y: 6.505138
+[2025-11-08 23:02:01] [DEBUG] [I_process.c:76] New forze: -1 0
+[2025-11-08 23:02:01] [DEBUG] [BB.c:49] Leggo input: Fx: -1 Fy: 0
+[2025-11-08 23:02:01] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:02:01] [DEBUG] [drone.c:119] Position: X: 19.525995 Y: 6.836759
+[2025-11-08 23:02:01] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:02:01] [DEBUG] [drone.c:119] Position: X: 19.017324 Y: 7.057839
+[2025-11-08 23:02:01] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:02:01] [DEBUG] [drone.c:119] Position: X: 18.511543 Y: 7.205226
+[2025-11-08 23:02:01] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:02:01] [DEBUG] [drone.c:119] Position: X: 18.007689 Y: 7.303484
+[2025-11-08 23:02:01] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:02:01] [DEBUG] [drone.c:119] Position: X: 17.505119 Y: 7.368989
+[2025-11-08 23:02:01] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:02:01] [DEBUG] [drone.c:119] Position: X: 17.003407 Y: 7.412660
+[2025-11-08 23:02:02] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:02:02] [DEBUG] [drone.c:119] Position: X: 16.502264 Y: 7.441773
+[2025-11-08 23:02:02] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:02:02] [DEBUG] [drone.c:119] Position: X: 16.001503 Y: 7.461182
+[2025-11-08 23:02:02] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:02:02] [DEBUG] [drone.c:119] Position: X: 15.500996 Y: 7.474121
+[2025-11-08 23:02:02] [DEBUG] [I_process.c:76] New forze: 0 0
+[2025-11-08 23:02:02] [DEBUG] [BB.c:49] Leggo input: Fx: 0 Fy: 0
+[2025-11-08 23:02:02] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:02] [DEBUG] [drone.c:119] Position: X: 15.167324 Y: 7.482747
+[2025-11-08 23:02:02] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:02] [DEBUG] [drone.c:119] Position: X: 14.944877 Y: 7.488497
+[2025-11-08 23:02:02] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:02] [DEBUG] [drone.c:119] Position: X: 14.796578 Y: 7.492331
+[2025-11-08 23:02:02] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:02] [DEBUG] [drone.c:119] Position: X: 14.697713 Y: 7.494887
+[2025-11-08 23:02:02] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:02] [DEBUG] [drone.c:119] Position: X: 14.631803 Y: 7.496591
+[2025-11-08 23:02:02] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:02] [DEBUG] [drone.c:119] Position: X: 14.587862 Y: 7.497726
+[2025-11-08 23:02:02] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:02] [DEBUG] [drone.c:119] Position: X: 14.558568 Y: 7.498484
+[2025-11-08 23:02:03] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:03] [DEBUG] [drone.c:119] Position: X: 14.539039 Y: 7.498989
+[2025-11-08 23:02:03] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:03] [DEBUG] [drone.c:119] Position: X: 14.526019 Y: 7.499325
+[2025-11-08 23:02:03] [DEBUG] [I_process.c:76] New forze: 1 0
+[2025-11-08 23:02:03] [DEBUG] [BB.c:49] Leggo input: Fx: 1 Fy: 0
+[2025-11-08 23:02:03] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:03] [DEBUG] [drone.c:119] Position: X: 14.684006 Y: 7.499550
+[2025-11-08 23:02:03] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:03] [DEBUG] [drone.c:119] Position: X: 14.955997 Y: 7.499700
+[2025-11-08 23:02:03] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:03] [DEBUG] [drone.c:119] Position: X: 15.303990 Y: 7.499799
+[2025-11-08 23:02:03] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:03] [DEBUG] [drone.c:119] Position: X: 15.702653 Y: 7.499866
+[2025-11-08 23:02:03] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:03] [DEBUG] [drone.c:119] Position: X: 16.135094 Y: 7.499910
+[2025-11-08 23:02:03] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:03] [DEBUG] [drone.c:119] Position: X: 16.590054 Y: 7.499939
+[2025-11-08 23:02:03] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:03] [DEBUG] [drone.c:119] Position: X: 17.060026 Y: 7.499959
+[2025-11-08 23:02:03] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:03] [DEBUG] [drone.c:119] Position: X: 17.540009 Y: 7.499972
+[2025-11-08 23:02:04] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:04] [DEBUG] [drone.c:119] Position: X: 18.026663 Y: 7.499980
+[2025-11-08 23:02:04] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:04] [DEBUG] [drone.c:119] Position: X: 18.517765 Y: 7.499986
+[2025-11-08 23:02:04] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:04] [DEBUG] [drone.c:119] Position: X: 19.011833 Y: 7.499990
+[2025-11-08 23:02:04] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:04] [DEBUG] [drone.c:119] Position: X: 19.507879 Y: 7.499992
+[2025-11-08 23:02:04] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:04] [DEBUG] [drone.c:119] Position: X: 20.005243 Y: 7.499994
+[2025-11-08 23:02:04] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:04] [DEBUG] [drone.c:119] Position: X: 20.503487 Y: 7.499995
+[2025-11-08 23:02:04] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:04] [DEBUG] [drone.c:119] Position: X: 21.002316 Y: 7.499995
+[2025-11-08 23:02:04] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:04] [DEBUG] [drone.c:119] Position: X: 21.501535 Y: 7.499996
+[2025-11-08 23:02:04] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:04] [DEBUG] [drone.c:119] Position: X: 22.001015 Y: 7.499996
+[2025-11-08 23:02:04] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:04] [DEBUG] [drone.c:119] Position: X: 22.500668 Y: 7.499997
+[2025-11-08 23:02:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:05] [DEBUG] [drone.c:119] Position: X: 23.000437 Y: 7.499997
+[2025-11-08 23:02:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:05] [DEBUG] [drone.c:119] Position: X: 23.500282 Y: 7.499998
+[2025-11-08 23:02:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:05] [DEBUG] [drone.c:119] Position: X: 24.000179 Y: 7.499998
+[2025-11-08 23:02:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:05] [DEBUG] [drone.c:119] Position: X: 24.500111 Y: 7.499999
+[2025-11-08 23:02:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:05] [DEBUG] [drone.c:119] Position: X: 25.000065 Y: 7.499999
+[2025-11-08 23:02:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:05] [DEBUG] [drone.c:119] Position: X: 25.500034 Y: 7.500000
+[2025-11-08 23:02:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:05] [DEBUG] [drone.c:119] Position: X: 26.000013 Y: 7.500000
+[2025-11-08 23:02:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:05] [DEBUG] [drone.c:119] Position: X: 26.500000 Y: 7.500000
+[2025-11-08 23:02:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:05] [DEBUG] [drone.c:119] Position: X: 26.999990 Y: 7.500001
+[2025-11-08 23:02:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:05] [DEBUG] [drone.c:119] Position: X: 27.499985 Y: 7.500001
+[2025-11-08 23:02:06] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:06] [DEBUG] [drone.c:119] Position: X: 27.999981 Y: 7.500002
+[2025-11-08 23:02:06] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:06] [DEBUG] [drone.c:119] Position: X: 28.499979 Y: 7.500002
+[2025-11-08 23:02:06] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:02:06] [DEBUG] [drone.c:119] Position: X: 28.999977 Y: 7.500003
+[2025-11-08 23:02:06] [DEBUG] [I_process.c:76] New forze: 2 0
+[2025-11-08 23:02:06] [DEBUG] [BB.c:49] Leggo input: Fx: 2 Fy: 0
+[2025-11-08 23:02:06] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:02:06] [DEBUG] [drone.c:119] Position: X: 29.666643 Y: 7.500003
+[2025-11-08 23:02:06] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:02:06] [DEBUG] [drone.c:119] Position: X: 30.444420 Y: 7.500004
+[2025-11-08 23:02:06] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:02:06] [DEBUG] [drone.c:119] Position: X: 31.296270 Y: 7.500004
+[2025-11-08 23:02:06] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:02:06] [DEBUG] [drone.c:119] Position: X: 32.197502 Y: 7.500005
+[2025-11-08 23:02:06] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:02:06] [DEBUG] [drone.c:119] Position: X: 33.131657 Y: 7.500005
+[2025-11-08 23:02:06] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:02:06] [DEBUG] [drone.c:119] Position: X: 34.087761 Y: 7.500006
+[2025-11-08 23:02:07] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:02:07] [DEBUG] [drone.c:119] Position: X: 35.058498 Y: 7.500006
+[2025-11-08 23:02:07] [DEBUG] [I_process.c:76] New forze: 3 0
+[2025-11-08 23:02:07] [DEBUG] [BB.c:49] Leggo input: Fx: 3 Fy: 0
+[2025-11-08 23:02:07] [DEBUG] [drone.c:114] Fx: 3, Fy: 0
+[2025-11-08 23:02:07] [DEBUG] [drone.c:119] Position: X: 36.205658 Y: 7.500007
+[2025-11-08 23:02:07] [DEBUG] [drone.c:114] Fx: 3, Fy: 0
+[2025-11-08 23:02:07] [DEBUG] [drone.c:119] Position: X: 37.470432 Y: 7.500007
+[2025-11-08 23:02:07] [DEBUG] [drone.c:114] Fx: 3, Fy: 0
+[2025-11-08 23:02:07] [DEBUG] [drone.c:119] Position: X: 38.813614 Y: 7.500008
+[2025-11-08 23:02:07] [DEBUG] [drone.c:114] Fx: 3, Fy: 0
+[2025-11-08 23:02:07] [DEBUG] [drone.c:119] Position: X: 40.209068 Y: 7.500008
+[2025-11-08 23:02:07] [DEBUG] [drone.c:114] Fx: 3, Fy: 0
+[2025-11-08 23:02:07] [DEBUG] [drone.c:119] Position: X: 41.639370 Y: 7.500009
+[2025-11-08 23:02:07] [DEBUG] [drone.c:114] Fx: 3, Fy: 0
+[2025-11-08 23:02:07] [DEBUG] [drone.c:119] Position: X: 43.092903 Y: 7.500009
+[2025-11-08 23:02:07] [DEBUG] [drone.c:114] Fx: 3, Fy: 0
+[2025-11-08 23:02:07] [DEBUG] [drone.c:119] Position: X: 44.561924 Y: 7.500010
+[2025-11-08 23:02:07] [DEBUG] [drone.c:114] Fx: 3, Fy: 0
+[2025-11-08 23:02:07] [DEBUG] [drone.c:119] Position: X: 46.041271 Y: 7.500010
+[2025-11-08 23:02:07] [DEBUG] [I_process.c:76] New forze: 4 0
+[2025-11-08 23:02:07] [DEBUG] [BB.c:49] Leggo input: Fx: 4 Fy: 0
+[2025-11-08 23:02:07] [DEBUG] [drone.c:114] Fx: 4, Fy: 0
+[2025-11-08 23:02:07] [DEBUG] [drone.c:119] Position: X: 47.694168 Y: 7.500010
+[2025-11-08 23:02:08] [DEBUG] [drone.c:114] Fx: 4, Fy: 0
+[2025-11-08 23:02:08] [DEBUG] [drone.c:119] Position: X: 49.462765 Y: 7.500011
+[2025-11-08 23:02:08] [DEBUG] [drone.c:114] Fx: 4, Fy: 0
+[2025-11-08 23:02:08] [DEBUG] [drone.c:119] Position: X: 51.308495 Y: 7.500011
+[2025-11-08 23:02:08] [DEBUG] [drone.c:114] Fx: 4, Fy: 0
+[2025-11-08 23:02:08] [DEBUG] [drone.c:119] Position: X: 53.205647 Y: 7.500012
+[2025-11-08 23:02:08] [DEBUG] [drone.c:114] Fx: 4, Fy: 0
+[2025-11-08 23:02:08] [DEBUG] [drone.c:119] Position: X: 55.137081 Y: 7.500012
+[2025-11-08 23:02:08] [DEBUG] [drone.c:114] Fx: 4, Fy: 0
+[2025-11-08 23:02:08] [DEBUG] [drone.c:119] Position: X: 57.091370 Y: 7.500013
+[2025-11-08 23:02:08] [DEBUG] [drone.c:114] Fx: 4, Fy: 0
+[2025-11-08 23:02:08] [DEBUG] [drone.c:119] Position: X: 59.060894 Y: 7.500013
+[2025-11-08 23:02:08] [DEBUG] [drone.c:114] Fx: 4, Fy: 0
+[2025-11-08 23:02:08] [DEBUG] [drone.c:119] Position: X: 61.040577 Y: 7.500014
+[2025-11-08 23:02:08] [DEBUG] [drone.c:114] Fx: 4, Fy: 0
+[2025-11-08 23:02:08] [DEBUG] [drone.c:119] Position: X: 63.027031 Y: 7.500014
+[2025-11-08 23:02:08] [DEBUG] [drone.c:114] Fx: 4, Fy: 0
+[2025-11-08 23:02:08] [DEBUG] [drone.c:119] Position: X: 65.017998 Y: 7.500015
+[2025-11-08 23:02:08] [DEBUG] [drone.c:114] Fx: 4, Fy: 0
+[2025-11-08 23:02:08] [DEBUG] [drone.c:119] Position: X: 67.011978 Y: 7.500015
+[2025-11-08 23:02:08] [DEBUG] [I_process.c:76] New forze: 0 0
+[2025-11-08 23:02:08] [DEBUG] [BB.c:49] Leggo input: Fx: 0 Fy: 0
+[2025-11-08 23:02:09] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:09] [DEBUG] [drone.c:119] Position: X: 68.341301 Y: 7.500016
+[2025-11-08 23:02:09] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:09] [DEBUG] [drone.c:119] Position: X: 69.227516 Y: 7.500016
+[2025-11-08 23:02:09] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:09] [DEBUG] [drone.c:119] Position: X: 69.818329 Y: 7.500017
+[2025-11-08 23:02:09] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:09] [DEBUG] [drone.c:119] Position: X: 70.212204 Y: 7.500017
+[2025-11-08 23:02:09] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:09] [DEBUG] [drone.c:119] Position: X: 70.474785 Y: 7.500018
+[2025-11-08 23:02:09] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:09] [DEBUG] [drone.c:119] Position: X: 70.649841 Y: 7.500018
+[2025-11-08 23:02:09] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:09] [DEBUG] [drone.c:119] Position: X: 70.766548 Y: 7.500019
+[2025-11-08 23:02:09] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:09] [DEBUG] [drone.c:119] Position: X: 70.844353 Y: 7.500019
+[2025-11-08 23:02:09] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:09] [DEBUG] [drone.c:119] Position: X: 70.896225 Y: 7.500020
+[2025-11-08 23:02:09] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:09] [DEBUG] [drone.c:119] Position: X: 70.930809 Y: 7.500020
+[2025-11-08 23:02:10] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:10] [DEBUG] [drone.c:119] Position: X: 70.953865 Y: 7.500021
+[2025-11-08 23:02:10] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:10] [DEBUG] [drone.c:119] Position: X: 70.969238 Y: 7.500021
+[2025-11-08 23:02:10] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:10] [DEBUG] [drone.c:119] Position: X: 70.979485 Y: 7.500021
+[2025-11-08 23:02:10] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:10] [DEBUG] [drone.c:119] Position: X: 70.986313 Y: 7.500022
+[2025-11-08 23:02:10] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:10] [DEBUG] [drone.c:119] Position: X: 70.990868 Y: 7.500022
+[2025-11-08 23:02:10] [DEBUG] [BB.c:49] Leggo input: Fx: 0 Fy: 0
+[2025-11-08 23:02:10] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:10] [DEBUG] [drone.c:119] Position: X: 70.993904 Y: 7.500023
+[2025-11-08 23:02:10] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:10] [DEBUG] [drone.c:119] Position: X: 70.995926 Y: 7.500023
+[2025-11-08 23:02:10] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:10] [DEBUG] [drone.c:119] Position: X: 70.997276 Y: 7.500024
+[2025-11-08 23:02:10] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:10] [DEBUG] [drone.c:119] Position: X: 70.998177 Y: 7.500024
+[2025-11-08 23:02:10] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:10] [DEBUG] [drone.c:119] Position: X: 70.998779 Y: 7.500025
+[2025-11-08 23:02:11] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:11] [DEBUG] [drone.c:119] Position: X: 70.999184 Y: 7.500025
+[2025-11-08 23:02:11] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:11] [DEBUG] [drone.c:119] Position: X: 70.999451 Y: 7.500026
+[2025-11-08 23:02:11] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:11] [DEBUG] [drone.c:119] Position: X: 70.999626 Y: 7.500026
+[2025-11-08 23:02:11] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:11] [DEBUG] [drone.c:119] Position: X: 70.999741 Y: 7.500027
+[2025-11-08 23:02:11] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:11] [DEBUG] [drone.c:119] Position: X: 70.999817 Y: 7.500027
+[2025-11-08 23:02:11] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:11] [DEBUG] [drone.c:119] Position: X: 70.999870 Y: 7.500028
+[2025-11-08 23:02:11] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:11] [DEBUG] [drone.c:119] Position: X: 70.999908 Y: 7.500028
+[2025-11-08 23:02:11] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:11] [DEBUG] [drone.c:119] Position: X: 70.999931 Y: 7.500029
+[2025-11-08 23:02:11] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:11] [DEBUG] [drone.c:119] Position: X: 70.999947 Y: 7.500029
+[2025-11-08 23:02:11] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:11] [DEBUG] [drone.c:119] Position: X: 70.999954 Y: 7.500030
+[2025-11-08 23:02:12] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:12] [DEBUG] [drone.c:119] Position: X: 70.999962 Y: 7.500030
+[2025-11-08 23:02:12] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:12] [DEBUG] [drone.c:119] Position: X: 70.999969 Y: 7.500031
+[2025-11-08 23:02:12] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:12] [DEBUG] [drone.c:119] Position: X: 70.999977 Y: 7.500031
+[2025-11-08 23:02:12] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:12] [DEBUG] [drone.c:119] Position: X: 70.999985 Y: 7.500031
+[2025-11-08 23:02:12] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:12] [DEBUG] [drone.c:119] Position: X: 70.999992 Y: 7.500032
+[2025-11-08 23:02:12] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:12] [DEBUG] [drone.c:119] Position: X: 71.000000 Y: 7.500032
+[2025-11-08 23:02:12] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:12] [DEBUG] [drone.c:119] Position: X: 71.000008 Y: 7.500033
+[2025-11-08 23:02:12] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:12] [DEBUG] [drone.c:119] Position: X: 71.000015 Y: 7.500033
+[2025-11-08 23:02:12] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:02:12] [DEBUG] [drone.c:119] Position: X: 71.000023 Y: 7.500034
+[2025-11-08 23:02:12] [DEBUG] [BB.c:49] Leggo input: Fx: 0 Fy: 0
+[2025-11-08 23:10:49] [DEBUG] [drone.c:96] Inizio il ciclo
+[2025-11-08 23:10:49] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:49] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:49] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:49] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:49] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:49] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:50] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:50] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:50] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:50] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:50] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:50] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:50] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:50] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:50] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:50] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:50] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:50] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:50] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:50] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:50] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:50] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:50] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:50] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:50] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:50] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:51] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:51] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:51] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:51] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:51] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:51] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:51] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:51] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:51] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:51] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:51] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:51] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:51] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:51] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:51] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:51] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:51] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:51] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:51] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:51] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:52] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:52] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:52] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:52] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:52] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:52] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:52] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:52] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:52] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:52] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:52] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:52] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:52] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:52] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:52] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:52] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:52] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:52] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:52] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:52] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:53] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:53] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:53] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:53] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:53] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:53] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:53] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:53] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:53] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:53] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:53] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:53] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:53] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:53] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:53] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:53] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:53] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:53] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:53] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:53] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:54] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:54] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:54] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:54] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:54] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:54] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:54] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:54] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:54] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:54] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:54] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:54] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:54] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:54] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:54] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:54] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:54] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:54] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:54] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:54] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:55] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:55] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:55] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:55] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:55] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:55] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:55] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:55] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:55] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:55] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:55] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:55] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:55] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:55] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:55] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:55] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:55] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:55] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:55] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:55] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:56] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:56] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:56] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:56] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:56] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:56] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:56] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:56] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:56] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:56] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:56] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:56] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:56] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:56] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:56] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:56] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:56] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:56] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:56] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:56] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:57] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:57] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:57] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:57] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:57] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:57] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:57] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:57] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:57] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:57] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:57] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:57] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:57] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:57] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:57] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:57] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:57] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:57] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:57] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:57] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:58] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:58] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:58] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:58] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:58] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:58] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:58] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:58] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:58] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:58] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:58] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:58] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:58] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:58] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:58] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:58] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:58] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:58] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:58] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:58] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:59] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:59] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:59] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:59] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:59] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:59] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:59] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:59] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:59] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:59] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:59] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:59] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:59] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:59] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:59] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:59] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:59] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:59] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:10:59] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:10:59] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:00] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:00] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:00] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:00] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:00] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:00] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:00] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:00] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:00] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:00] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:00] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:00] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:00] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:00] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:00] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:00] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:00] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:00] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:00] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:00] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:01] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:01] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:01] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:01] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:01] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:01] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:01] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:01] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:01] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:01] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:01] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:01] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:01] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:01] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:01] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:01] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:01] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:01] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:01] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:01] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:02] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:02] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:02] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:02] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:02] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:02] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:02] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:02] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:02] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:02] [DEBUG] [drone.c:119] Position: X: 1.000000 Y: 1.000000
+[2025-11-08 23:11:02] [DEBUG] [I_process.c:76] New forze: 1 0
+[2025-11-08 23:11:02] [DEBUG] [BB.c:54] Leggo input: Fx: 1 Fy: 0
+[2025-11-08 23:11:02] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:02] [DEBUG] [drone.c:119] Position: X: 1.166667 Y: 1.000000
+[2025-11-08 23:11:02] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:02] [DEBUG] [drone.c:119] Position: X: 1.444444 Y: 1.000000
+[2025-11-08 23:11:02] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:02] [DEBUG] [drone.c:119] Position: X: 1.796296 Y: 1.000000
+[2025-11-08 23:11:02] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:02] [DEBUG] [drone.c:119] Position: X: 2.197531 Y: 1.000000
+[2025-11-08 23:11:02] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:02] [DEBUG] [drone.c:119] Position: X: 2.631687 Y: 1.000000
+[2025-11-08 23:11:03] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:03] [DEBUG] [drone.c:119] Position: X: 3.087791 Y: 1.000000
+[2025-11-08 23:11:03] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:03] [DEBUG] [drone.c:119] Position: X: 3.558528 Y: 1.000000
+[2025-11-08 23:11:03] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:03] [DEBUG] [drone.c:119] Position: X: 4.039019 Y: 1.000000
+[2025-11-08 23:11:03] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:03] [DEBUG] [drone.c:119] Position: X: 4.526012 Y: 1.000000
+[2025-11-08 23:11:03] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:03] [DEBUG] [drone.c:119] Position: X: 5.017342 Y: 1.000000
+[2025-11-08 23:11:03] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:03] [DEBUG] [drone.c:119] Position: X: 5.511561 Y: 1.000000
+[2025-11-08 23:11:03] [DEBUG] [I_process.c:76] New forze: 2 0
+[2025-11-08 23:11:03] [DEBUG] [BB.c:54] Leggo input: Fx: 2 Fy: 0
+[2025-11-08 23:11:03] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:11:03] [DEBUG] [drone.c:119] Position: X: 6.174374 Y: 1.000000
+[2025-11-08 23:11:03] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:11:03] [DEBUG] [drone.c:119] Position: X: 6.949582 Y: 1.000000
+[2025-11-08 23:11:03] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:11:03] [DEBUG] [drone.c:119] Position: X: 7.799721 Y: 1.000000
+[2025-11-08 23:11:03] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:11:03] [DEBUG] [drone.c:119] Position: X: 8.699814 Y: 1.000000
+[2025-11-08 23:11:04] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:11:04] [DEBUG] [drone.c:119] Position: X: 9.633209 Y: 1.000000
+[2025-11-08 23:11:04] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:11:04] [DEBUG] [drone.c:119] Position: X: 10.588806 Y: 1.000000
+[2025-11-08 23:11:04] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:11:04] [DEBUG] [drone.c:119] Position: X: 11.559204 Y: 1.000000
+[2025-11-08 23:11:04] [DEBUG] [drone.c:114] Fx: 2, Fy: 0
+[2025-11-08 23:11:04] [DEBUG] [drone.c:119] Position: X: 12.539470 Y: 1.000000
+[2025-11-08 23:11:04] [DEBUG] [I_process.c:76] New forze: 1 0
+[2025-11-08 23:11:04] [DEBUG] [BB.c:54] Leggo input: Fx: 1 Fy: 0
+[2025-11-08 23:11:04] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:04] [DEBUG] [drone.c:119] Position: X: 13.359647 Y: 1.000000
+[2025-11-08 23:11:04] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:04] [DEBUG] [drone.c:119] Position: X: 14.073098 Y: 1.000000
+[2025-11-08 23:11:04] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:04] [DEBUG] [drone.c:119] Position: X: 14.715399 Y: 1.000000
+[2025-11-08 23:11:04] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:04] [DEBUG] [drone.c:119] Position: X: 15.310266 Y: 1.000000
+[2025-11-08 23:11:04] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:04] [DEBUG] [drone.c:119] Position: X: 15.873510 Y: 1.000000
+[2025-11-08 23:11:04] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:04] [DEBUG] [drone.c:119] Position: X: 16.415674 Y: 1.000000
+[2025-11-08 23:11:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:05] [DEBUG] [drone.c:119] Position: X: 16.943783 Y: 1.000000
+[2025-11-08 23:11:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:05] [DEBUG] [drone.c:119] Position: X: 17.462523 Y: 1.000000
+[2025-11-08 23:11:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:05] [DEBUG] [drone.c:119] Position: X: 17.975016 Y: 1.000000
+[2025-11-08 23:11:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:05] [DEBUG] [drone.c:119] Position: X: 18.483345 Y: 1.000000
+[2025-11-08 23:11:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:05] [DEBUG] [drone.c:119] Position: X: 18.988897 Y: 1.000000
+[2025-11-08 23:11:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:05] [DEBUG] [drone.c:119] Position: X: 19.492599 Y: 1.000000
+[2025-11-08 23:11:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:05] [DEBUG] [drone.c:119] Position: X: 19.995068 Y: 1.000000
+[2025-11-08 23:11:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:05] [DEBUG] [drone.c:119] Position: X: 20.496714 Y: 1.000000
+[2025-11-08 23:11:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:05] [DEBUG] [drone.c:119] Position: X: 20.997810 Y: 1.000000
+[2025-11-08 23:11:05] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:05] [DEBUG] [drone.c:119] Position: X: 21.498541 Y: 1.000000
+[2025-11-08 23:11:06] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:06] [DEBUG] [drone.c:119] Position: X: 21.999027 Y: 1.000000
+[2025-11-08 23:11:06] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:06] [DEBUG] [drone.c:119] Position: X: 22.499352 Y: 1.000000
+[2025-11-08 23:11:06] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:06] [DEBUG] [drone.c:119] Position: X: 22.999567 Y: 1.000000
+[2025-11-08 23:11:06] [DEBUG] [I_process.c:76] New forze: 1 1
+[2025-11-08 23:11:06] [DEBUG] [BB.c:54] Leggo input: Fx: 1 Fy: 1
+[2025-11-08 23:11:06] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:06] [DEBUG] [drone.c:119] Position: X: 23.499710 Y: 1.166667
+[2025-11-08 23:11:06] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:06] [DEBUG] [drone.c:119] Position: X: 23.999805 Y: 1.444444
+[2025-11-08 23:11:06] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:06] [DEBUG] [drone.c:119] Position: X: 24.499868 Y: 1.796296
+[2025-11-08 23:11:06] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:06] [DEBUG] [drone.c:119] Position: X: 24.999910 Y: 2.197531
+[2025-11-08 23:11:06] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:06] [DEBUG] [drone.c:119] Position: X: 25.499939 Y: 2.631687
+[2025-11-08 23:11:06] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:06] [DEBUG] [drone.c:119] Position: X: 25.999958 Y: 3.087791
+[2025-11-08 23:11:06] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:06] [DEBUG] [drone.c:119] Position: X: 26.499971 Y: 3.558528
+[2025-11-08 23:11:07] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:07] [DEBUG] [drone.c:119] Position: X: 26.999981 Y: 4.039019
+[2025-11-08 23:11:07] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:07] [DEBUG] [drone.c:119] Position: X: 27.499987 Y: 4.526012
+[2025-11-08 23:11:07] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:07] [DEBUG] [drone.c:119] Position: X: 27.999990 Y: 5.017342
+[2025-11-08 23:11:07] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:07] [DEBUG] [drone.c:119] Position: X: 28.499992 Y: 5.511561
+[2025-11-08 23:11:07] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:07] [DEBUG] [drone.c:119] Position: X: 28.999994 Y: 6.007707
+[2025-11-08 23:11:07] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:07] [DEBUG] [drone.c:119] Position: X: 29.499996 Y: 6.505138
+[2025-11-08 23:11:07] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:07] [DEBUG] [drone.c:119] Position: X: 29.999998 Y: 7.003425
+[2025-11-08 23:11:07] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:07] [DEBUG] [drone.c:119] Position: X: 30.500000 Y: 7.502283
+[2025-11-08 23:11:07] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:07] [DEBUG] [drone.c:119] Position: X: 31.000002 Y: 8.001522
+[2025-11-08 23:11:07] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:07] [DEBUG] [drone.c:119] Position: X: 31.500004 Y: 8.501015
+[2025-11-08 23:11:08] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:08] [DEBUG] [drone.c:119] Position: X: 32.000004 Y: 9.000676
+[2025-11-08 23:11:08] [DEBUG] [drone.c:114] Fx: 1, Fy: 1
+[2025-11-08 23:11:08] [DEBUG] [drone.c:119] Position: X: 32.500004 Y: 9.500450
+[2025-11-08 23:11:08] [DEBUG] [I_process.c:76] New forze: 1 0
+[2025-11-08 23:11:08] [DEBUG] [BB.c:54] Leggo input: Fx: 1 Fy: 0
+[2025-11-08 23:11:08] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:08] [DEBUG] [drone.c:119] Position: X: 33.000004 Y: 9.833632
+[2025-11-08 23:11:08] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:08] [DEBUG] [drone.c:119] Position: X: 33.500004 Y: 10.055754
+[2025-11-08 23:11:08] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:08] [DEBUG] [drone.c:119] Position: X: 34.000004 Y: 10.203835
+[2025-11-08 23:11:08] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:08] [DEBUG] [drone.c:119] Position: X: 34.500004 Y: 10.302555
+[2025-11-08 23:11:08] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:08] [DEBUG] [drone.c:119] Position: X: 35.000004 Y: 10.368369
+[2025-11-08 23:11:08] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:08] [DEBUG] [drone.c:119] Position: X: 35.500004 Y: 10.412245
+[2025-11-08 23:11:08] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:08] [DEBUG] [drone.c:119] Position: X: 36.000004 Y: 10.441495
+[2025-11-08 23:11:09] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:09] [DEBUG] [drone.c:119] Position: X: 36.500004 Y: 10.460995
+[2025-11-08 23:11:09] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:09] [DEBUG] [drone.c:119] Position: X: 37.000004 Y: 10.473994
+[2025-11-08 23:11:09] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:09] [DEBUG] [drone.c:119] Position: X: 37.500004 Y: 10.482660
+[2025-11-08 23:11:09] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:09] [DEBUG] [drone.c:119] Position: X: 38.000004 Y: 10.488438
+[2025-11-08 23:11:09] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:09] [DEBUG] [drone.c:119] Position: X: 38.500004 Y: 10.492290
+[2025-11-08 23:11:09] [DEBUG] [I_process.c:76] New forze: 1 -1
+[2025-11-08 23:11:09] [DEBUG] [BB.c:54] Leggo input: Fx: 1 Fy: -1
+[2025-11-08 23:11:09] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:11:09] [DEBUG] [drone.c:119] Position: X: 39.000004 Y: 10.328191
+[2025-11-08 23:11:09] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:11:09] [DEBUG] [drone.c:119] Position: X: 39.500004 Y: 10.052125
+[2025-11-08 23:11:09] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:11:09] [DEBUG] [drone.c:119] Position: X: 40.000004 Y: 9.701414
+[2025-11-08 23:11:09] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:11:09] [DEBUG] [drone.c:119] Position: X: 40.500004 Y: 9.300941
+[2025-11-08 23:11:09] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:11:09] [DEBUG] [drone.c:119] Position: X: 41.000004 Y: 8.867291
+[2025-11-08 23:11:10] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:11:10] [DEBUG] [drone.c:119] Position: X: 41.500004 Y: 8.411526
+[2025-11-08 23:11:10] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:11:10] [DEBUG] [drone.c:119] Position: X: 42.000004 Y: 7.941015
+[2025-11-08 23:11:10] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:11:10] [DEBUG] [drone.c:119] Position: X: 42.500004 Y: 7.460675
+[2025-11-08 23:11:10] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:11:10] [DEBUG] [drone.c:119] Position: X: 43.000004 Y: 6.973781
+[2025-11-08 23:11:10] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:11:10] [DEBUG] [drone.c:119] Position: X: 43.500004 Y: 6.482519
+[2025-11-08 23:11:10] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:11:10] [DEBUG] [drone.c:119] Position: X: 44.000004 Y: 5.988344
+[2025-11-08 23:11:10] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:11:10] [DEBUG] [drone.c:119] Position: X: 44.500004 Y: 5.492227
+[2025-11-08 23:11:10] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:11:10] [DEBUG] [drone.c:119] Position: X: 45.000004 Y: 4.994816
+[2025-11-08 23:11:10] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:11:10] [DEBUG] [drone.c:119] Position: X: 45.500004 Y: 4.496542
+[2025-11-08 23:11:10] [DEBUG] [drone.c:114] Fx: 1, Fy: -1
+[2025-11-08 23:11:10] [DEBUG] [drone.c:119] Position: X: 46.000004 Y: 3.997692
+[2025-11-08 23:11:10] [DEBUG] [I_process.c:76] New forze: 1 0
+[2025-11-08 23:11:10] [DEBUG] [BB.c:54] Leggo input: Fx: 1 Fy: 0
+[2025-11-08 23:11:11] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:11] [DEBUG] [drone.c:119] Position: X: 46.500004 Y: 3.665125
+[2025-11-08 23:11:11] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:11] [DEBUG] [drone.c:119] Position: X: 47.000004 Y: 3.443414
+[2025-11-08 23:11:11] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:11] [DEBUG] [drone.c:119] Position: X: 47.500004 Y: 3.295607
+[2025-11-08 23:11:11] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:11] [DEBUG] [drone.c:119] Position: X: 48.000004 Y: 3.197069
+[2025-11-08 23:11:11] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:11] [DEBUG] [drone.c:119] Position: X: 48.500004 Y: 3.131377
+[2025-11-08 23:11:11] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:11] [DEBUG] [drone.c:119] Position: X: 49.000004 Y: 3.087582
+[2025-11-08 23:11:11] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:11] [DEBUG] [drone.c:119] Position: X: 49.500004 Y: 3.058385
+[2025-11-08 23:11:11] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:11] [DEBUG] [drone.c:119] Position: X: 50.000004 Y: 3.038921
+[2025-11-08 23:11:11] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:11] [DEBUG] [drone.c:119] Position: X: 50.500004 Y: 3.025945
+[2025-11-08 23:11:11] [DEBUG] [drone.c:114] Fx: 1, Fy: 0
+[2025-11-08 23:11:11] [DEBUG] [drone.c:119] Position: X: 51.000004 Y: 3.017294
+[2025-11-08 23:11:12] [DEBUG] [I_process.c:76] New forze: 0 0
+[2025-11-08 23:11:12] [DEBUG] [BB.c:54] Leggo input: Fx: 0 Fy: 0
+[2025-11-08 23:11:12] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:12] [DEBUG] [drone.c:119] Position: X: 51.333336 Y: 3.011527
+[2025-11-08 23:11:12] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:12] [DEBUG] [drone.c:119] Position: X: 51.555557 Y: 3.007682
+[2025-11-08 23:11:12] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:12] [DEBUG] [drone.c:119] Position: X: 51.703705 Y: 3.005119
+[2025-11-08 23:11:12] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:12] [DEBUG] [drone.c:119] Position: X: 51.802471 Y: 3.003410
+[2025-11-08 23:11:12] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:12] [DEBUG] [drone.c:119] Position: X: 51.868317 Y: 3.002271
+[2025-11-08 23:11:12] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:12] [DEBUG] [drone.c:119] Position: X: 51.912212 Y: 3.001512
+[2025-11-08 23:11:12] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:12] [DEBUG] [drone.c:119] Position: X: 51.941475 Y: 3.001006
+[2025-11-08 23:11:12] [DEBUG] [I_process.c:76] New forze: -1 0
+[2025-11-08 23:11:12] [DEBUG] [BB.c:54] Leggo input: Fx: -1 Fy: 0
+[2025-11-08 23:11:12] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:12] [DEBUG] [drone.c:119] Position: X: 51.794315 Y: 3.000668
+[2025-11-08 23:11:12] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:12] [DEBUG] [drone.c:119] Position: X: 51.529541 Y: 3.000443
+[2025-11-08 23:11:12] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:12] [DEBUG] [drone.c:119] Position: X: 51.186359 Y: 3.000293
+[2025-11-08 23:11:13] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:13] [DEBUG] [drone.c:119] Position: X: 50.790905 Y: 3.000194
+[2025-11-08 23:11:13] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:13] [DEBUG] [drone.c:119] Position: X: 50.360603 Y: 3.000127
+[2025-11-08 23:11:13] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:13] [DEBUG] [drone.c:119] Position: X: 49.907070 Y: 3.000083
+[2025-11-08 23:11:13] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:13] [DEBUG] [drone.c:119] Position: X: 49.438049 Y: 3.000053
+[2025-11-08 23:11:13] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:13] [DEBUG] [drone.c:119] Position: X: 48.958702 Y: 3.000033
+[2025-11-08 23:11:13] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:13] [DEBUG] [drone.c:119] Position: X: 48.472469 Y: 3.000020
+[2025-11-08 23:11:13] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:13] [DEBUG] [drone.c:119] Position: X: 47.981647 Y: 3.000011
+[2025-11-08 23:11:13] [DEBUG] [I_process.c:76] New forze: -2 0
+[2025-11-08 23:11:13] [DEBUG] [BB.c:54] Leggo input: Fx: -2 Fy: 0
+[2025-11-08 23:11:13] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:11:13] [DEBUG] [drone.c:119] Position: X: 47.321098 Y: 3.000005
+[2025-11-08 23:11:13] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:11:13] [DEBUG] [drone.c:119] Position: X: 46.547398 Y: 3.000001
+[2025-11-08 23:11:13] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:11:13] [DEBUG] [drone.c:119] Position: X: 45.698265 Y: 2.999999
+[2025-11-08 23:11:14] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:11:14] [DEBUG] [drone.c:119] Position: X: 44.798843 Y: 2.999997
+[2025-11-08 23:11:14] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:11:14] [DEBUG] [drone.c:119] Position: X: 43.865894 Y: 2.999996
+[2025-11-08 23:11:14] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:11:14] [DEBUG] [drone.c:119] Position: X: 42.910595 Y: 2.999995
+[2025-11-08 23:11:14] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:11:14] [DEBUG] [drone.c:119] Position: X: 41.940395 Y: 2.999995
+[2025-11-08 23:11:14] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:11:14] [DEBUG] [drone.c:119] Position: X: 40.960262 Y: 2.999995
+[2025-11-08 23:11:14] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:11:14] [DEBUG] [drone.c:119] Position: X: 39.973507 Y: 2.999994
+[2025-11-08 23:11:14] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:11:14] [DEBUG] [drone.c:119] Position: X: 38.982338 Y: 2.999994
+[2025-11-08 23:11:14] [DEBUG] [I_process.c:76] New forze: -3 0
+[2025-11-08 23:11:14] [DEBUG] [BB.c:54] Leggo input: Fx: -3 Fy: 0
+[2025-11-08 23:11:14] [DEBUG] [drone.c:114] Fx: -3, Fy: 0
+[2025-11-08 23:11:14] [DEBUG] [drone.c:119] Position: X: 37.821560 Y: 2.999994
+[2025-11-08 23:11:14] [DEBUG] [drone.c:114] Fx: -3, Fy: 0
+[2025-11-08 23:11:14] [DEBUG] [drone.c:119] Position: X: 36.547707 Y: 2.999994
+[2025-11-08 23:11:14] [DEBUG] [drone.c:114] Fx: -3, Fy: 0
+[2025-11-08 23:11:14] [DEBUG] [drone.c:119] Position: X: 35.198471 Y: 2.999993
+[2025-11-08 23:11:15] [DEBUG] [drone.c:114] Fx: -3, Fy: 0
+[2025-11-08 23:11:15] [DEBUG] [drone.c:119] Position: X: 33.798981 Y: 2.999993
+[2025-11-08 23:11:15] [DEBUG] [drone.c:114] Fx: -3, Fy: 0
+[2025-11-08 23:11:15] [DEBUG] [drone.c:119] Position: X: 32.365986 Y: 2.999993
+[2025-11-08 23:11:15] [DEBUG] [drone.c:114] Fx: -3, Fy: 0
+[2025-11-08 23:11:15] [DEBUG] [drone.c:119] Position: X: 30.910656 Y: 2.999993
+[2025-11-08 23:11:15] [DEBUG] [drone.c:114] Fx: -3, Fy: 0
+[2025-11-08 23:11:15] [DEBUG] [drone.c:119] Position: X: 29.440435 Y: 2.999992
+[2025-11-08 23:11:15] [DEBUG] [drone.c:114] Fx: -3, Fy: 0
+[2025-11-08 23:11:15] [DEBUG] [drone.c:119] Position: X: 27.960289 Y: 2.999992
+[2025-11-08 23:11:15] [DEBUG] [drone.c:114] Fx: -3, Fy: 0
+[2025-11-08 23:11:15] [DEBUG] [drone.c:119] Position: X: 26.473524 Y: 2.999992
+[2025-11-08 23:11:15] [DEBUG] [drone.c:114] Fx: -3, Fy: 0
+[2025-11-08 23:11:15] [DEBUG] [drone.c:119] Position: X: 24.982347 Y: 2.999992
+[2025-11-08 23:11:15] [DEBUG] [drone.c:114] Fx: -3, Fy: 0
+[2025-11-08 23:11:15] [DEBUG] [drone.c:119] Position: X: 23.488230 Y: 2.999991
+[2025-11-08 23:11:15] [DEBUG] [drone.c:114] Fx: -3, Fy: 0
+[2025-11-08 23:11:15] [DEBUG] [drone.c:119] Position: X: 21.992151 Y: 2.999991
+[2025-11-08 23:11:15] [DEBUG] [drone.c:114] Fx: -3, Fy: 0
+[2025-11-08 23:11:15] [DEBUG] [drone.c:119] Position: X: 20.494766 Y: 2.999991
+[2025-11-08 23:11:16] [DEBUG] [I_process.c:76] New forze: -2 0
+[2025-11-08 23:11:16] [DEBUG] [BB.c:54] Leggo input: Fx: -2 Fy: 0
+[2025-11-08 23:11:16] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:11:16] [DEBUG] [drone.c:119] Position: X: 19.163176 Y: 2.999991
+[2025-11-08 23:11:16] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:11:16] [DEBUG] [drone.c:119] Position: X: 17.942116 Y: 2.999990
+[2025-11-08 23:11:16] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:11:16] [DEBUG] [drone.c:119] Position: X: 16.794743 Y: 2.999990
+[2025-11-08 23:11:16] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:11:16] [DEBUG] [drone.c:119] Position: X: 15.696494 Y: 2.999990
+[2025-11-08 23:11:16] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:11:16] [DEBUG] [drone.c:119] Position: X: 14.630995 Y: 2.999990
+[2025-11-08 23:11:16] [DEBUG] [drone.c:114] Fx: -2, Fy: 0
+[2025-11-08 23:11:16] [DEBUG] [drone.c:119] Position: X: 13.587329 Y: 2.999990
+[2025-11-08 23:11:16] [DEBUG] [I_process.c:76] New forze: -1 0
+[2025-11-08 23:11:16] [DEBUG] [BB.c:54] Leggo input: Fx: -1 Fy: 0
+[2025-11-08 23:11:16] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:16] [DEBUG] [drone.c:119] Position: X: 12.724885 Y: 2.999989
+[2025-11-08 23:11:16] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:16] [DEBUG] [drone.c:119] Position: X: 11.983255 Y: 2.999989
+[2025-11-08 23:11:16] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:16] [DEBUG] [drone.c:119] Position: X: 11.322169 Y: 2.999989
+[2025-11-08 23:11:16] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:16] [DEBUG] [drone.c:119] Position: X: 10.714779 Y: 2.999989
+[2025-11-08 23:11:17] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:17] [DEBUG] [drone.c:119] Position: X: 10.143186 Y: 2.999988
+[2025-11-08 23:11:17] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:17] [DEBUG] [drone.c:119] Position: X: 9.595457 Y: 2.999988
+[2025-11-08 23:11:17] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:17] [DEBUG] [drone.c:119] Position: X: 9.063638 Y: 2.999988
+[2025-11-08 23:11:17] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:17] [DEBUG] [drone.c:119] Position: X: 8.542425 Y: 2.999988
+[2025-11-08 23:11:17] [DEBUG] [drone.c:114] Fx: -1, Fy: 0
+[2025-11-08 23:11:17] [DEBUG] [drone.c:119] Position: X: 8.028283 Y: 2.999987
+[2025-11-08 23:11:17] [DEBUG] [I_process.c:76] New forze: 0 0
+[2025-11-08 23:11:17] [DEBUG] [BB.c:54] Leggo input: Fx: 0 Fy: 0
+[2025-11-08 23:11:17] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:17] [DEBUG] [drone.c:119] Position: X: 7.685522 Y: 2.999987
+[2025-11-08 23:11:17] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:17] [DEBUG] [drone.c:119] Position: X: 7.457014 Y: 2.999987
+[2025-11-08 23:11:17] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:17] [DEBUG] [drone.c:119] Position: X: 7.304676 Y: 2.999987
+[2025-11-08 23:11:17] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:17] [DEBUG] [drone.c:119] Position: X: 7.203116 Y: 2.999986
+[2025-11-08 23:11:17] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:17] [DEBUG] [drone.c:119] Position: X: 7.135410 Y: 2.999986
+[2025-11-08 23:11:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:18] [DEBUG] [drone.c:119] Position: X: 7.090273 Y: 2.999986
+[2025-11-08 23:11:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:18] [DEBUG] [drone.c:119] Position: X: 7.060181 Y: 2.999986
+[2025-11-08 23:11:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:18] [DEBUG] [drone.c:119] Position: X: 7.040120 Y: 2.999985
+[2025-11-08 23:11:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:18] [DEBUG] [drone.c:119] Position: X: 7.026746 Y: 2.999985
+[2025-11-08 23:11:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:18] [DEBUG] [drone.c:119] Position: X: 7.017830 Y: 2.999985
+[2025-11-08 23:11:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:18] [DEBUG] [drone.c:119] Position: X: 7.011887 Y: 2.999985
+[2025-11-08 23:11:18] [DEBUG] [I_process.c:76] New forze: 0 0
+[2025-11-08 23:11:18] [DEBUG] [BB.c:54] Leggo input: Fx: 0 Fy: 0
+[2025-11-08 23:11:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:18] [DEBUG] [drone.c:119] Position: X: 7.007924 Y: 2.999985
+[2025-11-08 23:11:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:18] [DEBUG] [drone.c:119] Position: X: 7.005282 Y: 2.999984
+[2025-11-08 23:11:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:18] [DEBUG] [drone.c:119] Position: X: 7.003521 Y: 2.999984
+[2025-11-08 23:11:18] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:18] [DEBUG] [drone.c:119] Position: X: 7.002347 Y: 2.999984
+[2025-11-08 23:11:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:19] [DEBUG] [drone.c:119] Position: X: 7.001565 Y: 2.999984
+[2025-11-08 23:11:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:19] [DEBUG] [drone.c:119] Position: X: 7.001043 Y: 2.999983
+[2025-11-08 23:11:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:19] [DEBUG] [drone.c:119] Position: X: 7.000696 Y: 2.999983
+[2025-11-08 23:11:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:19] [DEBUG] [drone.c:119] Position: X: 7.000464 Y: 2.999983
+[2025-11-08 23:11:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:19] [DEBUG] [drone.c:119] Position: X: 7.000309 Y: 2.999983
+[2025-11-08 23:11:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:19] [DEBUG] [drone.c:119] Position: X: 7.000206 Y: 2.999982
+[2025-11-08 23:11:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:19] [DEBUG] [drone.c:119] Position: X: 7.000138 Y: 2.999982
+[2025-11-08 23:11:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:19] [DEBUG] [drone.c:119] Position: X: 7.000092 Y: 2.999982
+[2025-11-08 23:11:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:19] [DEBUG] [drone.c:119] Position: X: 7.000062 Y: 2.999982
+[2025-11-08 23:11:19] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:19] [DEBUG] [drone.c:119] Position: X: 7.000041 Y: 2.999981
+[2025-11-08 23:11:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:20] [DEBUG] [drone.c:119] Position: X: 7.000027 Y: 2.999981
+[2025-11-08 23:11:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:20] [DEBUG] [drone.c:119] Position: X: 7.000018 Y: 2.999981
+[2025-11-08 23:11:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:20] [DEBUG] [drone.c:119] Position: X: 7.000012 Y: 2.999981
+[2025-11-08 23:11:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:20] [DEBUG] [drone.c:119] Position: X: 7.000008 Y: 2.999980
+[2025-11-08 23:11:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:20] [DEBUG] [drone.c:119] Position: X: 7.000005 Y: 2.999980
+[2025-11-08 23:11:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:20] [DEBUG] [drone.c:119] Position: X: 7.000003 Y: 2.999980
+[2025-11-08 23:11:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:20] [DEBUG] [drone.c:119] Position: X: 7.000001 Y: 2.999980
+[2025-11-08 23:11:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:20] [DEBUG] [drone.c:119] Position: X: 7.000000 Y: 2.999979
+[2025-11-08 23:11:20] [DEBUG] [drone.c:114] Fx: 0, Fy: 0
+[2025-11-08 23:11:20] [DEBUG] [drone.c:119] Position: X: 7.000000 Y: 2.999979

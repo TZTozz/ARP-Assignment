@@ -2,10 +2,11 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#include "logger.h"
 
 #define init_x 1    //Initial position x
 #define init_y 1    //Initial position y
-#define T 0.1        //Integration time value (s)
+#define T 0.5        //Integration time value (s)
 
 WINDOW *create_newwin(int height, int width, int starty, int startx){	
 
@@ -29,14 +30,14 @@ void destroy_win(WINDOW *local_win){
 
 typedef struct
 {
-    int x;
-    int y;
+    float x;
+    float y;
     int Fx;
     int Fy;
-    int x_1;
-    int x_2;
-    int y_1;
-    int y_2;
+    float x_1;
+    float x_2;
+    float y_1;
+    float y_2;
     const char *skin;
 }drone;
 
@@ -49,6 +50,8 @@ int main(int argc, char *argv[])
 {
     int fd_r_drone, fd_w_drone;
     sscanf(argv[1], "%d %d", &fd_r_drone, &fd_w_drone);
+
+    log_config("simple.log", LOG_DEBUG);
     
     int startx, starty, width, height;
     char str[80], ch;
@@ -90,12 +93,15 @@ int main(int argc, char *argv[])
     mvwprintw(my_win, drn.y, drn.x, "%s", drn.skin);
     wrefresh(my_win);
 
+    log_debug("Inizio il ciclo");
+
     while(1)
     {
         write(fd_w_drone, request, strlen(request) + 1);
         read(fd_r_drone, str, sizeof(str));
         if (str[0]=='q') break;
         sscanf(str, "%d %d", &drn.Fx, &drn.Fy);
+
         mvwprintw(my_win, drn.y, drn.x, " ");
         drn.x_2=drn.x_1;
         drn.y_2=drn.y_1;
@@ -105,13 +111,15 @@ int main(int argc, char *argv[])
         drn.y=(T*T*drn.Fy-drn.y_2+(2+T)*drn.y_1)/(T+1);
         //drn.x += drn.Fx;
         //drn.y += drn.Fy;
+        log_debug("Fx: %d, Fy: %d", drn.Fx, drn.Fy);
         if (drn.x < 1) drn.x = 1;
         if (drn.x > width - 2) drn.x = width - 2;
         if (drn.y < 1) drn.y = 1;
         if (drn.y > height - 2) drn.y = height - 2;
+        log_debug("Position: X: %f Y: %f", drn.x, drn.y);
         mvwprintw(my_win, drn.y, drn.x, "%s", drn.skin);
         wrefresh(my_win);
-        usleep(100);
+        usleep(100000);
     }
     endwin();
     close(fd_r_drone);

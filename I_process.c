@@ -3,11 +3,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include "logger.h"
 
 int main(int argc, char *argv[]) {
 
-    int fd_r_input, fd_w_input;
-    sscanf(argv[1], "%d %d", &fd_r_input, &fd_w_input);
+    int fd_w_input;
+    sscanf(argv[1], "%d", &fd_w_input);
+
+    log_config("simple.log", LOG_DEBUG);
 
     char str[80];
 	int ch, ax, ay;
@@ -70,6 +73,7 @@ int main(int argc, char *argv[]) {
         if(!wrongKey)
         {
             sprintf(str, "%d %d", ax, ay);
+            log_debug("New forze: %d %d", ax, ay);
             write(fd_w_input, str, strlen(str) + 1);
         }
         wrongKey = false;
@@ -80,7 +84,6 @@ int main(int argc, char *argv[]) {
     write(fd_w_input, str, strlen(str) + 1);
 
     endwin();
-    close(fd_r_input);
     close(fd_w_input);           
     return 0;
 }
