@@ -58,6 +58,7 @@ int main(int argc, char *argv[])
             if(FD_ISSET(fd_w_drone, &r_fds))        //Il drone vuole conoscere le forze
             {
                 read(fd_w_drone, message_in, sizeof(message_in));
+                sscanf(message_in, "%d %d", &xDrone, &yDrone);
                 sprintf(message_out, "%d %d", Fx, Fy);
                 write(fd_r_drone, message_out, strlen(message_out) + 1);
 

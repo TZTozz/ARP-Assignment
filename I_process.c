@@ -13,11 +13,11 @@ int main(int argc, char *argv[]) {
     log_config("simple.log", LOG_DEBUG);
 
     char str[80];
-	int ch, ax, ay;
+	int ch, Fx, Fy;
 
 	
-	ax = 0;
-	ay = 0;
+	Fx = 0;
+	Fy = 0;
 
     bool wrongKey = false;
 
@@ -34,36 +34,37 @@ int main(int argc, char *argv[]) {
         switch(ch)
         {
             case 'e':       //Up
-                ay--;
+                Fy--;
                 break;
             case 'r':       //Up-right
-                ax++;
-                ay--;
+                Fx++;
+                Fy--;
                 break;
             case 'f':       //Right
-                ax++;
+                Fx++;
                 break;
             case 'v':       //Down-right
-                ax++;
-                ay++;
+                Fx++;
+                Fy++;
                 break;
             case 'c':       //Down
-                ay++;
+                Fy++;
                 break;
             case 'x':       //Down-right
-                ax--;
-                ay++;
+                Fx--;
+                Fy++;
                 break;		
             case 's':       //Left
-                ax--;
+                Fx--;
                 break;
             case 'w':       //Up-left
-                ax--;
-                ay--;
+                Fx--;
+                Fy--;
                 break;
             case 'd':       //Brake
-                ax = 0;
-                ay = 0;
+                Fx = Fx * 0.5;
+                Fy = Fy *0.5;
+                
                 break;
             default:
                 wrongKey = true;
@@ -72,8 +73,8 @@ int main(int argc, char *argv[]) {
         
         if(!wrongKey)
         {
-            sprintf(str, "%d %d", ax, ay);
-            log_debug("New forze: %d %d", ax, ay);
+            sprintf(str, "%d %d", Fx, Fy);
+            log_debug("New forze: %d %d", Fx, Fy);
             write(fd_w_input, str, strlen(str) + 1);
         }
         wrongKey = false;
