@@ -22,7 +22,7 @@ int main() {
         close(fd_w_input[1]);
         char fd_str[80];
         sprintf(fd_str, "%d %d %d", fd_r_drone[1], fd_w_drone[0], fd_w_input[0]);
-        execlp("./BB", "./BB", fd_str, NULL);
+        execlp("konsole", "konsole", "-e", "./BB", fd_str, NULL);
         perror("exec BlackBoard");
         exit(1);
     }
@@ -45,7 +45,7 @@ int main() {
         close(fd_w_drone[0]);
         char fd_str[80];
         sprintf(fd_str, "%d %d", fd_r_drone[0], fd_w_drone[1]);
-        execlp("konsole", "konsole", "-e", "./drone", fd_str, NULL);
+        execlp("./drone", "./drone", fd_str, NULL);
         perror("exec drone");
         exit(1);
     }
