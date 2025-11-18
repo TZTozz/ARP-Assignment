@@ -4,9 +4,13 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <string.h>
+#include <locale.h>
 #include "logger.h"
+#include <signal.h>
 
 #define skin "+"
+
+volatile sig_atomic_t need_resize = 0;
 
 int max(int a, int b) 
 {
@@ -33,8 +37,7 @@ void destroy_win(WINDOW *local_win){
 	delwin(local_win);
 }
 
-static void layout_and_draw(WINDOW *win) 
-{
+static void layout_and_draw(WINDOW *win) {
     int H, W;
     getmaxyx(stdscr, H, W);
 
@@ -52,6 +55,7 @@ static void layout_and_draw(WINDOW *win)
     werase(stdscr);
     werase(win);
     box(win, 0, 0);
+    //mvprintw(0, 0, "Ridimensiona la shell; premi 'q' per uscire.");
     //mvwprintw(win, 1, 2, "stdscr: %dx%d  win: %dx%d",
     //          H, W, wh, ww);
 
@@ -59,62 +63,72 @@ static void layout_and_draw(WINDOW *win)
     wrefresh(win);
 }
 
+void handle_winch(int sig) {
+    need_resize = 1;
+}
+
 int main(int argc, char *argv[])
 {
     int fd_r_drone, fd_w_drone, fd_w_input;
     sscanf(argv[1], "%d %d %d", &fd_r_drone, &fd_w_drone, &fd_w_input);
-
+    
     log_config("simple.log", LOG_DEBUG);
-
+    
     int max_fd = max(fd_w_drone, fd_w_input);
     int startx, starty, width, height;
-
+    
     char message_in[80], message_out[80];
-
+    
     fd_set r_fds;
     int retval;
-    char line[80];
-
+    char line[80], ch;
+    
     //Blackboard data
     float xDrone = 1, yDrone = 1;
     int Fx = 0, Fy = 0;
-
-    //Genera finesta provvisoria
-    WINDOW *my_win;
-    //layout_and_draw(my_win);
-
+    
     initscr(); 
     cbreak();
     noecho();
-    	
+    
+    signal(SIGWINCH, handle_winch);
+    
     keypad(stdscr, TRUE);
     curs_set(0);
-    	
+    
+    setlocale(LC_ALL, "");
+
+    WINDOW *my_win;
+    
     height = 20;
     width = 100;
     starty = (LINES - height) / 2;	
 	startx = (COLS - width) / 2;
-
+    
     my_win = create_newwin(height, width, starty, startx);
+    layout_and_draw(my_win);
     mvwprintw(my_win, yDrone, xDrone, "%s", skin);
     wrefresh(my_win);
 
     while (1)
     {
-        /*if (ch == KEY_RESIZE) {
-            // Aggiorna le strutture interne di ncurses per la nuova dimensione
-            resize_term(0, 0);          // o resizeterm(0, 0)
-            layout_and_draw(win);       // ricalcola layout e ridisegna
-        }*/
-
         //Inizializzo i set
         FD_ZERO(&r_fds);
         //Aggiungo i file descriptor
         FD_SET(fd_w_drone, &r_fds);
         FD_SET(fd_w_input, &r_fds);
 
+        if (need_resize) {
+            need_resize = 0;
+            endwin();
+            refresh();
+            resize_term(0, 0);          // o resizeterm(0, 0)
+            layout_and_draw(my_win);       // ricalcola layout e ridisegna
+        }
+
         //Rimane in attesa 
         retval = select(max_fd + 1, &r_fds, NULL, NULL, NULL);
+
 
         if (retval == -1) perror("select()");
         else if (retval) 
@@ -149,7 +163,6 @@ int main(int argc, char *argv[])
         }
         else printf("No data within five seconds.\n");
     }
-    log_debug("Esco");
 
     close(fd_r_drone);
     close(fd_w_drone);

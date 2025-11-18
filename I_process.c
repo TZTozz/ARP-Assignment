@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
                 break;
             case 'd':       //Brake
                 Fx = Fx * 0.5;
-                Fy = Fy *0.5;
+                Fy = Fy * 0.5;
                 
                 break;
             default:
