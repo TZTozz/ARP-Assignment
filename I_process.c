@@ -50,7 +50,7 @@ int main(int argc, char *argv[]) {
             case 'c':       //Down
                 Fy++;
                 break;
-            case 'x':       //Down-right
+            case 'x':       //Down-left
                 Fx--;
                 Fy++;
                 break;		

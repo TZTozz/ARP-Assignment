@@ -12,6 +12,11 @@
 
 volatile sig_atomic_t need_resize = 0;
 
+typedef struct{
+    int width;
+    int height;
+}winDimension;
+
 int max(int a, int b) 
 {
     return (a > b) ? a : b;
@@ -37,7 +42,7 @@ void destroy_win(WINDOW *local_win){
 	delwin(local_win);
 }
 
-static void layout_and_draw(WINDOW *win) {
+static winDimension layout_and_draw(WINDOW *win) {
     int H, W;
     getmaxyx(stdscr, H, W);
 
@@ -47,6 +52,10 @@ static void layout_and_draw(WINDOW *win) {
     if (wh < 3) wh = 3;
     if (ww < 3) ww = 3;
 
+    winDimension size;
+    size.height = wh;
+    size.width = ww;
+
     // Ridimensiona e ricentra la finestra
     wresize(win, wh, ww);
     mvwin(win, (H - wh) / 2, (W - ww) / 2);
@@ -55,12 +64,10 @@ static void layout_and_draw(WINDOW *win) {
     werase(stdscr);
     werase(win);
     box(win, 0, 0);
-    //mvprintw(0, 0, "Ridimensiona la shell; premi 'q' per uscire.");
-    //mvwprintw(win, 1, 2, "stdscr: %dx%d  win: %dx%d",
-    //          H, W, wh, ww);
 
     refresh();
     wrefresh(win);
+    return size;
 }
 
 void handle_winch(int sig) {
@@ -76,6 +83,8 @@ int main(int argc, char *argv[])
     
     int max_fd = max(fd_w_drone, fd_w_input);
     int startx, starty, width, height;
+    bool sizeChanged = false;
+    winDimension size;
     
     char message_in[80], message_out[80];
     
@@ -96,17 +105,22 @@ int main(int argc, char *argv[])
     keypad(stdscr, TRUE);
     curs_set(0);
     
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "C");
 
     WINDOW *my_win;
     
-    height = 20;
-    width = 100;
-    starty = (LINES - height) / 2;	
-	startx = (COLS - width) / 2;
+    size.height = 20;
+    size.width = 100;
+    starty = (LINES - size.height) / 2;	
+	startx = (COLS - size.width) / 2;
     
-    my_win = create_newwin(height, width, starty, startx);
-    layout_and_draw(my_win);
+    my_win = create_newwin(size.height, size.width, starty, startx);
+    size = layout_and_draw(my_win);
+    //Comunica al drone la dimensione della finestra
+    sprintf(message_out, "s %d %d", size.height, size.width);
+    write(fd_r_drone, message_out, strlen(message_out) + 1);
+
+    //Stampa il drone nella posizione iniziale
     mvwprintw(my_win, yDrone, xDrone, "%s", skin);
     wrefresh(my_win);
 
@@ -123,7 +137,9 @@ int main(int argc, char *argv[])
             endwin();
             refresh();
             resize_term(0, 0);          // o resizeterm(0, 0)
-            layout_and_draw(my_win);       // ricalcola layout e ridisegna
+            size = layout_and_draw(my_win);       // ricalcola layout e ridisegna
+            sizeChanged = true;
+
         }
 
         //Rimane in attesa 
@@ -138,26 +154,32 @@ int main(int argc, char *argv[])
                 read(fd_w_input, message_in, sizeof(message_in));
                 if(message_in[0]=='q') 
                 {
-                    write(fd_r_drone, "quite", strlen("quite") + 1);
+                    strcpy(message_out, "quit");
+                    write(fd_r_drone, message_out, strlen(message_out) + 1);
                     break;
                 }
                 sscanf(message_in, "%d %d", &Fx, &Fy);
-                log_debug("Leggo input: Fx: %d Fy: %d", Fx, Fy);
+                //log_debug("Leggo input: Fx: %d Fy: %d", Fx, Fy);
 
             }
 
-            if(FD_ISSET(fd_w_drone, &r_fds))        //Il drone vuole conoscere le forze
+            if(FD_ISSET(fd_w_drone, &r_fds))        //Il drone vuole leggere
             {
                 read(fd_w_drone, message_in, sizeof(message_in));
                 mvwprintw(my_win, yDrone, xDrone, " ");
                 sscanf(message_in, "%f %f", &xDrone, &yDrone);
-                log_debug("Position X: %f Y: %f", xDrone, yDrone);
 
                 mvwprintw(my_win, yDrone, xDrone, skin);
                 wrefresh(my_win);
+
+                if(sizeChanged)
+                {
+                    sprintf(message_out, "s %d %d", size.height, size.width);
+                    write(fd_r_drone, message_out, strlen(message_out) + 1);
+                    sizeChanged = false;
+                }
                 sprintf(message_out, "f %d %d", Fx, Fy);
                 write(fd_r_drone, message_out, strlen(message_out) + 1);
-
             }
 
         }
