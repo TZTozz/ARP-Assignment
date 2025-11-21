@@ -9,6 +9,8 @@
 #include <signal.h>
 
 #define skin "+"
+#define MaxHeight 80
+#define MaxWidth 270
 
 volatile sig_atomic_t need_resize = 0;
 
@@ -70,14 +72,26 @@ static winDimension layout_and_draw(WINDOW *win) {
     return size;
 }
 
+void PrintObstacle(WINDOW *win, bool array[][MaxWidth], int height, int width)
+{
+    for(int i = 0; i < height - 2; i++)
+    {
+        for(int j = 0; j < width - 2; j++)
+        {
+            if (array[i][j]) mvwprintw(win, i, j, "0");
+        }
+    }
+
+}
+
 void handle_winch(int sig) {
     need_resize = 1;
 }
 
 int main(int argc, char *argv[])
 {
-    int fd_r_drone, fd_w_drone, fd_w_input;
-    sscanf(argv[1], "%d %d %d", &fd_r_drone, &fd_w_drone, &fd_w_input);
+    int fd_r_drone, fd_w_drone, fd_w_input, fd_r_obstacle, fd_w_obstacle;
+    sscanf(argv[1], "%d %d %d %d %d", &fd_r_drone, &fd_w_drone, &fd_w_input, &fd_r_obstacle, &fd_w_obstacle);
     
     log_config("simple.log", LOG_DEBUG);
     
@@ -95,6 +109,9 @@ int main(int argc, char *argv[])
     //Blackboard data
     float xDrone = 1, yDrone = 1;
     int Fx = 0, Fy = 0;
+
+    //Obstacle array
+    bool obstacle[MaxHeight][MaxWidth]; 
     
     initscr(); 
     cbreak();
@@ -116,9 +133,18 @@ int main(int argc, char *argv[])
     
     my_win = create_newwin(size.height, size.width, starty, startx);
     size = layout_and_draw(my_win);
+
     //Comunica al drone la dimensione della finestra
     sprintf(message_out, "s %d %d", size.height, size.width);
     write(fd_r_drone, message_out, strlen(message_out) + 1);
+
+    log_debug("height: %d Width: %d", size.height, size.width);
+
+    //Comunica a obstacle le dimensioni della finestra
+    sprintf(message_out, "o %d %d", size.height, size.width);
+    write(fd_r_obstacle, message_out, strlen(message_out) + 1);
+    read(fd_w_obstacle, obstacle, sizeof(obstacle));
+    PrintObstacle(my_win, obstacle, size.height, size.width);
 
     //Stampa il drone nella posizione iniziale
     mvwprintw(my_win, yDrone, xDrone, "%s", skin);
@@ -138,6 +164,12 @@ int main(int argc, char *argv[])
             refresh();
             resize_term(0, 0);          // o resizeterm(0, 0)
             size = layout_and_draw(my_win);       // ricalcola layout e ridisegna
+            sprintf(message_out, "o %d %d", size.height, size.width);
+            write(fd_r_obstacle, message_out, strlen(message_out) + 1);
+            read(fd_w_obstacle, obstacle, sizeof(obstacle));
+            PrintObstacle(my_win, obstacle, size.height, size.width);
+            mvwprintw(my_win, yDrone, xDrone, skin);
+            wrefresh(my_win);
             sizeChanged = true;
 
         }
@@ -156,6 +188,7 @@ int main(int argc, char *argv[])
                 {
                     strcpy(message_out, "quit");
                     write(fd_r_drone, message_out, strlen(message_out) + 1);
+                    write(fd_r_obstacle, message_out, strlen(message_out) + 1);
                     break;
                 }
                 sscanf(message_in, "%d %d", &Fx, &Fy);
@@ -174,6 +207,7 @@ int main(int argc, char *argv[])
 
                 if(sizeChanged)
                 {
+                    log_debug("size Changed");
                     sprintf(message_out, "s %d %d", size.height, size.width);
                     write(fd_r_drone, message_out, strlen(message_out) + 1);
                     sizeChanged = false;

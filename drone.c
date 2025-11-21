@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
         write(fd_w_drone, str, strlen(str) + 1);
         read(fd_r_drone, str, sizeof(str));
         ch = str[0];
-        
+        log_debug("Ch = %c", ch);
         switch(ch)
         {
 
@@ -95,6 +95,7 @@ int main(int argc, char *argv[])
                 log_warn("caso s");
                 sscanf(str, "s %d %d", &size.height, &size.width);
                 read(fd_r_drone, str, sizeof(str));
+                log_debug("Letto forza post resize %c", str[0]);
                 sscanf(str, "f %d %d", &drn.Fx, &drn.Fy);
                 break;
             default:

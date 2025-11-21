@@ -9,10 +9,14 @@ int main() {
 
     int fd_r_drone[2], fd_w_drone[2];       //pipes for drone
     int fd_w_input[2];       //pipes for input
+    int fd_r_obstacle[2], fd_w_obstacle[2];       //pipes for obstacle
 
     pipe(fd_r_drone);
     pipe(fd_w_drone);
     pipe(fd_w_input);
+    pipe(fd_r_obstacle);
+    pipe(fd_w_obstacle);
+
 
     pid_t BB = fork();
     if (BB == 0) 
@@ -20,8 +24,10 @@ int main() {
         close(fd_r_drone[0]);
         close(fd_w_drone[1]);
         close(fd_w_input[1]);
+        close(fd_r_obstacle[0]);
+        close(fd_w_obstacle[1]);
         char fd_str[80];
-        sprintf(fd_str, "%d %d %d", fd_r_drone[1], fd_w_drone[0], fd_w_input[0]);
+        sprintf(fd_str, "%d %d %d %d %d", fd_r_drone[1], fd_w_drone[0], fd_w_input[0], fd_r_obstacle[1], fd_w_obstacle[0]);
         execlp("konsole", "konsole", "-e", "./BB", fd_str, NULL);
         perror("exec BlackBoard");
         exit(1);
@@ -50,13 +56,28 @@ int main() {
         exit(1);
     }
 
+    pid_t obstacle = fork();
+    if (obstacle == 0) 
+    {
+        close(fd_r_obstacle[1]);
+        close(fd_w_obstacle[0]);
+        char fd_str[80];
+        sprintf(fd_str, "%d %d", fd_r_obstacle[0], fd_w_obstacle[1]);
+        execlp("./obstacle", "./obstacle", fd_str, NULL);
+        perror("exec obstacle");
+        exit(1);
+    }
+
     close(fd_r_drone[0]);
     close(fd_r_drone[1]);
     close(fd_w_drone[0]);
     close(fd_w_drone[1]);
     close(fd_w_input[0]);
     close(fd_w_input[1]);
-    
+    close(fd_r_obstacle[0]);
+    close(fd_r_obstacle[1]);
+    close(fd_w_obstacle[0]);
+    close(fd_w_obstacle[1]);
     
     printf ("Main program exiting...\n");
     return 0;
