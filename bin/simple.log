@@ -1,0 +1,1439 @@
+[2025-11-23 23:04:25] [DEBUG] [src/drone.c:44] Parto
+[2025-11-23 23:04:26] [DEBUG] [src/BB.c:138] height: 26 Width: 100
+[2025-11-23 23:04:26] [DEBUG] [src/drone.c:50] Ho letto
+[2025-11-23 23:04:26] [DEBUG] [src/drone.c:55] Inizio il ciclo
+[2025-11-23 23:04:26] [DEBUG] [src/obstacle.c:84] The char is o
+[2025-11-23 23:04:26] [DEBUG] [src/obstacle.c:33] Width: 100, Height: 26
+[2025-11-23 23:04:26] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:04:26] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:18] [DEBUG] [src/drone.c:44] Parto
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:50] Ho letto
+[2025-11-23 23:07:19] [DEBUG] [src/BB.c:138] height: 26 Width: 100
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:55] Inizio il ciclo
+[2025-11-23 23:07:19] [DEBUG] [src/obstacle.c:84] The char is o
+[2025-11-23 23:07:19] [DEBUG] [src/obstacle.c:33] Width: 100, Height: 26
+[2025-11-23 23:07:19] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:19] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:19] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:19] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:19] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:19] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:19] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:19] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:19] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:19] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:20] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:20] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:20] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:20] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:20] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:20] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:20] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:20] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:20] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:20] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:20] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:21] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:21] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:21] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:21] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:21] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:21] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:21] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:21] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:21] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:21] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:21] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:22] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:22] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:22] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:22] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:22] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:22] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:22] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:22] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:22] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:22] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:22] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:23] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:23] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:23] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:23] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:23] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:23] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:23] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:23] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:23] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:23] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:23] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:24] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:24] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:24] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:24] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:24] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:24] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:24] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:24] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:24] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:24] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:24] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:24] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:24] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:24] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:24] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:24] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:24] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:24] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:24] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:24] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:24] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:24] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:24] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:24] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:24] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:24] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:24] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:24] [DEBUG] [src/I_process.c:78] New forze: 1 0
+[2025-11-23 23:07:24] [DEBUG] [src/BB.c:195] Leggo input: Fx: 1 Fy: 0
+[2025-11-23 23:07:25] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:104] Position: X: 1.166667 Y: 1.000000
+[2025-11-23 23:07:25] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:104] Position: X: 1.444444 Y: 1.000000
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:25] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:104] Position: X: 1.796296 Y: 1.000000
+[2025-11-23 23:07:25] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:104] Position: X: 2.197531 Y: 1.000000
+[2025-11-23 23:07:25] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:104] Position: X: 2.631687 Y: 1.000000
+[2025-11-23 23:07:25] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:104] Position: X: 3.087791 Y: 1.000000
+[2025-11-23 23:07:25] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:104] Position: X: 3.558528 Y: 1.000000
+[2025-11-23 23:07:25] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:104] Position: X: 4.039019 Y: 1.000000
+[2025-11-23 23:07:25] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:104] Position: X: 4.526012 Y: 1.000000
+[2025-11-23 23:07:25] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:25] [DEBUG] [src/drone.c:104] Position: X: 5.017342 Y: 1.000000
+[2025-11-23 23:07:26] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:104] Position: X: 5.511561 Y: 1.000000
+[2025-11-23 23:07:26] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:104] Position: X: 6.007707 Y: 1.000000
+[2025-11-23 23:07:26] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:104] Position: X: 6.505138 Y: 1.000000
+[2025-11-23 23:07:26] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:104] Position: X: 7.003425 Y: 1.000000
+[2025-11-23 23:07:26] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:104] Position: X: 7.502283 Y: 1.000000
+[2025-11-23 23:07:26] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:104] Position: X: 8.001522 Y: 1.000000
+[2025-11-23 23:07:26] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:104] Position: X: 8.501015 Y: 1.000000
+[2025-11-23 23:07:26] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:104] Position: X: 9.000676 Y: 1.000000
+[2025-11-23 23:07:26] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:104] Position: X: 9.500450 Y: 1.000000
+[2025-11-23 23:07:26] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:26] [DEBUG] [src/drone.c:104] Position: X: 10.000299 Y: 1.000000
+[2025-11-23 23:07:27] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:104] Position: X: 10.500199 Y: 1.000000
+[2025-11-23 23:07:27] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:104] Position: X: 11.000133 Y: 1.000000
+[2025-11-23 23:07:27] [DEBUG] [src/I_process.c:78] New forze: 2 0
+[2025-11-23 23:07:27] [DEBUG] [src/BB.c:195] Leggo input: Fx: 2 Fy: 0
+[2025-11-23 23:07:27] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:104] Position: X: 11.666755 Y: 1.000000
+[2025-11-23 23:07:27] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:104] Position: X: 12.444503 Y: 1.000000
+[2025-11-23 23:07:27] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:104] Position: X: 13.296335 Y: 1.000000
+[2025-11-23 23:07:27] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:104] Position: X: 14.197556 Y: 1.000000
+[2025-11-23 23:07:27] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:104] Position: X: 15.131704 Y: 1.000000
+[2025-11-23 23:07:27] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:104] Position: X: 16.087803 Y: 1.000000
+[2025-11-23 23:07:27] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:104] Position: X: 17.058535 Y: 1.000000
+[2025-11-23 23:07:27] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:27] [DEBUG] [src/drone.c:104] Position: X: 18.039022 Y: 1.000000
+[2025-11-23 23:07:28] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:104] Position: X: 19.026014 Y: 1.000000
+[2025-11-23 23:07:28] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:104] Position: X: 20.017342 Y: 1.000000
+[2025-11-23 23:07:28] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:104] Position: X: 21.011560 Y: 1.000000
+[2025-11-23 23:07:28] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:104] Position: X: 22.007706 Y: 1.000000
+[2025-11-23 23:07:28] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:104] Position: X: 23.005136 Y: 1.000000
+[2025-11-23 23:07:28] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:104] Position: X: 24.003424 Y: 1.000000
+[2025-11-23 23:07:28] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:104] Position: X: 25.002281 Y: 1.000000
+[2025-11-23 23:07:28] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:104] Position: X: 26.001520 Y: 1.000000
+[2025-11-23 23:07:28] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:104] Position: X: 27.001013 Y: 1.000000
+[2025-11-23 23:07:28] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:28] [DEBUG] [src/drone.c:104] Position: X: 28.000675 Y: 1.000000
+[2025-11-23 23:07:29] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:104] Position: X: 29.000450 Y: 1.000000
+[2025-11-23 23:07:29] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:104] Position: X: 30.000299 Y: 1.000000
+[2025-11-23 23:07:29] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:104] Position: X: 31.000198 Y: 1.000000
+[2025-11-23 23:07:29] [DEBUG] [src/I_process.c:78] New forze: 2 1
+[2025-11-23 23:07:29] [DEBUG] [src/BB.c:195] Leggo input: Fx: 2 Fy: 1
+[2025-11-23 23:07:29] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:104] Position: X: 32.000130 Y: 1.166667
+[2025-11-23 23:07:29] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:104] Position: X: 33.000084 Y: 1.444444
+[2025-11-23 23:07:29] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:104] Position: X: 34.000053 Y: 1.796296
+[2025-11-23 23:07:29] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:104] Position: X: 35.000034 Y: 2.197531
+[2025-11-23 23:07:29] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:104] Position: X: 36.000023 Y: 2.631687
+[2025-11-23 23:07:29] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:104] Position: X: 37.000015 Y: 3.087791
+[2025-11-23 23:07:29] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:29] [DEBUG] [src/drone.c:104] Position: X: 38.000011 Y: 3.558528
+[2025-11-23 23:07:30] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:104] Position: X: 39.000008 Y: 4.039019
+[2025-11-23 23:07:30] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:104] Position: X: 40.000004 Y: 4.526012
+[2025-11-23 23:07:30] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:104] Position: X: 41.000000 Y: 5.017342
+[2025-11-23 23:07:30] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:104] Position: X: 41.999996 Y: 5.511561
+[2025-11-23 23:07:30] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:104] Position: X: 42.999992 Y: 6.007707
+[2025-11-23 23:07:30] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:104] Position: X: 43.999989 Y: 6.505138
+[2025-11-23 23:07:30] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:104] Position: X: 44.999985 Y: 7.003425
+[2025-11-23 23:07:30] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:104] Position: X: 45.999981 Y: 7.502283
+[2025-11-23 23:07:30] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:104] Position: X: 46.999977 Y: 8.001522
+[2025-11-23 23:07:30] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:30] [DEBUG] [src/drone.c:104] Position: X: 47.999973 Y: 8.501015
+[2025-11-23 23:07:31] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:104] Position: X: 48.999969 Y: 9.000676
+[2025-11-23 23:07:31] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:104] Position: X: 49.999966 Y: 9.500450
+[2025-11-23 23:07:31] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:104] Position: X: 50.999962 Y: 10.000299
+[2025-11-23 23:07:31] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:104] Position: X: 51.999958 Y: 10.500199
+[2025-11-23 23:07:31] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:104] Position: X: 52.999954 Y: 11.000133
+[2025-11-23 23:07:31] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:104] Position: X: 53.999950 Y: 11.500088
+[2025-11-23 23:07:31] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:104] Position: X: 54.999947 Y: 12.000058
+[2025-11-23 23:07:31] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:104] Position: X: 55.999943 Y: 12.500038
+[2025-11-23 23:07:31] [DEBUG] [src/I_process.c:78] New forze: 1 1
+[2025-11-23 23:07:31] [DEBUG] [src/BB.c:195] Leggo input: Fx: 1 Fy: 1
+[2025-11-23 23:07:31] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:104] Position: X: 56.833275 Y: 13.000025
+[2025-11-23 23:07:31] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:31] [DEBUG] [src/drone.c:104] Position: X: 57.555496 Y: 13.500016
+[2025-11-23 23:07:32] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:104] Position: X: 58.203644 Y: 14.000010
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:32] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:104] Position: X: 58.802410 Y: 14.500007
+[2025-11-23 23:07:32] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:104] Position: X: 59.368256 Y: 15.000004
+[2025-11-23 23:07:32] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:104] Position: X: 59.912151 Y: 15.500002
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:32] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:104] Position: X: 60.441414 Y: 16.000000
+[2025-11-23 23:07:32] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:104] Position: X: 60.960922 Y: 16.499998
+[2025-11-23 23:07:32] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:104] Position: X: 61.473927 Y: 16.999996
+[2025-11-23 23:07:32] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:104] Position: X: 61.982597 Y: 17.499994
+[2025-11-23 23:07:32] [DEBUG] [src/I_process.c:78] New forze: 0 0
+[2025-11-23 23:07:32] [DEBUG] [src/BB.c:195] Leggo input: Fx: 0 Fy: 0
+[2025-11-23 23:07:32] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:104] Position: X: 62.321712 Y: 17.833326
+[2025-11-23 23:07:32] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:32] [DEBUG] [src/drone.c:104] Position: X: 62.547791 Y: 18.055548
+[2025-11-23 23:07:33] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:104] Position: X: 62.698509 Y: 18.203695
+[2025-11-23 23:07:33] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:104] Position: X: 62.798988 Y: 18.302460
+[2025-11-23 23:07:33] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:104] Position: X: 62.865974 Y: 18.368303
+[2025-11-23 23:07:33] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:104] Position: X: 62.910633 Y: 18.412199
+[2025-11-23 23:07:33] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:104] Position: X: 62.940407 Y: 18.441463
+[2025-11-23 23:07:33] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:104] Position: X: 62.960255 Y: 18.460974
+[2025-11-23 23:07:33] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:104] Position: X: 62.973488 Y: 18.473980
+[2025-11-23 23:07:33] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:104] Position: X: 62.982311 Y: 18.482651
+[2025-11-23 23:07:33] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:104] Position: X: 62.988194 Y: 18.488432
+[2025-11-23 23:07:33] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:33] [DEBUG] [src/drone.c:104] Position: X: 62.992115 Y: 18.492287
+[2025-11-23 23:07:34] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:104] Position: X: 62.994728 Y: 18.494856
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:34] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:104] Position: X: 62.996471 Y: 18.496569
+[2025-11-23 23:07:34] [DEBUG] [src/I_process.c:78] New forze: -1 -1
+[2025-11-23 23:07:34] [DEBUG] [src/BB.c:195] Leggo input: Fx: -1 Fy: -1
+[2025-11-23 23:07:34] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:104] Position: X: 62.830967 Y: 18.331043
+[2025-11-23 23:07:34] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:104] Position: X: 62.553963 Y: 18.054026
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:34] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:104] Position: X: 62.202625 Y: 17.702681
+[2025-11-23 23:07:34] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:104] Position: X: 61.801735 Y: 17.301785
+[2025-11-23 23:07:34] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:104] Position: X: 61.367809 Y: 16.867853
+[2025-11-23 23:07:34] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:104] Position: X: 60.911858 Y: 16.411900
+[2025-11-23 23:07:34] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:104] Position: X: 60.441223 Y: 15.941264
+[2025-11-23 23:07:34] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:34] [DEBUG] [src/drone.c:104] Position: X: 59.960800 Y: 15.460840
+[2025-11-23 23:07:35] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:104] Position: X: 59.473850 Y: 14.973891
+[2025-11-23 23:07:35] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:104] Position: X: 58.982552 Y: 14.482592
+[2025-11-23 23:07:35] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:104] Position: X: 58.488354 Y: 13.988392
+[2025-11-23 23:07:35] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:104] Position: X: 57.992222 Y: 13.492259
+[2025-11-23 23:07:35] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:104] Position: X: 57.494801 Y: 12.994837
+[2025-11-23 23:07:35] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:104] Position: X: 56.996521 Y: 12.496555
+[2025-11-23 23:07:35] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:104] Position: X: 56.497669 Y: 11.997701
+[2025-11-23 23:07:35] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:104] Position: X: 55.998436 Y: 11.498465
+[2025-11-23 23:07:35] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:104] Position: X: 55.498947 Y: 10.998974
+[2025-11-23 23:07:35] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:35] [DEBUG] [src/drone.c:104] Position: X: 54.999287 Y: 10.499313
+[2025-11-23 23:07:36] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:104] Position: X: 54.499512 Y: 9.999539
+[2025-11-23 23:07:36] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:104] Position: X: 53.999660 Y: 9.499690
+[2025-11-23 23:07:36] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:104] Position: X: 53.499760 Y: 8.999790
+[2025-11-23 23:07:36] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:104] Position: X: 52.999825 Y: 8.499857
+[2025-11-23 23:07:36] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:104] Position: X: 52.499866 Y: 7.999901
+[2025-11-23 23:07:36] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:104] Position: X: 51.999893 Y: 7.499931
+[2025-11-23 23:07:36] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:104] Position: X: 51.499912 Y: 6.999950
+[2025-11-23 23:07:36] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:104] Position: X: 50.999924 Y: 6.499963
+[2025-11-23 23:07:36] [DEBUG] [src/I_process.c:78] New forze: -2 -1
+[2025-11-23 23:07:36] [DEBUG] [src/BB.c:195] Leggo input: Fx: -2 Fy: -1
+[2025-11-23 23:07:36] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:104] Position: X: 50.333263 Y: 5.999972
+[2025-11-23 23:07:36] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:36] [DEBUG] [src/drone.c:104] Position: X: 49.555489 Y: 5.499978
+[2025-11-23 23:07:37] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:37] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:37] [DEBUG] [src/drone.c:104] Position: X: 48.703640 Y: 4.999981
+[2025-11-23 23:07:37] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:37] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:37] [DEBUG] [src/drone.c:104] Position: X: 47.802406 Y: 4.499984
+[2025-11-23 23:07:37] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:37] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:37] [DEBUG] [src/drone.c:104] Position: X: 46.868252 Y: 3.999985
+[2025-11-23 23:07:37] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:37] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:37] [DEBUG] [src/drone.c:104] Position: X: 45.912148 Y: 3.499987
+[2025-11-23 23:07:37] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:37] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:37] [DEBUG] [src/drone.c:104] Position: X: 44.941410 Y: 2.999987
+[2025-11-23 23:07:37] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:37] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:37] [DEBUG] [src/drone.c:104] Position: X: 43.960918 Y: 2.499988
+[2025-11-23 23:07:37] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:37] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:37] [DEBUG] [src/drone.c:104] Position: X: 42.973923 Y: 1.999988
+[2025-11-23 23:07:37] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:37] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:37] [DEBUG] [src/drone.c:104] Position: X: 41.982594 Y: 1.499988
+[2025-11-23 23:07:37] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:37] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:37] [DEBUG] [src/drone.c:104] Position: X: 40.988373 Y: 1.000000
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:38] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:104] Position: X: 39.992226 Y: 1.000000
+[2025-11-23 23:07:38] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:104] Position: X: 38.994793 Y: 1.000000
+[2025-11-23 23:07:38] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:104] Position: X: 37.996506 Y: 1.000000
+[2025-11-23 23:07:38] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:104] Position: X: 36.997646 Y: 1.000000
+[2025-11-23 23:07:38] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:104] Position: X: 35.998405 Y: 1.000000
+[2025-11-23 23:07:38] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:104] Position: X: 34.998913 Y: 1.000000
+[2025-11-23 23:07:38] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:104] Position: X: 33.999252 Y: 1.000000
+[2025-11-23 23:07:38] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:104] Position: X: 32.999477 Y: 1.000000
+[2025-11-23 23:07:38] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:104] Position: X: 31.999628 Y: 1.000000
+[2025-11-23 23:07:38] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:38] [DEBUG] [src/drone.c:104] Position: X: 30.999729 Y: 1.000000
+[2025-11-23 23:07:39] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:104] Position: X: 29.999796 Y: 1.000000
+[2025-11-23 23:07:39] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:104] Position: X: 28.999840 Y: 1.000000
+[2025-11-23 23:07:39] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:104] Position: X: 27.999868 Y: 1.000000
+[2025-11-23 23:07:39] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:104] Position: X: 26.999887 Y: 1.000000
+[2025-11-23 23:07:39] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:104] Position: X: 25.999901 Y: 1.000000
+[2025-11-23 23:07:39] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:104] Position: X: 24.999910 Y: 1.000000
+[2025-11-23 23:07:39] [DEBUG] [src/I_process.c:78] New forze: -3 0
+[2025-11-23 23:07:39] [DEBUG] [src/BB.c:195] Leggo input: Fx: -3 Fy: 0
+[2025-11-23 23:07:39] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:104] Position: X: 23.833250 Y: 1.000000
+[2025-11-23 23:07:39] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:104] Position: X: 22.555477 Y: 1.000000
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:39] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:104] Position: X: 21.203629 Y: 1.000000
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:39] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:39] [DEBUG] [src/drone.c:104] Position: X: 19.802397 Y: 1.000000
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:40] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:104] Position: X: 18.368242 Y: 1.000000
+[2025-11-23 23:07:40] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:104] Position: X: 16.912140 Y: 1.000000
+[2025-11-23 23:07:40] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:104] Position: X: 15.441405 Y: 1.000000
+[2025-11-23 23:07:40] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:104] Position: X: 13.960916 Y: 1.000000
+[2025-11-23 23:07:40] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:104] Position: X: 12.473923 Y: 1.000000
+[2025-11-23 23:07:40] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:104] Position: X: 10.982594 Y: 1.000000
+[2025-11-23 23:07:40] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:104] Position: X: 9.488376 Y: 1.000000
+[2025-11-23 23:07:40] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:104] Position: X: 7.992230 Y: 1.000000
+[2025-11-23 23:07:40] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:104] Position: X: 6.494800 Y: 1.000000
+[2025-11-23 23:07:40] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:40] [DEBUG] [src/drone.c:104] Position: X: 4.996513 Y: 1.000000
+[2025-11-23 23:07:41] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:104] Position: X: 3.497655 Y: 1.000000
+[2025-11-23 23:07:41] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:104] Position: X: 1.998417 Y: 1.000000
+[2025-11-23 23:07:41] [DEBUG] [src/I_process.c:78] New forze: -1 0
+[2025-11-23 23:07:41] [DEBUG] [src/BB.c:195] Leggo input: Fx: -1 Fy: 0
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:41] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:41] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:41] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:41] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:41] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:41] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:41] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:41] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:41] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:42] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:42] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:42] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:42] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:42] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:42] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:42] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:42] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:42] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:42] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:42] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:43] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:43] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:43] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:43] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:43] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:43] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:43] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:43] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:43] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:43] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:43] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:44] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:44] [DEBUG] [src/I_process.c:78] New forze: 0 0
+[2025-11-23 23:07:44] [DEBUG] [src/BB.c:195] Leggo input: Fx: 0 Fy: 0
+[2025-11-23 23:07:44] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:44] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:44] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:44] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:44] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:44] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:44] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:44] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:44] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:44] [DEBUG] [src/drone.c:104] Position: X: 1.000000 Y: 1.000000
+[2025-11-23 23:07:45] [DEBUG] [src/I_process.c:78] New forze: 1 0
+[2025-11-23 23:07:45] [DEBUG] [src/BB.c:195] Leggo input: Fx: 1 Fy: 0
+[2025-11-23 23:07:45] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:104] Position: X: 1.166667 Y: 1.000000
+[2025-11-23 23:07:45] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:104] Position: X: 1.444444 Y: 1.000000
+[2025-11-23 23:07:45] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:104] Position: X: 1.796296 Y: 1.000000
+[2025-11-23 23:07:45] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:104] Position: X: 2.197531 Y: 1.000000
+[2025-11-23 23:07:45] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:104] Position: X: 2.631687 Y: 1.000000
+[2025-11-23 23:07:45] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:104] Position: X: 3.087791 Y: 1.000000
+[2025-11-23 23:07:45] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:104] Position: X: 3.558528 Y: 1.000000
+[2025-11-23 23:07:45] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:104] Position: X: 4.039019 Y: 1.000000
+[2025-11-23 23:07:45] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:104] Position: X: 4.526012 Y: 1.000000
+[2025-11-23 23:07:45] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:45] [DEBUG] [src/drone.c:104] Position: X: 5.017342 Y: 1.000000
+[2025-11-23 23:07:46] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:104] Position: X: 5.511561 Y: 1.000000
+[2025-11-23 23:07:46] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:104] Position: X: 6.007707 Y: 1.000000
+[2025-11-23 23:07:46] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:104] Position: X: 6.505138 Y: 1.000000
+[2025-11-23 23:07:46] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:104] Position: X: 7.003425 Y: 1.000000
+[2025-11-23 23:07:46] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:104] Position: X: 7.502283 Y: 1.000000
+[2025-11-23 23:07:46] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:104] Position: X: 8.001522 Y: 1.000000
+[2025-11-23 23:07:46] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:104] Position: X: 8.501015 Y: 1.000000
+[2025-11-23 23:07:46] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:104] Position: X: 9.000676 Y: 1.000000
+[2025-11-23 23:07:46] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:104] Position: X: 9.500450 Y: 1.000000
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:46] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:46] [DEBUG] [src/drone.c:104] Position: X: 10.000299 Y: 1.000000
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:104] Position: X: 10.500199 Y: 1.000000
+[2025-11-23 23:07:47] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:47] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:104] Position: X: 11.000133 Y: 1.000000
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:104] Position: X: 11.500088 Y: 1.000000
+[2025-11-23 23:07:47] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:47] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:104] Position: X: 12.000058 Y: 1.000000
+[2025-11-23 23:07:47] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:104] Position: X: 12.500038 Y: 1.000000
+[2025-11-23 23:07:47] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:104] Position: X: 13.000025 Y: 1.000000
+[2025-11-23 23:07:47] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:104] Position: X: 13.500016 Y: 1.000000
+[2025-11-23 23:07:47] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:104] Position: X: 14.000010 Y: 1.000000
+[2025-11-23 23:07:47] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:104] Position: X: 14.500007 Y: 1.000000
+[2025-11-23 23:07:47] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:47] [DEBUG] [src/drone.c:104] Position: X: 15.000004 Y: 1.000000
+[2025-11-23 23:07:48] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:104] Position: X: 15.500002 Y: 1.000000
+[2025-11-23 23:07:48] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:104] Position: X: 16.000000 Y: 1.000000
+[2025-11-23 23:07:48] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:104] Position: X: 16.499998 Y: 1.000000
+[2025-11-23 23:07:48] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:104] Position: X: 16.999996 Y: 1.000000
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:48] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:104] Position: X: 17.499994 Y: 1.000000
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:48] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:104] Position: X: 17.999992 Y: 1.000000
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:48] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:104] Position: X: 18.499990 Y: 1.000000
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:48] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:104] Position: X: 18.999989 Y: 1.000000
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:48] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:104] Position: X: 19.499987 Y: 1.000000
+[2025-11-23 23:07:48] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:48] [DEBUG] [src/drone.c:104] Position: X: 19.999985 Y: 1.000000
+[2025-11-23 23:07:49] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:104] Position: X: 20.499983 Y: 1.000000
+[2025-11-23 23:07:49] [DEBUG] [src/obstacle.c:84] The char is o
+[2025-11-23 23:07:49] [DEBUG] [src/obstacle.c:33] Width: 100, Height: 27
+[2025-11-23 23:07:49] [DEBUG] [src/BB.c:211] size Changed
+[2025-11-23 23:07:49] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:62] Ch = s
+[2025-11-23 23:07:49] [WARN ] [src/drone.c:75] caso s
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:79] Letto forza post resize f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:104] Position: X: 20.999981 Y: 1.000000
+[2025-11-23 23:07:49] [DEBUG] [src/obstacle.c:84] The char is o
+[2025-11-23 23:07:49] [DEBUG] [src/obstacle.c:33] Width: 100, Height: 28
+[2025-11-23 23:07:49] [DEBUG] [src/BB.c:211] size Changed
+[2025-11-23 23:07:49] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:62] Ch = s
+[2025-11-23 23:07:49] [WARN ] [src/drone.c:75] caso s
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:79] Letto forza post resize f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:104] Position: X: 21.499979 Y: 1.000000
+[2025-11-23 23:07:49] [DEBUG] [src/obstacle.c:84] The char is o
+[2025-11-23 23:07:49] [DEBUG] [src/obstacle.c:33] Width: 100, Height: 29
+[2025-11-23 23:07:49] [DEBUG] [src/BB.c:211] size Changed
+[2025-11-23 23:07:49] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:62] Ch = s
+[2025-11-23 23:07:49] [WARN ] [src/drone.c:75] caso s
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:79] Letto forza post resize f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:104] Position: X: 21.999977 Y: 1.000000
+[2025-11-23 23:07:49] [DEBUG] [src/obstacle.c:84] The char is o
+[2025-11-23 23:07:49] [DEBUG] [src/obstacle.c:33] Width: 100, Height: 30
+[2025-11-23 23:07:49] [DEBUG] [src/BB.c:211] size Changed
+[2025-11-23 23:07:49] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:62] Ch = s
+[2025-11-23 23:07:49] [WARN ] [src/drone.c:75] caso s
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:79] Letto forza post resize f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:104] Position: X: 22.499975 Y: 1.000000
+[2025-11-23 23:07:49] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:104] Position: X: 22.999973 Y: 1.000000
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:49] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:104] Position: X: 23.499971 Y: 1.000000
+[2025-11-23 23:07:49] [DEBUG] [src/obstacle.c:84] The char is o
+[2025-11-23 23:07:49] [DEBUG] [src/obstacle.c:33] Width: 100, Height: 31
+[2025-11-23 23:07:49] [DEBUG] [src/BB.c:211] size Changed
+[2025-11-23 23:07:49] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:62] Ch = s
+[2025-11-23 23:07:49] [WARN ] [src/drone.c:75] caso s
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:79] Letto forza post resize f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:104] Position: X: 23.999969 Y: 1.000000
+[2025-11-23 23:07:49] [DEBUG] [src/obstacle.c:84] The char is o
+[2025-11-23 23:07:49] [DEBUG] [src/obstacle.c:33] Width: 100, Height: 32
+[2025-11-23 23:07:49] [DEBUG] [src/BB.c:211] size Changed
+[2025-11-23 23:07:49] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:62] Ch = s
+[2025-11-23 23:07:49] [WARN ] [src/drone.c:75] caso s
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:79] Letto forza post resize f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:104] Position: X: 24.499968 Y: 1.000000
+[2025-11-23 23:07:49] [DEBUG] [src/obstacle.c:84] The char is o
+[2025-11-23 23:07:49] [DEBUG] [src/obstacle.c:33] Width: 100, Height: 33
+[2025-11-23 23:07:49] [DEBUG] [src/BB.c:211] size Changed
+[2025-11-23 23:07:49] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:62] Ch = s
+[2025-11-23 23:07:49] [WARN ] [src/drone.c:75] caso s
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:79] Letto forza post resize f
+[2025-11-23 23:07:49] [DEBUG] [src/drone.c:104] Position: X: 24.999966 Y: 1.000000
+[2025-11-23 23:07:50] [DEBUG] [src/obstacle.c:84] The char is o
+[2025-11-23 23:07:50] [DEBUG] [src/obstacle.c:33] Width: 100, Height: 34
+[2025-11-23 23:07:50] [DEBUG] [src/BB.c:211] size Changed
+[2025-11-23 23:07:50] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:62] Ch = s
+[2025-11-23 23:07:50] [WARN ] [src/drone.c:75] caso s
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:79] Letto forza post resize f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:104] Position: X: 25.499964 Y: 1.000000
+[2025-11-23 23:07:50] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:104] Position: X: 25.999962 Y: 1.000000
+[2025-11-23 23:07:50] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:104] Position: X: 26.499960 Y: 1.000000
+[2025-11-23 23:07:50] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:104] Position: X: 26.999958 Y: 1.000000
+[2025-11-23 23:07:50] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:104] Position: X: 27.499956 Y: 1.000000
+[2025-11-23 23:07:50] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:104] Position: X: 27.999954 Y: 1.000000
+[2025-11-23 23:07:50] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:104] Position: X: 28.499952 Y: 1.000000
+[2025-11-23 23:07:50] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:104] Position: X: 28.999950 Y: 1.000000
+[2025-11-23 23:07:50] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:104] Position: X: 29.499949 Y: 1.000000
+[2025-11-23 23:07:50] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:50] [DEBUG] [src/drone.c:104] Position: X: 29.999947 Y: 1.000000
+[2025-11-23 23:07:51] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:104] Position: X: 30.499945 Y: 1.000000
+[2025-11-23 23:07:51] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:104] Position: X: 30.999943 Y: 1.000000
+[2025-11-23 23:07:51] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:104] Position: X: 31.499941 Y: 1.000000
+[2025-11-23 23:07:51] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:104] Position: X: 31.999939 Y: 1.000000
+[2025-11-23 23:07:51] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:104] Position: X: 32.499939 Y: 1.000000
+[2025-11-23 23:07:51] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:104] Position: X: 32.999939 Y: 1.000000
+[2025-11-23 23:07:51] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:104] Position: X: 33.499939 Y: 1.000000
+[2025-11-23 23:07:51] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:104] Position: X: 33.999939 Y: 1.000000
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:51] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:104] Position: X: 34.499939 Y: 1.000000
+[2025-11-23 23:07:51] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:51] [DEBUG] [src/drone.c:104] Position: X: 34.999939 Y: 1.000000
+[2025-11-23 23:07:52] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:104] Position: X: 35.499939 Y: 1.000000
+[2025-11-23 23:07:52] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:104] Position: X: 35.999939 Y: 1.000000
+[2025-11-23 23:07:52] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:104] Position: X: 36.499939 Y: 1.000000
+[2025-11-23 23:07:52] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:104] Position: X: 36.999939 Y: 1.000000
+[2025-11-23 23:07:52] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:104] Position: X: 37.499939 Y: 1.000000
+[2025-11-23 23:07:52] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:104] Position: X: 37.999939 Y: 1.000000
+[2025-11-23 23:07:52] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:104] Position: X: 38.499939 Y: 1.000000
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:52] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:104] Position: X: 38.999939 Y: 1.000000
+[2025-11-23 23:07:52] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:104] Position: X: 39.499939 Y: 1.000000
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:52] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:52] [DEBUG] [src/drone.c:104] Position: X: 39.999939 Y: 1.000000
+[2025-11-23 23:07:52] [DEBUG] [src/obstacle.c:84] The char is o
+[2025-11-23 23:07:52] [DEBUG] [src/obstacle.c:33] Width: 100, Height: 35
+[2025-11-23 23:07:53] [DEBUG] [src/obstacle.c:84] The char is o
+[2025-11-23 23:07:53] [DEBUG] [src/obstacle.c:33] Width: 100, Height: 36
+[2025-11-23 23:07:53] [DEBUG] [src/BB.c:211] size Changed
+[2025-11-23 23:07:53] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:62] Ch = s
+[2025-11-23 23:07:53] [WARN ] [src/drone.c:75] caso s
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:79] Letto forza post resize f
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:104] Position: X: 40.499939 Y: 1.000000
+[2025-11-23 23:07:53] [DEBUG] [src/obstacle.c:84] The char is o
+[2025-11-23 23:07:53] [DEBUG] [src/obstacle.c:33] Width: 100, Height: 37
+[2025-11-23 23:07:53] [DEBUG] [src/BB.c:211] size Changed
+[2025-11-23 23:07:53] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:62] Ch = s
+[2025-11-23 23:07:53] [WARN ] [src/drone.c:75] caso s
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:79] Letto forza post resize f
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:104] Position: X: 40.999939 Y: 1.000000
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:53] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:104] Position: X: 41.499939 Y: 1.000000
+[2025-11-23 23:07:53] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:104] Position: X: 41.999939 Y: 1.000000
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:53] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:104] Position: X: 42.499939 Y: 1.000000
+[2025-11-23 23:07:53] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:104] Position: X: 42.999939 Y: 1.000000
+[2025-11-23 23:07:53] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:104] Position: X: 43.499939 Y: 1.000000
+[2025-11-23 23:07:53] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:104] Position: X: 43.999939 Y: 1.000000
+[2025-11-23 23:07:53] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:104] Position: X: 44.499939 Y: 1.000000
+[2025-11-23 23:07:53] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:53] [DEBUG] [src/drone.c:104] Position: X: 44.999939 Y: 1.000000
+[2025-11-23 23:07:54] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:104] Position: X: 45.499939 Y: 1.000000
+[2025-11-23 23:07:54] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:104] Position: X: 45.999939 Y: 1.000000
+[2025-11-23 23:07:54] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:104] Position: X: 46.499939 Y: 1.000000
+[2025-11-23 23:07:54] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:104] Position: X: 46.999939 Y: 1.000000
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:54] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:104] Position: X: 47.499939 Y: 1.000000
+[2025-11-23 23:07:54] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:104] Position: X: 47.999939 Y: 1.000000
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:54] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:104] Position: X: 48.499939 Y: 1.000000
+[2025-11-23 23:07:54] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:104] Position: X: 48.999939 Y: 1.000000
+[2025-11-23 23:07:54] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:104] Position: X: 49.499939 Y: 1.000000
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:54] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:54] [DEBUG] [src/drone.c:104] Position: X: 49.999939 Y: 1.000000
+[2025-11-23 23:07:55] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:55] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:55] [DEBUG] [src/drone.c:104] Position: X: 50.499939 Y: 1.000000
+[2025-11-23 23:07:55] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:55] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:55] [DEBUG] [src/drone.c:104] Position: X: 50.999939 Y: 1.000000
+[2025-11-23 23:07:55] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:55] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:55] [DEBUG] [src/drone.c:104] Position: X: 51.499939 Y: 1.000000
+[2025-11-23 23:07:55] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:55] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:55] [DEBUG] [src/drone.c:104] Position: X: 51.999939 Y: 1.000000
+[2025-11-23 23:07:55] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:55] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:55] [DEBUG] [src/drone.c:104] Position: X: 52.499939 Y: 1.000000
+[2025-11-23 23:07:55] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:55] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:55] [DEBUG] [src/drone.c:104] Position: X: 52.999939 Y: 1.000000
+[2025-11-23 23:07:55] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:55] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:55] [DEBUG] [src/drone.c:104] Position: X: 53.499939 Y: 1.000000
+[2025-11-23 23:07:55] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:55] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:55] [DEBUG] [src/drone.c:104] Position: X: 53.999939 Y: 1.000000
+[2025-11-23 23:07:55] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:55] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:55] [DEBUG] [src/drone.c:104] Position: X: 54.499939 Y: 1.000000
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:56] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:104] Position: X: 54.999939 Y: 1.000000
+[2025-11-23 23:07:56] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:104] Position: X: 55.499939 Y: 1.000000
+[2025-11-23 23:07:56] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:104] Position: X: 55.999939 Y: 1.000000
+[2025-11-23 23:07:56] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:104] Position: X: 56.499939 Y: 1.000000
+[2025-11-23 23:07:56] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:104] Position: X: 56.999939 Y: 1.000000
+[2025-11-23 23:07:56] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:104] Position: X: 57.499939 Y: 1.000000
+[2025-11-23 23:07:56] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:104] Position: X: 57.999939 Y: 1.000000
+[2025-11-23 23:07:56] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:104] Position: X: 58.499939 Y: 1.000000
+[2025-11-23 23:07:56] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:104] Position: X: 58.999939 Y: 1.000000
+[2025-11-23 23:07:56] [DEBUG] [src/I_process.c:78] New forze: 0 0
+[2025-11-23 23:07:56] [DEBUG] [src/BB.c:195] Leggo input: Fx: 0 Fy: 0
+[2025-11-23 23:07:56] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:56] [DEBUG] [src/drone.c:104] Position: X: 59.333271 Y: 1.000000
+[2025-11-23 23:07:57] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:104] Position: X: 59.555492 Y: 1.000000
+[2025-11-23 23:07:57] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:104] Position: X: 59.703640 Y: 1.000000
+[2025-11-23 23:07:57] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:104] Position: X: 59.802406 Y: 1.000000
+[2025-11-23 23:07:57] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:104] Position: X: 59.868252 Y: 1.000000
+[2025-11-23 23:07:57] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:104] Position: X: 59.912148 Y: 1.000000
+[2025-11-23 23:07:57] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:104] Position: X: 59.941410 Y: 1.000000
+[2025-11-23 23:07:57] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:104] Position: X: 59.960918 Y: 1.000000
+[2025-11-23 23:07:57] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:104] Position: X: 59.973923 Y: 1.000000
+[2025-11-23 23:07:57] [DEBUG] [src/I_process.c:78] New forze: -1 0
+[2025-11-23 23:07:57] [DEBUG] [src/BB.c:195] Leggo input: Fx: -1 Fy: 0
+[2025-11-23 23:07:57] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:104] Position: X: 59.815926 Y: 1.000000
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:57] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:57] [DEBUG] [src/drone.c:104] Position: X: 59.543926 Y: 1.000000
+[2025-11-23 23:07:58] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:104] Position: X: 59.195927 Y: 1.000000
+[2025-11-23 23:07:58] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:104] Position: X: 58.797260 Y: 1.000000
+[2025-11-23 23:07:58] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:104] Position: X: 58.364815 Y: 1.000000
+[2025-11-23 23:07:58] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:104] Position: X: 57.909851 Y: 1.000000
+[2025-11-23 23:07:58] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:104] Position: X: 57.439877 Y: 1.000000
+[2025-11-23 23:07:58] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:104] Position: X: 56.959892 Y: 1.000000
+[2025-11-23 23:07:58] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:104] Position: X: 56.473236 Y: 1.000000
+[2025-11-23 23:07:58] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:104] Position: X: 55.982132 Y: 1.000000
+[2025-11-23 23:07:58] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:104] Position: X: 55.488064 Y: 1.000000
+[2025-11-23 23:07:58] [DEBUG] [src/I_process.c:78] New forze: 0 0
+[2025-11-23 23:07:58] [DEBUG] [src/BB.c:195] Leggo input: Fx: 0 Fy: 0
+[2025-11-23 23:07:58] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:58] [DEBUG] [src/drone.c:104] Position: X: 55.158684 Y: 1.000000
+[2025-11-23 23:07:59] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:104] Position: X: 54.939098 Y: 1.000000
+[2025-11-23 23:07:59] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:104] Position: X: 54.792709 Y: 1.000000
+[2025-11-23 23:07:59] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:104] Position: X: 54.695118 Y: 1.000000
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:59] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:104] Position: X: 54.630058 Y: 1.000000
+[2025-11-23 23:07:59] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:104] Position: X: 54.586685 Y: 1.000000
+[2025-11-23 23:07:59] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:104] Position: X: 54.557770 Y: 1.000000
+[2025-11-23 23:07:59] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:104] Position: X: 54.538494 Y: 1.000000
+[2025-11-23 23:07:59] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:104] Position: X: 54.525642 Y: 1.000000
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:59] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:104] Position: X: 54.517075 Y: 1.000000
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:07:59] [DEBUG] [src/drone.c:104] Position: X: 54.511364 Y: 1.000000
+[2025-11-23 23:07:59] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:00] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:104] Position: X: 54.507557 Y: 1.000000
+[2025-11-23 23:08:00] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:104] Position: X: 54.505020 Y: 1.000000
+[2025-11-23 23:08:00] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:104] Position: X: 54.503330 Y: 1.000000
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:00] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:104] Position: X: 54.502205 Y: 1.000000
+[2025-11-23 23:08:00] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:104] Position: X: 54.501453 Y: 1.000000
+[2025-11-23 23:08:00] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:104] Position: X: 54.500954 Y: 1.000000
+[2025-11-23 23:08:00] [DEBUG] [src/I_process.c:78] New forze: 0 1
+[2025-11-23 23:08:00] [DEBUG] [src/BB.c:195] Leggo input: Fx: 0 Fy: 1
+[2025-11-23 23:08:00] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:104] Position: X: 54.500622 Y: 1.166667
+[2025-11-23 23:08:00] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:104] Position: X: 54.500401 Y: 1.444444
+[2025-11-23 23:08:00] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:104] Position: X: 54.500252 Y: 1.796296
+[2025-11-23 23:08:00] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:00] [DEBUG] [src/drone.c:104] Position: X: 54.500153 Y: 2.197531
+[2025-11-23 23:08:01] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:104] Position: X: 54.500088 Y: 2.631687
+[2025-11-23 23:08:01] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:104] Position: X: 54.500046 Y: 3.087791
+[2025-11-23 23:08:01] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:104] Position: X: 54.500019 Y: 3.558528
+[2025-11-23 23:08:01] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:104] Position: X: 54.500000 Y: 4.039019
+[2025-11-23 23:08:01] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:104] Position: X: 54.499989 Y: 4.526012
+[2025-11-23 23:08:01] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:104] Position: X: 54.499981 Y: 5.017342
+[2025-11-23 23:08:01] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:104] Position: X: 54.499977 Y: 5.511561
+[2025-11-23 23:08:01] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:104] Position: X: 54.499973 Y: 6.007707
+[2025-11-23 23:08:01] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:104] Position: X: 54.499969 Y: 6.505138
+[2025-11-23 23:08:01] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:01] [DEBUG] [src/drone.c:104] Position: X: 54.499966 Y: 7.003425
+[2025-11-23 23:08:01] [DEBUG] [src/I_process.c:78] New forze: 0 0
+[2025-11-23 23:08:01] [DEBUG] [src/BB.c:195] Leggo input: Fx: 0 Fy: 0
+[2025-11-23 23:08:02] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:104] Position: X: 54.499962 Y: 7.335617
+[2025-11-23 23:08:02] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:104] Position: X: 54.499958 Y: 7.557077
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:02] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:104] Position: X: 54.499954 Y: 7.704718
+[2025-11-23 23:08:02] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:104] Position: X: 54.499950 Y: 7.803145
+[2025-11-23 23:08:02] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:104] Position: X: 54.499947 Y: 7.868763
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:02] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:104] Position: X: 54.499943 Y: 7.912509
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:02] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:104] Position: X: 54.499939 Y: 7.941673
+[2025-11-23 23:08:02] [DEBUG] [src/I_process.c:78] New forze: 0 0
+[2025-11-23 23:08:02] [DEBUG] [src/BB.c:195] Leggo input: Fx: 0 Fy: 0
+[2025-11-23 23:08:02] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:104] Position: X: 54.499935 Y: 7.961115
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:02] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:104] Position: X: 54.499931 Y: 7.974077
+[2025-11-23 23:08:02] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:02] [DEBUG] [src/drone.c:104] Position: X: 54.499928 Y: 7.982718
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:03] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:104] Position: X: 54.499924 Y: 7.988479
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:03] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:104] Position: X: 54.499920 Y: 7.992320
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:03] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:104] Position: X: 54.499916 Y: 7.994880
+[2025-11-23 23:08:03] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:104] Position: X: 54.499912 Y: 7.996586
+[2025-11-23 23:08:03] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:104] Position: X: 54.499908 Y: 7.997724
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:03] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:104] Position: X: 54.499905 Y: 7.998483
+[2025-11-23 23:08:03] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:104] Position: X: 54.499901 Y: 7.998989
+[2025-11-23 23:08:03] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:104] Position: X: 54.499897 Y: 7.999326
+[2025-11-23 23:08:03] [DEBUG] [src/BB.c:218] Ho scritto anche le forze: f
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:62] Ch = f
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:104] Position: X: 54.499893 Y: 7.999550
+[2025-11-23 23:08:03] [DEBUG] [src/obstacle.c:84] The char is q
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:62] Ch = q
+[2025-11-23 23:08:03] [WARN ] [src/drone.c:67] Caso q
+[2025-11-23 23:08:03] [DEBUG] [src/drone.c:108] Sto uscendo

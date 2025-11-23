@@ -6,18 +6,12 @@
 #include <string.h>
 #include <locale.h>
 #include "logger.h"
+#include "parameter_file.h"
 #include <signal.h>
-
-#define skin "+"
-#define MaxHeight 80
-#define MaxWidth 270
 
 volatile sig_atomic_t need_resize = 0;
 
-typedef struct{
-    int width;
-    int height;
-}winDimension;
+
 
 int max(int a, int b) 
 {
@@ -100,11 +94,13 @@ int main(int argc, char *argv[])
     bool sizeChanged = false;
     winDimension size;
     
-    char message_in[80], message_out[80];
+    Msg_int msg_int_in, msg_int_out;
+    Msg_float msg_float_in, msg_float_out;
     
     fd_set r_fds;
     int retval;
-    char line[80], ch;
+    //char line[80],
+    char ch;
     
     //Blackboard data
     float xDrone = 1, yDrone = 1;
@@ -135,14 +131,16 @@ int main(int argc, char *argv[])
     size = layout_and_draw(my_win);
 
     //Comunica al drone la dimensione della finestra
-    sprintf(message_out, "s %d %d", size.height, size.width);
-    write(fd_r_drone, message_out, strlen(message_out) + 1);
+    Set_msg(msg_int_out, 's', size.height, size.width);
+    //(msg_int_out, "s %d %d", size.height, size.width);
+    write(fd_r_drone, &msg_int_out, sizeof(msg_int_out));
 
     log_debug("height: %d Width: %d", size.height, size.width);
 
     //Comunica a obstacle le dimensioni della finestra
-    sprintf(message_out, "o %d %d", size.height, size.width);
-    write(fd_r_obstacle, message_out, strlen(message_out) + 1);
+    Set_msg(msg_int_out, 'o', size.height, size.width);
+    //sprintf(msg_int_out, "o %d %d", size.height, size.width);
+    write(fd_r_obstacle, &msg_int_out, sizeof(msg_int_out));
     read(fd_w_obstacle, obstacle, sizeof(obstacle));
     PrintObstacle(my_win, obstacle, size.height, size.width);
 
@@ -164,8 +162,9 @@ int main(int argc, char *argv[])
             refresh();
             resize_term(0, 0);          // o resizeterm(0, 0)
             size = layout_and_draw(my_win);       // ricalcola layout e ridisegna
-            sprintf(message_out, "o %d %d", size.height, size.width);
-            write(fd_r_obstacle, message_out, strlen(message_out) + 1);
+
+            Set_msg(msg_int_out, 'o', size.height, size.width);
+            write(fd_r_obstacle, &msg_int_out, sizeof(msg_int_out));
             read(fd_w_obstacle, obstacle, sizeof(obstacle));
             PrintObstacle(my_win, obstacle, size.height, size.width);
             mvwprintw(my_win, yDrone, xDrone, skin);
@@ -183,24 +182,26 @@ int main(int argc, char *argv[])
         {
             if(FD_ISSET(fd_w_input, &r_fds))        //Input vuole scrivere le nuove forze
             {
-                read(fd_w_input, message_in, sizeof(message_in));
-                if(message_in[0]=='q') 
+                read(fd_w_input, &msg_int_in, sizeof(msg_int_in));
+                if(msg_int_in.type == 'q') 
                 {
-                    strcpy(message_out, "quit");
-                    write(fd_r_drone, message_out, strlen(message_out) + 1);
-                    write(fd_r_obstacle, message_out, strlen(message_out) + 1);
+                    Set_msg(msg_int_out, 'q', 0, 0);
+                    write(fd_r_drone, &msg_int_out, sizeof(msg_int_out));
+                    write(fd_r_obstacle, &msg_int_out, sizeof(msg_int_out));
                     break;
                 }
-                sscanf(message_in, "%d %d", &Fx, &Fy);
-                //log_debug("Leggo input: Fx: %d Fy: %d", Fx, Fy);
+                Fx = msg_int_in.a;
+                Fy = msg_int_in.b;
+                log_debug("Leggo input: Fx: %d Fy: %d", Fx, Fy);
 
             }
 
             if(FD_ISSET(fd_w_drone, &r_fds))        //Il drone vuole leggere
             {
-                read(fd_w_drone, message_in, sizeof(message_in));
+                read(fd_w_drone, &msg_float_in, sizeof(msg_float_in));
                 mvwprintw(my_win, yDrone, xDrone, " ");
-                sscanf(message_in, "%f %f", &xDrone, &yDrone);
+                xDrone = msg_float_in.a;
+                yDrone = msg_float_in.b;
 
                 mvwprintw(my_win, yDrone, xDrone, skin);
                 wrefresh(my_win);
@@ -208,12 +209,13 @@ int main(int argc, char *argv[])
                 if(sizeChanged)
                 {
                     log_debug("size Changed");
-                    sprintf(message_out, "s %d %d", size.height, size.width);
-                    write(fd_r_drone, message_out, strlen(message_out) + 1);
+                    Set_msg(msg_int_out, 's', size.height, size.width);
+                    write(fd_r_drone, &msg_int_out, sizeof(msg_int_out));
                     sizeChanged = false;
                 }
-                sprintf(message_out, "f %d %d", Fx, Fy);
-                write(fd_r_drone, message_out, strlen(message_out) + 1);
+                Set_msg(msg_int_out, 'f', Fx, Fy);
+                write(fd_r_drone, &msg_int_out, sizeof(msg_int_out));
+                log_debug("Ho scritto anche le forze: %c", msg_int_out.type);
             }
 
         }

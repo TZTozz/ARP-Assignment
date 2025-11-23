@@ -4,6 +4,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "logger.h"
+#include "parameter_file.h"
 
 int main(int argc, char *argv[]) {
 
@@ -12,7 +13,7 @@ int main(int argc, char *argv[]) {
 
     log_config("simple.log", LOG_DEBUG);
 
-    char str[80];
+    Msg_int msg_int_out;
 	int ch, Fx, Fy;
 
 	
@@ -73,16 +74,16 @@ int main(int argc, char *argv[]) {
         
         if(!wrongKey)
         {
-            sprintf(str, "%d %d", Fx, Fy);
+            Set_msg(msg_int_out, 'f', Fx, Fy);
             log_debug("New forze: %d %d", Fx, Fy);
-            write(fd_w_input, str, strlen(str) + 1);
+            write(fd_w_input, &msg_int_out, sizeof(msg_int_out));
         }
         wrongKey = false;
         
     }
     
-    strcpy(str, "quit");
-    write(fd_w_input, str, strlen(str) + 1);
+    Set_msg(msg_int_out, 'q', 0, 0);
+    write(fd_w_input, &msg_int_out, sizeof(msg_int_out));
 
     endwin();
     close(fd_w_input);           

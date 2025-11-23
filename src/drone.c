@@ -5,29 +5,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "logger.h"
-
-#define init_x 1    //Initial position x
-#define init_y 1    //Initial position y
-#define T 0.5        //Integration time value (s)
-
-//DA CAMBIARE!!!! Ma ora non è ancora implementato il resize
-typedef struct{
-    int width;
-    int height;
-}winDimension;
-
-typedef struct
-{
-    float x;
-    float y;
-    int Fx;
-    int Fy;
-    float x_1;
-    float x_2;
-    float y_1;
-    float y_2;
-    const char *skin;
-}drone;
+#include "parameter_file.h"
 
 /// @brief Calcola la nuova posizione del drone sulla base delle forze che riceve come input e calcola le forze
 ///         sulla base delle posizioni degli ostacoli e target
@@ -41,8 +19,8 @@ int main(int argc, char *argv[])
 
     log_config("simple.log", LOG_DEBUG);
     
-    
-    char str[80], ch;
+    Msg_int msg_int_in;
+    Msg_float msg_float_out;
     //char request[80] = "request";
 
     winDimension size;
@@ -50,7 +28,6 @@ int main(int argc, char *argv[])
     size.width = 100;
 
     drone drn;
-    drn.skin = "+";
     
     bool exiting = false;
 
@@ -64,10 +41,13 @@ int main(int argc, char *argv[])
     drn.x_2=init_x;
     drn.y_2=init_y;
     
+    log_debug("Parto");
 	
     //Legge dimensioni iniziali della finestra
-	read(fd_r_drone, str, sizeof(str));
-    sscanf(str, "s %d %d", &size.height, &size.width);
+	read(fd_r_drone, &msg_int_in, sizeof(msg_int_in));
+    size.height = msg_int_in.a;
+    size.width = msg_int_in.b;
+    log_debug("Ho letto");
 
     //printw("Press q to quit");
 	//refresh();
@@ -76,12 +56,11 @@ int main(int argc, char *argv[])
 
     while(1)
     {
-        sprintf(str, "%f %f", drn.x, drn.y);
-        write(fd_w_drone, str, strlen(str) + 1);
-        read(fd_r_drone, str, sizeof(str));
-        ch = str[0];
-        log_debug("Ch = %c", ch);
-        switch(ch)
+        Set_msg(msg_float_out, 'f', drn.x, drn.y);
+        write(fd_w_drone, &msg_float_out, sizeof(msg_float_out));
+        read(fd_r_drone, &msg_int_in, sizeof(msg_int_in));
+        log_debug("Ch = %c", msg_int_in.type);
+        switch(msg_int_in.type)
         {
 
             case 'q': 
@@ -89,14 +68,17 @@ int main(int argc, char *argv[])
                 exiting = true;
                 break;
             case 'f':
-                sscanf(str, "f %d %d", &drn.Fx, &drn.Fy);
+                drn.Fx = msg_int_in.a;
+                drn.Fy = msg_int_in.b;
                 break; 
             case 's':
                 log_warn("caso s");
-                sscanf(str, "s %d %d", &size.height, &size.width);
-                read(fd_r_drone, str, sizeof(str));
-                log_debug("Letto forza post resize %c", str[0]);
-                sscanf(str, "f %d %d", &drn.Fx, &drn.Fy);
+                size.height = msg_int_in.a;
+                size.width = msg_int_in.b;
+                read(fd_r_drone, &msg_int_in, sizeof(msg_int_in));
+                log_debug("Letto forza post resize %c", msg_int_in.type);
+                drn.Fx = msg_int_in.a;
+                drn.Fy = msg_int_in.b;
                 break;
             default:
                 log_error("ERRORE nel formato");

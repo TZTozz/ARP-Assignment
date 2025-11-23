@@ -6,10 +6,8 @@
 #include <unistd.h>
 #include <stdio.h>
 #include "logger.h"
+#include "parameter_file.h"
 
-#define density 0.01
-#define MaxHeight 80
-#define MaxWidth 270
 
 
 void ClearArray(bool array[MaxHeight][MaxWidth])
@@ -73,7 +71,7 @@ int main(int argc, char *argv[])
     
     bool exiting = false;
 
-    char message_out[80], message_in[80], ch;
+    Msg_int msg_int_in;
     int h_Win, w_Win;
 
     //ClearArray(obstacle);
@@ -82,16 +80,16 @@ int main(int argc, char *argv[])
     
     while(1)
     {
-        read(fd_r_obstacle, message_in, sizeof(message_in));
-        ch = message_in[0];
-        log_debug("The char is %c", ch);
-        switch (ch)
+        read(fd_r_obstacle, &msg_int_in, sizeof(msg_int_in));
+        log_debug("The char is %c", msg_int_in.type);
+        switch (msg_int_in.type)
         {
             case 'q':
                 exiting = true;
                 break;
             case 'o':       //La BB vuole la posizione degli ostacoli
-                sscanf(message_in, "o %d %d", &h_Win, &w_Win);
+                h_Win = msg_int_in.a;
+                w_Win = msg_int_in.b;
                 ClearArray(obstacle);
                 Positioning(obstacle, h_Win, w_Win);
                 write(fd_w_obstacle, obstacle, sizeof(obstacle));
@@ -106,6 +104,7 @@ int main(int argc, char *argv[])
 
         if (exiting) break;
 
+        usleep(100000);
         
     }
 
