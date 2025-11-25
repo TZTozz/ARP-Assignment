@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     log_config("simple.log", LOG_DEBUG);
     
     Msg_int msg_int_in;
-    Msg_float msg_float_out;
+    Msg_float msg_float_in, msg_float_out;
     //char request[80] = "request";
 
     winDimension size;
@@ -58,9 +58,9 @@ int main(int argc, char *argv[])
     {
         Set_msg(msg_float_out, 'f', drn.x, drn.y);
         write(fd_w_drone, &msg_float_out, sizeof(msg_float_out));
-        read(fd_r_drone, &msg_int_in, sizeof(msg_int_in));
-        log_debug("Ch = %c", msg_int_in.type);
-        switch(msg_int_in.type)
+        read(fd_r_drone, &msg_float_in, sizeof(msg_float_in));
+        log_debug("Ch = %c", msg_float_in.type);
+        switch(msg_float_in.type)
         {
 
             case 'q': 
@@ -68,17 +68,17 @@ int main(int argc, char *argv[])
                 exiting = true;
                 break;
             case 'f':
-                drn.Fx = msg_int_in.a;
-                drn.Fy = msg_int_in.b;
+                drn.Fx = msg_float_in.a;
+                drn.Fy = msg_float_in.b;
                 break; 
             case 's':
-                log_warn("caso s");
-                size.height = msg_int_in.a;
-                size.width = msg_int_in.b;
-                read(fd_r_drone, &msg_int_in, sizeof(msg_int_in));
-                log_debug("Letto forza post resize %c", msg_int_in.type);
-                drn.Fx = msg_int_in.a;
-                drn.Fy = msg_int_in.b;
+                log_debug("caso s");
+                size.height = msg_float_in.a;
+                size.width = msg_float_in.b;
+                read(fd_r_drone, &msg_float_in, sizeof(msg_float_in));
+                //log_debug("Letto forza post resize %c", msg_int_in.type);
+                drn.Fx = msg_float_in.a;
+                drn.Fy = msg_float_in.b;
                 break;
             default:
                 log_error("ERRORE nel formato");

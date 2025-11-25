@@ -104,7 +104,7 @@ int main(int argc, char *argv[])
     
     //Blackboard data
     float xDrone = 1, yDrone = 1;
-    int Fx = 0, Fy = 0;
+    float Fx = 0, Fy = 0;
 
     //Obstacle array
     bool obstacle[MaxHeight][MaxWidth]; 
@@ -132,15 +132,14 @@ int main(int argc, char *argv[])
 
     //Comunica al drone la dimensione della finestra
     Set_msg(msg_int_out, 's', size.height, size.width);
-    //(msg_int_out, "s %d %d", size.height, size.width);
     write(fd_r_drone, &msg_int_out, sizeof(msg_int_out));
 
     log_debug("height: %d Width: %d", size.height, size.width);
 
     //Comunica a obstacle le dimensioni della finestra
-    Set_msg(msg_int_out, 'o', size.height, size.width);
+    Set_msg(msg_float_out, 'o', size.height, size.width);
     //sprintf(msg_int_out, "o %d %d", size.height, size.width);
-    write(fd_r_obstacle, &msg_int_out, sizeof(msg_int_out));
+    write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
     read(fd_w_obstacle, obstacle, sizeof(obstacle));
     PrintObstacle(my_win, obstacle, size.height, size.width);
 
@@ -163,8 +162,8 @@ int main(int argc, char *argv[])
             resize_term(0, 0);          // o resizeterm(0, 0)
             size = layout_and_draw(my_win);       // ricalcola layout e ridisegna
 
-            Set_msg(msg_int_out, 'o', size.height, size.width);
-            write(fd_r_obstacle, &msg_int_out, sizeof(msg_int_out));
+            Set_msg(msg_float_out, 'o', size.height, size.width);
+            write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
             read(fd_w_obstacle, obstacle, sizeof(obstacle));
             PrintObstacle(my_win, obstacle, size.height, size.width);
             mvwprintw(my_win, yDrone, xDrone, skin);
@@ -185,14 +184,14 @@ int main(int argc, char *argv[])
                 read(fd_w_input, &msg_int_in, sizeof(msg_int_in));
                 if(msg_int_in.type == 'q') 
                 {
-                    Set_msg(msg_int_out, 'q', 0, 0);
-                    write(fd_r_drone, &msg_int_out, sizeof(msg_int_out));
-                    write(fd_r_obstacle, &msg_int_out, sizeof(msg_int_out));
+                    Set_msg(msg_float_out, 'q', 0, 0);
+                    write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
+                    write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
                     break;
                 }
-                Fx = msg_int_in.a;
-                Fy = msg_int_in.b;
-                log_debug("Leggo input: Fx: %d Fy: %d", Fx, Fy);
+                Fx = (float)msg_int_in.a;
+                Fy = (float)msg_int_in.b;
+                //log_debug("Leggo input: Fx: %d Fy: %d", Fx, Fy);
 
             }
 
@@ -213,9 +212,14 @@ int main(int argc, char *argv[])
                     write(fd_r_drone, &msg_int_out, sizeof(msg_int_out));
                     sizeChanged = false;
                 }
-                Set_msg(msg_int_out, 'f', Fx, Fy);
-                write(fd_r_drone, &msg_int_out, sizeof(msg_int_out));
-                log_debug("Ho scritto anche le forze: %c", msg_int_out.type);
+                Set_msg(msg_float_out, 'f', xDrone, yDrone);
+                write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
+                read(fd_w_obstacle, &msg_float_in, sizeof(msg_float_in));
+                log_debug("obstacles forces: %f %f", msg_float_in.a, msg_float_in.b);
+                Fx += msg_float_in.a;
+                Fy += msg_float_in.b;
+                Set_msg(msg_float_out, 'f', Fx, Fy);
+                write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
             }
 
         }

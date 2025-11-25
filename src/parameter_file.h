@@ -9,8 +9,10 @@
 
 #define init_x 1    //Initial position x
 #define init_y 1    //Initial position y
-#define T 0.5        //Integration time value (s)
 
+#define T 0.5       //Integration time value (s)
+#define eta 5       //Coefficient Latombe formula
+#define rho 5       //Distance of sensibility obstacles
 
 typedef struct{
     char type;   // 'f', 's', 'q'
@@ -37,8 +39,8 @@ typedef struct
 {
     float x;
     float y;
-    int Fx;
-    int Fy;
+    float Fx;
+    float Fy;
     float x_1;
     float x_2;
     float y_1;

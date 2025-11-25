@@ -21,13 +21,46 @@ void ClearArray(bool array[MaxHeight][MaxWidth])
     }
 }
 
+void CheckObNear(bool array[][MaxWidth], float x, float y, float *Fx, float *Fy)
+{
+    int c = (int)(x - rho);
+    int r = (int)(y - rho);
+
+    if (c < 0) c = 0;
+    if (r < 0) r = 0;
+
+    for (r = 0; r < y + 3; r++)
+    {
+        for (c = 0; c < x + 3; c++)
+        {
+            if (array[r][c])
+            {
+                float d = sqrt(powf((r - y), 2) + powf((c - x), 2));
+                log_warn("distance: %f", d);
+                if (d < rho)
+                {
+                    float F = eta * ((1/d) - (1/rho)) * (1/powf(d,2));
+                    float m = (c - x)/(r - y);
+                    float fy = sqrt(powf(F, 2)/(powf(m, 2) + 1));
+                    float fx = m * fy; 
+                    log_debug("Obstacle forces: %f %f", fx, fy);
+                    *Fx += fx;
+                    *Fy += fy;
+                }
+
+            }
+        }
+    }
+}
+
+
 /// @brief Stampa in posizioni random gli ostacoli sulla base 
 /// @param array 
 /// @param height 
 /// @param width 
 void Positioning(bool array[][MaxWidth], int height, int width)
 {
-    int dim = (height - 2) * (width - 2);        //-3 cause the obstacles must be inside the window
+    int dim = (height - 2) * (width - 2);        //-2 cause the obstacles must be inside the window
     int numObstacle = (int)(density * dim);
 
     log_debug("Width: %d, Height: %d", width, height);
@@ -71,8 +104,11 @@ int main(int argc, char *argv[])
     
     bool exiting = false;
 
-    Msg_int msg_int_in;
+    Msg_int msg_int_out;
+    Msg_float msg_float_in, msg_float_out;
     int h_Win, w_Win;
+
+    float Fx, Fy;
 
     //ClearArray(obstacle);
     //strcpy(message_out, "request");
@@ -80,21 +116,27 @@ int main(int argc, char *argv[])
     
     while(1)
     {
-        read(fd_r_obstacle, &msg_int_in, sizeof(msg_int_in));
-        log_debug("The char is %c", msg_int_in.type);
-        switch (msg_int_in.type)
+        read(fd_r_obstacle, &msg_float_in, sizeof(msg_float_in));
+        log_debug("The char is %c", msg_float_in.type);
+        switch (msg_float_in.type)
         {
             case 'q':
                 exiting = true;
                 break;
             case 'o':       //La BB vuole la posizione degli ostacoli
-                h_Win = msg_int_in.a;
-                w_Win = msg_int_in.b;
+                h_Win = (int)msg_float_in.a;
+                w_Win = (int)msg_float_in.b;
+                log_debug("Dimesioni finestra: %d, %d", h_Win, w_Win);
                 ClearArray(obstacle);
                 Positioning(obstacle, h_Win, w_Win);
                 write(fd_w_obstacle, obstacle, sizeof(obstacle));
                 break;
             case 'f':       //La BB vuole le forze che gli ostacoli applicano sul drone
+                Fx = 0;
+                Fy = 0;
+                CheckObNear(obstacle, msg_float_in.a, msg_float_in.b, &Fx, &Fy);
+                Set_msg(msg_float_out, 'f', Fx, Fy);
+                write(fd_w_obstacle, &msg_float_out, sizeof(msg_float_out));
                 break;
             default:
                 log_error("ERRORE nel formato");
