@@ -162,7 +162,7 @@ int main(int argc, char *argv[])
             resize_term(0, 0);          // o resizeterm(0, 0)
             size = layout_and_draw(my_win);       // ricalcola layout e ridisegna
 
-            Set_msg(msg_float_out, 'o', size.height, size.width);
+            Set_msg(msg_float_out, 'o', (float)size.height, (float)size.width);
             write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
             read(fd_w_obstacle, obstacle, sizeof(obstacle));
             PrintObstacle(my_win, obstacle, size.height, size.width);
@@ -208,17 +208,17 @@ int main(int argc, char *argv[])
                 if(sizeChanged)
                 {
                     log_debug("size Changed");
-                    Set_msg(msg_int_out, 's', size.height, size.width);
-                    write(fd_r_drone, &msg_int_out, sizeof(msg_int_out));
+                    Set_msg(msg_float_out, 's', (float)size.height, (float)size.width);
+                    write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
                     sizeChanged = false;
                 }
                 Set_msg(msg_float_out, 'f', xDrone, yDrone);
                 write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
                 read(fd_w_obstacle, &msg_float_in, sizeof(msg_float_in));
                 log_debug("obstacles forces: %f %f", msg_float_in.a, msg_float_in.b);
-                Fx += msg_float_in.a;
-                Fy += msg_float_in.b;
-                Set_msg(msg_float_out, 'f', Fx, Fy);
+                float totFx = Fx + msg_float_in.a;
+                float totFy = Fy + msg_float_in.b;
+                Set_msg(msg_float_out, 'f', totFx, totFy);
                 write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
             }
 

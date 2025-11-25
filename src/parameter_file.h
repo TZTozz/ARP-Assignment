@@ -13,6 +13,7 @@
 #define T 0.5       //Integration time value (s)
 #define eta 5       //Coefficient Latombe formula
 #define rho 5       //Distance of sensibility obstacles
+#define MaxRepulsive 5      //Max repulsive force of the obstacles
 
 typedef struct{
     char type;   // 'f', 's', 'q'

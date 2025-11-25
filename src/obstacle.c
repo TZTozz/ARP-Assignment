@@ -21,33 +21,63 @@ void ClearArray(bool array[MaxHeight][MaxWidth])
     }
 }
 
+#include <math.h>
+#include <stdbool.h>
+
+// Assumo che log_warn e log_debug siano definiti altrove
+// Assumo MaxWidth e MaxHeight siano definiti
+
 void CheckObNear(bool array[][MaxWidth], float x, float y, float *Fx, float *Fy)
 {
-    int c = (int)(x - rho);
-    int r = (int)(y - rho);
+    int min_c = (int)(x - rho);
+    int max_c = (int)(x + rho);
+    int min_r = (int)(y - rho);
+    int max_r = (int)(y + rho);
 
-    if (c < 0) c = 0;
-    if (r < 0) r = 0;
-
-    for (r = 0; r < y + 3; r++)
+    if (min_c < 0) min_c = 0;
+    //if (max_c >= MaxWidth) max_c = MaxWidth - 1;
+    if (min_r < 0) min_r = 0;
+    
+    for (int r = min_r; r <= max_r; r++)
     {
-        for (c = 0; c < x + 3; c++)
+        for (int c = min_c; c <= max_c; c++)
         {
             if (array[r][c])
             {
-                float d = sqrt(powf((r - y), 2) + powf((c - x), 2));
-                log_warn("distance: %f", d);
+                float dx = x - c; 
+                float dy = y - r;
+
+                float d = sqrtf(dx*dx + dy*dy);
+
+                //To avoid division per zero
+                if (d < 0.001f) d = 0.001f;
+
                 if (d < rho)
                 {
-                    float F = eta * ((1/d) - (1/rho)) * (1/powf(d,2));
-                    float m = (c - x)/(r - y);
-                    float fy = sqrt(powf(F, 2)/(powf(m, 2) + 1));
-                    float fx = m * fy; 
-                    log_debug("Obstacle forces: %f %f", fx, fy);
+                    // Formula Latombe
+                    // F = eta * (1/d - 1/rho) * (1/d^2)
+                    float term1 = (1.0f / d) - (1.0f / rho);
+                    float F = eta * term1 * (1.0f / (d * d));
+
+                    // Proiezione vettoriale (molto più robusta della pendenza m):
+                    // Fx = Magnitude * (dx / d) -> dove (dx/d) è il coseno direttore
+                    // Fy = Magnitude * (dy / d) -> dove (dy/d) è il seno direttore
+                    
+                    float fx = F * (dx / d);
+                    float fy = F * (dy / d);
+
+                    if (abs(F) > MaxRepulsive)
+                    {
+                        float scale = MaxRepulsive / F;
+                        fx = fx * scale;
+                        fy = fy * scale;
+                    }
+
+                    log_debug("Obstacle at [%d,%d] Dist: %f -> F: %f %f", r, c, d, fx, fy);
+                    
                     *Fx += fx;
                     *Fy += fy;
                 }
-
             }
         }
     }
