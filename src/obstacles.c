@@ -12,9 +12,9 @@
 
 void ClearArray(bool array[MaxHeight][MaxWidth])
 {
-    for(int i; i < MaxHeight; i++)
+    for(int i = 0; i < MaxHeight; i++)
     {
-        for(int j; j < MaxWidth; j++)
+        for(int j = 0; j < MaxWidth; j++)
         {
             array[i][j] = false;
         }
@@ -81,64 +81,67 @@ void ObstacleRepulsion(bool array[][MaxWidth], float x, float y, float *Fx, floa
 void WallRepulsion(float x, float y, float *Fx, float *Fy, int height, int width)
 {
     //Left wall
-    if (x < rho)
+    if (x - 1 < rho)
     {
-        float d = x;
+        float d = x - 1;
         if (d < 0.001f) d = 0.001f;
 
         //Calculate relative distance 
         float term1 = (1.0f / d) - (1.0f / rho);
         float F = eta * term1 * (1.0f / (d * d));
 
-        if (abs(F) > MaxRepulsive) F = MaxRepulsive;
-
+        if (F > MaxRepulsive) F = MaxRepulsive;
+        log_debug("Thedistance is %f and the force is %f", d, F);
         //Sum to total force
         *Fx += F;
     }
 
     //Right wall
-    if ((width - x - 1) < rho)
+    if ((width - x - 2) < rho)
     {
-        float d = width - x;
+        float d = width - x- 2;
         if (d < 0.001f) d = 0.001f;
 
         //Calculate relative distance 
         float term1 = (1.0f / d) - (1.0f / rho);
         float F = eta * term1 * (1.0f / (d * d));
 
-        if (abs(F) > MaxRepulsive) F = MaxRepulsive;
+        if (F > MaxRepulsive) F = MaxRepulsive;
+        log_debug("Thedistance is %f and the force is %f", d, F);
 
         //Sum to total force
         *Fx -= F;
     }
 
     //Upper wall
-    if (y < rho)
+    if (y - 1 < rho)
     {
-        float d = y;
+        float d = y - 1;
         if (d < 0.001f) d = 0.001f;
 
         //Calculate relative distance 
         float term1 = (1.0f / d) - (1.0f / rho);
         float F = eta * term1 * (1.0f / (d * d));
 
-        if (abs(F) > MaxRepulsive) F = MaxRepulsive;
+        if (F > MaxRepulsive) F = MaxRepulsive;
+        log_debug("Thedistance is %f and the force is %f", d, F);
 
         //Sum to total force
         *Fy += F;
     }
 
     //Bottom wall
-    if ((height - y - 1) < rho)
+    if ((height - y - 2) < rho)
     {
-        float d = height - y;
+        float d = height - y - 2;
         if (d < 0.001f) d = 0.001f;
 
         //Calculate relative distance 
         float term1 = (1.0f / d) - (1.0f / rho);
         float F = eta * term1 * (1.0f / (d * d));
 
-        if (abs(F) > MaxRepulsive) F = MaxRepulsive;
+        if (F > MaxRepulsive) F = MaxRepulsive;
+        log_debug("Thedistance is %f and the force is %f", d, F);
 
         //Sum to total force
         *Fy -= F;

@@ -93,15 +93,16 @@ int main(int argc, char *argv[])
         drn.y_2=drn.y_1;
         drn.x_1 = drn.x;
         drn.y_1 = drn.y;
-        drn.x=(T*T*drn.Fx-drn.x_2+(2+T)*drn.x_1)/(T+1);
-        drn.y=(T*T*drn.Fy-drn.y_2+(2+T)*drn.y_1)/(T+1);
+        drn.x=(T*T*drn.Fx-drn.x_2+(2+T*K)*drn.x_1)/(K*T+1);
+        drn.y=(T*T*drn.Fy-drn.y_2+(2+T*K)*drn.y_1)/(K*T+1);
 
         //log_debug("Fx: %d, Fy: %d", drn.Fx, drn.Fy);
         if (drn.x < 1) drn.x = 1;
         if (drn.x > size.width - 2) drn.x = size.width - 2;
         if (drn.y < 1) drn.y = 1;
         if (drn.y > size.height - 2) drn.y = size.height - 2;
-        log_debug("Position: X: %f Y: %f", drn.x, drn.y);
+        //log_debug("Position: X: %f Y: %f", drn.x, drn.y);
+        log_debug("Velocità: X: %f Y: %f", (drn.x - drn.x_1), (drn.y - drn.y_1));
         usleep(SleepTime);
     }
 

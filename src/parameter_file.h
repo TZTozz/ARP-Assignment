@@ -9,15 +9,16 @@
 #define densityTargets 0.002
 
 
-#define init_x 6    //Initial position x
-#define init_y 6    //Initial position y
+#define init_x 6        //Initial position x
+#define init_y 6        //Initial position y
 
-#define T 0.01       //Integration time value (s)
-#define eta 5       //Coefficient Latombe formula
-#define rho 5       //Distance of sensibility obstacles
-#define MaxRepulsive 2      //Max repulsive force of the obstacles
+#define T 0.1           //Integration time value (s)
+#define K 10             //Air coefficient
+#define eta 0.8         //Coefficient Latombe formula
+#define rho 5           //Distance of sensibility obstacles
+#define MaxRepulsive 10      //Max repulsive force of the obstacles
 
-#define SleepTime 100000
+#define SleepTime 10000
 
 typedef struct{
     char type;   // 'f', 's', 'q'

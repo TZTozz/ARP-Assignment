@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <locale.h>
+#include <stdlib.h>
 #include "logger.h"
 #include "parameter_file.h"
 #include <signal.h>
@@ -66,7 +67,7 @@ static winDimension layout_and_draw(WINDOW *win) {
     return size;
 }
 
-void PrintObstacle(WINDOW *win, bool array[][MaxWidth], int height, int width, bool isTarget)
+void PrintObject(WINDOW *win, bool array[][MaxWidth], int height, int width, bool isTarget)
 {
     for(int i = 0; i < height - 2; i++)
     {
@@ -116,9 +117,10 @@ int main(int argc, char *argv[])
     float xDrone = 1, yDrone = 1;
     float Fx = 0, Fy = 0;
 
-    //Obstacle array
+    //Obstacle and target array
     bool obstacle[MaxHeight][MaxWidth]; 
-    bool target[MaxHeight][MaxWidth]; 
+    bool target[MaxHeight][MaxWidth];
+    bool isExiting = false;
     
     initscr(); 
     cbreak();
@@ -149,16 +151,17 @@ int main(int argc, char *argv[])
 
     //Comunica a obstacle le dimensioni della finestra
     Set_msg(msg_float_out, 'o', size.height, size.width);
-    //sprintf(msg_int_out, "o %d %d", size.height, size.width);
     write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
     read(fd_w_obstacle, obstacle, sizeof(obstacle));
-    PrintObstacle(my_win, obstacle, size.height, size.width, false);
+    PrintObject(my_win, obstacle, size.height, size.width, false);
     
+
+    //Comunica a target le dimensioni della finestra
     Set_msg(msg_float_out, 't', size.height, size.width);
     write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
     write(fd_r_target, obstacle, sizeof(obstacle));
     read(fd_w_target, target, sizeof(target));
-    PrintObstacle(my_win, target, size.height, size.width, true);
+    PrintObject(my_win, target, size.height, size.width, true);
 
     //Stampa il drone nella posizione iniziale
     mvwprintw(my_win, yDrone, xDrone, "%s", skin);
@@ -180,10 +183,19 @@ int main(int argc, char *argv[])
             resize_term(0, 0);          // o resizeterm(0, 0)
             size = layout_and_draw(my_win);       // ricalcola layout e ridisegna
 
+            //Redraw obstacles
             Set_msg(msg_float_out, 'o', (float)size.height, (float)size.width);
             write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
             read(fd_w_obstacle, obstacle, sizeof(obstacle));
-            PrintObstacle(my_win, obstacle, size.height, size.width, false);
+            PrintObject(my_win, obstacle, size.height, size.width, false);
+
+            //Redraw targets
+            Set_msg(msg_float_out, 't', size.height, size.width);
+            write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
+            write(fd_r_target, obstacle, sizeof(obstacle));
+            read(fd_w_target, target, sizeof(target));
+            PrintObject(my_win, target, size.height, size.width, true);
+
             mvwprintw(my_win, yDrone, xDrone, skin);
             wrefresh(my_win);
             sizeChanged = true;
@@ -200,15 +212,33 @@ int main(int argc, char *argv[])
             if(FD_ISSET(fd_w_input, &r_fds))        //Input vuole scrivere le nuove forze
             {
                 read(fd_w_input, &msg_int_in, sizeof(msg_int_in));
-                if(msg_int_in.type == 'q') 
+                switch(msg_int_in.type)
                 {
-                    Set_msg(msg_float_out, 'q', 0, 0);
-                    write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
-                    write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
-                    break;
+                    case 'q':
+                        Set_msg(msg_float_out, 'q', 0, 0);
+                        write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
+                        write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
+                        write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
+                        isExiting = true;
+                        break;
+                    case 'f':
+                        Fx += (float)msg_int_in.a;
+                        Fy += (float)msg_int_in.b;
+                        break;
+                    case 'b':
+                        Fx = Fx * 0.5;
+                        Fy = Fy * 0.5;
+                        log_debug("Forces after breaking: %f %f", Fx, Fy);
+                        if (abs(Fx) < 0.5) Fx = 0;
+                        if (abs(Fy) < 0.5) Fy = 0;
+                        break;
+                    default:
+                        perror("Error msg from input");
+                        break;
                 }
-                Fx = (float)msg_int_in.a;
-                Fy = (float)msg_int_in.b;
+
+                if (isExiting) break;
+                
                 //log_debug("Leggo input: Fx: %d Fy: %d", Fx, Fy);
 
             }
@@ -233,12 +263,12 @@ int main(int argc, char *argv[])
                 Set_msg(msg_float_out, 'f', xDrone, yDrone);
                 write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
                 read(fd_w_obstacle, &msg_float_in, sizeof(msg_float_in));
-                log_debug("obstacles forces: %f %f", msg_float_in.a, msg_float_in.b);
                 //float totFx = Fx + msg_float_in.a;
                 //float totFy = Fy + msg_float_in.b;
                 //Set_msg(msg_float_out, 'f', totFx, totFy);
                 Fx += msg_float_in.a;
                 Fy += msg_float_in.b;
+                log_debug("Total forces: %f %f", Fx, Fy);
                 Set_msg(msg_float_out, 'f', Fx, Fy);
                 write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
             }

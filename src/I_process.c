@@ -21,6 +21,7 @@ int main(int argc, char *argv[]) {
 	Fy = 0;
 
     bool wrongKey = false;
+    bool isBreaking = false;
 
 	initscr();
     cbreak();
@@ -31,41 +32,42 @@ int main(int argc, char *argv[]) {
 
     while((ch = getch()) != 'q')
     {
-
         switch(ch)
         {
             case 'e':       //Up
-                Fy--;
+                Fx = 0;
+                Fy = -1;
                 break;
             case 'r':       //Up-right
-                Fx++;
-                Fy--;
+                Fx = 1;
+                Fy = -1;
                 break;
             case 'f':       //Right
-                Fx++;
+                Fx = 1;
+                Fy = 0;
                 break;
             case 'v':       //Down-right
-                Fx++;
-                Fy++;
+                Fx = 1;
+                Fy = +1;
                 break;
             case 'c':       //Down
-                Fy++;
+                Fx = 0;
+                Fy = +1;
                 break;
             case 'x':       //Down-left
-                Fx--;
-                Fy++;
+                Fx = -1;
+                Fy = +1;
                 break;		
             case 's':       //Left
-                Fx--;
+                Fx = -1;
+                Fy = 0;
                 break;
             case 'w':       //Up-left
-                Fx--;
-                Fy--;
+                Fx = -1;
+                Fy = -1;
                 break;
             case 'd':       //Brake
-                Fx = Fx * 0.5;
-                Fy = Fy * 0.5;
-                
+                isBreaking = true;
                 break;
             default:
                 wrongKey = true;
@@ -74,11 +76,21 @@ int main(int argc, char *argv[]) {
         
         if(!wrongKey)
         {
-            Set_msg(msg_int_out, 'f', Fx, Fy);
-            log_debug("New forze: %d %d", Fx, Fy);
+            if(isBreaking)
+            {
+                Set_msg(msg_int_out, 'b', 0, 0);
+                log_debug("Breaking!");
+            } 
+            else 
+            {
+                Set_msg(msg_int_out, 'f', Fx, Fy);
+                log_debug("New forze: %d %d", Fx, Fy);
+            }
+            
             write(fd_w_input, &msg_int_out, sizeof(msg_int_out));
         }
         wrongKey = false;
+        isBreaking = false;
         
     }
     
