@@ -5,17 +5,19 @@
 #define skin "+"
 #define MaxHeight 80
 #define MaxWidth 270
-#define densityObstacles 0.01
-#define densityTargets 0.01
+#define densityObstacles 0.002
+#define densityTargets 0.002
 
 
-#define init_x 1    //Initial position x
-#define init_y 1    //Initial position y
+#define init_x 6    //Initial position x
+#define init_y 6    //Initial position y
 
-#define T 0.5       //Integration time value (s)
+#define T 0.01       //Integration time value (s)
 #define eta 5       //Coefficient Latombe formula
 #define rho 5       //Distance of sensibility obstacles
-#define MaxRepulsive 5      //Max repulsive force of the obstacles
+#define MaxRepulsive 2      //Max repulsive force of the obstacles
+
+#define SleepTime 100000
 
 typedef struct{
     char type;   // 'f', 's', 'q'

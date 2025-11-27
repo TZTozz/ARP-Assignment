@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
         if (drn.y < 1) drn.y = 1;
         if (drn.y > size.height - 2) drn.y = size.height - 2;
         log_debug("Position: X: %f Y: %f", drn.x, drn.y);
-        usleep(100000);
+        usleep(SleepTime);
     }
 
     log_debug("Sto uscendo");

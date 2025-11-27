@@ -76,7 +76,73 @@ void ObstacleRepulsion(bool array[][MaxWidth], float x, float y, float *Fx, floa
             }
         }
     }
+}
 
+void WallRepulsion(float x, float y, float *Fx, float *Fy, int height, int width)
+{
+    //Left wall
+    if (x < rho)
+    {
+        float d = x;
+        if (d < 0.001f) d = 0.001f;
+
+        //Calculate relative distance 
+        float term1 = (1.0f / d) - (1.0f / rho);
+        float F = eta * term1 * (1.0f / (d * d));
+
+        if (abs(F) > MaxRepulsive) F = MaxRepulsive;
+
+        //Sum to total force
+        *Fx += F;
+    }
+
+    //Right wall
+    if ((width - x - 1) < rho)
+    {
+        float d = width - x;
+        if (d < 0.001f) d = 0.001f;
+
+        //Calculate relative distance 
+        float term1 = (1.0f / d) - (1.0f / rho);
+        float F = eta * term1 * (1.0f / (d * d));
+
+        if (abs(F) > MaxRepulsive) F = MaxRepulsive;
+
+        //Sum to total force
+        *Fx -= F;
+    }
+
+    //Upper wall
+    if (y < rho)
+    {
+        float d = y;
+        if (d < 0.001f) d = 0.001f;
+
+        //Calculate relative distance 
+        float term1 = (1.0f / d) - (1.0f / rho);
+        float F = eta * term1 * (1.0f / (d * d));
+
+        if (abs(F) > MaxRepulsive) F = MaxRepulsive;
+
+        //Sum to total force
+        *Fy += F;
+    }
+
+    //Bottom wall
+    if ((height - y - 1) < rho)
+    {
+        float d = height - y;
+        if (d < 0.001f) d = 0.001f;
+
+        //Calculate relative distance 
+        float term1 = (1.0f / d) - (1.0f / rho);
+        float F = eta * term1 * (1.0f / (d * d));
+
+        if (abs(F) > MaxRepulsive) F = MaxRepulsive;
+
+        //Sum to total force
+        *Fy -= F;
+    }
 }
 
 
@@ -146,7 +212,7 @@ int main(int argc, char *argv[])
         log_debug("The char is %c", msg_float_in.type);
         switch (msg_float_in.type)
         {
-            case 'q':
+            case 'q':       //Quitting
                 exiting = true;
                 break;
             case 'o':       //La BB vuole la posizione degli ostacoli
@@ -161,6 +227,9 @@ int main(int argc, char *argv[])
                 Fx = 0;
                 Fy = 0;
                 ObstacleRepulsion(obstacle, msg_float_in.a, msg_float_in.b, &Fx, &Fy);
+                log_debug("Forze dopo ostacoli: %f %f", Fx, Fy);
+                WallRepulsion(msg_float_in.a, msg_float_in.b, &Fx, &Fy, h_Win, w_Win);
+                log_debug("Forze dopo wall: %f %f", Fx, Fy);
                 Set_msg(msg_float_out, 'f', Fx, Fy);
                 write(fd_w_obstacle, &msg_float_out, sizeof(msg_float_out));
                 break;
@@ -171,8 +240,6 @@ int main(int argc, char *argv[])
         }
 
         if (exiting) break;
-
-        usleep(100000);
         
     }
 

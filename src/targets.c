@@ -114,8 +114,6 @@ int main(int argc, char *argv[])
         }
 
         if (exiting) break;
-
-        usleep(100000);
         
     }
 

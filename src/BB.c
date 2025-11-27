@@ -172,7 +172,8 @@ int main(int argc, char *argv[])
         FD_SET(fd_w_drone, &r_fds);
         FD_SET(fd_w_input, &r_fds);
 
-        if (need_resize) {
+        if (need_resize) 
+        {
             need_resize = 0;
             endwin();
             refresh();
@@ -249,6 +250,10 @@ int main(int argc, char *argv[])
     close(fd_r_drone);
     close(fd_w_drone);
     close(fd_w_input);
+    close(fd_r_obstacle);
+    close(fd_w_obstacle);
+    close(fd_r_target);
+    close(fd_w_target);
     endwin();
     return 0;
 
