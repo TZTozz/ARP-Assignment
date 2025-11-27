@@ -5,7 +5,9 @@
 #define skin "+"
 #define MaxHeight 80
 #define MaxWidth 270
-#define density 0.01
+#define densityObstacles 0.01
+#define densityTargets 0.01
+
 
 #define init_x 1    //Initial position x
 #define init_y 1    //Initial position y

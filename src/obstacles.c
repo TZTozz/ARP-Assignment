@@ -21,13 +21,8 @@ void ClearArray(bool array[MaxHeight][MaxWidth])
     }
 }
 
-#include <math.h>
-#include <stdbool.h>
 
-// Assumo che log_warn e log_debug siano definiti altrove
-// Assumo MaxWidth e MaxHeight siano definiti
-
-void CheckObNear(bool array[][MaxWidth], float x, float y, float *Fx, float *Fy)
+void ObstacleRepulsion(bool array[][MaxWidth], float x, float y, float *Fx, float *Fy)
 {
     int min_c = (int)(x - rho);
     int max_c = (int)(x + rho);
@@ -81,6 +76,7 @@ void CheckObNear(bool array[][MaxWidth], float x, float y, float *Fx, float *Fy)
             }
         }
     }
+
 }
 
 
@@ -91,7 +87,7 @@ void CheckObNear(bool array[][MaxWidth], float x, float y, float *Fx, float *Fy)
 void Positioning(bool array[][MaxWidth], int height, int width)
 {
     int dim = (height - 2) * (width - 2);        //-2 cause the obstacles must be inside the window
-    int numObstacle = (int)(density * dim);
+    int numObstacle = (int)(densityObstacles * dim);
 
     log_debug("Width: %d, Height: %d", width, height);
     bool vector[dim];
@@ -164,7 +160,7 @@ int main(int argc, char *argv[])
             case 'f':       //La BB vuole le forze che gli ostacoli applicano sul drone
                 Fx = 0;
                 Fy = 0;
-                CheckObNear(obstacle, msg_float_in.a, msg_float_in.b, &Fx, &Fy);
+                ObstacleRepulsion(obstacle, msg_float_in.a, msg_float_in.b, &Fx, &Fy);
                 Set_msg(msg_float_out, 'f', Fx, Fy);
                 write(fd_w_obstacle, &msg_float_out, sizeof(msg_float_out));
                 break;

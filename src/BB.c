@@ -66,13 +66,20 @@ static winDimension layout_and_draw(WINDOW *win) {
     return size;
 }
 
-void PrintObstacle(WINDOW *win, bool array[][MaxWidth], int height, int width)
+void PrintObstacle(WINDOW *win, bool array[][MaxWidth], int height, int width, bool isTarget)
 {
     for(int i = 0; i < height - 2; i++)
     {
         for(int j = 0; j < width - 2; j++)
         {
-            if (array[i][j]) mvwprintw(win, i, j, "0");
+            if (array[i][j]) 
+            {
+                if(isTarget)
+                {
+                    mvwprintw(win, i, j, "#");
+                }
+                else mvwprintw(win, i, j, "0");
+            }   
         }
     }
 
@@ -84,8 +91,11 @@ void handle_winch(int sig) {
 
 int main(int argc, char *argv[])
 {
-    int fd_r_drone, fd_w_drone, fd_w_input, fd_r_obstacle, fd_w_obstacle;
-    sscanf(argv[1], "%d %d %d %d %d", &fd_r_drone, &fd_w_drone, &fd_w_input, &fd_r_obstacle, &fd_w_obstacle);
+    int fd_r_drone, fd_w_drone, fd_w_input, fd_r_obstacle, fd_w_obstacle, fd_r_target, fd_w_target;
+    sscanf(argv[1], "%d %d %d %d %d %d %d", &fd_r_drone, &fd_w_drone,
+                                            &fd_w_input,
+                                            &fd_r_obstacle, &fd_w_obstacle,
+                                            &fd_r_target, &fd_w_target);
     
     log_config("simple.log", LOG_DEBUG);
     
@@ -108,6 +118,7 @@ int main(int argc, char *argv[])
 
     //Obstacle array
     bool obstacle[MaxHeight][MaxWidth]; 
+    bool target[MaxHeight][MaxWidth]; 
     
     initscr(); 
     cbreak();
@@ -141,7 +152,13 @@ int main(int argc, char *argv[])
     //sprintf(msg_int_out, "o %d %d", size.height, size.width);
     write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
     read(fd_w_obstacle, obstacle, sizeof(obstacle));
-    PrintObstacle(my_win, obstacle, size.height, size.width);
+    PrintObstacle(my_win, obstacle, size.height, size.width, false);
+    
+    Set_msg(msg_float_out, 't', size.height, size.width);
+    write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
+    write(fd_r_target, obstacle, sizeof(obstacle));
+    read(fd_w_target, target, sizeof(target));
+    PrintObstacle(my_win, target, size.height, size.width, true);
 
     //Stampa il drone nella posizione iniziale
     mvwprintw(my_win, yDrone, xDrone, "%s", skin);
@@ -165,7 +182,7 @@ int main(int argc, char *argv[])
             Set_msg(msg_float_out, 'o', (float)size.height, (float)size.width);
             write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
             read(fd_w_obstacle, obstacle, sizeof(obstacle));
-            PrintObstacle(my_win, obstacle, size.height, size.width);
+            PrintObstacle(my_win, obstacle, size.height, size.width, false);
             mvwprintw(my_win, yDrone, xDrone, skin);
             wrefresh(my_win);
             sizeChanged = true;
@@ -216,9 +233,12 @@ int main(int argc, char *argv[])
                 write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
                 read(fd_w_obstacle, &msg_float_in, sizeof(msg_float_in));
                 log_debug("obstacles forces: %f %f", msg_float_in.a, msg_float_in.b);
-                float totFx = Fx + msg_float_in.a;
-                float totFy = Fy + msg_float_in.b;
-                Set_msg(msg_float_out, 'f', totFx, totFy);
+                //float totFx = Fx + msg_float_in.a;
+                //float totFy = Fy + msg_float_in.b;
+                //Set_msg(msg_float_out, 'f', totFx, totFy);
+                Fx += msg_float_in.a;
+                Fy += msg_float_in.b;
+                Set_msg(msg_float_out, 'f', Fx, Fy);
                 write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
             }
 
