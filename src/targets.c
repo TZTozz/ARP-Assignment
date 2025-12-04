@@ -26,13 +26,14 @@ void Positioning(bool obsta[][MaxWidth], bool targ[][MaxWidth], int height, int 
 
     log_debug("Width: %d, Height: %d", width, height);
     bool targetVector[dim], obstaVector[dim];
-    //Inizializza il vettore a tutti false
+    
+    //Inizialize the vector with all false
     for(int i = 0; i < dim; i++)
     {
         targetVector[i] = false;
     }
 
-    //Dall'array al vettore di ostacoli
+    //From array to vector
     for (int r = 0; r < height - 2; r++) 
     {
         for (int c = 0; c < width - 2; c++) 
@@ -42,7 +43,7 @@ void Positioning(bool obsta[][MaxWidth], bool targ[][MaxWidth], int height, int 
         }
     }
 
-    //Ciclo che riempie il vettore con un numero di target pari a numTarget 
+    //Fill the vector with a number of targets as numTargets
     int j;
     for(int i = 0; i < numTargets; i++)
     {
@@ -50,15 +51,15 @@ void Positioning(bool obsta[][MaxWidth], bool targ[][MaxWidth], int height, int 
         {
             j = rand() % dim;
 
-        }while(obstaVector[j] || targetVector[j]);
+        }while(obstaVector[j] || targetVector[j]);      //Check for another target or obtacle in that position
         targetVector[j] = true;
     }
 
-    //Trasforma il vettore in una matrice
+    //From vector to matrix
     for (int i = 0; i < dim; i++) 
     {
-        int r = i / (width - 2);  // indice riga
-        int c = i % (width - 2);  // indice colonna
+        int r = i / (width - 2);  //Row
+        int c = i % (width - 2);  //Column
         targ[r+1][c+1] = targetVector[i];
     }
 
@@ -92,7 +93,7 @@ int main(int argc, char *argv[])
             case 'q':
                 exiting = true;
                 break;
-            case 't':       //La BB vuole la posizione degli ostacoli
+            case 't':       //The BB wants to know the position of the targets
                 h_Win = (int)msg_float_in.a;
                 w_Win = (int)msg_float_in.b;
                 read(fd_r_target, obstacle, sizeof(obstacle));
@@ -100,7 +101,8 @@ int main(int argc, char *argv[])
                 Positioning(obstacle, target, h_Win, w_Win);
                 write(fd_w_target, target, sizeof(target));
                 break;
-            case 'f':       //La BB vuole le forze che gli ostacoli applicano sul drone
+            case 'f':       //The BB wants to know the forces applied by targets
+                //-------TO BE IMPLEMENTED------
                 // Fx = 0;
                 // Fy = 0;
                 // CheckObNear(target, msg_float_in.a, msg_float_in.b, &Fx, &Fy);

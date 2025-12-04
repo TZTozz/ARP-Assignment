@@ -8,22 +8,27 @@
 
 int main(int argc, char *argv[]) {
 
+    //Handles the pipes
     int fd_w_input;
     sscanf(argv[1], "%d", &fd_w_input);
 
     log_config("simple.log", LOG_DEBUG);
 
+    //Protocol variable 
     Msg_int msg_int_out;
+
 	int ch, Fx, Fy;
 
-	
+    //Inizialize the forces
 	Fx = 0;
 	Fy = 0;
 
+    //Flags
     bool wrongKey = false;
     bool isBreaking = false;
 
-	initscr();
+	//Window setting
+    initscr();
     cbreak();
     noecho();
     keypad(stdscr, TRUE);
@@ -94,6 +99,7 @@ int main(int argc, char *argv[]) {
         
     }
     
+    //Communicates to the BB the user wants to quit
     Set_msg(msg_int_out, 'q', 0, 0);
     write(fd_w_input, &msg_int_out, sizeof(msg_int_out));
 

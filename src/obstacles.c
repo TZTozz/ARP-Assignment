@@ -9,7 +9,6 @@
 #include "parameter_file.h"
 
 
-
 void ClearArray(bool array[MaxHeight][MaxWidth])
 {
     for(int i = 0; i < MaxHeight; i++)
@@ -30,7 +29,6 @@ void ObstacleRepulsion(bool array[][MaxWidth], float x, float y, float *Fx, floa
     int max_r = (int)(y + rho);
 
     if (min_c < 0) min_c = 0;
-    //if (max_c >= MaxWidth) max_c = MaxWidth - 1;
     if (min_r < 0) min_r = 0;
     
     for (int r = min_r; r <= max_r; r++)
@@ -49,14 +47,13 @@ void ObstacleRepulsion(bool array[][MaxWidth], float x, float y, float *Fx, floa
 
                 if (d < rho)
                 {
-                    // Formula Latombe
-                    // F = eta * (1/d - 1/rho) * (1/d^2)
+                    //Latombe's formula
+                    //F = eta * (1/d - 1/rho) * (1/d^2)
                     float term1 = (1.0f / d) - (1.0f / rho);
                     float F = eta * term1 * (1.0f / (d * d));
 
-                    // Proiezione vettoriale (molto più robusta della pendenza m):
-                    // Fx = Magnitude * (dx / d) -> dove (dx/d) è il coseno direttore
-                    // Fy = Magnitude * (dy / d) -> dove (dy/d) è il seno direttore
+                    //(dx/d) is the cosine
+                    //(dy/d) is the sine
                     
                     float fx = F * (dx / d);
                     float fy = F * (dy / d);
@@ -92,6 +89,7 @@ void WallRepulsion(float x, float y, float *Fx, float *Fy, int height, int width
 
         if (F > MaxRepulsive) F = MaxRepulsive;
         log_debug("Thedistance is %f and the force is %f", d, F);
+
         //Sum to total force
         *Fx += F;
     }
@@ -149,7 +147,7 @@ void WallRepulsion(float x, float y, float *Fx, float *Fy, int height, int width
 }
 
 
-/// @brief Stampa in posizioni random gli ostacoli sulla base 
+/// @brief Prints obstacles in random positions 
 /// @param array 
 /// @param height 
 /// @param width 
@@ -160,13 +158,14 @@ void Positioning(bool array[][MaxWidth], int height, int width)
 
     log_debug("Width: %d, Height: %d", width, height);
     bool vector[dim];
-    //Inizializza il vettore a tutti false
+
+    //Inizialize the vector with all false
     for(int i = 0; i < dim; i++)
     {
         vector[i] = false;
     }
 
-    //Ciclo che riempie il vettore con un numero di ostacoli pari a numObstacle 
+    //Fill the vector with a number of obstacles as numObstacle 
     int j;
     for(int i = 0; i < numObstacle; i++)
     {
@@ -174,15 +173,15 @@ void Positioning(bool array[][MaxWidth], int height, int width)
         {
             j = rand() % dim;
 
-        }while(vector[j]);
+        }while(vector[j]);      //Check for another obtacle in that position
         vector[j] = true;
     }
 
-    //Trasforma il vettore in una matrice
+    //From vector to matrix
     for (int i = 0; i < dim; i++) 
     {
-        int r = i / (width - 2);  // indice riga
-        int c = i % (width - 2);  // indice colonna
+        int r = i / (width - 2);  //Row
+        int c = i % (width - 2);  //Column
         array[r+1][c+1] = vector[i];
     }
 
@@ -204,10 +203,6 @@ int main(int argc, char *argv[])
     int h_Win, w_Win;
 
     float Fx, Fy;
-
-    //ClearArray(obstacle);
-    //strcpy(message_out, "request");
-    //write(fd_w_obstacle, message_out, strlen(message_out) + 1);
     
     while(1)
     {
@@ -218,7 +213,7 @@ int main(int argc, char *argv[])
             case 'q':       //Quitting
                 exiting = true;
                 break;
-            case 'o':       //La BB vuole la posizione degli ostacoli
+            case 'o':       //The BB wants to know the positions of the obstacles
                 h_Win = (int)msg_float_in.a;
                 w_Win = (int)msg_float_in.b;
                 log_debug("Dimesioni finestra: %d, %d", h_Win, w_Win);
@@ -226,7 +221,7 @@ int main(int argc, char *argv[])
                 Positioning(obstacle, h_Win, w_Win);
                 write(fd_w_obstacle, obstacle, sizeof(obstacle));
                 break;
-            case 'f':       //La BB vuole le forze che gli ostacoli applicano sul drone
+            case 'f':       //The BB wants to know the forces that obstacles apply to the drone
                 Fx = 0;
                 Fy = 0;
                 ObstacleRepulsion(obstacle, msg_float_in.a, msg_float_in.b, &Fx, &Fy);
@@ -237,7 +232,7 @@ int main(int argc, char *argv[])
                 write(fd_w_obstacle, &msg_float_out, sizeof(msg_float_out));
                 break;
             default:
-                log_error("ERRORE nel formato");
+                log_error("Error: wrong format of the message recived");
                 perror("Format not correct");
                 break;
         }
