@@ -4,6 +4,8 @@
 This project is a multi-process interactive simulator designed to operate a drone within a 2D environment.
 The system simulates the physical dynamics of a drone (inertia and viscous resistance), allowing the user to navigate through obstacles and reach targets using keyboard controls.
 
+<img width="1640" height="812" alt="image" src="https://github.com/user-attachments/assets/0a97025c-138a-4101-999e-954ce76bcc35" />
+
 The visual interface is built using the `ncurses` library, providing a lightweight, terminal-based simulation.
 
 ## System Architecture
@@ -41,6 +43,9 @@ $$\sum F = \eta * (\frac{1}{d} - \frac{1}{\rho})\frac{1}{d^2}$$
 
 The force increases as the drone gets closer to an obstacle, diverging to infinity as distance approaches zero.
 
+>[!NOTE]
+>All computations are performed in floating-point precision; only the visual representation is discrete.
+
 ## Installation & Requirements
 
 ### Prerequisites
@@ -57,14 +62,31 @@ sudo apt-get install libncurses5-dev libncursesw5-dev
 ```
 sudo apt install konsole
 ```
-
-### Usage
 * Clone the repositery
 ```
 git clone https://github.com/TZTozz/ARP-Assignment.git
 cd ARP-Assignment
 ```
-* Launch the program
+
+## Usage
+### Launch the program
 ```
-./compiler.sh
+./launcher.sh
 ```
+### Control the drone
+The drone is controlled via the keyboard. The the following keys increase the force in the specific direction (relative to the key D).
+The key D is the brake and halves the force.
+```
+┌───┬───┬───┐
+│ W │ E │ R │
+├───┼───┼───┤
+│ S │ D │ F │
+├───┼───┼───┤
+│ X │ C │ V │
+└───┴───┴───┘
+```
+### Visual elements
+* ${\color{magenta}"+"}$: the drone
+* ${\color{green}"T"}$: targets
+* ${\color{red}"0"}$: obstacles
+
