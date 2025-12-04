@@ -75,9 +75,16 @@ void PrintObject(WINDOW *win, bool array[][MaxWidth], int height, int width, boo
             {
                 if(isTarget)
                 {
-                    mvwprintw(win, i, j, "#");
+                    attron(COLOR_PAIR(2));
+                    mvwprintw(win, i, j, "T");
+                    attroff(COLOR_PAIR(2));
                 }
-                else mvwprintw(win, i, j, "0");
+                else 
+                {
+                    attron(COLOR_PAIR(1));
+                    mvwprintw(win, i, j, "0");
+                    attroff(COLOR_PAIR(1));
+                }
             }   
         }
     }
@@ -117,6 +124,7 @@ int main(int argc, char *argv[])
     //Blackboard data
     float xDrone = 1, yDrone = 1;
     float Fx = 0, Fy = 0;
+    float F_obstacle_X = 0, F_obstacle_Y = 0;
     
     bool isExiting = false;
 
@@ -130,7 +138,12 @@ int main(int argc, char *argv[])
     noecho();
     keypad(stdscr, TRUE);
     curs_set(0);
+    start_color();
+    use_default_colors();
     setlocale(LC_ALL, "C");
+
+    init_pair(1, COLOR_RED, -1);    //Color obstacles
+    init_pair(2, COLOR_GREEN, -1);  //Color targets
     
     //Signal for the risize 
     signal(SIGWINCH, handle_winch);
@@ -202,6 +215,12 @@ int main(int argc, char *argv[])
             wrefresh(my_win);
             sizeChanged = true;
         }
+
+        //Print the values
+        move(0, 0);
+        clrtoeol();
+        printw("Fx: %f\tFy: %f\tx: %f\ty: %f\tF_obstacle_X: %f\tF_obstacle_Y: %f", Fx, Fy, xDrone, yDrone, F_obstacle_X, F_obstacle_Y);
+        refresh();
 
         //Waiting
         retval = select(max_fd + 1, &r_fds, NULL, NULL, NULL);
@@ -275,10 +294,15 @@ int main(int argc, char *argv[])
                 read(fd_w_obstacle, &msg_float_in, sizeof(msg_float_in));
 
                 //Sum all the forces and send them to the drone
-                Fx += msg_float_in.a;
-                Fy += msg_float_in.b;
-                log_debug("Total forces: %f %f", Fx, Fy);
-                Set_msg(msg_float_out, 'f', Fx, Fy);
+                //Fx += msg_float_in.a;
+                //Fy += msg_float_in.b;
+                //Set_msg(msg_float_out, 'f', Fx, Fy);
+                F_obstacle_X = msg_float_in.a;
+                F_obstacle_Y = msg_float_in.b;
+                float totFx = Fx + msg_float_in.a;
+                float totFy = Fy + msg_float_in.b;
+                log_debug("Input Forces: %f %f Total forces: %f %f",Fx, Fy, totFx, totFy);
+                Set_msg(msg_float_out, 'f', totFx, totFy);
                 write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
             }
 

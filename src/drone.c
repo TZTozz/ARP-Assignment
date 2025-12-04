@@ -101,7 +101,7 @@ int main(int argc, char *argv[])
         if (drn.x > size.width - 2) drn.x = size.width - 2;
         if (drn.y < 1) drn.y = 1;
         if (drn.y > size.height - 2) drn.y = size.height - 2;
-        //log_debug("Position: X: %f Y: %f", drn.x, drn.y);
+        log_debug("Position: X: %f Y: %f", drn.x, drn.y);
         log_debug("Velocità: X: %f Y: %f", (drn.x - drn.x_1), (drn.y - drn.y_1));
         usleep(SleepTime);
     }

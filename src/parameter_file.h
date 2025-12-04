@@ -13,8 +13,8 @@
 #define init_y 6        //Initial position y
 
 #define T 0.1           //Integration time value (s)
-#define K 10             //Air coefficient
-#define eta 0.8         //Coefficient Latombe formula
+#define K 5             //Air coefficient
+#define eta 5        //Coefficient Latombe formula
 #define rho 5           //Distance of sensibility obstacles
 #define MaxRepulsive 10      //Max repulsive force of the obstacles
 
