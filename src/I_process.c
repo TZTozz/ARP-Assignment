@@ -1,10 +1,64 @@
 #include <ncurses.h>
+#include <locale.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 #include "logger.h"
 #include "parameter_file.h"
+
+
+void PrintKeyboard(WINDOW *win, int start_y, int start_x) {
+    char keys[3][3] = {
+        {'w', 'e', 'r'},
+        {'s', 'd', 'f'},
+        {'x', 'c', 'v'}
+    };
+
+    int box_h = 2; 
+    int box_w = 4; 
+
+    //Draw grid
+    for (int i = 0; i <= 3; i++) {
+        mvwhline(win, start_y + (i * box_h), start_x, ACS_HLINE, (3 * box_w) + 1);
+    }
+    for (int j = 0; j <= 3; j++) {
+        mvwvline(win, start_y, start_x + (j * box_w), ACS_VLINE, (3 * box_h) + 1);
+    }
+
+    //Handles the intersections
+    for (int i = 0; i <= 3; i++) {
+        for (int j = 0; j <= 3; j++) {
+            int y = start_y + (i * box_h);
+            int x = start_x + (j * box_w);
+            chtype ch;
+
+            if (i == 0 && j == 0) ch = ACS_ULCORNER;
+            else if (i == 0 && j == 3) ch = ACS_URCORNER;
+            else if (i == 3 && j == 0) ch = ACS_LLCORNER;
+            else if (i == 3 && j == 3) ch = ACS_LRCORNER;
+            else if (i == 0) ch = ACS_TTEE;
+            else if (i == 3) ch = ACS_BTEE;
+            else if (j == 0) ch = ACS_LTEE;
+            else if (j == 3) ch = ACS_RTEE;
+            else ch = ACS_PLUS;
+
+            mvwaddch(win, y, x, ch);
+        }
+    }
+
+    //Prints the letters
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            int y_pos = start_y + (i * box_h) + 1;
+            int x_pos = start_x + (j * box_w) + 2;
+            
+            wattron(win, COLOR_PAIR(1) | A_BOLD); 
+            mvwaddch(win, y_pos, x_pos, keys[i][j]);
+            wattroff(win, COLOR_PAIR(1) | A_BOLD);
+        }
+    }
+}
 
 int main(int argc, char *argv[]) {
 
@@ -31,9 +85,18 @@ int main(int argc, char *argv[]) {
     initscr();
     cbreak();
     noecho();
+    curs_set(0);
     keypad(stdscr, TRUE);
-
-    printw("Controllo drone - Premi q per uscire\n");
+    start_color();
+    setlocale(LC_ALL, "C");
+    init_pair(1, COLOR_YELLOW, -1);
+    WINDOW *my_win = newwin(10, 20, 5, 5);
+    refresh();
+    
+    //Print the instruction
+    PrintKeyboard(my_win, 1, 1);
+    printw("Press q to quit\n");
+    wrefresh(my_win);
 
     while((ch = getch()) != 'q')
     {
@@ -89,7 +152,7 @@ int main(int argc, char *argv[]) {
             else 
             {
                 Set_msg(msg_int_out, 'f', Fx, Fy);
-                log_debug("New forze: %d %d", Fx, Fy);
+                log_debug("New forces: %d %d", Fx, Fy);
             }
             
             write(fd_w_input, &msg_int_out, sizeof(msg_int_out));

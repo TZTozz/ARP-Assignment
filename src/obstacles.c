@@ -58,13 +58,6 @@ void ObstacleRepulsion(bool array[][MaxWidth], float x, float y, float *Fx, floa
                     float fx = F * (dx / d);
                     float fy = F * (dy / d);
 
-                    if (abs(F) > MaxRepulsive)
-                    {
-                        float scale = MaxRepulsive / F;
-                        fx = fx * scale;
-                        fy = fy * scale;
-                    }
-
                     log_debug("Obstacle at [%d,%d] Dist: %f -> F: %f %f", r, c, d, fx, fy);
                     
                     *Fx += fx;
@@ -216,7 +209,7 @@ int main(int argc, char *argv[])
             case 'o':       //The BB wants to know the positions of the obstacles
                 h_Win = (int)msg_float_in.a;
                 w_Win = (int)msg_float_in.b;
-                log_debug("Dimesioni finestra: %d, %d", h_Win, w_Win);
+                log_debug("Window dimension: %d, %d", h_Win, w_Win);
                 ClearArray(obstacle);
                 Positioning(obstacle, h_Win, w_Win);
                 write(fd_w_obstacle, obstacle, sizeof(obstacle));
@@ -225,9 +218,9 @@ int main(int argc, char *argv[])
                 Fx = 0;
                 Fy = 0;
                 ObstacleRepulsion(obstacle, msg_float_in.a, msg_float_in.b, &Fx, &Fy);
-                log_debug("Forze dopo ostacoli: %f %f", Fx, Fy);
+                log_debug("Forces after obstacles: %f %f", Fx, Fy);
                 WallRepulsion(msg_float_in.a, msg_float_in.b, &Fx, &Fy, h_Win, w_Win);
-                log_debug("Forze dopo wall: %f %f", Fx, Fy);
+                log_debug("Forces after walls: %f %f", Fx, Fy);
                 Set_msg(msg_float_out, 'f', Fx, Fy);
                 write(fd_w_obstacle, &msg_float_out, sizeof(msg_float_out));
                 break;

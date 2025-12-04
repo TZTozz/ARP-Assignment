@@ -75,15 +75,11 @@ void PrintObject(WINDOW *win, bool array[][MaxWidth], int height, int width, boo
             {
                 if(isTarget)
                 {
-                    attron(COLOR_PAIR(2));
-                    mvwprintw(win, i, j, "T");
-                    attroff(COLOR_PAIR(2));
+                    mvwaddch(win, i, j, 'T' | COLOR_PAIR(3));
                 }
                 else 
                 {
-                    attron(COLOR_PAIR(1));
-                    mvwprintw(win, i, j, "0");
-                    attroff(COLOR_PAIR(1));
+                    mvwaddch(win, i, j, '0' | COLOR_PAIR(2));
                 }
             }   
         }
@@ -142,8 +138,9 @@ int main(int argc, char *argv[])
     use_default_colors();
     setlocale(LC_ALL, "C");
 
-    init_pair(1, COLOR_RED, -1);    //Color obstacles
-    init_pair(2, COLOR_GREEN, -1);  //Color targets
+    init_pair(1, COLOR_MAGENTA, -1);    //Color drone
+    init_pair(2, COLOR_RED, -1);        //Color obstacles
+    init_pair(3, COLOR_GREEN, -1);      //Color targets
     
     //Signal for the risize 
     signal(SIGWINCH, handle_winch);
@@ -178,7 +175,7 @@ int main(int argc, char *argv[])
     PrintObject(my_win, target, size.height, size.width, true);
 
     //Print the drone in the initial position
-    mvwprintw(my_win, yDrone, xDrone, "%s", skin);
+    mvwaddch(my_win, yDrone, xDrone, skin | COLOR_PAIR(1));
     wrefresh(my_win);
 
     while (1)
@@ -211,7 +208,7 @@ int main(int argc, char *argv[])
             PrintObject(my_win, target, size.height, size.width, true);
 
             //Print the drone
-            mvwprintw(my_win, yDrone, xDrone, skin);
+            mvwaddch(my_win, yDrone, xDrone, skin | COLOR_PAIR(1));
             wrefresh(my_win);
             sizeChanged = true;
         }
@@ -276,7 +273,7 @@ int main(int argc, char *argv[])
                 xDrone = msg_float_in.a;
                 yDrone = msg_float_in.b;
 
-                mvwprintw(my_win, yDrone, xDrone, skin);
+                mvwaddch(my_win, yDrone, xDrone, skin | COLOR_PAIR(1));
                 wrefresh(my_win);
 
                 //If the size of the window changed send to drone the new dimensions

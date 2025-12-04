@@ -71,8 +71,6 @@ int main(int argc, char *argv[])
     sscanf(argv[1], "%d %d", &fd_r_target, &fd_w_target);
 
     log_config("simple.log", LOG_DEBUG);
-
-    log_debug("Sono vivo");
     
     bool target[MaxHeight][MaxWidth];     //Max dimension of the screen
     bool obstacle[MaxHeight][MaxWidth];
@@ -110,7 +108,7 @@ int main(int argc, char *argv[])
                 // write(fd_w_target, &msg_float_out, sizeof(msg_float_out));
                 break;
             default:
-                log_error("ERRORE nel formato");
+                log_error("Format error");
                 perror("Format not correct");
                 break;
         }

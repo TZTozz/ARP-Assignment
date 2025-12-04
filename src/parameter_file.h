@@ -2,7 +2,7 @@
 #define parameter_file
 
 
-#define skin "+"
+#define skin '+'
 #define MaxHeight 80
 #define MaxWidth 270
 #define densityObstacles 0.002
@@ -52,7 +52,6 @@ typedef struct
     float y_1;
     float y_2;
 }drone;
-
 
 
 #endif
