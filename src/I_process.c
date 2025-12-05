@@ -10,9 +10,9 @@
 
 void PrintKeyboard(WINDOW *win, int start_y, int start_x) {
     char keys[3][3] = {
-        {'w', 'e', 'r'},
-        {'s', 'd', 'f'},
-        {'x', 'c', 'v'}
+        {'W', 'E', 'R'},
+        {'S', 'D', 'F'},
+        {'X', 'C', 'V'}
     };
 
     int box_h = 2; 

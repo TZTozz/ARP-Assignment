@@ -14,9 +14,8 @@
 
 #define T 0.1           //Integration time value (s)
 #define K 5             //Air coefficient
-#define eta 5        //Coefficient Latombe formula
+#define eta 10        //Coefficient Latombe formula
 #define rho 5           //Distance of sensibility obstacles
-#define MaxRepulsive 10      //Max repulsive force of the obstacles
 
 #define SleepTime 10000
 

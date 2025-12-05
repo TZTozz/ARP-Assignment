@@ -26,6 +26,9 @@ int main(int argc, char *argv[])
 
 
     winDimension size;
+    size.height = 20;
+    size.width = 100;
+    
     drone drn;
     
     bool exiting = false;

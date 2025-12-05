@@ -37,8 +37,8 @@ void ObstacleRepulsion(bool array[][MaxWidth], float x, float y, float *Fx, floa
         {
             if (array[r][c])
             {
-                float dx = x - c; 
-                float dy = y - r;
+                float dx = x - (c + 0.5);   //The obstacles is in the center of char space
+                float dy = y - (r + 0.5);   //The obstacles is in the center of char space
 
                 float d = sqrtf(dx*dx + dy*dy);
 
