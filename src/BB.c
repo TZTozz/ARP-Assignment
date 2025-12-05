@@ -145,8 +145,8 @@ int main(int argc, char *argv[])
     //Signal for the risize 
     signal(SIGWINCH, handle_winch);
     
-    size.height = 20;
-    size.width = 100;
+    size.height = 15;
+    size.width = 20;
     starty = (LINES - size.height) / 2;	
 	startx = (COLS - size.width) / 2;
     

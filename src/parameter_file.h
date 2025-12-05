@@ -9,8 +9,8 @@
 #define densityTargets 0.002
 
 
-#define init_x 6        //Initial position x
-#define init_y 6        //Initial position y
+#define init_x 10        //Initial position x
+#define init_y 10       //Initial position y
 
 #define T 0.1           //Integration time value (s)
 #define K 5             //Air coefficient

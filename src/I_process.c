@@ -137,6 +137,11 @@ int main(int argc, char *argv[]) {
             case 'd':       //Brake
                 isBreaking = true;
                 break;
+            case KEY_RESIZE:
+                refresh();
+                PrintKeyboard(my_win, 1, 1);
+                wrefresh(my_win);
+                break;
             default:
                 wrongKey = true;
                 break;
