@@ -21,8 +21,14 @@ The system follows a blackboard architecture:
 4.  **Obstacles:** Spawns obstacles at random locations that repel the drone.
 5.  **Targets:** Spawns targets that the drone must collect.
 
+The following scheme illustrate the sequential steps computed at runtime:
+
+<img width="50%" height="50%" alt="Blackboard(1)" src="https://github.com/user-attachments/assets/90559b72-eebd-4e86-b2fc-90b278b140b5" />
+
+This scheme don't integrate the case in which the user is resizing the window.
+
 ### Files
-* **Parameter File:** Contains all the parameters about the physics (forces, mass, viscousity, time of integration), the protocol of communication via pipes.
+* **Parameter File:** Contains all the parameters about the physics (forces, mass, viscousity, time of integration) and the protocol of communication via pipes.
 * **Log Files:** Contains all the debug, warning and error messages.
 
 ## Physics & Dynamics
