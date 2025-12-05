@@ -37,10 +37,10 @@ void ObstacleRepulsion(bool array[][MaxWidth], float x, float y, float *Fx, floa
         {
             if (array[r][c])
             {
-                float dx = x - (c + 0.5);   //The obstacles is in the center of char space
-                float dy = y - (r + 0.5);   //The obstacles is in the center of char space
+                float dx = x - (c + 0.5f);   //The obstacles is in the center of char space
+                float dy = y - (r + 0.5f);   //The obstacles is in the center of char space
 
-                float d = sqrtf(dx*dx + dy*dy);
+                float d = sqrtf(dx*dx + dy*dy) - 0.5f;
 
                 //To avoid division per zero
                 if (d < 0.001f) d = 0.001f;
@@ -71,9 +71,9 @@ void ObstacleRepulsion(bool array[][MaxWidth], float x, float y, float *Fx, floa
 void WallRepulsion(float x, float y, float *Fx, float *Fy, int height, int width)
 {
     //Left wall
-    if (x - 0.9 < rho)
+    if (x < rho)
     {
-        float d = x - 0.9;
+        float d = x - 0.8f;
         if (d < 0.001f) d = 0.001f;
 
         //Calculate relative distance 
@@ -88,9 +88,9 @@ void WallRepulsion(float x, float y, float *Fx, float *Fy, int height, int width
     }
 
     //Right wall
-    if ((width - x - 1.9) < rho)
+    if ((width - x - 1) < rho)
     {
-        float d = width - x - 1.9;
+        float d = width - x - 1.8f;
         if (d < 0.001f) d = 0.001f;
 
         //Calculate relative distance 
@@ -105,9 +105,9 @@ void WallRepulsion(float x, float y, float *Fx, float *Fy, int height, int width
     }
 
     //Upper wall
-    if (y - 0.9 < rho)
+    if (y  < rho)
     {
-        float d = y - 0.9;
+        float d = y - 0.8f;
         if (d < 0.001f) d = 0.001f;
 
         //Calculate relative distance 
@@ -122,9 +122,9 @@ void WallRepulsion(float x, float y, float *Fx, float *Fy, int height, int width
     }
 
     //Bottom wall
-    if ((height - y - 1.9) < rho)
+    if ((height - y - 1) < rho)
     {
-        float d = height - y - 1.9;
+        float d = height - y - 1;
         if (d < 0.001f) d = 0.001f;
 
         //Calculate relative distance 

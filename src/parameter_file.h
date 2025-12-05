@@ -16,6 +16,7 @@
 #define K 5             //Air coefficient
 #define eta 10        //Coefficient Latombe formula
 #define rho 5           //Distance of sensibility obstacles
+#define MaxRepulsion 70     //Max repulsive force by the obstacles
 
 #define SleepTime 10000
 
