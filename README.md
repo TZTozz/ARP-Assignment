@@ -96,3 +96,27 @@ The key D is the brake and halves the force.
 * ${\color{green}"T"}$: targets
 * ${\color{red}"0"}$: obstacles
 
+## Directory
+```
+.
+├── bin
+│   ├── BB
+│   ├── drone
+│   ├── I_process
+│   ├── master
+│   ├── obstacles
+│   ├── simple.log
+│   └── targets
+├── launcher.sh
+├── README.md
+└── src
+    ├── BB.c
+    ├── drone.c
+    ├── I_process.c
+    ├── logger.c
+    ├── logger.h
+    ├── master.c
+    ├── obstacles.c
+    ├── parameter_file.h
+    └── targets.c
+```
