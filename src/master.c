@@ -1,16 +1,17 @@
-//Code to call First and Second with Fork() and Execvp()
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <signal.h>
+
+#define SIG_SETUP (SIGRTMIN + 1)
 
 int main() {
 
-    int fd_r_drone[2], fd_w_drone[2];       //pipes for drone
-    int fd_w_input[2];       //pipes for input
-    int fd_r_obstacle[2], fd_w_obstacle[2];       //pipes for obstacles
-    int fd_r_target[2], fd_w_target[2];       //pipes for targets
+    int fd_r_drone[2], fd_w_drone[2];           //pipes for drone
+    int fd_w_input[2];                          //pipes for input
+    int fd_r_obstacle[2], fd_w_obstacle[2];     //pipes for obstacles
+    int fd_r_target[2], fd_w_target[2];         //pipes for targets
 
     pipe(fd_r_drone);
     pipe(fd_w_drone);
@@ -19,6 +20,15 @@ int main() {
     pipe(fd_w_obstacle);
     pipe(fd_r_target);
     pipe(fd_w_target);
+
+
+    pid_t watchdog = fork();
+    if (watchdog== 0) 
+    {
+        execlp("./watchdog", "./watchdog", NULL);
+        perror("exec watchdog");
+        exit(1);
+    }
 
 
     pid_t BB = fork();
@@ -30,7 +40,11 @@ int main() {
         close(fd_r_obstacle[0]);
         close(fd_w_obstacle[1]);
         char fd_str[80];
-        sprintf(fd_str, "%d %d %d %d %d %d %d", fd_r_drone[1], fd_w_drone[0], fd_w_input[0], fd_r_obstacle[1], fd_w_obstacle[0], fd_r_target[1], fd_w_target[0]);
+        sprintf(fd_str, "%d %d %d %d %d %d %d %d",  fd_r_drone[1], fd_w_drone[0],
+                                                    fd_w_input[0],
+                                                    fd_r_obstacle[1], fd_w_obstacle[0],
+                                                    fd_r_target[1], fd_w_target[0],
+                                                    watchdog);
         execlp("konsole", "konsole", "-e", "./BB", fd_str, NULL);
         perror("exec BlackBoard");
         exit(1);
@@ -53,7 +67,7 @@ int main() {
         close(fd_r_drone[1]);
         close(fd_w_drone[0]);
         char fd_str[80];
-        sprintf(fd_str, "%d %d", fd_r_drone[0], fd_w_drone[1]);
+        sprintf(fd_str, "%d %d %d", fd_r_drone[0], fd_w_drone[1], watchdog);
         execlp("./drone", "./drone", fd_str, NULL);
         perror("exec drone");
         exit(1);
@@ -65,7 +79,7 @@ int main() {
         close(fd_r_obstacle[1]);
         close(fd_w_obstacle[0]);
         char fd_str[80];
-        sprintf(fd_str, "%d %d", fd_r_obstacle[0], fd_w_obstacle[1]);
+        sprintf(fd_str, "%d %d %d", fd_r_obstacle[0], fd_w_obstacle[1], watchdog);
         execlp("./obstacles", "./obstacles", fd_str, NULL);
         perror("exec obstacles");
         exit(1);
@@ -77,7 +91,7 @@ int main() {
         close(fd_r_target[1]);
         close(fd_w_target[0]);
         char fd_str[80];
-        sprintf(fd_str, "%d %d", fd_r_target[0], fd_w_target[1]);
+        sprintf(fd_str, "%d %d %d", fd_r_target[0], fd_w_target[1], watchdog);
         execlp("./targets", "./targets", fd_str, NULL);
         perror("exec targets");
         exit(1);

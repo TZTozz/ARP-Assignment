@@ -4,6 +4,7 @@ gcc src/drone.c src/logger.c -o bin/drone &&
 gcc src/obstacles.c src/logger.c -o bin/obstacles -lm &&
 gcc src/BB.c src/logger.c -o bin/BB -lncurses &&
 gcc src/targets.c src/logger.c -o bin/targets -lm &&
+gcc src/watchdog.c src/logger.c -o bin/watchdog &&
 cd ./bin &&
 ./master &&
 cd ..

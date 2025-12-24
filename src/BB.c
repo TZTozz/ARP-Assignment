@@ -1,3 +1,4 @@
+#define _POSIX_C_SOURCE 200809L
 #include <ncurses.h>
 #include <stdio.h>
 #include <sys/time.h>
@@ -6,11 +7,57 @@
 #include <string.h>
 #include <locale.h>
 #include <stdlib.h>
+#include <fcntl.h>
+#include <sys/file.h>
+#include <sys/wait.h>
 #include "logger.h"
 #include "parameter_file.h"
 #include <signal.h>
 
 volatile sig_atomic_t need_resize = 0;
+
+void WritePid() {
+    int fd;
+    char buffer[32];
+    pid_t pid = getpid();
+
+    // 1. OPEN: Apre il file (o lo crea) in modalità append
+    fd = open(FILENAME_PID, O_WRONLY | O_CREAT | O_APPEND, 0666);
+    if (fd == -1) {
+        perror("Errore open");
+        exit(EXIT_FAILURE);
+    }
+
+    // 2. LOCK: Acquisisce il lock esclusivo
+    // Il processo si blocca qui se un altro sta già scrivendo.
+    if (flock(fd, LOCK_EX) == -1) {
+        perror("Errore flock lock");
+        close(fd);
+        exit(EXIT_FAILURE);
+    }
+
+    // 3. WRITE: Scrive il PID nel buffer e poi nel file
+    snprintf(buffer, sizeof(buffer), "BB: %d\n", pid);
+    if (write(fd, buffer, strlen(buffer)) == -1) {
+        perror("Errore write");
+    } else {
+        log_debug("Processo %d: scritto su file", pid);
+    }
+
+    // 4. FLUSH: Forza la scrittura dalla cache al disco
+    // Questo svuota la cache interna del sistema operativo.
+    if (fsync(fd) == -1) {
+        perror("Errore fsync");
+    }
+
+    // 5. RELEASE LOCK: Rilascia il lock
+    if (flock(fd, LOCK_UN) == -1) {
+        perror("Errore flock unlock");
+    }
+
+    // 6. CLOSE: Chiude il file descriptor
+    close(fd);
+}
 
 int max(int a, int b) 
 {
@@ -87,20 +134,25 @@ void PrintObject(WINDOW *win, bool array[][MaxWidth], int height, int width, boo
 
 }
 
-void handle_winch(int sig) {
+void handle_winch(int sig) 
+{
     need_resize = 1;
 }
 
 int main(int argc, char *argv[])
 {
     //Handles the pipes
-    int fd_r_drone, fd_w_drone, fd_w_input, fd_r_obstacle, fd_w_obstacle, fd_r_target, fd_w_target;
-    sscanf(argv[1], "%d %d %d %d %d %d %d", &fd_r_drone, &fd_w_drone,
-                                            &fd_w_input,
-                                            &fd_r_obstacle, &fd_w_obstacle,
-                                            &fd_r_target, &fd_w_target);
+    int fd_r_drone, fd_w_drone, fd_w_input, fd_r_obstacle, fd_w_obstacle, fd_r_target, fd_w_target, watchdog_pid;
+    sscanf(argv[1], "%d %d %d %d %d %d %d %d", &fd_r_drone, &fd_w_drone,
+                                                &fd_w_input,
+                                                &fd_r_obstacle, &fd_w_obstacle,
+                                                &fd_r_target, &fd_w_target,
+                                                &watchdog_pid);
     
     log_config("simple.log", LOG_DEBUG);
+
+    WritePid();
+    kill(watchdog_pid, SIG_WRITTEN);
     
     int max_fd = max(fd_w_drone, fd_w_input);
     int retval;
@@ -115,6 +167,11 @@ int main(int argc, char *argv[])
     //Protocol messages
     Msg_int msg_int_in, msg_int_out;
     Msg_float msg_float_in, msg_float_out;
+
+
+    //Signal setup
+    union sigval value;
+    value.sival_int = 1;
     
     
     //Blackboard data
@@ -212,6 +269,8 @@ int main(int argc, char *argv[])
             wrefresh(my_win);
             sizeChanged = true;
         }
+
+        kill(watchdog_pid, SIG_HEARTBEAT);
 
         //Print the values
         move(0, 0);

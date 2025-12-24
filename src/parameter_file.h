@@ -19,6 +19,9 @@
 #define MaxRepulsion 70     //Max repulsive force by the obstacles
 
 #define SleepTime 10000
+#define FILENAME_PID "../files/PID_file"
+#define SIG_HEARTBEAT SIGRTMIN
+#define SIG_WRITTEN   (SIGRTMIN + 1)
 
 typedef struct{
     char type;   // 'f', 's', 'q'

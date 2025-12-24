@@ -1,11 +1,60 @@
-//#include <ncurses.h>
+#define _DEFAULT_SOURCE
+#define _POSIX_C_SOURCE 200809L
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <fcntl.h>
+#include <sys/file.h>
+#include <sys/wait.h>
+#include <signal.h>
 #include "logger.h"
 #include "parameter_file.h"
+
+
+void WritePid() {
+    int fd;
+    char buffer[32];
+    pid_t pid = getpid();
+
+    // 1. OPEN: Apre il file (o lo crea) in modalità append
+    fd = open(FILENAME_PID, O_WRONLY | O_CREAT | O_APPEND, 0666);
+    if (fd == -1) {
+        perror("Errore open");
+        exit(EXIT_FAILURE);
+    }
+
+    // 2. LOCK: Acquisisce il lock esclusivo
+    // Il processo si blocca qui se un altro sta già scrivendo.
+    if (flock(fd, LOCK_EX) == -1) {
+        perror("Errore flock lock");
+        close(fd);
+        exit(EXIT_FAILURE);
+    }
+
+    // 3. WRITE: Scrive il PID nel buffer e poi nel file
+    snprintf(buffer, sizeof(buffer), "drone: %d\n", pid);
+    if (write(fd, buffer, strlen(buffer)) == -1) {
+        perror("Errore write");
+    } else {
+        log_debug("Processo %d: scritto su file", pid);
+    }
+
+    // 4. FLUSH: Forza la scrittura dalla cache al disco
+    // Questo svuota la cache interna del sistema operativo.
+    if (fsync(fd) == -1) {
+        perror("Errore fsync");
+    }
+
+    // 5. RELEASE LOCK: Rilascia il lock
+    if (flock(fd, LOCK_UN) == -1) {
+        perror("Errore flock unlock");
+    }
+
+    // 6. CLOSE: Chiude il file descriptor
+    close(fd);
+}
 
 /// @brief Calcola la nuova posizione del drone sulla base delle forze che riceve come input e calcola le forze
 ///         sulla base delle posizioni degli ostacoli e target
@@ -15,14 +64,21 @@
 int main(int argc, char *argv[])
 {
     //Handles the pipes
-    int fd_r_drone, fd_w_drone;
-    sscanf(argv[1], "%d %d", &fd_r_drone, &fd_w_drone);
+    int fd_r_drone, fd_w_drone, watchdog_pid;
+    sscanf(argv[1], "%d %d %d", &fd_r_drone, &fd_w_drone, &watchdog_pid);
 
     log_config("simple.log", LOG_DEBUG);
+
+    WritePid();
+    kill(watchdog_pid, SIG_WRITTEN);
     
     //Protocol messages
     Msg_int msg_int_in;
     Msg_float msg_float_in, msg_float_out;
+
+    //Signal setup
+    union sigval value;
+    value.sival_int = 1;
 
 
     winDimension size;
@@ -104,6 +160,7 @@ int main(int argc, char *argv[])
         log_debug("Position: X: %f Y: %f", drn.x, drn.y);
         log_debug("Velocity: X: %f Y: %f", (drn.x - drn.x_1), (drn.y - drn.y_1));
         usleep(SleepTime);
+        kill(watchdog_pid, SIG_HEARTBEAT);
     }
 
     close(fd_r_drone);
