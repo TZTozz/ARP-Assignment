@@ -64,6 +64,22 @@ int max(int a, int b)
     return (a > b) ? a : b;
 }
 
+ssize_t read_exact(int fd, void *buf, size_t count) 
+{
+    size_t bytes_read = 0;
+    while (bytes_read < count) {
+        ssize_t res = read(fd, (char *)buf + bytes_read, count - bytes_read);
+        if (res > 0) {
+            bytes_read += res;
+        } else if (res == 0) {
+            return bytes_read; // EOF
+        } else {
+            return -1; // Errore
+        }
+    }
+    return bytes_read;
+}
+
 WINDOW *create_newwin(int height, int width, int starty, int startx){	
 
 	WINDOW *local_win;
@@ -237,7 +253,7 @@ int main(int argc, char *argv[])
     Set_msg(msg_float_out, 't', size.height, size.width);
     write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
     write(fd_r_target, obstacle, sizeof(obstacle));
-    read(fd_w_target, target, sizeof(target));
+    read_exact(fd_w_target, target, sizeof(target));
     PrintTarget(my_win, target, size.height, size.width);
 
     //Print the drone in the initial position
@@ -270,7 +286,7 @@ int main(int argc, char *argv[])
             Set_msg(msg_float_out, 't', size.height, size.width);
             write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
             write(fd_r_target, obstacle, sizeof(obstacle));
-            read(fd_w_target, target, sizeof(target));
+            read_exact(fd_w_target, target, sizeof(target));
             PrintTarget(my_win, target, size.height, size.width);
 
             //Print the drone
@@ -364,9 +380,12 @@ int main(int argc, char *argv[])
                 //Ask the forces applied by the targets to the drone
                 Set_msg(msg_float_out, 'f', xDrone, yDrone);
                 write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
+                log_debug("Ora leggo");
                 read(fd_w_target, &msg_float_in, sizeof(msg_float_in));
+                log_debug("Ho letto");
                 F_target_X = msg_float_in.a;
                 F_target_Y = msg_float_in.b;
+                
                 if(msg_float_in.type == 'w') score++;
 
                 //Sum all the forces and send them to the drone
@@ -376,7 +395,7 @@ int main(int argc, char *argv[])
                 
                 float totFx = Fx + F_obstacle_X + F_target_X;
                 float totFy = Fy + F_obstacle_Y + F_target_Y;
-                log_debug("Input Forces: %f %f Target: %f %f",msg_float_in.a, msg_float_in.b, F_target_X, F_target_Y);
+                log_debug("Total Forces: %f %f Target: %f %f", totFx, totFy, F_target_X, F_target_Y);
                 Set_msg(msg_float_out, 'f', totFx, totFy);
                 write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
             }

@@ -56,9 +56,10 @@ void WritePid() {
     close(fd);
 }
 
+
 void ClearArray(int array[MaxHeight][MaxWidth])
 {
-    for(int i; i < MaxHeight; i++)
+    for(int i = 0; i < MaxHeight; i++)
     {
         for(int j; j < MaxWidth; j++)
         {
