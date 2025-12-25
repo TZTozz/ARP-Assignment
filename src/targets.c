@@ -56,29 +56,31 @@ void WritePid() {
     close(fd);
 }
 
-void ClearArray(bool array[MaxHeight][MaxWidth])
+void ClearArray(int array[MaxHeight][MaxWidth])
 {
     for(int i; i < MaxHeight; i++)
     {
         for(int j; j < MaxWidth; j++)
         {
-            array[i][j] = false;
+            array[i][j] = 0;
         }
     }
 }
 
-void Positioning(bool obsta[][MaxWidth], bool targ[][MaxWidth], int height, int width)
+void Positioning(bool obsta[][MaxWidth], int targ[][MaxWidth], int height, int width)
 {
+    log_debug("inizio positioning");
     int dim = (height - 2) * (width - 2);        //-2 cause the targets must be inside the window
     int numTargets = (int)(densityTargets * dim);
 
     log_debug("Width: %d, Height: %d", width, height);
-    bool targetVector[dim], obstaVector[dim];
-    
+    bool obstaVector[dim];
+    int targetVector[dim];
+
     //Inizialize the vector with all false
     for(int i = 0; i < dim; i++)
     {
-        targetVector[i] = false;
+        targetVector[i] = 0;
     }
 
     //From array to vector
@@ -93,14 +95,14 @@ void Positioning(bool obsta[][MaxWidth], bool targ[][MaxWidth], int height, int 
 
     //Fill the vector with a number of targets as numTargets
     int j;
-    for(int i = 0; i < numTargets; i++)
+    for(int i = 1; i < numTargets + 1; i++)
     {
         do
         {
             j = rand() % dim;
 
-        }while(obstaVector[j] || targetVector[j]);      //Check for another target or obtacle in that position
-        targetVector[j] = true;
+        }while(obstaVector[j] || !(targetVector[j] == 0));      //Check for another target or obtacle in that position
+        targetVector[j] = i;
     }
 
     //From vector to matrix
@@ -113,6 +115,66 @@ void Positioning(bool obsta[][MaxWidth], bool targ[][MaxWidth], int height, int 
 
 }
 
+bool IsTargetReached(int array[][MaxWidth], float x, float y)
+{
+    
+    if (array[(int)y][(int)x] != 0)      //If the drone is in the same square of the target
+    {
+        array[(int)y][(int)x] = 0;      //The target is reached
+        return true;
+    }
+    return false;
+}
+
+void TargetAttraction(int array[][MaxWidth], float x, float y, float *Fx, float *Fy)
+{
+    int min_c = (int)(x - rho);
+    int max_c = (int)(x + rho);
+    int min_r = (int)(y - rho);
+    int max_r = (int)(y + rho);
+
+    if (min_c < 0) min_c = 0;
+    if (min_r < 0) min_r = 0;
+    
+    for (int r = min_r; r <= max_r; r++)
+    {
+        for (int c = min_c; c <= max_c; c++)
+        {
+            if (array[r][c] != 0)
+            {
+                float dx = x - (c + 0.5f);   //The target is in the center of char space
+                float dy = y - (r + 0.5f);   //The target is in the center of char space
+
+                float d = sqrtf(dx*dx + dy*dy);
+
+                //To avoid division per zero
+                if (d < 0.001f) d = 0.001f;
+
+                if (d < rho)
+                {
+                    //Latombe's formula
+                    //F = eta * (1/d - 1/rho) * (1/d^2)
+                    float term1 = (1.0f / d) - (1.0f / rho);
+                    float F = eta * term1 * (1.0f / (d * d));
+
+                    if (F > MaxAttraction) F = MaxAttraction;
+
+                    //(dx/d) is the cosine
+                    //(dy/d) is the sine
+                    
+                    float fx = -F * (dx / d);
+                    float fy = -F * (dy / d);
+
+                    log_debug("Target at [%d,%d] Dist: %f -> F: %f %f", r, c, d, fx, fy);
+                    
+                    *Fx += fx;
+                    *Fy += fy;
+                }
+            }
+        }
+    }
+}
+
 int main(int argc, char *argv[])
 {
     int fd_r_target, fd_w_target, watchdog_pid;
@@ -122,19 +184,21 @@ int main(int argc, char *argv[])
     WritePid();
     kill(watchdog_pid, SIG_WRITTEN);
     
-    bool target[MaxHeight][MaxWidth];     //Max dimension of the screen
+    int target[MaxHeight][MaxWidth];     //Max dimension of the screen
     bool obstacle[MaxHeight][MaxWidth];
     
     bool exiting = false;
 
     //Msg_int msg_int_out;
-    Msg_float msg_float_in;
+    Msg_float msg_float_in, msg_float_out;
 
     //Signal setup
     union sigval value;
     value.sival_int = 1;
 
     int h_Win, w_Win;
+
+    float Fx, Fy;
 
     while(1)
     {
@@ -148,18 +212,29 @@ int main(int argc, char *argv[])
             case 't':       //The BB wants to know the position of the targets
                 h_Win = (int)msg_float_in.a;
                 w_Win = (int)msg_float_in.b;
+                log_debug("Leggo obstacle");
                 read(fd_r_target, obstacle, sizeof(obstacle));
                 ClearArray(target);
+                log_debug("Letto obstacle");
                 Positioning(obstacle, target, h_Win, w_Win);
+                log_debug("Scrivo");
                 write(fd_w_target, target, sizeof(target));
                 break;
             case 'f':       //The BB wants to know the forces applied by targets
-                //-------TO BE IMPLEMENTED------
-                // Fx = 0;
-                // Fy = 0;
-                // CheckObNear(target, msg_float_in.a, msg_float_in.b, &Fx, &Fy);
-                // Set_msg(msg_float_out, 'f', Fx, Fy);
-                // write(fd_w_target, &msg_float_out, sizeof(msg_float_out));
+                Fx = 0;
+                Fy = 0;
+                TargetAttraction(target, msg_float_in.a, msg_float_in.b, &Fx, &Fy);
+                log_debug("Forces from targets: %f %f", Fx, Fy);
+                if (IsTargetReached(target, msg_float_in.a, msg_float_in.b))
+                {
+                    Set_msg(msg_float_out, 'w', Fx, Fy);
+                    write(fd_w_target, &msg_float_out, sizeof(msg_float_out));
+                }
+                else
+                {
+                    Set_msg(msg_float_out, 'l', Fx, Fy);
+                    write(fd_w_target, &msg_float_out, sizeof(msg_float_out));
+                }
                 break;
             default:
                 log_error("Format error");

@@ -112,7 +112,7 @@ static winDimension layout_and_draw(WINDOW *win) {
     return size;
 }
 
-void PrintObject(WINDOW *win, bool array[][MaxWidth], int height, int width, bool isTarget)
+void PrintObstacle(WINDOW *win, bool array[][MaxWidth], int height, int width)
 {
     for(int i = 0; i < height - 2; i++)
     {
@@ -120,18 +120,25 @@ void PrintObject(WINDOW *win, bool array[][MaxWidth], int height, int width, boo
         {
             if (array[i][j]) 
             {
-                if(isTarget)
-                {
-                    mvwaddch(win, i, j, 'T' | COLOR_PAIR(3));
-                }
-                else 
-                {
-                    mvwaddch(win, i, j, '0' | COLOR_PAIR(2));
-                }
+                mvwaddch(win, i, j, '0' | COLOR_PAIR(2));
             }   
         }
     }
+}
 
+void PrintTarget(WINDOW *win, int array[][MaxWidth], int height, int width)
+{
+    for(int i = 0; i < height - 2; i++)
+    {
+        for(int j = 0; j < width - 2; j++)
+        {
+            if (array[i][j] != 0) 
+            {
+                char ch = array[i][j] + '0';
+                mvwaddch(win, i, j, ch | COLOR_PAIR(3));
+            }   
+        }
+    }
 }
 
 void handle_winch(int sig) 
@@ -178,12 +185,14 @@ int main(int argc, char *argv[])
     float xDrone = 1, yDrone = 1;
     float Fx = 0, Fy = 0;
     float F_obstacle_X = 0, F_obstacle_Y = 0;
+    float F_target_X = 0, F_target_Y = 0;
+    int score = 0;
     
     bool isExiting = false;
 
     //Obstacle and target array
     bool obstacle[MaxHeight][MaxWidth]; 
-    bool target[MaxHeight][MaxWidth];
+    int target[MaxHeight][MaxWidth];
     
     //Window setting
     initscr(); 
@@ -221,7 +230,7 @@ int main(int argc, char *argv[])
     Set_msg(msg_float_out, 'o', size.height, size.width);
     write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
     read(fd_w_obstacle, obstacle, sizeof(obstacle));
-    PrintObject(my_win, obstacle, size.height, size.width, false);
+    PrintObstacle(my_win, obstacle, size.height, size.width);
     
 
     //Communicate to targets the window's dimensions and prints the targets
@@ -229,7 +238,7 @@ int main(int argc, char *argv[])
     write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
     write(fd_r_target, obstacle, sizeof(obstacle));
     read(fd_w_target, target, sizeof(target));
-    PrintObject(my_win, target, size.height, size.width, true);
+    PrintTarget(my_win, target, size.height, size.width);
 
     //Print the drone in the initial position
     mvwaddch(my_win, yDrone, xDrone, skin | COLOR_PAIR(1));
@@ -255,14 +264,14 @@ int main(int argc, char *argv[])
             Set_msg(msg_float_out, 'o', (float)size.height, (float)size.width);
             write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
             read(fd_w_obstacle, obstacle, sizeof(obstacle));
-            PrintObject(my_win, obstacle, size.height, size.width, false);
+            PrintObstacle(my_win, obstacle, size.height, size.width);
 
             //Redraw targets
             Set_msg(msg_float_out, 't', size.height, size.width);
             write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
             write(fd_r_target, obstacle, sizeof(obstacle));
             read(fd_w_target, target, sizeof(target));
-            PrintObject(my_win, target, size.height, size.width, true);
+            PrintTarget(my_win, target, size.height, size.width);
 
             //Print the drone
             mvwaddch(my_win, yDrone, xDrone, skin | COLOR_PAIR(1));
@@ -275,7 +284,7 @@ int main(int argc, char *argv[])
         //Print the values
         move(0, 0);
         clrtoeol();
-        printw("Fx: %f\tFy: %f\tx: %f\ty: %f\tF_obstacle_X: %f\tF_obstacle_Y: %f", Fx, Fy, xDrone, yDrone, F_obstacle_X, F_obstacle_Y);
+        printw("Fx: %.3f\tFy: %.3f\tx: %.3f\ty: %.3f\tF_obstacle_X: %.3f\tF_obstacle_Y: %.3f\tScore: %d", Fx, Fy, xDrone, yDrone, F_obstacle_X, F_obstacle_Y, score);
         refresh();
 
         //Waiting
@@ -300,6 +309,7 @@ int main(int argc, char *argv[])
                         write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
                         write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
                         write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
+                        kill(watchdog_pid, SIG_STOP);
                         isExiting = true;
                         break;
                     case 'f':           //New forces
@@ -348,16 +358,25 @@ int main(int argc, char *argv[])
                 Set_msg(msg_float_out, 'f', xDrone, yDrone);
                 write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
                 read(fd_w_obstacle, &msg_float_in, sizeof(msg_float_in));
+                F_obstacle_X = msg_float_in.a;
+                F_obstacle_Y = msg_float_in.b;
+
+                //Ask the forces applied by the targets to the drone
+                Set_msg(msg_float_out, 'f', xDrone, yDrone);
+                write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
+                read(fd_w_target, &msg_float_in, sizeof(msg_float_in));
+                F_target_X = msg_float_in.a;
+                F_target_Y = msg_float_in.b;
+                if(msg_float_in.type == 'w') score++;
 
                 //Sum all the forces and send them to the drone
                 //Fx += msg_float_in.a;
                 //Fy += msg_float_in.b;
                 //Set_msg(msg_float_out, 'f', Fx, Fy);
-                F_obstacle_X = msg_float_in.a;
-                F_obstacle_Y = msg_float_in.b;
-                float totFx = Fx + msg_float_in.a;
-                float totFy = Fy + msg_float_in.b;
-                log_debug("Input Forces: %f %f Total forces: %f %f",Fx, Fy, totFx, totFy);
+                
+                float totFx = Fx + F_obstacle_X + F_target_X;
+                float totFy = Fy + F_obstacle_Y + F_target_Y;
+                log_debug("Input Forces: %f %f Target: %f %f",msg_float_in.a, msg_float_in.b, F_target_X, F_target_Y);
                 Set_msg(msg_float_out, 'f', totFx, totFy);
                 write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
             }

@@ -97,6 +97,17 @@ int main() {
         exit(1);
     }
 
+    //Creation file with all PID
+    FILE *fp = fopen("../files/PID_file", "w");
+
+    // Controllo se il file è stato aperto correttamente
+    if (fp == NULL) {
+        perror("Errore nell'apertura del file");
+        return 1;
+    }
+
+    fclose(fp);
+
     close(fd_r_drone[0]);
     close(fd_r_drone[1]);
     close(fd_w_drone[0]);

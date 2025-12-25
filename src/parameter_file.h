@@ -16,12 +16,13 @@
 #define K 5             //Air coefficient
 #define eta 10        //Coefficient Latombe formula
 #define rho 5           //Distance of sensibility obstacles
-#define MaxRepulsion 70     //Max repulsive force by the obstacles
+#define MaxAttraction 10     //Max repulsive force by the obstacles
 
 #define SleepTime 10000
 #define FILENAME_PID "../files/PID_file"
 #define SIG_HEARTBEAT SIGRTMIN
 #define SIG_WRITTEN   (SIGRTMIN + 1)
+#define SIG_STOP      (SIGRTMIN + 2)
 
 typedef struct{
     char type;   // 'f', 's', 'q'
