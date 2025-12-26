@@ -152,13 +152,13 @@ void PrintObstacle(WINDOW *win, bool array[][MaxWidth], int height, int width)
     }
 }
 
-void PrintTarget(WINDOW *win, int array[][MaxWidth], int height, int width)
+void PrintTarget(WINDOW *win, int array[][MaxWidth], int height, int width, int target_reached)
 {
     for(int i = 0; i < height - 2; i++)
     {
         for(int j = 0; j < width - 2; j++)
         {
-            if (array[i][j] != 0) 
+            if (array[i][j] > target_reached) 
             {
                 char ch = array[i][j] + '0';
                 mvwaddch(win, i, j, ch | COLOR_PAIR(3));
@@ -209,6 +209,7 @@ int main(int argc, char *argv[])
     float F_obstacle_X = 0, F_obstacle_Y = 0;
     float F_target_X = 0, F_target_Y = 0;
     int score = 0;
+    int targetReached = 0;
     
     bool isExiting = false;
     bool redraw_obstacle = false, redraw_target = false, redraw_drone = false;
@@ -245,8 +246,16 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
     
-    //Signal for the risize 
-    signal(SIGWINCH, handle_winch);
+    //Signal for the risize  
+    struct sigaction sa_winch;
+    sa_winch.sa_handler = handle_winch;
+    sa_winch.sa_flags = 0;
+    sigemptyset(&sa_winch.sa_mask);
+
+    if (sigaction(SIGWINCH, &sa_winch, NULL) == -1) {
+        perror("Error in sigaction SIGWINCH");
+        exit(EXIT_FAILURE);
+    }
     
     
     //Create window
@@ -277,7 +286,7 @@ int main(int argc, char *argv[])
     write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
     write(fd_r_target, obstacle, sizeof(obstacle));
     read_exact(fd_w_target, target, sizeof(target));
-    PrintTarget(my_win, target, size.height, size.width);
+    PrintTarget(my_win, target, size.height, size.width, targetReached);
 
     //Print the drone in the initial position
     mvwaddch(my_win, yDrone, xDrone, skin | COLOR_PAIR(1));
@@ -299,8 +308,20 @@ int main(int argc, char *argv[])
             resize_term(0, 0);          // o resizeterm(0, 0)
             size = layout_and_draw(my_win);       // ricalcola layout e ridisegna
 
+            //Redraw obstacles
+            Set_msg(msg_float_out, 'o', (float)size.height, (float)size.width);
+            write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
+            read(fd_w_obstacle, obstacle, sizeof(obstacle));
             redraw_obstacle = true;
+            
+            //Redraw targets
+            Set_msg(msg_float_out, 't', size.height, size.width);
+            write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
+            write(fd_r_target, obstacle, sizeof(obstacle));
+            read_exact(fd_w_target, target, sizeof(target));
             redraw_target = true;
+            
+            
             redraw_drone = true;
 
             sizeChanged = true;
@@ -308,22 +329,14 @@ int main(int argc, char *argv[])
 
         if (redraw_obstacle)
         {
-            //Redraw obstacles
-            Set_msg(msg_float_out, 'o', (float)size.height, (float)size.width);
-            write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
-            read(fd_w_obstacle, obstacle, sizeof(obstacle));
+            
             PrintObstacle(my_win, obstacle, size.height, size.width);
             redraw_obstacle = false;
         }
 
         if (redraw_target)
         {
-            //Redraw targets
-            Set_msg(msg_float_out, 't', size.height, size.width);
-            write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
-            write(fd_r_target, obstacle, sizeof(obstacle));
-            read_exact(fd_w_target, target, sizeof(target));
-            PrintTarget(my_win, target, size.height, size.width);
+            PrintTarget(my_win, target, size.height, size.width, targetReached);
             redraw_target = false;
         }
 
@@ -332,6 +345,7 @@ int main(int argc, char *argv[])
             //Print the drone
             mvwaddch(my_win, yDrone, xDrone, skin | COLOR_PAIR(1));
             wrefresh(my_win);
+            //refresh();
             redraw_drone = true;
         }
 
@@ -429,18 +443,24 @@ int main(int argc, char *argv[])
                 F_target_X = msg_float_in.a;
                 F_target_Y = msg_float_in.b;
                 
-                if(msg_float_in.type == 'w') score++;           //Win
+                if(msg_float_in.type == 'w')            //Win
+                {
+                    score++;
+                    targetReached++;
+                }
                 if(msg_float_in.type == 'l' && firstLoss)       //Lose
                 {
                     score--;
                     firstLoss = false;
+                    log_error("Diminuito score");
                 }
                 if(msg_float_in.type == 'a')                    //After lose
                 {
                     redraw_target = true;
                     redraw_drone = true;
-                    firstLoss = false;
+                    firstLoss = true;
                 }
+                log_warn("Score in BB: %d", score);
 
                 //Sum all the forces and send them to the drone
                 //Fx += msg_float_in.a;

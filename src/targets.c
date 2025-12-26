@@ -282,7 +282,7 @@ int main(int argc, char *argv[])
                 TargetAttraction(target, msg_float_in.a, msg_float_in.b, &Fx, &Fy);
                 log_debug("Forces from targets: %f %f", Fx, Fy);
                 int point = IsTargetReached(target, msg_float_in.a, msg_float_in.b, &score, &firstLoss);
-                log_warn("Nel main è %d", score);
+                log_warn("Nel main del target è %d", score);
                 if (point == 1)
                 {
                     Set_msg(msg_float_out, 'w', Fx, Fy);        //win: right target reached
