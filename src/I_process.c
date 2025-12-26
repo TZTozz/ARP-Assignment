@@ -66,10 +66,12 @@ int main(int argc, char *argv[]) {
     int fd_w_input;
     sscanf(argv[1], "%d", &fd_w_input);
 
-    log_config("simple.log", LOG_DEBUG);
+    log_config("../files/simple.log", LOG_DEBUG);
 
     //Protocol variable 
     Msg_int msg_int_out;
+
+    
 
 	int ch, Fx, Fy;
 

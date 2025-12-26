@@ -13,6 +13,8 @@
 #include "logger.h"
 #include "parameter_file.h"
 
+volatile sig_atomic_t watchdogPid = 0;
+
 void WritePid() {
     int fd;
     char buffer[32];
@@ -54,6 +56,27 @@ void WritePid() {
 
     // 6. CLOSE: Chiude il file descriptor
     close(fd);
+}
+
+ssize_t read_exact(int fd, void *buf, size_t count) 
+{
+    size_t bytes_read = 0;
+    while (bytes_read < count) {
+        ssize_t res = read(fd, (char *)buf + bytes_read, count - bytes_read);
+        if (res > 0) {
+            bytes_read += res;
+        } else if (res == 0) {
+            return bytes_read; // EOF
+        } else {
+            return -1; // Errore
+        }
+    }
+    return bytes_read;
+}
+
+void ping_handler(int sig) 
+{
+    kill(watchdogPid, SIG_HEARTBEAT);
 }
 
 
@@ -116,15 +139,38 @@ void Positioning(bool obsta[][MaxWidth], int targ[][MaxWidth], int height, int w
 
 }
 
-bool IsTargetReached(int array[][MaxWidth], float x, float y)
+int IsTargetReached(int array[][MaxWidth], float x, float y, int *score, bool *firstLoss)
 {
     
     if (array[(int)y][(int)x] != 0)      //If the drone is in the same square of the target
     {
-        array[(int)y][(int)x] = 0;      //The target is reached
-        return true;
+        if (array[(int)y][(int)x] == *score + 1)     //The right target is reached
+        {
+            array[(int)y][(int)x] = 0;
+            (*score) ++;
+            log_warn("Score +1");     
+            return 1;
+        }
+        else
+        {
+            log_warn("Score: %d, target number: %d", *score, array[(int)y][(int)x]);
+            if (*firstLoss)
+            {
+                *score--;
+                *firstLoss = false;
+                log_warn("FirstLoss");
+            }
+            log_warn("Not FirstLoss");
+            return -1;
+        }
     }
-    return false;
+    else if (!*firstLoss)
+    {
+        *firstLoss = true;
+        log_warn("exit from the wrong target");
+        return -2;
+    }
+    return 0;
 }
 
 void TargetAttraction(int array[][MaxWidth], float x, float y, float *Fx, float *Fy)
@@ -178,12 +224,12 @@ void TargetAttraction(int array[][MaxWidth], float x, float y, float *Fx, float 
 
 int main(int argc, char *argv[])
 {
-    int fd_r_target, fd_w_target, watchdog_pid;
-    sscanf(argv[1], "%d %d %d", &fd_r_target, &fd_w_target, &watchdog_pid);
+    int fd_r_target, fd_w_target;
+    sscanf(argv[1], "%d %d %d", &fd_r_target, &fd_w_target, &watchdogPid);
 
-    log_config("simple.log", LOG_DEBUG);
+    log_config("../files/simple.log", LOG_DEBUG);
     WritePid();
-    kill(watchdog_pid, SIG_WRITTEN);
+    kill(watchdogPid, SIG_WRITTEN);
     
     int target[MaxHeight][MaxWidth];     //Max dimension of the screen
     bool obstacle[MaxHeight][MaxWidth];
@@ -193,13 +239,22 @@ int main(int argc, char *argv[])
     //Msg_int msg_int_out;
     Msg_float msg_float_in, msg_float_out;
 
-    //Signal setup
-    union sigval value;
-    value.sival_int = 1;
+    //Signal from watchdog
+    struct sigaction sa_ping;
+    sa_ping.sa_handler = ping_handler;
+    sa_ping.sa_flags = SA_RESTART;
+    sigemptyset(&sa_ping.sa_mask);
+    
+    if (sigaction(SIG_PING, &sa_ping, NULL) == -1) {
+        perror("Error in ping_handler");
+        exit(EXIT_FAILURE);
+    }
 
     int h_Win, w_Win;
 
     float Fx, Fy;
+    int score = 0;
+    bool firstLoss = true;
 
     while(1)
     {
@@ -214,7 +269,7 @@ int main(int argc, char *argv[])
                 h_Win = (int)msg_float_in.a;
                 w_Win = (int)msg_float_in.b;
                 log_debug("Leggo obstacle");
-                read(fd_r_target, obstacle, sizeof(obstacle));
+                read_exact(fd_r_target, obstacle, sizeof(obstacle));
                 ClearArray(target);
                 log_debug("Letto obstacle");
                 Positioning(obstacle, target, h_Win, w_Win);
@@ -226,16 +281,25 @@ int main(int argc, char *argv[])
                 Fy = 0;
                 TargetAttraction(target, msg_float_in.a, msg_float_in.b, &Fx, &Fy);
                 log_debug("Forces from targets: %f %f", Fx, Fy);
-                if (IsTargetReached(target, msg_float_in.a, msg_float_in.b))
+                int point = IsTargetReached(target, msg_float_in.a, msg_float_in.b, &score, &firstLoss);
+                log_warn("Nel main è %d", score);
+                if (point == 1)
                 {
-                    Set_msg(msg_float_out, 'w', Fx, Fy);
-                    write(fd_w_target, &msg_float_out, sizeof(msg_float_out));
+                    Set_msg(msg_float_out, 'w', Fx, Fy);        //win: right target reached
                 }
-                else
+                else if (point == 0)
                 {
-                    Set_msg(msg_float_out, 'l', Fx, Fy);
-                    write(fd_w_target, &msg_float_out, sizeof(msg_float_out));
+                    Set_msg(msg_float_out, 'n', Fx, Fy);        //nothing: target not reached
                 }
+                else if(point == -1)
+                {
+                    Set_msg(msg_float_out, 'l', Fx, Fy);        //lose: wrong target reached
+                }
+                else if(point == -2)
+                {
+                    Set_msg(msg_float_out, 'a', Fx, Fy);        //after loss: the drone is no more in the same square of a wrong target
+                }
+                write(fd_w_target, &msg_float_out, sizeof(msg_float_out));
                 break;
             default:
                 log_error("Format error");
@@ -244,8 +308,6 @@ int main(int argc, char *argv[])
         }
 
         if (exiting) break;
-
-        kill(watchdog_pid, SIG_HEARTBEAT);
         
     }
 

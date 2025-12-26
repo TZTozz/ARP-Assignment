@@ -10,13 +10,16 @@
 #include <fcntl.h>
 #include <sys/file.h>
 #include <sys/wait.h>
+#include <errno.h>
 #include "logger.h"
 #include "parameter_file.h"
 #include <signal.h>
 
 volatile sig_atomic_t need_resize = 0;
+volatile sig_atomic_t watchdogPid = 0;
 
-void WritePid() {
+void WritePid() 
+{
     int fd;
     char buffer[32];
     pid_t pid = getpid();
@@ -59,6 +62,11 @@ void WritePid() {
     close(fd);
 }
 
+void ping_handler(int sig) 
+{
+    kill(watchdogPid, SIG_HEARTBEAT);
+}
+
 int max(int a, int b) 
 {
     return (a > b) ? a : b;
@@ -94,13 +102,15 @@ WINDOW *create_newwin(int height, int width, int starty, int startx){
 }
 
 
-void destroy_win(WINDOW *local_win){	
+void destroy_win(WINDOW *local_win)
+{	
 	wborder(local_win, ' ', ' ', ' ',' ',' ',' ',' ',' ');
 	wrefresh(local_win);
 	delwin(local_win);
 }
 
-static winDimension layout_and_draw(WINDOW *win) {
+static winDimension layout_and_draw(WINDOW *win) 
+{
     int H, W;
     getmaxyx(stdscr, H, W);
 
@@ -165,17 +175,18 @@ void handle_winch(int sig)
 int main(int argc, char *argv[])
 {
     //Handles the pipes
-    int fd_r_drone, fd_w_drone, fd_w_input, fd_r_obstacle, fd_w_obstacle, fd_r_target, fd_w_target, watchdog_pid;
+    int fd_r_drone, fd_w_drone, fd_w_input, fd_r_obstacle, fd_w_obstacle, fd_r_target, fd_w_target;
     sscanf(argv[1], "%d %d %d %d %d %d %d %d", &fd_r_drone, &fd_w_drone,
                                                 &fd_w_input,
                                                 &fd_r_obstacle, &fd_w_obstacle,
                                                 &fd_r_target, &fd_w_target,
-                                                &watchdog_pid);
+                                                &watchdogPid);
     
-    log_config("simple.log", LOG_DEBUG);
+    
+    log_config("../files/simple.log", LOG_DEBUG);
 
     WritePid();
-    kill(watchdog_pid, SIG_WRITTEN);
+    kill(watchdogPid, SIG_WRITTEN);
     
     int max_fd = max(fd_w_drone, fd_w_input);
     int retval;
@@ -190,11 +201,6 @@ int main(int argc, char *argv[])
     //Protocol messages
     Msg_int msg_int_in, msg_int_out;
     Msg_float msg_float_in, msg_float_out;
-
-
-    //Signal setup
-    union sigval value;
-    value.sival_int = 1;
     
     
     //Blackboard data
@@ -205,6 +211,9 @@ int main(int argc, char *argv[])
     int score = 0;
     
     bool isExiting = false;
+    bool redraw_obstacle = false, redraw_target = false, redraw_drone = false;
+    bool firstLoss = true;
+
 
     //Obstacle and target array
     bool obstacle[MaxHeight][MaxWidth]; 
@@ -224,9 +233,23 @@ int main(int argc, char *argv[])
     init_pair(2, COLOR_RED, -1);        //Color obstacles
     init_pair(3, COLOR_GREEN, -1);      //Color targets
     
+    
+    //Signal from watchdog
+    struct sigaction sa_ping;
+    sa_ping.sa_handler = ping_handler;
+    sa_ping.sa_flags = SA_RESTART;
+    sigemptyset(&sa_ping.sa_mask);
+    
+    if (sigaction(SIG_PING, &sa_ping, NULL) == -1) {
+        perror("Error in ping_handler");
+        exit(EXIT_FAILURE);
+    }
+    
     //Signal for the risize 
     signal(SIGWINCH, handle_winch);
     
+    
+    //Create window
     size.height = 15;
     size.width = 20;
     starty = (LINES - size.height) / 2;	
@@ -245,7 +268,7 @@ int main(int argc, char *argv[])
     //Communicate to obstacles the window's dimensions and prints the obstacles
     Set_msg(msg_float_out, 'o', size.height, size.width);
     write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
-    read(fd_w_obstacle, obstacle, sizeof(obstacle));
+    read_exact(fd_w_obstacle, obstacle, sizeof(obstacle));
     PrintObstacle(my_win, obstacle, size.height, size.width);
     
 
@@ -276,41 +299,63 @@ int main(int argc, char *argv[])
             resize_term(0, 0);          // o resizeterm(0, 0)
             size = layout_and_draw(my_win);       // ricalcola layout e ridisegna
 
+            redraw_obstacle = true;
+            redraw_target = true;
+            redraw_drone = true;
+
+            sizeChanged = true;
+        }
+
+        if (redraw_obstacle)
+        {
             //Redraw obstacles
             Set_msg(msg_float_out, 'o', (float)size.height, (float)size.width);
             write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
             read(fd_w_obstacle, obstacle, sizeof(obstacle));
             PrintObstacle(my_win, obstacle, size.height, size.width);
+            redraw_obstacle = false;
+        }
 
+        if (redraw_target)
+        {
             //Redraw targets
             Set_msg(msg_float_out, 't', size.height, size.width);
             write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
             write(fd_r_target, obstacle, sizeof(obstacle));
             read_exact(fd_w_target, target, sizeof(target));
             PrintTarget(my_win, target, size.height, size.width);
+            redraw_target = false;
+        }
 
+        if(redraw_drone)
+        {
             //Print the drone
             mvwaddch(my_win, yDrone, xDrone, skin | COLOR_PAIR(1));
             wrefresh(my_win);
-            sizeChanged = true;
+            redraw_drone = true;
         }
-
-        kill(watchdog_pid, SIG_HEARTBEAT);
 
         //Print the values
         move(0, 0);
         clrtoeol();
-        printw("Fx: %.3f\tFy: %.3f\tx: %.3f\ty: %.3f\tF_obstacle_X: %.3f\tF_obstacle_Y: %.3f\tScore: %d", Fx, Fy, xDrone, yDrone, F_obstacle_X, F_obstacle_Y, score);
+        printw("Fx: %.3f\tFy: %.3f\tx: %.3f\ty: %.3f\tF_obstacle_X: %.3f\tF_obstacle_Y: %.3f\tScore: %d  ", Fx, Fy, xDrone, yDrone, F_obstacle_X, F_obstacle_Y, score);
         refresh();
 
         //Waiting
         retval = select(max_fd + 1, &r_fds, NULL, NULL, NULL);
 
 
-        if (retval == -1) 
+        if (retval == -1)       //Error in select
         {
-            log_error("Error in the select");
-            perror("select()");
+            if (errno == EINTR)         //Check if is due to a signal from watchdog
+            {
+                continue;
+            }
+            else
+            {
+                log_error("Error in the select");
+                perror("select()");
+            }
         }
         else if (retval) 
         {
@@ -325,7 +370,7 @@ int main(int argc, char *argv[])
                         write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
                         write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
                         write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
-                        kill(watchdog_pid, SIG_STOP);
+                        kill(watchdogPid, SIG_STOP);
                         isExiting = true;
                         break;
                     case 'f':           //New forces
@@ -380,13 +425,22 @@ int main(int argc, char *argv[])
                 //Ask the forces applied by the targets to the drone
                 Set_msg(msg_float_out, 'f', xDrone, yDrone);
                 write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
-                log_debug("Ora leggo");
                 read(fd_w_target, &msg_float_in, sizeof(msg_float_in));
-                log_debug("Ho letto");
                 F_target_X = msg_float_in.a;
                 F_target_Y = msg_float_in.b;
                 
-                if(msg_float_in.type == 'w') score++;
+                if(msg_float_in.type == 'w') score++;           //Win
+                if(msg_float_in.type == 'l' && firstLoss)       //Lose
+                {
+                    score--;
+                    firstLoss = false;
+                }
+                if(msg_float_in.type == 'a')                    //After lose
+                {
+                    redraw_target = true;
+                    redraw_drone = true;
+                    firstLoss = false;
+                }
 
                 //Sum all the forces and send them to the drone
                 //Fx += msg_float_in.a;

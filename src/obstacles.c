@@ -13,6 +13,8 @@
 #include "logger.h"
 #include "parameter_file.h"
 
+volatile sig_atomic_t watchdogPid = 0;
+
 
 void WritePid() {
     int fd;
@@ -55,6 +57,11 @@ void WritePid() {
 
     // 6. CLOSE: Chiude il file descriptor
     close(fd);
+}
+
+void ping_handler(int sig) 
+{
+    kill(watchdogPid, SIG_HEARTBEAT);
 }
 
 void ClearArray(bool array[MaxHeight][MaxWidth])
@@ -230,12 +237,12 @@ void Positioning(bool array[][MaxWidth], int height, int width)
 
 int main(int argc, char *argv[])
 {
-    int fd_r_obstacle, fd_w_obstacle, watchdog_pid;
-    sscanf(argv[1], "%d %d %d", &fd_r_obstacle, &fd_w_obstacle, &watchdog_pid);
+    int fd_r_obstacle, fd_w_obstacle;
+    sscanf(argv[1], "%d %d %d", &fd_r_obstacle, &fd_w_obstacle, &watchdogPid);
 
-    log_config("simple.log", LOG_DEBUG);
+    log_config("../files/simple.log", LOG_DEBUG);
     WritePid();
-    kill(watchdog_pid, SIG_WRITTEN);
+    kill(watchdogPid, SIG_WRITTEN);
     
     bool obstacle[MaxHeight][MaxWidth];     //Max dimension of the screen
     
@@ -244,6 +251,17 @@ int main(int argc, char *argv[])
     Msg_int msg_int_out;
     Msg_float msg_float_in, msg_float_out;
     int h_Win, w_Win;
+
+    //Signal from watchdog
+    struct sigaction sa_ping;
+    sa_ping.sa_handler = ping_handler;
+    sa_ping.sa_flags = SA_RESTART;
+    sigemptyset(&sa_ping.sa_mask);
+    
+    if (sigaction(SIG_PING, &sa_ping, NULL) == -1) {
+        perror("Error in ping_handler");
+        exit(EXIT_FAILURE);
+    }
 
     float Fx, Fy;
     
@@ -281,8 +299,6 @@ int main(int argc, char *argv[])
         }
 
         if (exiting) break;
-
-        kill(watchdog_pid, SIG_HEARTBEAT);
         
     }
 

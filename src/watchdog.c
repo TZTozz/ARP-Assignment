@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <errno.h>
 #include <sys/types.h>
 #include "logger.h"
 #include "parameter_file.h"
@@ -142,44 +143,55 @@ void heartbeat_handler(int sig, siginfo_t *info, void *context)
 
 }
 
-void watchdog_routine(int sig) {
+void watchdog_routine(int sig) 
+{
     log_debug("--- WATCHDOG CHECK (5s) ---");
+    int saved_errno = errno;
 
-    // Controllo chi NON ha risposto
-    if (recv_drone == 0) {
-        log_error("ALERT: Il processo DRONE non risponde!");
-    }
-    if (recv_obstacles == 0) {
-        log_error("ALERT: Il processo OBSTACLES non risponde!");
-    }
-    if (recv_bb == 0) {
-        log_error("ALERT: Il processo BB non risponde!");
-    }
-    if (recv_targets == 0) {
-        log_error("ALERT: Il processo TARGETS non risponde!");
+    if (PID_DRONE > 0) {
+        if (recv_drone == 0) {
+            log_error("ALERT: Drone dosen't respond!");
+        }
+        recv_drone = 0; 
+        kill(PID_DRONE, SIG_PING);
     }
 
-    // Se tutti sono a 1, tutto ok.
-    
-    // FONDAMENTALE: Resetta i flag per i prossimi 5 secondi
-    recv_drone = 0;
-    recv_obstacles = 0;
-    recv_bb = 0;
-    recv_targets = 0;
+    if (PID_OBSTACLE > 0) {
+        if (recv_obstacles == 0) {
+            log_error("ALERT: Obstacle dosen't respond!");
+        }
+        recv_obstacles = 0;
+        kill(PID_OBSTACLE, SIG_PING);
+    }
 
-    // Ricarica la sveglia per tra altri 5 secondi
+    if (PID_BB > 0) {
+        if (recv_bb == 0) {
+            log_error("ALERT: BB dosen't respond!");
+        }
+        recv_bb = 0;
+        kill(PID_BB, SIG_PING);
+    }
+
+    if (PID_TARGETS > 0) {
+        if (recv_targets == 0) {
+            log_error("ALERT: Target dosen't respond!");
+        }
+        recv_targets = 0;
+        kill(PID_TARGETS, SIG_PING);
+    }
+
     alarm(5);
+    
+    errno = saved_errno;
 }
 
 int main() 
 {
-    struct sigaction sa;
-
+    
     log_config("../files/Watchdog_log.log", LOG_DEBUG);
-
-    //log_warn("Sono vivo");
+    
+    struct sigaction sa;
     sa.sa_sigaction = heartbeat_handler;
-    //sa.sa_flags = SA_RESTART;
     sa.sa_flags = SA_SIGINFO | SA_RESTART;
     sigemptyset(&sa.sa_mask);
 
@@ -188,8 +200,11 @@ int main()
     sa_alarm.sa_flags = SA_RESTART;
     sigemptyset(&sa_alarm.sa_mask);
 
-    
-    //Read_PID();
+    recv_drone = 1;
+    recv_obstacles = 1;
+    recv_bb = 1;
+    recv_targets = 1;
+
 
     if (sigaction(SIG_HEARTBEAT, &sa, NULL) == -1) {
         perror("Errore in sigaction heartbeat");

@@ -23,6 +23,7 @@
 #define SIG_HEARTBEAT SIGRTMIN
 #define SIG_WRITTEN   (SIGRTMIN + 1)
 #define SIG_STOP      (SIGRTMIN + 2)
+#define SIG_PING      (SIGRTMIN + 3)
 
 typedef struct{
     char type;   // 'f', 's', 'q'
