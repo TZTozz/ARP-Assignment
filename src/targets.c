@@ -96,7 +96,7 @@ void Positioning(bool obsta[][MaxWidth], int targ[][MaxWidth], int height, int w
 {
     log_debug("inizio positioning");
     int dim = (height - 2) * (width - 2);        //-2 cause the targets must be inside the window
-    int numTargets = (int)(densityTargets * dim);
+    //int numTargets = (int)(densityTargets * dim);
 
     log_debug("Width: %d, Height: %d", width, height);
     bool obstaVector[dim];
@@ -120,7 +120,7 @@ void Positioning(bool obsta[][MaxWidth], int targ[][MaxWidth], int height, int w
 
     //Fill the vector with a number of targets as numTargets
     int j;
-    for(int i = 1; i < numTargets + 1; i++)
+    for(int i = 1; i < NumTargets + 1; i++)
     {
         do
         {

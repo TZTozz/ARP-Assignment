@@ -179,6 +179,37 @@ void handle_winch(int sig)
     need_resize = 1;
 }
 
+void VictoryWindow(WINDOW *win, int score) 
+{
+    int max_y, max_x;
+    getmaxyx(win, max_y, max_x);
+
+    werase(win);
+
+    box(win, 0, 0);
+
+    const char *msg_title = "YOU WIN!";
+    char msg_score[50];
+    snprintf(msg_score, sizeof(msg_score), "Score: %d", score);
+
+    int x_title = (max_x - strlen(msg_title)) / 2;
+    int x_score = (max_x - strlen(msg_score)) / 2;
+    
+    int y_center = max_y / 2;
+
+    wattron(win, COLOR_PAIR(4) | A_BOLD);
+    mvwprintw(win, y_center - 1, x_title, "%s", msg_title);
+    wattroff(win, COLOR_PAIR(4) | A_BOLD);
+
+    mvwprintw(win, y_center + 1, x_score, "%s", msg_score);
+    
+    const char *msg_exit = "Press q to exit";
+    int x_exit = (max_x - strlen(msg_exit)) / 2;
+    mvwprintw(win, max_y - 2, x_exit, "%s", msg_exit);
+
+    wrefresh(win);
+}
+
 int main(int argc, char *argv[])
 {
     //Handles the pipes
@@ -240,6 +271,7 @@ int main(int argc, char *argv[])
     init_pair(1, COLOR_MAGENTA, -1);    //Color drone
     init_pair(2, COLOR_RED, -1);        //Color obstacles
     init_pair(3, COLOR_GREEN, -1);      //Color targets
+    init_pair(4, COLOR_YELLOW, -1);      //Color victory
     
     
     //Signal from watchdog
@@ -483,6 +515,8 @@ int main(int argc, char *argv[])
                 }
                 log_warn("Score in BB: %d", score);
 
+                if(targetReached == NumTargets) break;
+
                 //Sum all the forces and send them to the drone
                 //Fx += msg_float_in.a;
                 //Fy += msg_float_in.b;
@@ -498,6 +532,32 @@ int main(int argc, char *argv[])
         }
         else printf("No data within five seconds.\n");
     }
+
+    if(!isExiting)
+    {
+        VictoryWindow(my_win, score);
+    
+        log_debug("Scritta finale");
+    
+        while(1)
+        {
+            log_debug("Pre read");
+            read(fd_w_input, &msg_int_in, sizeof(msg_int_in));
+            log_debug("Waiting for exiting");
+            if (msg_int_in.type == 'q')
+            {
+                log_debug("Dentro l'if");
+                Set_msg(msg_float_out, 'q', 0, 0);
+                write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
+                write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
+                write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
+                kill(watchdogPid, SIG_STOP);
+                break;
+            }
+        }
+    }
+    
+
 
     close(fd_r_drone);
     close(fd_w_drone);

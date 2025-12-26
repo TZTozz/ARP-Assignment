@@ -6,7 +6,9 @@
 #define MaxHeight 80
 #define MaxWidth 270
 #define densityObstacles 0.002
-#define densityTargets 0.002
+#define NumTargets 1
+//#define densityTargets 0.002
+
 
 
 #define init_x 10        //Initial position x
