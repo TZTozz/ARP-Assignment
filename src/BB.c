@@ -17,6 +17,7 @@
 
 volatile sig_atomic_t need_resize = 0;
 volatile sig_atomic_t watchdogPid = 0;
+volatile sig_atomic_t reposition = 0;
 
 void WritePid() 
 {
@@ -65,6 +66,12 @@ void WritePid()
 void ping_handler(int sig) 
 {
     kill(watchdogPid, SIG_HEARTBEAT);
+}
+
+void redraw_routine(int sig)
+{
+    reposition = 1;
+    alarm(15);
 }
 
 int max(int a, int b) 
@@ -212,7 +219,7 @@ int main(int argc, char *argv[])
     int targetReached = 0;
     
     bool isExiting = false;
-    bool redraw_obstacle = false, redraw_target = false, redraw_drone = false;
+    bool redraw_target = false, redraw_drone = false;
     bool firstLoss = true;
 
 
@@ -256,6 +263,17 @@ int main(int argc, char *argv[])
         perror("Error in sigaction SIGWINCH");
         exit(EXIT_FAILURE);
     }
+
+    //Timer for the redrawing
+    struct sigaction sa_alarm;
+    sa_alarm.sa_handler = redraw_routine;
+    sa_alarm.sa_flags = SA_RESTART;
+    sigemptyset(&sa_alarm.sa_mask);
+
+    if (sigaction(SIGALRM, &sa_alarm, NULL) == -1) {
+        perror("Errore sigaction alarm");
+        exit(EXIT_FAILURE);
+    }
     
     
     //Create window
@@ -292,6 +310,8 @@ int main(int argc, char *argv[])
     mvwaddch(my_win, yDrone, xDrone, skin | COLOR_PAIR(1));
     wrefresh(my_win);
 
+    alarm(15);
+
     while (1)
     {
         //Inizialization for the select
@@ -308,11 +328,20 @@ int main(int argc, char *argv[])
             resize_term(0, 0);          // o resizeterm(0, 0)
             size = layout_and_draw(my_win);       // ricalcola layout e ridisegna
 
+            reposition = true;
+            sizeChanged = true;
+        }
+
+        if(reposition)
+        {
+            werase(my_win);
+            box(my_win, 0, 0);
+            
             //Redraw obstacles
             Set_msg(msg_float_out, 'o', (float)size.height, (float)size.width);
             write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
             read(fd_w_obstacle, obstacle, sizeof(obstacle));
-            redraw_obstacle = true;
+            PrintObstacle(my_win, obstacle, size.height, size.width);
             
             //Redraw targets
             Set_msg(msg_float_out, 't', size.height, size.width);
@@ -321,17 +350,9 @@ int main(int argc, char *argv[])
             read_exact(fd_w_target, target, sizeof(target));
             redraw_target = true;
             
-            
             redraw_drone = true;
 
-            sizeChanged = true;
-        }
-
-        if (redraw_obstacle)
-        {
-            
-            PrintObstacle(my_win, obstacle, size.height, size.width);
-            redraw_obstacle = false;
+            reposition = 0;
         }
 
         if (redraw_target)
@@ -345,8 +366,8 @@ int main(int argc, char *argv[])
             //Print the drone
             mvwaddch(my_win, yDrone, xDrone, skin | COLOR_PAIR(1));
             wrefresh(my_win);
-            //refresh();
-            redraw_drone = true;
+            refresh();
+            redraw_drone = false;
         }
 
         //Print the values

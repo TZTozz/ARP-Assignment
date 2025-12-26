@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include <math.h>
 #include <sys/types.h>
 #include <unistd.h>
@@ -230,6 +231,8 @@ int main(int argc, char *argv[])
     log_config("../files/simple.log", LOG_DEBUG);
     WritePid();
     kill(watchdogPid, SIG_WRITTEN);
+
+    srand(time(NULL) + 10);
     
     int target[MaxHeight][MaxWidth];     //Max dimension of the screen
     bool obstacle[MaxHeight][MaxWidth];
