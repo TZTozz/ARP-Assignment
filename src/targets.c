@@ -15,47 +15,47 @@
 #include "parameter_file.h"
 
 volatile sig_atomic_t watchdogPid = 0;
+int reachedTarget = 0;
 
-void WritePid() {
+void WritePid() 
+{
     int fd;
     char buffer[32];
     pid_t pid = getpid();
 
-    // 1. OPEN: Apre il file (o lo crea) in modalità append
+    //Open the file
     fd = open(FILENAME_PID, O_WRONLY | O_CREAT | O_APPEND, 0666);
     if (fd == -1) {
-        perror("Errore open");
+        perror("Error open");
         exit(EXIT_FAILURE);
     }
 
-    // 2. LOCK: Acquisisce il lock esclusivo
-    // Il processo si blocca qui se un altro sta già scrivendo.
+    //Lock the file
     if (flock(fd, LOCK_EX) == -1) {
         perror("Errore flock lock");
         close(fd);
         exit(EXIT_FAILURE);
     }
 
-    // 3. WRITE: Scrive il PID nel buffer e poi nel file
+    //Write
     snprintf(buffer, sizeof(buffer), "targets: %d\n", pid);
     if (write(fd, buffer, strlen(buffer)) == -1) {
-        perror("Errore write");
+        perror("Error write");
     } else {
-        log_debug("Processo %d: scritto su file", pid);
+        log_debug("Process %d: written on file", pid);
     }
 
-    // 4. FLUSH: Forza la scrittura dalla cache al disco
-    // Questo svuota la cache interna del sistema operativo.
+    //Flush
     if (fsync(fd) == -1) {
-        perror("Errore fsync");
+        perror("Error fsync");
     }
 
-    // 5. RELEASE LOCK: Rilascia il lock
+    //Unlock
     if (flock(fd, LOCK_UN) == -1) {
-        perror("Errore flock unlock");
+        perror("Error flock unlock");
     }
 
-    // 6. CLOSE: Chiude il file descriptor
+    //Close
     close(fd);
 }
 
@@ -120,14 +120,15 @@ void Positioning(bool obsta[][MaxWidth], int targ[][MaxWidth], int height, int w
 
     //Fill the vector with a number of targets as numTargets
     int j;
-    for(int i = 1; i < NumTargets + 1; i++)
+    for(int i = (reachedTarget + 1); i < NumTargets + 1; i++)
     {
         do
         {
             j = rand() % dim;
 
-        }while(obstaVector[j] || !(targetVector[j] == 0));      //Check for another target or obtacle in that position
+        }while(obstaVector[j] || targetVector[j] != 0);      //Check for another target or obtacle in that position
         targetVector[j] = i;
+        log_error("Positioned target %d in slot %d, %d", i, j / (width - 2), j % (width - 2));
     }
 
     //From vector to matrix
@@ -140,28 +141,25 @@ void Positioning(bool obsta[][MaxWidth], int targ[][MaxWidth], int height, int w
 
 }
 
-int IsTargetReached(int array[][MaxWidth], float x, float y, int *score, bool *firstLoss)
+int IsTargetReached(int array[][MaxWidth], float x, float y, bool *firstLoss)
 {
     
     if (array[(int)y][(int)x] != 0)      //If the drone is in the same square of the target
     {
-        if (array[(int)y][(int)x] == *score + 1)     //The right target is reached
+        if (array[(int)y][(int)x] == reachedTarget + 1)     //The right target is reached
         {
             array[(int)y][(int)x] = 0;
-            (*score) ++;
-            log_warn("Score +1");     
+            reachedTarget++;
             return 1;
         }
         else
         {
-            log_warn("Score: %d, target number: %d", *score, array[(int)y][(int)x]);
             if (*firstLoss)
             {
-                *score--;
+                //*score--;
                 *firstLoss = false;
-                log_warn("FirstLoss");
+                log_debug("FirstLoss");
             }
-            log_warn("Not FirstLoss");
             return -1;
         }
     }
@@ -271,12 +269,9 @@ int main(int argc, char *argv[])
             case 't':       //The BB wants to know the position of the targets
                 h_Win = (int)msg_float_in.a;
                 w_Win = (int)msg_float_in.b;
-                log_debug("Leggo obstacle");
                 read_exact(fd_r_target, obstacle, sizeof(obstacle));
                 ClearArray(target);
-                log_debug("Letto obstacle");
                 Positioning(obstacle, target, h_Win, w_Win);
-                log_debug("Scrivo");
                 write(fd_w_target, target, sizeof(target));
                 break;
             case 'f':       //The BB wants to know the forces applied by targets
@@ -284,7 +279,7 @@ int main(int argc, char *argv[])
                 Fy = 0;
                 TargetAttraction(target, msg_float_in.a, msg_float_in.b, &Fx, &Fy);
                 log_debug("Forces from targets: %f %f", Fx, Fy);
-                int point = IsTargetReached(target, msg_float_in.a, msg_float_in.b, &score, &firstLoss);
+                int point = IsTargetReached(target, msg_float_in.a, msg_float_in.b, &firstLoss);
                 log_warn("Nel main del target è %d", score);
                 if (point == 1)
                 {

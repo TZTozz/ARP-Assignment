@@ -1,476 +1,220 @@
-[2025-12-26 21:30:55] [DEBUG] [src/watchdog.c:72] Num_process: 1
-[2025-12-26 21:30:55] [DEBUG] [src/watchdog.c:72] Num_process: 2
-[2025-12-26 21:30:55] [DEBUG] [src/watchdog.c:72] Num_process: 3
-[2025-12-26 21:30:56] [DEBUG] [src/watchdog.c:72] Num_process: 4
-[2025-12-26 21:30:56] [WARN ] [src/watchdog.c:29] Leggo
-[2025-12-26 21:31:00] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:31:05] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:31:10] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:31:15] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:31:20] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:31:25] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:33:55] [DEBUG] [src/watchdog.c:72] Num_process: 1
-[2025-12-26 21:33:55] [DEBUG] [src/watchdog.c:72] Num_process: 2
-[2025-12-26 21:33:55] [DEBUG] [src/watchdog.c:72] Num_process: 3
-[2025-12-26 21:33:56] [DEBUG] [src/watchdog.c:72] Num_process: 4
-[2025-12-26 21:33:56] [WARN ] [src/watchdog.c:29] Leggo
-[2025-12-26 21:34:00] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:34:05] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:34:10] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:34:15] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:38:27] [DEBUG] [src/watchdog.c:72] Num_process: 1
-[2025-12-26 21:38:27] [DEBUG] [src/watchdog.c:72] Num_process: 2
-[2025-12-26 21:38:27] [DEBUG] [src/watchdog.c:72] Num_process: 3
-[2025-12-26 21:38:28] [DEBUG] [src/watchdog.c:72] Num_process: 4
-[2025-12-26 21:38:28] [WARN ] [src/watchdog.c:29] Leggo
-[2025-12-26 21:38:32] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:38:37] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:38:42] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:38:47] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:38:52] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:38:57] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:39:02] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:39:07] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:45:10] [DEBUG] [src/watchdog.c:72] Num_process: 1
-[2025-12-26 21:45:10] [DEBUG] [src/watchdog.c:72] Num_process: 2
-[2025-12-26 21:45:10] [DEBUG] [src/watchdog.c:72] Num_process: 3
-[2025-12-26 21:45:11] [DEBUG] [src/watchdog.c:72] Num_process: 4
-[2025-12-26 21:45:11] [WARN ] [src/watchdog.c:29] Leggo
-[2025-12-26 21:45:15] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:45:20] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:45:25] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:45:30] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:45:35] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:45:40] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:45:45] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:45:50] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:45:55] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:46:00] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:46:05] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:46:10] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:46:15] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:46:20] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:46:25] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:46:30] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:52:06] [DEBUG] [src/watchdog.c:72] Num_process: 1
-[2025-12-26 21:52:06] [DEBUG] [src/watchdog.c:72] Num_process: 2
-[2025-12-26 21:52:06] [DEBUG] [src/watchdog.c:72] Num_process: 3
-[2025-12-26 21:52:07] [DEBUG] [src/watchdog.c:72] Num_process: 4
-[2025-12-26 21:52:07] [WARN ] [src/watchdog.c:29] Leggo
-[2025-12-26 21:52:11] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:52:16] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:52:21] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:52:26] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:53:26] [DEBUG] [src/watchdog.c:72] Num_process: 1
-[2025-12-26 21:53:26] [DEBUG] [src/watchdog.c:72] Num_process: 2
-[2025-12-26 21:53:26] [DEBUG] [src/watchdog.c:72] Num_process: 3
-[2025-12-26 21:53:27] [DEBUG] [src/watchdog.c:72] Num_process: 4
-[2025-12-26 21:53:27] [WARN ] [src/watchdog.c:29] Leggo
-[2025-12-26 21:53:31] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:53:36] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:53:41] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:53:46] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:53:51] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:53:56] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:54:01] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:54:55] [DEBUG] [src/watchdog.c:72] Num_process: 1
-[2025-12-26 21:54:55] [DEBUG] [src/watchdog.c:72] Num_process: 2
-[2025-12-26 21:54:55] [DEBUG] [src/watchdog.c:72] Num_process: 3
-[2025-12-26 21:54:55] [DEBUG] [src/watchdog.c:72] Num_process: 4
-[2025-12-26 21:54:55] [WARN ] [src/watchdog.c:29] Leggo
-[2025-12-26 21:55:00] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:55:05] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:55:10] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:55:15] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:55:20] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:55:25] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:55:30] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:55:35] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:55:40] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:55:45] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:55:50] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:55:55] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:56:00] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:56:05] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 21:56:10] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:12:22] [DEBUG] [src/watchdog.c:72] Num_process: 1
-[2025-12-26 22:12:22] [DEBUG] [src/watchdog.c:72] Num_process: 2
-[2025-12-26 22:12:22] [DEBUG] [src/watchdog.c:72] Num_process: 3
-[2025-12-26 22:12:23] [DEBUG] [src/watchdog.c:72] Num_process: 4
-[2025-12-26 22:12:23] [WARN ] [src/watchdog.c:29] Leggo
-[2025-12-26 22:12:27] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:12:33] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:12:38] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:12:43] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:12:48] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:12:53] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:12:58] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:13:03] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:13:08] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:13:13] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:13:18] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:13:23] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:13:28] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:13:33] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:13:38] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:13:43] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:18:06] [DEBUG] [src/watchdog.c:72] Num_process: 1
-[2025-12-26 22:18:06] [DEBUG] [src/watchdog.c:72] Num_process: 2
-[2025-12-26 22:18:06] [DEBUG] [src/watchdog.c:72] Num_process: 3
-[2025-12-26 22:18:06] [DEBUG] [src/watchdog.c:72] Num_process: 4
-[2025-12-26 22:18:06] [WARN ] [src/watchdog.c:29] Leggo
-[2025-12-26 22:18:11] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:18:16] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:18:21] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:18:26] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:18:31] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:18:36] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:27:04] [DEBUG] [src/watchdog.c:72] Num_process: 1
-[2025-12-26 22:27:04] [DEBUG] [src/watchdog.c:72] Num_process: 2
-[2025-12-26 22:27:04] [DEBUG] [src/watchdog.c:72] Num_process: 3
-[2025-12-26 22:27:05] [DEBUG] [src/watchdog.c:72] Num_process: 4
-[2025-12-26 22:27:05] [WARN ] [src/watchdog.c:29] Leggo
-[2025-12-26 22:27:09] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:27:14] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:27:19] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:27:24] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:27:29] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:27:34] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:27:39] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:27:44] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:27:49] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:27:54] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:27:59] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:28:04] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:28:09] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:28:14] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:28:19] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:28:24] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:28:29] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:28:34] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:28:39] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:28:44] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:28:49] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:28:54] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:28:59] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:29:04] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:29:09] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:29:14] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:29:19] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:29:24] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:29:29] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:29:34] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:29:39] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:29:44] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:29:49] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:29:54] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:29:59] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:30:04] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:30:09] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:30:14] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:30:19] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:30:24] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:30:29] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:30:34] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:30:39] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:30:44] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:30:49] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:30:54] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:30:59] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:31:04] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:31:09] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:31:14] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:31:19] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:31:24] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:31:29] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:31:34] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:31:39] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:31:44] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:31:44] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:31:49] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:31:49] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:31:54] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:31:54] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:31:59] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:31:59] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:32:04] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:32:04] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:32:09] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:32:09] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:32:14] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:32:14] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:32:19] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:32:19] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:32:24] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:32:24] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:32:29] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:32:29] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:32:34] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:32:34] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:32:39] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:32:39] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:32:44] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:32:44] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:32:49] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:32:49] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:32:54] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:32:54] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:32:59] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:32:59] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:33:04] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:33:04] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:33:09] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:33:09] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:33:14] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:33:14] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:33:19] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:33:19] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:33:24] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:33:24] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:33:29] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:33:29] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:33:34] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:33:34] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:33:39] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:33:39] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:33:44] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:33:44] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:33:49] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:33:49] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:33:54] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:33:54] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:33:59] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:33:59] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:34:04] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:34:04] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:34:09] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:34:09] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:34:14] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:34:14] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:34:19] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:34:19] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:34:24] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:34:24] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:34:29] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:34:29] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:34:34] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:34:34] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:34:39] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:34:39] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:34:44] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:34:44] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:34:49] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:34:49] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:34:54] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:34:54] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:34:59] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:34:59] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:35:04] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:35:04] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:35:09] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:35:09] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:35:14] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:35:14] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:35:18] [DEBUG] [src/watchdog.c:72] Num_process: 1
-[2025-12-26 22:35:18] [DEBUG] [src/watchdog.c:72] Num_process: 2
-[2025-12-26 22:35:18] [DEBUG] [src/watchdog.c:72] Num_process: 3
-[2025-12-26 22:35:19] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:35:19] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:35:19] [DEBUG] [src/watchdog.c:72] Num_process: 4
-[2025-12-26 22:35:19] [WARN ] [src/watchdog.c:29] Leggo
-[2025-12-26 22:35:23] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:35:24] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:35:24] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:35:29] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:35:29] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:35:34] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:35:34] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:35:39] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:35:39] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:35:44] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:35:44] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:35:49] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:35:49] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:41:56] [DEBUG] [src/watchdog.c:72] Num_process: 1
-[2025-12-26 22:41:56] [DEBUG] [src/watchdog.c:72] Num_process: 2
-[2025-12-26 22:41:56] [DEBUG] [src/watchdog.c:72] Num_process: 3
-[2025-12-26 22:41:57] [DEBUG] [src/watchdog.c:72] Num_process: 4
-[2025-12-26 22:41:57] [WARN ] [src/watchdog.c:29] Leggo
-[2025-12-26 22:42:01] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:42:06] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:42:11] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:42:16] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:42:21] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:42:26] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:42:31] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:42:36] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:42:41] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:42:46] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:42:51] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:42:56] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:43:01] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:43:01] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:43:06] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:43:06] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:44:43] [DEBUG] [src/watchdog.c:72] Num_process: 1
-[2025-12-26 22:44:43] [DEBUG] [src/watchdog.c:72] Num_process: 2
-[2025-12-26 22:44:43] [DEBUG] [src/watchdog.c:72] Num_process: 3
-[2025-12-26 22:44:43] [DEBUG] [src/watchdog.c:72] Num_process: 4
-[2025-12-26 22:44:43] [WARN ] [src/watchdog.c:29] Leggo
-[2025-12-26 22:44:48] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:44:53] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:44:58] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:45:03] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:45:08] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:45:13] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:45:18] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:45:23] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:45:28] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:45:33] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:45:38] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:45:43] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:45:43] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:45:48] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:45:48] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:45:53] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:45:53] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:45:58] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:45:58] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:46:03] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:46:03] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:46:08] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:46:08] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:46:13] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:46:13] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:46:18] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:46:18] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:46:23] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:46:23] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:46:28] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:46:28] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:46:33] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:46:33] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:46:38] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:46:38] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:46:43] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:46:43] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:46:48] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:46:48] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:46:53] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:46:53] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:46:58] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:46:58] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:47:03] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:47:03] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:47:08] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:47:08] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:47:13] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:47:13] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:47:18] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:47:18] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:47:23] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:47:23] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:47:24] [DEBUG] [src/watchdog.c:72] Num_process: 1
-[2025-12-26 22:47:24] [DEBUG] [src/watchdog.c:72] Num_process: 2
-[2025-12-26 22:47:24] [DEBUG] [src/watchdog.c:72] Num_process: 3
-[2025-12-26 22:47:25] [DEBUG] [src/watchdog.c:72] Num_process: 4
-[2025-12-26 22:47:25] [WARN ] [src/watchdog.c:29] Leggo
-[2025-12-26 22:47:28] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:47:28] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:47:29] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:47:33] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:47:33] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:47:34] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:47:38] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:47:38] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:47:39] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:47:43] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:47:43] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:47:44] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:47:48] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:47:48] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:47:49] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:47:53] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:47:53] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:47:54] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:47:58] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:47:58] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:47:59] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:03] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:03] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:48:04] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:08] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:08] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:48:09] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:13] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:13] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:48:14] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:18] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:18] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:48:19] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:23] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:23] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:48:24] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:28] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:28] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:48:29] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:33] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:33] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:48:34] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:38] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:38] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:48:39] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:43] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:43] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:48:44] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:48] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:48] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:48:49] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:53] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:53] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:48:54] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:54] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:48:58] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:58] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:48:59] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:48:59] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:49:03] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:49:03] [ERROR] [src/watchdog.c:169] ALERT: BB dosen't respond!
-[2025-12-26 22:49:14] [DEBUG] [src/watchdog.c:72] Num_process: 1
-[2025-12-26 22:49:14] [DEBUG] [src/watchdog.c:72] Num_process: 2
-[2025-12-26 22:49:14] [DEBUG] [src/watchdog.c:72] Num_process: 3
-[2025-12-26 22:49:14] [DEBUG] [src/watchdog.c:72] Num_process: 4
-[2025-12-26 22:49:14] [WARN ] [src/watchdog.c:29] Leggo
-[2025-12-26 22:49:19] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:49:24] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:49:29] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:49:59] [DEBUG] [src/watchdog.c:72] Num_process: 1
-[2025-12-26 22:49:59] [DEBUG] [src/watchdog.c:72] Num_process: 2
-[2025-12-26 22:49:59] [DEBUG] [src/watchdog.c:72] Num_process: 3
-[2025-12-26 22:50:00] [DEBUG] [src/watchdog.c:72] Num_process: 4
-[2025-12-26 22:50:00] [WARN ] [src/watchdog.c:29] Leggo
-[2025-12-26 22:55:26] [DEBUG] [src/watchdog.c:72] Num_process: 1
-[2025-12-26 22:55:26] [DEBUG] [src/watchdog.c:72] Num_process: 2
-[2025-12-26 22:55:26] [DEBUG] [src/watchdog.c:72] Num_process: 3
-[2025-12-26 22:55:26] [DEBUG] [src/watchdog.c:72] Num_process: 4
-[2025-12-26 22:55:26] [WARN ] [src/watchdog.c:29] Leggo
-[2025-12-26 22:55:31] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:55:36] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:55:41] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:55:46] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 22:55:51] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 23:01:45] [DEBUG] [src/watchdog.c:72] Num_process: 1
-[2025-12-26 23:01:45] [DEBUG] [src/watchdog.c:72] Num_process: 2
-[2025-12-26 23:01:45] [DEBUG] [src/watchdog.c:72] Num_process: 3
-[2025-12-26 23:01:46] [DEBUG] [src/watchdog.c:72] Num_process: 4
-[2025-12-26 23:01:46] [WARN ] [src/watchdog.c:29] Leggo
-[2025-12-26 23:01:50] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 23:01:55] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 23:02:00] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 23:02:05] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 23:02:10] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 23:02:15] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 23:02:20] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 23:02:25] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 23:02:30] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
-[2025-12-26 23:02:35] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:23:24] [DEBUG] [src/watchdog.c:72] Num_process: 1
+[2025-12-28 10:23:24] [DEBUG] [src/watchdog.c:72] Num_process: 2
+[2025-12-28 10:23:24] [DEBUG] [src/watchdog.c:72] Num_process: 3
+[2025-12-28 10:23:24] [DEBUG] [src/watchdog.c:72] Num_process: 4
+[2025-12-28 10:23:24] [DEBUG] [src/watchdog.c:72] Num_process: 5
+[2025-12-28 10:23:24] [WARN ] [src/watchdog.c:29] Leggo
+[2025-12-28 10:23:29] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:23:34] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:23:39] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:23:44] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:23:49] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:23:54] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:23:59] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:24:04] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:24:09] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:24:14] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:24:19] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:24:24] [DEBUG] [src/watchdog.c:148] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:30:17] [DEBUG] [src/watchdog.c:74] Num_process: 1
+[2025-12-28 10:30:17] [DEBUG] [src/watchdog.c:74] Num_process: 2
+[2025-12-28 10:30:17] [DEBUG] [src/watchdog.c:74] Num_process: 3
+[2025-12-28 10:30:17] [DEBUG] [src/watchdog.c:74] Num_process: 4
+[2025-12-28 10:30:17] [DEBUG] [src/watchdog.c:74] Num_process: 5
+[2025-12-28 10:30:17] [DEBUG] [src/watchdog.c:29] Reading the PIDs
+[2025-12-28 10:30:22] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:30:27] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:30:32] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:30:37] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:30:42] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:30:47] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:30:52] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:30:57] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:31:02] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:31:07] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:31:12] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:31:17] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:31:22] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:31:27] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:31:32] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:31:37] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:31:42] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:31:47] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:31:52] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:31:57] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:32:02] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:32:07] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:32:12] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:32:17] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:32:22] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:39:29] [DEBUG] [src/watchdog.c:74] Num_process: 1
+[2025-12-28 10:39:29] [DEBUG] [src/watchdog.c:74] Num_process: 2
+[2025-12-28 10:39:29] [DEBUG] [src/watchdog.c:74] Num_process: 3
+[2025-12-28 10:39:30] [DEBUG] [src/watchdog.c:74] Num_process: 4
+[2025-12-28 10:39:30] [DEBUG] [src/watchdog.c:74] Num_process: 5
+[2025-12-28 10:39:30] [DEBUG] [src/watchdog.c:29] Reading the PIDs
+[2025-12-28 10:39:34] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:39:39] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:39:44] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:39:49] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:39:54] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:39:59] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:40:04] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:40:09] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:40:14] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:40:19] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:40:24] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:40:29] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:40:34] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:40:39] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:40:44] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:40:49] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:40:54] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:40:59] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:41:04] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:41:09] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:41:14] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:41:19] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:41:24] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:41:29] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:41:34] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:41:39] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:41:44] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:41:49] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:41:54] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:41:59] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:42:04] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:42:09] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:42:14] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:42:19] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:42:24] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:42:29] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:42:34] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:42:39] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:42:44] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:51:13] [DEBUG] [src/watchdog.c:74] Num_process: 1
+[2025-12-28 10:51:13] [DEBUG] [src/watchdog.c:74] Num_process: 2
+[2025-12-28 10:51:13] [DEBUG] [src/watchdog.c:74] Num_process: 3
+[2025-12-28 10:51:13] [DEBUG] [src/watchdog.c:74] Num_process: 4
+[2025-12-28 10:51:13] [DEBUG] [src/watchdog.c:74] Num_process: 5
+[2025-12-28 10:51:13] [DEBUG] [src/watchdog.c:29] Reading the PIDs
+[2025-12-28 10:51:19] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:51:24] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:51:29] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:51:34] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:51:39] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:51:44] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:55:26] [DEBUG] [src/watchdog.c:74] Num_process: 1
+[2025-12-28 10:55:26] [DEBUG] [src/watchdog.c:74] Num_process: 2
+[2025-12-28 10:55:26] [DEBUG] [src/watchdog.c:74] Num_process: 3
+[2025-12-28 10:55:26] [DEBUG] [src/watchdog.c:74] Num_process: 4
+[2025-12-28 10:55:26] [DEBUG] [src/watchdog.c:74] Num_process: 5
+[2025-12-28 10:55:26] [DEBUG] [src/watchdog.c:29] Reading the PIDs
+[2025-12-28 10:55:32] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:55:37] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:57:04] [DEBUG] [src/watchdog.c:74] Num_process: 1
+[2025-12-28 10:57:04] [DEBUG] [src/watchdog.c:74] Num_process: 2
+[2025-12-28 10:57:04] [DEBUG] [src/watchdog.c:74] Num_process: 3
+[2025-12-28 10:57:04] [DEBUG] [src/watchdog.c:74] Num_process: 4
+[2025-12-28 10:57:04] [DEBUG] [src/watchdog.c:74] Num_process: 5
+[2025-12-28 10:57:04] [DEBUG] [src/watchdog.c:29] Reading the PIDs
+[2025-12-28 10:57:10] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:57:15] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:57:20] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 10:57:25] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:00:54] [DEBUG] [src/watchdog.c:74] Num_process: 1
+[2025-12-28 11:00:54] [DEBUG] [src/watchdog.c:74] Num_process: 2
+[2025-12-28 11:00:54] [DEBUG] [src/watchdog.c:74] Num_process: 3
+[2025-12-28 11:00:55] [DEBUG] [src/watchdog.c:74] Num_process: 4
+[2025-12-28 11:00:55] [DEBUG] [src/watchdog.c:74] Num_process: 5
+[2025-12-28 11:00:55] [DEBUG] [src/watchdog.c:29] Reading the PIDs
+[2025-12-28 11:01:06] [DEBUG] [src/watchdog.c:74] Num_process: 1
+[2025-12-28 11:01:06] [DEBUG] [src/watchdog.c:74] Num_process: 2
+[2025-12-28 11:01:06] [DEBUG] [src/watchdog.c:74] Num_process: 3
+[2025-12-28 11:01:06] [DEBUG] [src/watchdog.c:74] Num_process: 4
+[2025-12-28 11:01:06] [DEBUG] [src/watchdog.c:74] Num_process: 5
+[2025-12-28 11:01:06] [DEBUG] [src/watchdog.c:29] Reading the PIDs
+[2025-12-28 11:01:12] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:01:17] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:01:22] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:01:27] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:01:32] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:01:37] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:01:42] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:01:47] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:09:06] [DEBUG] [src/watchdog.c:74] Num_process: 1
+[2025-12-28 11:09:06] [DEBUG] [src/watchdog.c:74] Num_process: 2
+[2025-12-28 11:09:06] [DEBUG] [src/watchdog.c:74] Num_process: 3
+[2025-12-28 11:09:06] [DEBUG] [src/watchdog.c:74] Num_process: 4
+[2025-12-28 11:09:06] [DEBUG] [src/watchdog.c:74] Num_process: 5
+[2025-12-28 11:09:06] [DEBUG] [src/watchdog.c:29] Reading the PIDs
+[2025-12-28 11:09:12] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:09:17] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:12:04] [DEBUG] [src/watchdog.c:74] Num_process: 1
+[2025-12-28 11:12:04] [DEBUG] [src/watchdog.c:74] Num_process: 2
+[2025-12-28 11:12:04] [DEBUG] [src/watchdog.c:74] Num_process: 3
+[2025-12-28 11:12:04] [DEBUG] [src/watchdog.c:74] Num_process: 4
+[2025-12-28 11:12:04] [DEBUG] [src/watchdog.c:74] Num_process: 5
+[2025-12-28 11:12:04] [DEBUG] [src/watchdog.c:29] Reading the PIDs
+[2025-12-28 11:12:10] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:12:15] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:12:20] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:13:48] [DEBUG] [src/watchdog.c:74] Num_process: 1
+[2025-12-28 11:13:48] [DEBUG] [src/watchdog.c:74] Num_process: 2
+[2025-12-28 11:13:48] [DEBUG] [src/watchdog.c:74] Num_process: 3
+[2025-12-28 11:13:48] [DEBUG] [src/watchdog.c:74] Num_process: 4
+[2025-12-28 11:13:48] [DEBUG] [src/watchdog.c:74] Num_process: 5
+[2025-12-28 11:13:48] [DEBUG] [src/watchdog.c:29] Reading the PIDs
+[2025-12-28 11:13:54] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:13:59] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:14:04] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:14:09] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:14:14] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:14:19] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:16:07] [DEBUG] [src/watchdog.c:74] Num_process: 1
+[2025-12-28 11:16:07] [DEBUG] [src/watchdog.c:74] Num_process: 2
+[2025-12-28 11:16:07] [DEBUG] [src/watchdog.c:74] Num_process: 3
+[2025-12-28 11:16:07] [DEBUG] [src/watchdog.c:74] Num_process: 4
+[2025-12-28 11:16:07] [DEBUG] [src/watchdog.c:74] Num_process: 5
+[2025-12-28 11:16:07] [DEBUG] [src/watchdog.c:29] Reading the PIDs
+[2025-12-28 11:16:13] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:16:18] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:16:23] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:16:28] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:16:33] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:16:38] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:16:43] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:16:48] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:16:53] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:16:58] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:17:03] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:23:00] [DEBUG] [src/watchdog.c:74] Num_process: 1
+[2025-12-28 11:23:00] [DEBUG] [src/watchdog.c:74] Num_process: 2
+[2025-12-28 11:23:00] [DEBUG] [src/watchdog.c:74] Num_process: 3
+[2025-12-28 11:23:00] [DEBUG] [src/watchdog.c:74] Num_process: 4
+[2025-12-28 11:23:00] [DEBUG] [src/watchdog.c:74] Num_process: 5
+[2025-12-28 11:23:00] [DEBUG] [src/watchdog.c:29] Reading the PIDs
+[2025-12-28 11:23:06] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:23:11] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:24:28] [DEBUG] [src/watchdog.c:74] Num_process: 1
+[2025-12-28 11:24:28] [DEBUG] [src/watchdog.c:74] Num_process: 2
+[2025-12-28 11:24:28] [DEBUG] [src/watchdog.c:74] Num_process: 3
+[2025-12-28 11:24:28] [DEBUG] [src/watchdog.c:74] Num_process: 4
+[2025-12-28 11:24:28] [DEBUG] [src/watchdog.c:74] Num_process: 5
+[2025-12-28 11:24:28] [DEBUG] [src/watchdog.c:29] Reading the PIDs
+[2025-12-28 11:24:34] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:24:39] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:24:44] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:24:49] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:24:54] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:24:59] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:25:04] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:25:09] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:25:14] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:25:19] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:25:24] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:25:29] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:25:34] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:25:39] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:25:44] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---
+[2025-12-28 11:25:49] [DEBUG] [src/watchdog.c:150] --- WATCHDOG CHECK (5s) ---

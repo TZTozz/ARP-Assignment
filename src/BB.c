@@ -25,41 +25,39 @@ void WritePid()
     char buffer[32];
     pid_t pid = getpid();
 
-    // 1. OPEN: Apre il file (o lo crea) in modalità append
+    //Open the file
     fd = open(FILENAME_PID, O_WRONLY | O_CREAT | O_APPEND, 0666);
     if (fd == -1) {
-        perror("Errore open");
+        perror("Error open");
         exit(EXIT_FAILURE);
     }
 
-    // 2. LOCK: Acquisisce il lock esclusivo
-    // Il processo si blocca qui se un altro sta già scrivendo.
+    //Lock the file
     if (flock(fd, LOCK_EX) == -1) {
         perror("Errore flock lock");
         close(fd);
         exit(EXIT_FAILURE);
     }
 
-    // 3. WRITE: Scrive il PID nel buffer e poi nel file
+    //Write
     snprintf(buffer, sizeof(buffer), "BB: %d\n", pid);
     if (write(fd, buffer, strlen(buffer)) == -1) {
-        perror("Errore write");
+        perror("Error write");
     } else {
-        log_debug("Processo %d: scritto su file", pid);
+        log_debug("Process %d: written on file", pid);
     }
 
-    // 4. FLUSH: Forza la scrittura dalla cache al disco
-    // Questo svuota la cache interna del sistema operativo.
+    //Flush
     if (fsync(fd) == -1) {
-        perror("Errore fsync");
+        perror("Error fsync");
     }
 
-    // 5. RELEASE LOCK: Rilascia il lock
+    //Unlock
     if (flock(fd, LOCK_UN) == -1) {
-        perror("Errore flock unlock");
+        perror("Error flock unlock");
     }
 
-    // 6. CLOSE: Chiude il file descriptor
+    //Close
     close(fd);
 }
 
@@ -71,7 +69,7 @@ void ping_handler(int sig)
 void redraw_routine(int sig)
 {
     reposition = 1;
-    alarm(15);
+    alarm(TIMER_RESPAWN);
 }
 
 int max(int a, int b) 
@@ -147,9 +145,9 @@ static winDimension layout_and_draw(WINDOW *win)
 
 void PrintObstacle(WINDOW *win, bool array[][MaxWidth], int height, int width)
 {
-    for(int i = 0; i < height - 2; i++)
+    for(int i = 0; i < height - 1; i++)
     {
-        for(int j = 0; j < width - 2; j++)
+        for(int j = 0; j < width - 1; j++)
         {
             if (array[i][j]) 
             {
@@ -161,14 +159,15 @@ void PrintObstacle(WINDOW *win, bool array[][MaxWidth], int height, int width)
 
 void PrintTarget(WINDOW *win, int array[][MaxWidth], int height, int width, int target_reached)
 {
-    for(int i = 0; i < height - 2; i++)
+    for(int i = 0; i < height - 1; i++)
     {
-        for(int j = 0; j < width - 2; j++)
+        for(int j = 0; j < width - 1; j++)
         {
             if (array[i][j] > target_reached) 
             {
                 char ch = array[i][j] + '0';
                 mvwaddch(win, i, j, ch | COLOR_PAIR(3));
+                log_warn("Printed %c in slot %d, %d", ch, i, j);
             }   
         }
     }
@@ -223,9 +222,11 @@ int main(int argc, char *argv[])
     
     log_config("../files/simple.log", LOG_DEBUG);
 
+    //Write the pid in the PID_file and notify the watchdog
     WritePid();
     kill(watchdogPid, SIG_WRITTEN);
     
+    //Set the select
     int max_fd = max(fd_w_drone, fd_w_input);
     int retval;
     fd_set r_fds;
@@ -249,6 +250,7 @@ int main(int argc, char *argv[])
     int score = 0;
     int targetReached = 0;
     
+    //Useful flags
     bool isExiting = false;
     bool redraw_target = false, redraw_drone = false;
     bool firstLoss = true;
@@ -268,6 +270,7 @@ int main(int argc, char *argv[])
     use_default_colors();
     setlocale(LC_ALL, "C");
 
+    //Color setting
     init_pair(1, COLOR_MAGENTA, -1);    //Color drone
     init_pair(2, COLOR_RED, -1);        //Color obstacles
     init_pair(3, COLOR_GREEN, -1);      //Color targets
@@ -342,7 +345,8 @@ int main(int argc, char *argv[])
     mvwaddch(my_win, yDrone, xDrone, skin | COLOR_PAIR(1));
     wrefresh(my_win);
 
-    alarm(15);
+    //Start the timer to respawn object
+    alarm(TIMER_RESPAWN);
 
     while (1)
     {

@@ -26,12 +26,14 @@ volatile sig_atomic_t recv_targets = 0;
 
 void Read_PID() 
 {
-    log_warn("Leggo");
+    log_debug("Reading the PIDs");
     FILE *fp = fopen("../files/PID_file", "r");
     char line[256];
 
-    if (fp == NULL) {
-        perror("Errore: Impossibile leggere il file");
+    if (fp == NULL) 
+    {
+        log_error("Error: impossible reading the file");
+        perror("Error: impossible reading the file");
         return;
     }
 
@@ -70,7 +72,7 @@ void action_writtenPid()
 {
     num_process++;
     log_debug("Num_process: %d", num_process);
-    if (num_process == 4)
+    if (num_process == 5)
     {
         request_reload = 1;
     }
@@ -180,7 +182,7 @@ void watchdog_routine(int sig)
         kill(PID_TARGETS, SIG_PING);
     }
 
-    alarm(5);
+    alarm(TIMER_WATCHDOG);
     
     errno = saved_errno;
 }
@@ -226,7 +228,7 @@ int main()
         exit(EXIT_FAILURE);
     }
 
-    alarm(5);
+    alarm(TIMER_WATCHDOG + 1);
 
     while (1) {
         pause();

@@ -6,7 +6,9 @@
 #define MaxHeight 80
 #define MaxWidth 270
 #define densityObstacles 0.002
-#define NumTargets 1
+#define NumTargets 8
+#define TIMER_RESPAWN 5
+#define TIMER_WATCHDOG 5
 //#define densityTargets 0.002
 
 

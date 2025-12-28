@@ -1,12 +1,60 @@
+#define _POSIX_C_SOURCE 200809L
 #include <ncurses.h>
 #include <locale.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include <sys/types.h>
+#include <sys/file.h>
+#include <sys/wait.h>
+#include <signal.h>
 #include "logger.h"
 #include "parameter_file.h"
 
+volatile sig_atomic_t watchdogPid = 0;
+
+void WritePid() 
+{
+    int fd;
+    char buffer[32];
+    pid_t pid = getpid();
+
+    //Open the file
+    fd = open(FILENAME_PID, O_WRONLY | O_CREAT | O_APPEND, 0666);
+    if (fd == -1) {
+        perror("Error open");
+        exit(EXIT_FAILURE);
+    }
+
+    //Lock the file
+    if (flock(fd, LOCK_EX) == -1) {
+        perror("Errore flock lock");
+        close(fd);
+        exit(EXIT_FAILURE);
+    }
+
+    //Write
+    snprintf(buffer, sizeof(buffer), "input: %d\n", pid);
+    if (write(fd, buffer, strlen(buffer)) == -1) {
+        perror("Error write");
+    } else {
+        log_debug("Process %d: written on file", pid);
+    }
+
+    //Flush
+    if (fsync(fd) == -1) {
+        perror("Error fsync");
+    }
+
+    //Unlock
+    if (flock(fd, LOCK_UN) == -1) {
+        perror("Error flock unlock");
+    }
+
+    //Close
+    close(fd);
+}
 
 void PrintKeyboard(WINDOW *win, int start_y, int start_x) {
     char keys[3][3] = {
@@ -60,18 +108,24 @@ void PrintKeyboard(WINDOW *win, int start_y, int start_x) {
     }
 }
 
+void ping_handler(int sig) 
+{
+    kill(watchdogPid, SIG_HEARTBEAT);
+}
+
 int main(int argc, char *argv[]) {
 
     //Handles the pipes
     int fd_w_input;
-    sscanf(argv[1], "%d", &fd_w_input);
+    sscanf(argv[1], "%d %d", &fd_w_input, &watchdogPid);
 
     log_config("../files/simple.log", LOG_DEBUG);
 
+    WritePid();
+    kill(watchdogPid, SIG_WRITTEN);
+
     //Protocol variable 
     Msg_int msg_int_out;
-
-    
 
 	int ch, Fx, Fy;
 
@@ -82,6 +136,17 @@ int main(int argc, char *argv[]) {
     //Flags
     bool wrongKey = false;
     bool isBreaking = false;
+
+    //Signal from watchdog
+    struct sigaction sa_ping;
+    sa_ping.sa_handler = ping_handler;
+    sa_ping.sa_flags = SA_RESTART;
+    sigemptyset(&sa_ping.sa_mask);
+    
+    if (sigaction(SIG_PING, &sa_ping, NULL) == -1) {
+        perror("Error in ping_handler");
+        exit(EXIT_FAILURE);
+    }
 
 	//Window setting
     initscr();

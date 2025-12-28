@@ -55,7 +55,7 @@ int main() {
     {
         close(fd_w_input[0]);
         char fd_str[80];
-        sprintf(fd_str, "%d", fd_w_input[1]);
+        sprintf(fd_str, "%d %d", fd_w_input[1], watchdog);
         execlp("konsole", "konsole", "-e", "./I_process", fd_str, NULL);
         perror("exec I_process");
         exit(1);

@@ -16,46 +16,45 @@
 volatile sig_atomic_t watchdogPid = 0;
 
 
-void WritePid() {
+void WritePid() 
+{
     int fd;
     char buffer[32];
     pid_t pid = getpid();
 
-    // 1. OPEN: Apre il file (o lo crea) in modalità append
+    //Open the file
     fd = open(FILENAME_PID, O_WRONLY | O_CREAT | O_APPEND, 0666);
     if (fd == -1) {
-        perror("Errore open");
+        perror("Error open");
         exit(EXIT_FAILURE);
     }
 
-    // 2. LOCK: Acquisisce il lock esclusivo
-    // Il processo si blocca qui se un altro sta già scrivendo.
+    //Lock the file
     if (flock(fd, LOCK_EX) == -1) {
         perror("Errore flock lock");
         close(fd);
         exit(EXIT_FAILURE);
     }
 
-    // 3. WRITE: Scrive il PID nel buffer e poi nel file
+    //Write
     snprintf(buffer, sizeof(buffer), "obstacles: %d\n", pid);
     if (write(fd, buffer, strlen(buffer)) == -1) {
-        perror("Errore write");
+        perror("Error write");
     } else {
-        log_debug("Processo %d: scritto su file", pid);
+        log_debug("Process %d: written on file", pid);
     }
 
-    // 4. FLUSH: Forza la scrittura dalla cache al disco
-    // Questo svuota la cache interna del sistema operativo.
+    //Flush
     if (fsync(fd) == -1) {
-        perror("Errore fsync");
+        perror("Error fsync");
     }
 
-    // 5. RELEASE LOCK: Rilascia il lock
+    //Unlock
     if (flock(fd, LOCK_UN) == -1) {
-        perror("Errore flock unlock");
+        perror("Error flock unlock");
     }
 
-    // 6. CLOSE: Chiude il file descriptor
+    //Close
     close(fd);
 }
 
