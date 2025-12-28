@@ -6,8 +6,8 @@
 #define MaxHeight 80
 #define MaxWidth 270
 #define densityObstacles 0.002
-#define NumTargets 8
-#define TIMER_RESPAWN 5
+#define NumTargets 4
+#define TIMER_RESPAWN 20
 #define TIMER_WATCHDOG 5
 //#define densityTargets 0.002
 
@@ -23,7 +23,9 @@
 #define MaxAttraction 10     //Max repulsive force by the obstacles
 
 #define SleepTime 10000
-#define FILENAME_PID "../files/PID_file"
+#define FILENAME_PID "../files/PID_file.log"
+#define FILENAME_LOG "../files/log_file.log"
+#define FILENAME_WATCHDOG "../files/watchdog.log"
 #define SIG_HEARTBEAT SIGRTMIN
 #define SIG_WRITTEN   (SIGRTMIN + 1)
 #define SIG_STOP      (SIGRTMIN + 2)

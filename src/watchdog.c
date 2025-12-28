@@ -1,6 +1,8 @@
 #define _POSIX_C_SOURCE 200809L
+#include <ncurses.h>
 #include <signal.h>
 #include <stdio.h>
+#include <time.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
@@ -18,16 +20,18 @@ pid_t PID_TARGETS = 0;
 volatile sig_atomic_t request_reload = 0;
 volatile sig_atomic_t num_process = 0;
 volatile sig_atomic_t exiting = 0;
+volatile sig_atomic_t watchdog_flag = 1;
 
-volatile sig_atomic_t recv_drone = 0;
-volatile sig_atomic_t recv_obstacles = 0;
-volatile sig_atomic_t recv_bb = 0;
-volatile sig_atomic_t recv_targets = 0;
+volatile sig_atomic_t recv_drone = 1;
+volatile sig_atomic_t recv_obstacles = 1;
+volatile sig_atomic_t recv_bb = 1;
+volatile sig_atomic_t recv_targets = 1;
+volatile sig_atomic_t recv_input = 1;
 
 void Read_PID() 
 {
     log_debug("Reading the PIDs");
-    FILE *fp = fopen("../files/PID_file", "r");
+    FILE *fp = fopen(FILENAME_PID, "r");
     char line[256];
 
     if (fp == NULL) 
@@ -66,6 +70,35 @@ void Read_PID()
     }
                 
     fclose(fp);
+}
+
+static winDimension layout_and_draw(WINDOW *win) 
+{
+    int H, W;
+    getmaxyx(stdscr, H, W);
+
+    //Constant space outside the window
+    int wh = (H > 6) ? H - 6 : H;
+    int ww = (W > 10) ? W - 10 : W;
+    if (wh < 3) wh = 3;
+    if (ww < 3) ww = 3;
+
+    winDimension size;
+    size.height = wh;
+    size.width = ww;
+
+    //Resize the windows and put it in the center
+    wresize(win, wh, ww);
+    mvwin(win, (H - wh) / 2, (W - ww) / 2);
+
+    //Erase and redraw the window
+    werase(stdscr);
+    werase(win);
+    box(win, 0, 0);
+
+    refresh();
+    wrefresh(win);
+    return size;
 }
 
 void action_writtenPid()
@@ -107,6 +140,16 @@ void action_targets()
     //log_warn("Polling from targets");
 }
 
+void action_input()
+{
+    recv_input = 1;
+}
+
+void action_watchdog()
+{
+    watchdog_flag = 1;
+}
+
 void heartbeat_handler(int sig, siginfo_t *info, void *context) 
 {
     //log_warn("Arrivato un segnale");
@@ -121,9 +164,7 @@ void heartbeat_handler(int sig, siginfo_t *info, void *context)
         return;
     }
     
-    
-    // info->si_pid contiene il PID del processo che ha mandato il segnale 
-    
+        
     int sender_pid = info->si_pid;
 
     if (sender_pid == PID_DRONE) {
@@ -138,6 +179,9 @@ void heartbeat_handler(int sig, siginfo_t *info, void *context)
     else if (sender_pid == PID_TARGETS) {
         action_targets();
     }
+    else if (sender_pid == PID_INPUT) {
+        action_input();
+    }
     else {
         //gestisci_processo_sconosciuto(sender_pid);
         log_error("Processo sconosciuto: %d", sender_pid);;
@@ -145,42 +189,140 @@ void heartbeat_handler(int sig, siginfo_t *info, void *context)
 
 }
 
-void watchdog_routine(int sig) 
+void watchdog_routine(WINDOW *my_win) 
 {
-    log_debug("--- WATCHDOG CHECK (5s) ---");
-    int saved_errno = errno;
+    werase(my_win);
+    int max_y, max_x;
+    getmaxyx(my_win, max_y, max_x);
 
-    if (PID_DRONE > 0) {
-        if (recv_drone == 0) {
-            log_error("ALERT: Drone dosen't respond!");
+    //Time
+    time_t rawtime;
+    struct tm * timeinfo;
+    char time_str[9];
+    time(&rawtime);
+    timeinfo = localtime(&rawtime);
+    strftime(time_str, sizeof(time_str), "%H:%M:%S", timeinfo);
+
+    
+    char msg_check[50];
+    snprintf(msg_check, sizeof(msg_check), "--- WATCHDOG CHECK (%s) ---", time_str);
+    int x_title = (max_x - strlen(msg_check)) / 2;
+    log_debug(msg_check);
+    wattron(my_win, A_BOLD);
+    mvwprintw(my_win, 1, x_title, "%s", msg_check);
+    wattroff(my_win, A_BOLD);
+
+    int saved_errno = errno;
+    int Y_coordinates = 2;
+
+    if (PID_DRONE > 0) 
+    {
+        if (recv_drone == 0) 
+        {
+            char msg[50];
+            snprintf(msg, sizeof(msg), "ALERT: Drone dosen't respond!");
+            log_error(msg);
+            mvwprintw(my_win, Y_coordinates, 1, "%s", msg);
+            Y_coordinates++;
+        }
+        else
+        {
+            char msg[50];
+            snprintf(msg, sizeof(msg), "Drone is ok!");
+            mvwprintw(my_win, Y_coordinates, 1, "%s", msg);
+            Y_coordinates++;
         }
         recv_drone = 0; 
         kill(PID_DRONE, SIG_PING);
     }
 
-    if (PID_OBSTACLE > 0) {
-        if (recv_obstacles == 0) {
-            log_error("ALERT: Obstacle dosen't respond!");
+    if (PID_OBSTACLE > 0) 
+    {
+        if (recv_obstacles == 0) 
+        {
+            char msg[50];
+            snprintf(msg, sizeof(msg), "ALERT: Obstacle dosen't respond!");
+            log_error(msg);
+            mvwprintw(my_win, Y_coordinates, 1, "%s", msg);
+            Y_coordinates++;
+        }
+        else
+        {
+            char msg[50];
+            snprintf(msg, sizeof(msg), "Obstacle is ok!");
+            mvwprintw(my_win, Y_coordinates, 1, "%s", msg);
+            Y_coordinates++;
+
         }
         recv_obstacles = 0;
         kill(PID_OBSTACLE, SIG_PING);
     }
 
-    if (PID_BB > 0) {
-        if (recv_bb == 0) {
-            log_error("ALERT: BB dosen't respond!");
+    if (PID_BB > 0) 
+    {
+        if (recv_bb == 0) 
+        {
+            char msg[50];
+            snprintf(msg, sizeof(msg), "ALERT: BB dosen't respond!");
+            log_error(msg);
+            mvwprintw(my_win, Y_coordinates, 1, "%s", msg);
+            Y_coordinates++;
+        }
+        else
+        {
+            char msg[50];
+            snprintf(msg, sizeof(msg), "BB is ok!");
+            mvwprintw(my_win, Y_coordinates, 1, "%s", msg);
+            Y_coordinates++;
         }
         recv_bb = 0;
         kill(PID_BB, SIG_PING);
     }
 
-    if (PID_TARGETS > 0) {
-        if (recv_targets == 0) {
-            log_error("ALERT: Target dosen't respond!");
+    if (PID_TARGETS > 0) 
+    {
+        if (recv_targets == 0) 
+        {
+            char msg[50];
+            snprintf(msg, sizeof(msg), "ALERT: Target dosen't respond!");
+            log_error(msg);
+            mvwprintw(my_win, Y_coordinates, 1, "%s", msg);
+            Y_coordinates++;
+        }
+        else
+        {
+            char msg[50];
+            snprintf(msg, sizeof(msg), "Target is ok!");
+            mvwprintw(my_win, Y_coordinates, 1, "%s", msg);
+            Y_coordinates++;
         }
         recv_targets = 0;
         kill(PID_TARGETS, SIG_PING);
     }
+
+    if (PID_INPUT > 0) 
+    {
+        if (recv_input == 0) 
+        {
+            char msg[50];
+            snprintf(msg, sizeof(msg), "ALERT: Input dosen't respond!");
+            log_error(msg);
+            mvwprintw(my_win, Y_coordinates, 1, "%s", msg);
+            Y_coordinates++;
+        }
+        else
+        {
+            char msg[50];
+            snprintf(msg, sizeof(msg), "Input is ok!");
+            mvwprintw(my_win, Y_coordinates, 1, "%s", msg);
+            Y_coordinates++;
+        }
+        recv_input = 0;
+        kill(PID_INPUT, SIG_PING);
+    }
+
+    box(my_win, 0, 0);
+    wrefresh(my_win);
 
     alarm(TIMER_WATCHDOG);
     
@@ -190,7 +332,7 @@ void watchdog_routine(int sig)
 int main() 
 {
     
-    log_config("../files/Watchdog_log.log", LOG_DEBUG);
+    log_config(FILENAME_WATCHDOG, LOG_DEBUG);
     
     struct sigaction sa;
     sa.sa_sigaction = heartbeat_handler;
@@ -198,48 +340,69 @@ int main()
     sigemptyset(&sa.sa_mask);
 
     struct sigaction sa_alarm;
-    sa_alarm.sa_handler = watchdog_routine;
+    sa_alarm.sa_handler = action_watchdog;
     sa_alarm.sa_flags = SA_RESTART;
     sigemptyset(&sa_alarm.sa_mask);
 
-    recv_drone = 1;
-    recv_obstacles = 1;
-    recv_bb = 1;
-    recv_targets = 1;
 
-
-    if (sigaction(SIG_HEARTBEAT, &sa, NULL) == -1) {
+    if (sigaction(SIG_HEARTBEAT, &sa, NULL) == -1) 
+    {
         perror("Errore in sigaction heartbeat");
         exit(EXIT_FAILURE);
     }
 
-    if (sigaction(SIG_WRITTEN, &sa, NULL) == -1) {
+    if (sigaction(SIG_WRITTEN, &sa, NULL) == -1) 
+    {
         perror("Errore in sigaction reads PID");
         exit(EXIT_FAILURE);
     }
 
-    if (sigaction(SIG_STOP, &sa, NULL) == -1) {
+    if (sigaction(SIG_STOP, &sa, NULL) == -1) 
+    {
         perror("Errore in sigaction reads PID");
         exit(EXIT_FAILURE);
     }
 
-    if (sigaction(SIGALRM, &sa_alarm, NULL) == -1) {
+    if (sigaction(SIGALRM, &sa_alarm, NULL) == -1) 
+    {
         perror("Errore sigaction alarm");
         exit(EXIT_FAILURE);
     }
 
-    alarm(TIMER_WATCHDOG + 1);
+    //Window setting
+    initscr();
+    cbreak();
+    noecho();
+    curs_set(0);
+    keypad(stdscr, TRUE);
+    WINDOW *win = newwin(10, 20, 5, 5);
+    layout_and_draw(win);
+    refresh();
 
-    while (1) {
+
+    alarm(TIMER_WATCHDOG);
+
+    while (1) 
+    {
         pause();
 
-        if (request_reload) {
+        if (request_reload) 
+        {
             Read_PID();
             request_reload = 0;
         }
 
+        if(watchdog_flag)
+        {
+            watchdog_routine(win);
+            watchdog_flag = 0;
+
+        }
+
         if (exiting) break;
     }
+
+    endwin();
 
     return 0;
 

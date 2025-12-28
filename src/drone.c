@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
     int fd_r_drone, fd_w_drone;
     sscanf(argv[1], "%d %d %d", &fd_r_drone, &fd_w_drone, &watchdogPid);
 
-    log_config("../files/simple.log", LOG_DEBUG);
+    log_config(FILENAME_LOG, LOG_DEBUG);
 
     WritePid();
     kill(watchdogPid, SIG_WRITTEN);

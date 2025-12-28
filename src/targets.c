@@ -94,7 +94,6 @@ void ClearArray(int array[MaxHeight][MaxWidth])
 
 void Positioning(bool obsta[][MaxWidth], int targ[][MaxWidth], int height, int width)
 {
-    log_debug("inizio positioning");
     int dim = (height - 2) * (width - 2);        //-2 cause the targets must be inside the window
     //int numTargets = (int)(densityTargets * dim);
 
@@ -128,7 +127,6 @@ void Positioning(bool obsta[][MaxWidth], int targ[][MaxWidth], int height, int w
 
         }while(obstaVector[j] || targetVector[j] != 0);      //Check for another target or obtacle in that position
         targetVector[j] = i;
-        log_error("Positioned target %d in slot %d, %d", i, j / (width - 2), j % (width - 2));
     }
 
     //From vector to matrix
@@ -226,7 +224,7 @@ int main(int argc, char *argv[])
     int fd_r_target, fd_w_target;
     sscanf(argv[1], "%d %d %d", &fd_r_target, &fd_w_target, &watchdogPid);
 
-    log_config("../files/simple.log", LOG_DEBUG);
+    log_config(FILENAME_LOG, LOG_DEBUG);
     WritePid();
     kill(watchdogPid, SIG_WRITTEN);
 
@@ -280,7 +278,6 @@ int main(int argc, char *argv[])
                 TargetAttraction(target, msg_float_in.a, msg_float_in.b, &Fx, &Fy);
                 log_debug("Forces from targets: %f %f", Fx, Fy);
                 int point = IsTargetReached(target, msg_float_in.a, msg_float_in.b, &firstLoss);
-                log_warn("Nel main del target è %d", score);
                 if (point == 1)
                 {
                     Set_msg(msg_float_out, 'w', Fx, Fy);        //win: right target reached

@@ -1,10 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
+#include <sys/wait.h>
 #include <unistd.h>
 #include <signal.h>
 
 #define SIG_SETUP (SIGRTMIN + 1)
+#define FILENAME_PID "../files/PID_file.log"
+#define FILENAME_LOG "../files/log_file.log"
+#define FILENAME_WATCHDOG "../files/watchdog.log"
 
 int main() {
 
@@ -98,15 +102,34 @@ int main() {
     }
 
     //Creation file with all PID
-    FILE *fp = fopen("../files/PID_file", "w");
-
-    // Controllo se il file è stato aperto correttamente
-    if (fp == NULL) {
+    FILE *fp = fopen(FILENAME_PID, "w");
+    if (fp == NULL) 
+    {
         perror("Errore nell'apertura del file");
         return 1;
     }
-
     fclose(fp);
+
+    //Creation log file
+    FILE *fp_l = fopen(FILENAME_LOG, "w");
+    if (fp_l == NULL) 
+    {
+        perror("Errore nell'apertura del file log");
+        return 1;
+    }
+    fclose(fp_l);
+
+    //Creation watchdog log
+    FILE *fp_w = fopen(FILENAME_WATCHDOG, "w");
+    if (fp_w == NULL) 
+    {
+        perror("Errore nell'apertura del file");
+        return 1;
+    }
+    fclose(fp_w);
+
+    int status;
+    waitpid(watchdog, &status, 0);
 
     close(fd_r_drone[0]);
     close(fd_r_drone[1]);

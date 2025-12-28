@@ -144,7 +144,7 @@ void WallRepulsion(float x, float y, float *Fx, float *Fy, int height, int width
     //Right wall
     if ((width - x - 1) < rho)
     {
-        float d = width - x - 1.8f;
+        float d = width - x - 0.8f;
         if (d < 0.001f) d = 0.001f;
 
         //Calculate relative distance 
@@ -239,7 +239,7 @@ int main(int argc, char *argv[])
     int fd_r_obstacle, fd_w_obstacle;
     sscanf(argv[1], "%d %d %d", &fd_r_obstacle, &fd_w_obstacle, &watchdogPid);
 
-    log_config("../files/simple.log", LOG_DEBUG);
+    log_config(FILENAME_LOG, LOG_DEBUG);
     WritePid();
     kill(watchdogPid, SIG_WRITTEN);
     

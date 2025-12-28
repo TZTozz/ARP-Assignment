@@ -18,6 +18,7 @@
 volatile sig_atomic_t need_resize = 0;
 volatile sig_atomic_t watchdogPid = 0;
 volatile sig_atomic_t reposition = 0;
+int malus = 0;
 
 void WritePid() 
 {
@@ -63,6 +64,7 @@ void WritePid()
 
 void ping_handler(int sig) 
 {
+    malus += 5;
     kill(watchdogPid, SIG_HEARTBEAT);
 }
 
@@ -167,7 +169,6 @@ void PrintTarget(WINDOW *win, int array[][MaxWidth], int height, int width, int 
             {
                 char ch = array[i][j] + '0';
                 mvwaddch(win, i, j, ch | COLOR_PAIR(3));
-                log_warn("Printed %c in slot %d, %d", ch, i, j);
             }   
         }
     }
@@ -190,21 +191,33 @@ void VictoryWindow(WINDOW *win, int score)
     const char *msg_title = "YOU WIN!";
     char msg_score[50];
     snprintf(msg_score, sizeof(msg_score), "Score: %d", score);
+    char msg_malus[50];
+    snprintf(msg_malus, sizeof(msg_malus), "Time: -%d", malus);
+    int TOTscore = score - malus;
+    char msg_TOTscore[50];
+    snprintf(msg_TOTscore, sizeof(msg_TOTscore), "Total score: %d", TOTscore);
 
     int x_title = (max_x - strlen(msg_title)) / 2;
     int x_score = (max_x - strlen(msg_score)) / 2;
+    int x_malus = (max_x - strlen(msg_malus)) / 2;
+    int x_TOTscore = (max_x - strlen(msg_TOTscore)) / 2;
     
     int y_center = max_y / 2;
 
     wattron(win, COLOR_PAIR(4) | A_BOLD);
-    mvwprintw(win, y_center - 1, x_title, "%s", msg_title);
+    mvwprintw(win, y_center - 3, x_title, "%s", msg_title);
     wattroff(win, COLOR_PAIR(4) | A_BOLD);
 
-    mvwprintw(win, y_center + 1, x_score, "%s", msg_score);
+    mvwprintw(win, y_center - 1, x_score, "%s", msg_score);
+    mvwprintw(win, y_center + 1, x_malus, "%s", msg_malus);
+    wattron(win, COLOR_PAIR(3) | A_BOLD);
+    mvwprintw(win, y_center + 3, x_TOTscore, "%s", msg_TOTscore);
+    wattroff(win, COLOR_PAIR(3) | A_BOLD);
     
     const char *msg_exit = "Press q to exit";
     int x_exit = (max_x - strlen(msg_exit)) / 2;
     mvwprintw(win, max_y - 2, x_exit, "%s", msg_exit);
+    
 
     wrefresh(win);
 }
@@ -220,7 +233,7 @@ int main(int argc, char *argv[])
                                                 &watchdogPid);
     
     
-    log_config("../files/simple.log", LOG_DEBUG);
+    log_config(FILENAME_LOG, LOG_DEBUG);
 
     //Write the pid in the PID_file and notify the watchdog
     WritePid();
@@ -409,7 +422,7 @@ int main(int argc, char *argv[])
         //Print the values
         move(0, 0);
         clrtoeol();
-        printw("Fx: %.3f\tFy: %.3f\tx: %.3f\ty: %.3f\tF_obstacle_X: %.3f\tF_obstacle_Y: %.3f\tScore: %d  ", Fx, Fy, xDrone, yDrone, F_obstacle_X, F_obstacle_Y, score);
+        printw("Fx: %.3f\tFy: %.3f\tx: %.3f\ty: %.3f\tF_obstacle_X: %.3f\tF_obstacle_Y: %.3f\tScore: %d   ", Fx, Fy, xDrone, yDrone, F_obstacle_X, F_obstacle_Y, score);
         refresh();
 
         //Waiting
@@ -502,12 +515,12 @@ int main(int argc, char *argv[])
                 
                 if(msg_float_in.type == 'w')            //Win
                 {
-                    score++;
+                    score += 100;
                     targetReached++;
                 }
                 if(msg_float_in.type == 'l' && firstLoss)       //Lose
                 {
-                    score--;
+                    score -= 100;
                     firstLoss = false;
                     log_error("Diminuito score");
                 }
@@ -517,7 +530,6 @@ int main(int argc, char *argv[])
                     redraw_drone = true;
                     firstLoss = true;
                 }
-                log_warn("Score in BB: %d", score);
 
                 if(targetReached == NumTargets) break;
 

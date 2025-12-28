@@ -119,7 +119,7 @@ int main(int argc, char *argv[]) {
     int fd_w_input;
     sscanf(argv[1], "%d %d", &fd_w_input, &watchdogPid);
 
-    log_config("../files/simple.log", LOG_DEBUG);
+    log_config(FILENAME_LOG, LOG_DEBUG);
 
     WritePid();
     kill(watchdogPid, SIG_WRITTEN);
