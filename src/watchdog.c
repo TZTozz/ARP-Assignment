@@ -356,11 +356,9 @@ void StopProcess()
     kill(PID_OBSTACLE, SIGKILL);
     kill(PID_TARGETS, SIGKILL);
     kill(PID_INPUT, SIGKILL);
-    kill(PID_KONSOLE_BB, SIGTERM);
+    sleep(3);
     kill(PID_KONSOLE_I, SIGTERM);
-    log_debug("Ora dormo");
-    sleep(5);
-    log_debug("Dormito");
+    kill(PID_KONSOLE_BB, SIGTERM);
     exiting = true;
 }
 
