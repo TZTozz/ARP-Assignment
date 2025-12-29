@@ -3,7 +3,9 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
-#include <signal.h>
+#include <string.h>
+#include <fcntl.h>
+#include <sys/file.h>
 
 #define SIG_SETUP (SIGRTMIN + 1)
 #define FILENAME_PID "../files/PID_file.log"
@@ -108,7 +110,43 @@ int main() {
         perror("Errore nell'apertura del file");
         return 1;
     }
+
     fclose(fp);
+
+    //---------Writing konsole PID-------
+    int fd;
+    char buffer[32];
+    //Open the file
+    fd = open(FILENAME_PID, O_WRONLY | O_CREAT | O_APPEND, 0666);
+    if (fd == -1) {
+        perror("Error open");
+        exit(EXIT_FAILURE);
+    }
+    //Lock the file
+    if (flock(fd, LOCK_EX) == -1) {
+        perror("Errore flock lock");
+        close(fd);
+        exit(EXIT_FAILURE);
+    }
+    //Write
+    snprintf(buffer, sizeof(buffer), "Konsole_BB: %d\n", BB);
+    if (write(fd, buffer, strlen(buffer)) == -1) {
+        perror("Error write");
+    }
+    snprintf(buffer, sizeof(buffer), "Konsole_I: %d\n", input);
+    if (write(fd, buffer, strlen(buffer)) == -1) {
+        perror("Error write");
+    }
+    //Flush
+    if (fsync(fd) == -1) {
+        perror("Error fsync");
+    }
+    //Unlock
+    if (flock(fd, LOCK_UN) == -1) {
+        perror("Error flock unlock");
+    }
+    //Close
+    close(fd);
 
     //Creation log file
     FILE *fp_l = fopen(FILENAME_LOG, "w");

@@ -7,6 +7,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <errno.h>
+#include <sys/wait.h>
 #include <sys/types.h>
 #include "logger.h"
 #include "parameter_file.h"
@@ -16,6 +17,9 @@ pid_t PID_OBSTACLE = 0;
 pid_t PID_BB = 0;
 pid_t PID_INPUT = 0;
 pid_t PID_TARGETS = 0;
+pid_t PID_KONSOLE_BB = 0;
+pid_t PID_KONSOLE_I = 0;
+
 
 volatile sig_atomic_t request_reload = 0;
 volatile sig_atomic_t num_process = 0;
@@ -27,6 +31,8 @@ volatile sig_atomic_t recv_obstacles = 1;
 volatile sig_atomic_t recv_bb = 1;
 volatile sig_atomic_t recv_targets = 1;
 volatile sig_atomic_t recv_input = 1;
+
+volatile sig_atomic_t error_process = 0;
 
 void Read_PID() 
 {
@@ -62,6 +68,14 @@ void Read_PID()
         else if (strncmp(line, "targets:", 8) == 0) 
         {
             sscanf(line, "targets: %d", &PID_TARGETS);
+        }
+        else if (strncmp(line, "Konsole_BB:", 8) == 0) 
+        {
+            sscanf(line, "Konsole_BB: %d", &PID_KONSOLE_BB);
+        }
+        else if (strncmp(line, "Konsole_I:", 8) == 0) 
+        {
+            sscanf(line, "Konsole_I: %d", &PID_KONSOLE_I);
         }
         else
         {
@@ -119,25 +133,21 @@ void action_stop()
 void action_drone()
 {
     recv_drone = 1;
-    //log_warn("Polling from drone");
 }
 
 void action_obstacles()
 {
     recv_obstacles = 1;
-    //log_warn("Polling from obstacles");
 }
 
 void action_bb()
 {
     recv_bb = 1;
-    //log_warn("Polling from bb");
 }
 
 void action_targets()
 {
     recv_targets = 1;
-    //log_warn("Polling from targets");
 }
 
 void action_input()
@@ -183,8 +193,7 @@ void heartbeat_handler(int sig, siginfo_t *info, void *context)
         action_input();
     }
     else {
-        //gestisci_processo_sconosciuto(sender_pid);
-        log_error("Processo sconosciuto: %d", sender_pid);;
+        log_error("Process unknow: %d", sender_pid);;
     }
 
 }
@@ -224,6 +233,7 @@ void watchdog_routine(WINDOW *my_win)
             log_error(msg);
             mvwprintw(my_win, Y_coordinates, 1, "%s", msg);
             Y_coordinates++;
+            error_process = 1;
         }
         else
         {
@@ -245,6 +255,7 @@ void watchdog_routine(WINDOW *my_win)
             log_error(msg);
             mvwprintw(my_win, Y_coordinates, 1, "%s", msg);
             Y_coordinates++;
+            error_process = 1;
         }
         else
         {
@@ -267,6 +278,7 @@ void watchdog_routine(WINDOW *my_win)
             log_error(msg);
             mvwprintw(my_win, Y_coordinates, 1, "%s", msg);
             Y_coordinates++;
+            error_process = 1;
         }
         else
         {
@@ -288,6 +300,7 @@ void watchdog_routine(WINDOW *my_win)
             log_error(msg);
             mvwprintw(my_win, Y_coordinates, 1, "%s", msg);
             Y_coordinates++;
+            error_process = 1;
         }
         else
         {
@@ -309,6 +322,7 @@ void watchdog_routine(WINDOW *my_win)
             log_error(msg);
             mvwprintw(my_win, Y_coordinates, 1, "%s", msg);
             Y_coordinates++;
+            error_process = 1;
         }
         else
         {
@@ -329,44 +343,72 @@ void watchdog_routine(WINDOW *my_win)
     errno = saved_errno;
 }
 
+void StopProcess()
+{
+    kill(PID_DRONE, SIGKILL);
+    kill(PID_BB, SIGKILL);
+    kill(PID_OBSTACLE, SIGKILL);
+    kill(PID_TARGETS, SIGKILL);
+    kill(PID_INPUT, SIGKILL);
+    kill(PID_KONSOLE_BB, SIGTERM);
+    kill(PID_KONSOLE_I, SIGTERM);
+    log_debug("Ora dormo");
+    sleep(5);
+    log_debug("Dormito");
+    exiting = true;
+}
+
+
 int main() 
 {
     
     log_config(FILENAME_WATCHDOG, LOG_DEBUG);
     
+    //Signal heartbeat from other process
     struct sigaction sa;
     sa.sa_sigaction = heartbeat_handler;
     sa.sa_flags = SA_SIGINFO | SA_RESTART;
     sigemptyset(&sa.sa_mask);
 
+    //Signal for timer
     struct sigaction sa_alarm;
     sa_alarm.sa_handler = action_watchdog;
     sa_alarm.sa_flags = SA_RESTART;
     sigemptyset(&sa_alarm.sa_mask);
 
+    //Signal from konsole in case of error
+    struct sigaction sa_hup;
+    sa_hup.sa_handler = SIG_IGN;
+    sa_hup.sa_flags = 0;
+    sigemptyset(&sa_hup.sa_mask);
+
 
     if (sigaction(SIG_HEARTBEAT, &sa, NULL) == -1) 
     {
-        perror("Errore in sigaction heartbeat");
+        perror("Error in sigaction heartbeat");
         exit(EXIT_FAILURE);
     }
 
     if (sigaction(SIG_WRITTEN, &sa, NULL) == -1) 
     {
-        perror("Errore in sigaction reads PID");
+        perror("Error in sigaction written PID");
         exit(EXIT_FAILURE);
     }
 
     if (sigaction(SIG_STOP, &sa, NULL) == -1) 
     {
-        perror("Errore in sigaction reads PID");
+        perror("Error in sigaction stop");
         exit(EXIT_FAILURE);
     }
 
     if (sigaction(SIGALRM, &sa_alarm, NULL) == -1) 
     {
-        perror("Errore sigaction alarm");
+        perror("Error sigaction alarm");
         exit(EXIT_FAILURE);
+    }
+
+    if (sigaction(SIGHUP, &sa_hup, NULL) == -1) {
+        perror("Error sigaction SIGHUP");
     }
 
     //Window setting
@@ -397,6 +439,11 @@ int main()
             watchdog_routine(win);
             watchdog_flag = 0;
 
+        }
+
+        if(error_process)
+        {
+            StopProcess();
         }
 
         if (exiting) break;

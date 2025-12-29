@@ -1,15 +1,14 @@
-[2025-12-28 22:55:55] [DEBUG] [src/watchdog.c:107] Num_process: 1
-[2025-12-28 22:55:55] [DEBUG] [src/watchdog.c:210] --- WATCHDOG CHECK (22:55:55) ---
-[2025-12-28 22:55:55] [DEBUG] [src/watchdog.c:107] Num_process: 2
-[2025-12-28 22:55:55] [DEBUG] [src/watchdog.c:107] Num_process: 3
-[2025-12-28 22:55:55] [DEBUG] [src/watchdog.c:107] Num_process: 4
-[2025-12-28 22:55:55] [DEBUG] [src/watchdog.c:107] Num_process: 5
-[2025-12-28 22:55:55] [DEBUG] [src/watchdog.c:33] Reading the PIDs
-[2025-12-28 22:56:00] [DEBUG] [src/watchdog.c:210] --- WATCHDOG CHECK (22:56:00) ---
-[2025-12-28 22:56:05] [DEBUG] [src/watchdog.c:210] --- WATCHDOG CHECK (22:56:05) ---
-[2025-12-28 22:56:10] [DEBUG] [src/watchdog.c:210] --- WATCHDOG CHECK (22:56:10) ---
-[2025-12-28 22:56:15] [DEBUG] [src/watchdog.c:210] --- WATCHDOG CHECK (22:56:15) ---
-[2025-12-28 22:56:20] [DEBUG] [src/watchdog.c:210] --- WATCHDOG CHECK (22:56:20) ---
-[2025-12-28 22:56:25] [DEBUG] [src/watchdog.c:210] --- WATCHDOG CHECK (22:56:25) ---
-[2025-12-28 22:56:30] [DEBUG] [src/watchdog.c:210] --- WATCHDOG CHECK (22:56:30) ---
-[2025-12-28 22:56:35] [DEBUG] [src/watchdog.c:210] --- WATCHDOG CHECK (22:56:35) ---
+[2025-12-29 02:36:45] [DEBUG] [src/watchdog.c:121] Num_process: 1
+[2025-12-29 02:36:45] [DEBUG] [src/watchdog.c:219] --- WATCHDOG CHECK (02:36:45) ---
+[2025-12-29 02:36:45] [DEBUG] [src/watchdog.c:121] Num_process: 2
+[2025-12-29 02:36:45] [DEBUG] [src/watchdog.c:121] Num_process: 3
+[2025-12-29 02:36:46] [DEBUG] [src/watchdog.c:121] Num_process: 4
+[2025-12-29 02:36:46] [DEBUG] [src/watchdog.c:121] Num_process: 5
+[2025-12-29 02:36:46] [DEBUG] [src/watchdog.c:39] Reading the PIDs
+[2025-12-29 02:36:50] [DEBUG] [src/watchdog.c:219] --- WATCHDOG CHECK (02:36:50) ---
+[2025-12-29 02:36:55] [DEBUG] [src/watchdog.c:219] --- WATCHDOG CHECK (02:36:55) ---
+[2025-12-29 02:37:00] [DEBUG] [src/watchdog.c:219] --- WATCHDOG CHECK (02:37:00) ---
+[2025-12-29 02:37:05] [DEBUG] [src/watchdog.c:219] --- WATCHDOG CHECK (02:37:05) ---
+[2025-12-29 02:37:10] [DEBUG] [src/watchdog.c:219] --- WATCHDOG CHECK (02:37:10) ---
+[2025-12-29 02:37:15] [DEBUG] [src/watchdog.c:219] --- WATCHDOG CHECK (02:37:15) ---
+[2025-12-29 02:37:15] [ERROR] [src/watchdog.c:300] ALERT: Target dosen't respond!

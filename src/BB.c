@@ -296,7 +296,8 @@ int main(int argc, char *argv[])
     sa_ping.sa_flags = SA_RESTART;
     sigemptyset(&sa_ping.sa_mask);
     
-    if (sigaction(SIG_PING, &sa_ping, NULL) == -1) {
+    if (sigaction(SIG_PING, &sa_ping, NULL) == -1) 
+    {
         perror("Error in ping_handler");
         exit(EXIT_FAILURE);
     }
@@ -307,7 +308,8 @@ int main(int argc, char *argv[])
     sa_winch.sa_flags = 0;
     sigemptyset(&sa_winch.sa_mask);
 
-    if (sigaction(SIGWINCH, &sa_winch, NULL) == -1) {
+    if (sigaction(SIGWINCH, &sa_winch, NULL) == -1) 
+    {
         perror("Error in sigaction SIGWINCH");
         exit(EXIT_FAILURE);
     }
@@ -318,7 +320,8 @@ int main(int argc, char *argv[])
     sa_alarm.sa_flags = SA_RESTART;
     sigemptyset(&sa_alarm.sa_mask);
 
-    if (sigaction(SIGALRM, &sa_alarm, NULL) == -1) {
+    if (sigaction(SIGALRM, &sa_alarm, NULL) == -1) 
+    {
         perror("Errore sigaction alarm");
         exit(EXIT_FAILURE);
     }
@@ -374,8 +377,8 @@ int main(int argc, char *argv[])
             need_resize = 0;
             endwin();
             refresh();
-            resize_term(0, 0);          // o resizeterm(0, 0)
-            size = layout_and_draw(my_win);       // ricalcola layout e ridisegna
+            resize_term(0, 0);
+            size = layout_and_draw(my_win);
 
             reposition = true;
             sizeChanged = true;
@@ -450,11 +453,6 @@ int main(int argc, char *argv[])
                 switch(msg_int_in.type)
                 {
                     case 'q':           //The user want to exit
-                        Set_msg(msg_float_out, 'q', 0, 0);
-                        write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
-                        write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
-                        write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
-                        kill(watchdogPid, SIG_STOP);
                         isExiting = true;
                         break;
                     case 'f':           //New forces
@@ -557,20 +555,23 @@ int main(int argc, char *argv[])
     
         while(1)
         {
-            log_debug("Pre read");
             read(fd_w_input, &msg_int_in, sizeof(msg_int_in));
             log_debug("Waiting for exiting");
             if (msg_int_in.type == 'q')
             {
-                log_debug("Dentro l'if");
-                Set_msg(msg_float_out, 'q', 0, 0);
-                write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
-                write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
-                write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
-                kill(watchdogPid, SIG_STOP);
+                isExiting = true;
                 break;
             }
         }
+    }
+
+    if(isExiting)
+    {
+        Set_msg(msg_float_out, 'q', 0, 0);
+        write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
+        write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
+        write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
+        kill(watchdogPid, SIG_STOP);
     }
     
 
