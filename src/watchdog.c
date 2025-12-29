@@ -25,6 +25,7 @@ volatile sig_atomic_t request_reload = 0;
 volatile sig_atomic_t num_process = 0;
 volatile sig_atomic_t exiting = 0;
 volatile sig_atomic_t watchdog_flag = 1;
+volatile sig_atomic_t need_resize = 0;
 
 volatile sig_atomic_t recv_drone = 1;
 volatile sig_atomic_t recv_obstacles = 1;
@@ -158,6 +159,11 @@ void action_input()
 void action_watchdog()
 {
     watchdog_flag = 1;
+}
+
+void handle_winch(int sig) 
+{
+    need_resize = 1;
 }
 
 void heartbeat_handler(int sig, siginfo_t *info, void *context) 
@@ -382,6 +388,12 @@ int main()
     sa_hup.sa_flags = 0;
     sigemptyset(&sa_hup.sa_mask);
 
+    //Signal for the risize  
+    struct sigaction sa_winch;
+    sa_winch.sa_handler = handle_winch;
+    sa_winch.sa_flags = 0;
+    sigemptyset(&sa_winch.sa_mask);
+
 
     if (sigaction(SIG_HEARTBEAT, &sa, NULL) == -1) 
     {
@@ -411,6 +423,12 @@ int main()
         perror("Error sigaction SIGHUP");
     }
 
+    if (sigaction(SIGWINCH, &sa_winch, NULL) == -1) 
+    {
+        perror("Error in sigaction SIGWINCH");
+        exit(EXIT_FAILURE);
+    }
+
     //Window setting
     initscr();
     cbreak();
@@ -432,6 +450,15 @@ int main()
         {
             Read_PID();
             request_reload = 0;
+        }
+
+        if (need_resize)
+        {
+            need_resize = 0;
+            endwin();
+            refresh();
+            resize_term(0, 0);
+            layout_and_draw(win);
         }
 
         if(watchdog_flag)
