@@ -4,14 +4,16 @@
 This project is a multi-process interactive simulator designed to operate a drone within a 2D environment.
 The system simulates the physical dynamics of a drone (inertia and viscous resistance), allowing the user to navigate through obstacles and reach targets using keyboard controls.
 
-<img width="1640" height="812" alt="image" src="https://github.com/user-attachments/assets/0a97025c-138a-4101-999e-954ce76bcc35" />
+<img width="1325" height="597" alt="image" src="https://github.com/user-attachments/assets/cdb89ebe-8222-45cd-a9d1-44967935e371" />
+
 
 The visual interface is built using the `ncurses` library, providing a lightweight, terminal-based simulation.
 
 ## System Architecture
-The application is designed as a distributed system involving five active concurrent processes communicating via Pipes.
+The application is designed as a distributed system involving six active concurrent processes communicating mainly via Pipes.
 
-<img width="70%" height="70%" alt="Blackboard" src="https://github.com/user-attachments/assets/067aa08b-654c-4f51-b734-a7c77508b098" />
+<img width="80%" height="80%" alt="Blackboard(3)(1)" src="https://github.com/user-attachments/assets/98f103e1-a11e-455b-8d3a-2a38bf8bcc4a" />
+
 
 ### Components
 The system follows a blackboard architecture:
@@ -19,17 +21,24 @@ The system follows a blackboard architecture:
 2.  **Drone:** Calculates the physics of the drone, including mass, friction, and external forces, solving the motion equations.
 3.  **Input:** Captures keyboard inputs from the user and sends command forces to the server.
 4.  **Obstacles:** Spawns obstacles at random locations that repel the drone.
-5.  **Targets:** Spawns targets that the drone must collect.
+5.  **Targets:** Spawns targets with attractive force that the drone must collect. Handle the score system.
+6. **Master:** Launch every process.
+7. **Watchdog:** Periodically check if every process works correctly and handle the situation in case of errors. It communicates through signal.
+
+<img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/939b7f85-430c-41c0-b43d-39b4c0fe8748" />
 
 The following scheme illustrate the sequential steps computed at runtime:
 
-<img width="50%" height="50%" alt="Blackboard(1)" src="https://github.com/user-attachments/assets/90559b72-eebd-4e86-b2fc-90b278b140b5" />
+<img width="50%" height="50%" alt="Blackboard(2)(1)" src="https://github.com/user-attachments/assets/959b8d41-35a7-4666-8672-401f5c14c700" />
 
 This scheme don't integrate the case in which the user is resizing the window.
 
+
 ### Files
 * **Parameter File:** Contains all the parameters about the physics (forces, mass, viscousity, time of integration) and the protocol of communication via pipes.
-* **Log Files:** Contains all the debug, warning and error messages.
+* **Log File:** Contains all the debug, warning and error messages.
+* **Log Watchdog:** Cointains the state of all processes.
+* **PID File:** Contains the PID of every processes.
 
 ## Physics & Dynamics
 The drone is modeled as a point mass with 2 Degrees of Freedom (DoF). The motion is determined by the following equation of dynamics, solved numerically using Euler's method:
@@ -93,8 +102,16 @@ The key D is the brake and halves the force.
 ```
 ### Visual elements
 * ${\color{magenta}"+"}$: the drone
-* ${\color{green}"T"}$: targets
+* ${\color{green}"1"}$: targets
 * ${\color{red}"0"}$: obstacles
+
+### How to play
+Use the keyboard to reach the target in the right order. Pay attention to not go too close the wrong target or you will need a great amount of force to escape from it (10N) and you will lose points. You need to be fast, there is a malus for the time. Once you reach the final target the final window will appear.
+
+<img width="935" height="366" alt="image" src="https://github.com/user-attachments/assets/143d74f7-c860-4829-b5d5-90357d9e2ef2" />
+
+
+
 
 ## Directory
 ```
