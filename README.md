@@ -29,16 +29,27 @@ The system follows a blackboard architecture:
 
 The following scheme illustrate the sequential steps computed at runtime:
 
-<img width="50%" height="50%" alt="Blackboard(2)(1)" src="https://github.com/user-attachments/assets/959b8d41-35a7-4666-8672-401f5c14c700" />
+<img width="70%" height="70%" alt="Blackboard(2)(1)" src="https://github.com/user-attachments/assets/959b8d41-35a7-4666-8672-401f5c14c700" />
 
 This scheme doesn't integrate the case in which the user is resizing the window.
 
 
 ### Files
-* **Parameter File:** Contains all the parameters about the physics (forces, mass, viscousity, time of integration) and the protocol of communication via pipes.
+* **Parameter File:** Contains all the parameters about the physics (forces, mass, viscousity, time of integration), the protocol of communication via pipes and general setting like the denssity of obstacle or the time for the respawn of objects.
 * **Log File:** Contains all the debug, warning and error messages.
 * **Log Watchdog:** Cointains the state of all processes.
-* **PID File:** Contains the PID of every processes.
+* **PID File:** Contains the PID of every processes. At the start every process write its own PID in this file.
+
+### Watchdog signals
+At the start the watchdog waits every process to read the `PID_file` in order to send the signals. After that it set an alarm that every 5 seconds check if all processes are working correctly.
+| Signal | Use |
+| --- | --- |
+| SIG_WRITTEN | The signal that send every process after have written the PID in the file |
+| SIG_PING | The signal that send the watchdog to poll the processes |
+| SIG_HEARTBEAT | The signal that send every process to respond the ping |
+| SIGALARM | The signal to set the timer |
+| SIG_STOP | The signal that use the blackboard to stop the watchdog at the end of the game |
+| SIGWINCH | The signal to redraw the window in case of resize |
 
 ## Physics & Dynamics
 The drone is modeled as a point mass with 2 Degrees of Freedom (DoF). The motion is determined by the following equation of dynamics, solved numerically using Euler's method:
