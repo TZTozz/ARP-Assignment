@@ -23,7 +23,7 @@ The system follows a blackboard architecture:
 4.  **Obstacles:** Spawns obstacles at random locations that repel the drone.
 5.  **Targets:** Spawns targets with attractive force that the drone must collect. Handle the score system.
 6. **Master:** Launch every process.
-7. **Watchdog:** Periodically check if every process works correctly and handle the situation in case of errors. It communicates through signal.
+7. **Watchdog:** Periodically check if every process works correctly and handle the situation in case of errors. It poll each process through signal.
 
 <img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/939b7f85-430c-41c0-b43d-39b4c0fe8748" />
 
@@ -31,7 +31,7 @@ The following scheme illustrate the sequential steps computed at runtime:
 
 <img width="50%" height="50%" alt="Blackboard(2)(1)" src="https://github.com/user-attachments/assets/959b8d41-35a7-4666-8672-401f5c14c700" />
 
-This scheme don't integrate the case in which the user is resizing the window.
+This scheme doesn't integrate the case in which the user is resizing the window.
 
 
 ### Files
@@ -122,8 +122,12 @@ Use the keyboard to reach the target in the right order. Pay attention to not go
 │   ├── I_process
 │   ├── master
 │   ├── obstacles
-│   ├── simple.log
-│   └── targets
+│   ├── targets
+│   └── watchdog
+├── files
+│   ├── log_file.log
+│   ├── PID_file.log
+│   └── watchdog.log
 ├── launcher.sh
 ├── README.md
 └── src
@@ -135,5 +139,7 @@ Use the keyboard to reach the target in the right order. Pay attention to not go
     ├── master.c
     ├── obstacles.c
     ├── parameter_file.h
-    └── targets.c
+    ├── targets.c
+    └── watchdog.c
+
 ```
