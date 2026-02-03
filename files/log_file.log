@@ -1,18 +1,0 @@
-[2026-02-03 16:31:04] [DEBUG] [src/drone.c:42] Process 110294: written on file
-[2026-02-03 16:31:05] [DEBUG] [src/I_process.c:42] Process 110313: written on file
-[2026-02-03 16:31:05] [DEBUG] [src/BB.c:48] Process 110314: written on file
-[2026-02-03 16:31:05] [DEBUG] [src/BB.c:345] height: 23 Width: 101
-[2026-02-03 16:31:09] [DEBUG] [src/I_process.c:230] New forces: 0 0
-[2026-02-03 16:31:11] [DEBUG] [src/I_process.c:230] New forces: 0 0
-[2026-02-03 16:31:13] [DEBUG] [src/I_process.c:230] New forces: 1 0
-[2026-02-03 16:31:16] [DEBUG] [src/I_process.c:230] New forces: 1 0
-[2026-02-03 16:31:18] [DEBUG] [src/I_process.c:230] New forces: -1 0
-[2026-02-03 16:31:18] [DEBUG] [src/I_process.c:230] New forces: -1 0
-[2026-02-03 16:31:18] [DEBUG] [src/I_process.c:230] New forces: 0 -1
-[2026-02-03 16:31:19] [DEBUG] [src/I_process.c:230] New forces: 1 0
-[2026-02-03 16:31:19] [DEBUG] [src/I_process.c:225] Breaking!
-[2026-02-03 16:31:20] [DEBUG] [src/I_process.c:230] New forces: 0 1
-[2026-02-03 16:31:24] [DEBUG] [src/drone.c:131] Ch = 
-[2026-02-03 16:31:24] [ERROR] [src/drone.c:151] Format error
-[2026-02-03 16:31:24] [DEBUG] [src/drone.c:175] Position: X: 10.000000 Y: 10.000000
-[2026-02-03 16:31:24] [DEBUG] [src/drone.c:176] Velocity: X: 0.000000 Y: 0.000000

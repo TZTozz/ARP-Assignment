@@ -513,32 +513,35 @@ int main(int argc, char *argv[])
                 F_obstacle_X = msg_float_in.a;
                 F_obstacle_Y = msg_float_in.b;
 
-                //Ask the forces applied by the targets to the drone
-                Set_msg(msg_float_out, 'f', xDrone, yDrone);
-                write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
-                read(fd_w_target, &msg_float_in, sizeof(msg_float_in));
-                F_target_X = msg_float_in.a;
-                F_target_Y = msg_float_in.b;
-                
-                if(msg_float_in.type == 'w')            //Win
+                if(typeGame == 0)
                 {
-                    score += 100;
-                    targetReached++;
+                    //Ask the forces applied by the targets to the drone
+                    Set_msg(msg_float_out, 'f', xDrone, yDrone);
+                    write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
+                    read(fd_w_target, &msg_float_in, sizeof(msg_float_in));
+                    F_target_X = msg_float_in.a;
+                    F_target_Y = msg_float_in.b;
+                    
+                    if(msg_float_in.type == 'w')            //Win
+                    {
+                        score += 100;
+                        targetReached++;
+                    }
+                    if(msg_float_in.type == 'l' && firstLoss)       //Lose
+                    {
+                        score -= 100;
+                        firstLoss = false;
+                        log_error("Diminuito score");
+                    }
+                    if(msg_float_in.type == 'a')                    //After lose
+                    {
+                        redraw_target = true;
+                        redraw_drone = true;
+                        firstLoss = true;
+                    }
+                    
+                    if(targetReached == NumTargets) break;
                 }
-                if(msg_float_in.type == 'l' && firstLoss)       //Lose
-                {
-                    score -= 100;
-                    firstLoss = false;
-                    log_error("Diminuito score");
-                }
-                if(msg_float_in.type == 'a')                    //After lose
-                {
-                    redraw_target = true;
-                    redraw_drone = true;
-                    firstLoss = true;
-                }
-
-                if(targetReached == NumTargets) break;
 
                 //Sum all the forces and send them to the drone
                 //Fx += msg_float_in.a;
@@ -578,9 +581,9 @@ int main(int argc, char *argv[])
     {
         Set_msg(msg_float_out, 'q', 0, 0);
         write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
+        write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
         if(typeGame == 0)
         {
-            write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
             write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
             kill(watchdogPid, SIG_STOP);
         }
