@@ -225,19 +225,20 @@ void VictoryWindow(WINDOW *win, int score)
 int main(int argc, char *argv[])
 {
     //Handles the pipes
-    int fd_r_drone, fd_w_drone, fd_w_input, fd_r_obstacle, fd_w_obstacle, fd_r_target, fd_w_target;
-    sscanf(argv[1], "%d %d %d %d %d %d %d %d", &fd_r_drone, &fd_w_drone,
+    int fd_r_drone, fd_w_drone, fd_w_input, fd_r_obstacle, fd_w_obstacle, fd_r_target, fd_w_target, typeGame;
+    sscanf(argv[1], "%d %d %d %d %d %d %d %d %d", &fd_r_drone, &fd_w_drone,
                                                 &fd_w_input,
                                                 &fd_r_obstacle, &fd_w_obstacle,
                                                 &fd_r_target, &fd_w_target,
-                                                &watchdogPid);
+                                                &watchdogPid,
+                                                &typeGame);
     
     
     log_config(FILENAME_LOG, LOG_DEBUG);
 
     //Write the pid in the PID_file and notify the watchdog
     WritePid();
-    kill(watchdogPid, SIG_WRITTEN);
+    if (typeGame == 0) kill(watchdogPid, SIG_WRITTEN);
     
     //Set the select
     int max_fd = max(fd_w_drone, fd_w_input);
@@ -268,7 +269,6 @@ int main(int argc, char *argv[])
     bool redraw_target = false, redraw_drone = false;
     bool firstLoss = true;
 
-
     //Obstacle and target array
     bool obstacle[MaxHeight][MaxWidth]; 
     int target[MaxHeight][MaxWidth];
@@ -290,16 +290,19 @@ int main(int argc, char *argv[])
     init_pair(4, COLOR_YELLOW, -1);      //Color victory
     
     
-    //Signal from watchdog
-    struct sigaction sa_ping;
-    sa_ping.sa_handler = ping_handler;
-    sa_ping.sa_flags = SA_RESTART;
-    sigemptyset(&sa_ping.sa_mask);
-    
-    if (sigaction(SIG_PING, &sa_ping, NULL) == -1) 
+    if(typeGame == 0)
     {
-        perror("Error in ping_handler");
-        exit(EXIT_FAILURE);
+        //Signal from watchdog
+        struct sigaction sa_ping;
+        sa_ping.sa_handler = ping_handler;
+        sa_ping.sa_flags = SA_RESTART;
+        sigemptyset(&sa_ping.sa_mask);
+        
+        if (sigaction(SIG_PING, &sa_ping, NULL) == -1) 
+        {
+            perror("Error in ping_handler");
+            exit(EXIT_FAILURE);
+        }
     }
     
     //Signal for the risize  
@@ -314,18 +317,21 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-    //Timer for the redrawing
-    struct sigaction sa_alarm;
-    sa_alarm.sa_handler = redraw_routine;
-    sa_alarm.sa_flags = SA_RESTART;
-    sigemptyset(&sa_alarm.sa_mask);
-
-    if (sigaction(SIGALRM, &sa_alarm, NULL) == -1) 
+    if(typeGame == 0)
     {
-        perror("Errore sigaction alarm");
-        exit(EXIT_FAILURE);
+        //Timer for the redrawing
+        struct sigaction sa_alarm;
+        sa_alarm.sa_handler = redraw_routine;
+        sa_alarm.sa_flags = SA_RESTART;
+        sigemptyset(&sa_alarm.sa_mask);
+
+        if (sigaction(SIGALRM, &sa_alarm, NULL) == -1) 
+        {
+            perror("Errore sigaction alarm");
+            exit(EXIT_FAILURE);
+        }
     }
-    
+
     
     //Create window
     size.height = 15;
@@ -349,20 +355,23 @@ int main(int argc, char *argv[])
     read_exact(fd_w_obstacle, obstacle, sizeof(obstacle));
     PrintObstacle(my_win, obstacle, size.height, size.width);
     
-
-    //Communicate to targets the window's dimensions and prints the targets
-    Set_msg(msg_float_out, 't', size.height, size.width);
-    write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
-    write(fd_r_target, obstacle, sizeof(obstacle));
-    read_exact(fd_w_target, target, sizeof(target));
-    PrintTarget(my_win, target, size.height, size.width, targetReached);
+    
+    if(typeGame == 0)
+    {
+        //Communicate to targets the window's dimensions and prints the targets
+        Set_msg(msg_float_out, 't', size.height, size.width);
+        write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
+        write(fd_r_target, obstacle, sizeof(obstacle));
+        read_exact(fd_w_target, target, sizeof(target));
+        PrintTarget(my_win, target, size.height, size.width, targetReached);
+        
+        //Start the timer to respawn object
+        alarm(TIMER_RESPAWN);
+    }
 
     //Print the drone in the initial position
     mvwaddch(my_win, yDrone, xDrone, skin | COLOR_PAIR(1));
     wrefresh(my_win);
-
-    //Start the timer to respawn object
-    alarm(TIMER_RESPAWN);
 
     while (1)
     {
@@ -569,9 +578,13 @@ int main(int argc, char *argv[])
     {
         Set_msg(msg_float_out, 'q', 0, 0);
         write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
-        write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
-        write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
-        kill(watchdogPid, SIG_STOP);
+        if(typeGame == 0)
+        {
+            write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
+            write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
+            kill(watchdogPid, SIG_STOP);
+        }
+        
     }
     
 
