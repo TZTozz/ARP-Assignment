@@ -45,18 +45,18 @@ int main() {
 
         if (bufferAsk == endptr) 
         {
-            printf("Error: No number.\n");
+            printf("Error: No number, proced with single player mode.\n");
         } 
         else if (num == 2)      //Multiplayer
         {
-            printf("Client (1) or server (2)?\n");
+            printf("Server (1) or client (2)?\n");
             if (fgets(bufferAsk, sizeof(bufferAsk), stdin) != NULL) 
             {
                 num = strtol(bufferAsk, &endptr, 10);
 
                 if (bufferAsk == endptr) 
                 {
-                    printf("Error: No number.\n");
+                    printf("Error: No number, proced with single player mode.\n");
                 } 
                 else if (num == 1)      //Client
                 {
@@ -66,11 +66,11 @@ int main() {
                 {
                     typeGame = 2;
                 }
-                else printf("Error: Number not valid.\n");
+                else printf("Error: Number not valid, proced with single player mode.\n");
 
             }
         }
-        else if (num != 1) printf("Error: Number not valid.\n");
+        else if (num != 1) printf("Error: Number not valid, proced with single player mode.\n");
     }
 
     if (typeGame == 0)

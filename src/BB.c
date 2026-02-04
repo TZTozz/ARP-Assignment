@@ -262,6 +262,7 @@ int main(int argc, char *argv[])
     
     //Blackboard data
     float xDrone = 1, yDrone = 1;
+    int xEnemy = 1, yEnemy = 1;
     float Fx = 0, Fy = 0;
     float F_obstacle_X = 0, F_obstacle_Y = 0;
     float F_target_X = 0, F_target_Y = 0;
@@ -278,7 +279,7 @@ int main(int argc, char *argv[])
     int target[MaxHeight][MaxWidth];
 
     //Socket variables
-    int sockfd, newsockfd, clilen;
+    int sockfd, newsockfd, clilen, n;
     struct sockaddr_in serv_addr, cli_addr;
     struct hostent *server;
     char msg_sock[100];
@@ -326,46 +327,22 @@ int main(int argc, char *argv[])
             perror("Errore sigaction alarm");
             exit(EXIT_FAILURE);
         }
-    }
-    else if(typeGame == 1)       //---------Socket part Client-------
-    {
-        sockfd = socket(AF_INET, SOCK_STREAM, 0);
-        if (sockfd < 0) log_error("ERROR opening socket");
 
-        server = gethostbyname(HOST_NAME);
-        if (server == NULL) 
+
+        //Signal for the risize  
+        struct sigaction sa_winch;
+        sa_winch.sa_handler = handle_winch;
+        sa_winch.sa_flags = 0;
+        sigemptyset(&sa_winch.sa_mask);
+
+        if (sigaction(SIGWINCH, &sa_winch, NULL) == -1) 
         {
-            log_error("ERROR, no such host\n");
-            exit(0);
+            perror("Error in sigaction SIGWINCH");
+            exit(EXIT_FAILURE);
         }
 
-        memset(&serv_addr, 0, sizeof(serv_addr));
-        serv_addr.sin_family = AF_INET;
-        memcpy(&serv_addr.sin_addr.s_addr, 
-                server->h_addr_list[0], 
-                server->h_length);
-        serv_addr.sin_port = htons(PORTNUM);
-
-        if (connect(sockfd,(struct sockaddr *)&serv_addr,sizeof(serv_addr)) < 0) 
-        {
-            log_error("ERROR connecting");
-            exit(0);
-        }
-        log_debug("Connected to the server");
-
-        
-        memset(msg_sock, 0, sizeof(msg_sock));
-        int n = read(sockfd,msg_sock, sizeof(msg_sock));
-        if (n < 0) log_error("ERROR reading from socket");
-        
-        log_debug("Client recived: %s", msg_sock);
-        
-        sprintf(msg_sock, "Okk");
-        n = write(sockfd,msg_sock, sizeof(msg_sock));
-        if (n < 0) log_error("ERROR writing to socket");
-
     }
-    else        //--------------Socket part Server-------------
+    else if(typeGame == 1)       //---------Socket part Server-------
     {
         sockfd = socket(AF_INET, SOCK_STREAM, 0);
         if (sockfd < 0) 
@@ -375,11 +352,15 @@ int main(int argc, char *argv[])
         serv_addr.sin_addr.s_addr = INADDR_ANY;
         serv_addr.sin_port = htons(PORTNUM);
         if (bind(sockfd, (struct sockaddr *) &serv_addr,
-                sizeof(serv_addr)) < 0) 
-                log_error("ERROR on binding");
+        sizeof(serv_addr)) < 0) 
+        log_error("ERROR on binding");
         listen(sockfd,5);
         clilen = sizeof(cli_addr);
-
+        
+        move(0, 0);
+        printw("Waiting for the connection...");
+        refresh();
+        
         // Accept the connection
         newsockfd = accept(sockfd, (struct sockaddr *) &cli_addr, &clilen);
         if (newsockfd < 0) 
@@ -388,41 +369,105 @@ int main(int argc, char *argv[])
             exit(0);
         }
         log_debug("Connected to the server");
-
+        
         
         sprintf(msg_sock, "Ok");
-        int n = write(newsockfd,msg_sock, sizeof(msg_sock));
+        n = write(newsockfd, msg_sock, sizeof(msg_sock));
+        if (n < 0) log_error("ERROR writing to socket");
+        
+        memset(msg_sock, 0, sizeof(msg_sock));
+        n = read(newsockfd, msg_sock, sizeof(msg_sock));
+        if (n < 0) log_error("ERROR reading from socket");
+        
+        log_debug("Server recived: %s", msg_sock);
+        
+    }
+    else        //--------------Socket part Client-------------
+    {
+        sockfd = socket(AF_INET, SOCK_STREAM, 0);
+        if (sockfd < 0) log_error("ERROR opening socket");
+    
+        server = gethostbyname(HOST_NAME);
+        if (server == NULL) 
+        {
+            log_error("ERROR, no such host\n");
+            exit(0);
+        }
+    
+        memset(&serv_addr, 0, sizeof(serv_addr));
+        serv_addr.sin_family = AF_INET;
+        memcpy(&serv_addr.sin_addr.s_addr, 
+                server->h_addr_list[0], 
+                server->h_length);
+        serv_addr.sin_port = htons(PORTNUM);
+    
+        if (connect(sockfd,(struct sockaddr *)&serv_addr,sizeof(serv_addr)) < 0) 
+        {
+            log_error("ERROR connecting");
+            exit(0);
+        }
+        log_debug("Connected to the server");
+    
+        
+        memset(msg_sock, 0, sizeof(msg_sock));
+        n = read(sockfd, msg_sock, sizeof(msg_sock));
+        if (n < 0) log_error("ERROR reading from socket");
+        
+        log_debug("Client recived: %s", msg_sock);
+        
+        sprintf(msg_sock, "Okk");
+        n = write(sockfd,msg_sock, sizeof(msg_sock));
         if (n < 0) log_error("ERROR writing to socket");
 
-        memset(msg_sock, 0, sizeof(msg_sock));
-        n = read(newsockfd,msg_sock, sizeof(msg_sock));
-        if (n < 0) log_error("ERROR reading from socket");
-
-        log_debug("Server recived: %s", msg_sock);
-
     }
     
-    //Signal for the risize  
-    struct sigaction sa_winch;
-    sa_winch.sa_handler = handle_winch;
-    sa_winch.sa_flags = 0;
-    sigemptyset(&sa_winch.sa_mask);
-
-    if (sigaction(SIGWINCH, &sa_winch, NULL) == -1) 
+    if(typeGame == 0 || typeGame == 1)
     {
-        perror("Error in sigaction SIGWINCH");
-        exit(EXIT_FAILURE);
+        //Create window
+        size.height = 15;
+        size.width = 20;
+        starty = (LINES - size.height) / 2;	
+        startx = (COLS - size.width) / 2;
+        
+        my_win = create_newwin(size.height, size.width, starty, startx);
+        size = layout_and_draw(my_win);
+        log_debug("height: %d Width: %d", size.height, size.width);
+
+        if(typeGame == 1)
+        {
+            sprintf(msg_sock, "size %d, %d", size.width, size.height);
+            n = write(newsockfd, msg_sock, sizeof(msg_sock));
+            if (n < 0) log_error("ERROR writing to socket");
+
+            memset(msg_sock, 0, sizeof(msg_sock));
+            n = read(newsockfd, msg_sock, sizeof(msg_sock));
+            if (n < 0) log_error("ERROR reading from socket");
+
+            if(strcmp(msg_sock, "sok")) log_error("Not recived ok from client");
+        }
+
     }
-    
-    //Create window
-    size.height = 15;
-    size.width = 20;
-    starty = (LINES - size.height) / 2;	
-	startx = (COLS - size.width) / 2;
-    
-    my_win = create_newwin(size.height, size.width, starty, startx);
-    size = layout_and_draw(my_win);
-    log_debug("height: %d Width: %d", size.height, size.width);
+    else
+    {
+        memset(msg_sock, 0, sizeof(msg_sock));
+        n = read(sockfd,msg_sock, sizeof(msg_sock));
+        if (n < 0) log_error("ERROR reading from socket");
+        sscanf(msg_sock, "size %d, %d", &size.width, &size.height);
+
+        //Crete the window with the informations recived
+        starty = (LINES - size.height) / 2;	
+        startx = (COLS - size.width) / 2;
+        refresh();
+        my_win = create_newwin(size.height, size.width, starty, startx);
+        if (my_win == NULL) log_error("Error creating the window");
+        wrefresh(my_win);
+
+        sprintf(msg_sock, "sok");
+        n = write(sockfd,msg_sock, sizeof(msg_sock));
+        if (n < 0) log_error("ERROR writing to socket");
+
+        log_debug("height: %d Width: %d", size.height, size.width);
+    }
 
 
     //Communicate to the drone the window's dimensions
@@ -510,6 +555,72 @@ int main(int argc, char *argv[])
             wrefresh(my_win);
             refresh();
             redraw_drone = false;
+        }
+
+        //Multiplayer enemy position
+        if(typeGame == 1)           //----Server----
+        {
+            //Send my position
+            sprintf(msg_sock, "drone");
+            n = write(newsockfd, msg_sock, sizeof(msg_sock));
+            if (n < 0) log_error("ERROR writing to socket");
+
+            sprintf(msg_sock, "%d, %d", (int)xDrone, (int)yDrone);
+            n = write(newsockfd, msg_sock, sizeof(msg_sock));
+            if (n < 0) log_error("ERROR writing to socket");
+            
+            memset(msg_sock, 0, sizeof(msg_sock));
+            n = read(newsockfd, msg_sock, sizeof(msg_sock));
+            if (n < 0) log_error("ERROR reading from socket");
+            if(strcmp(msg_sock, "dok")) log_error("Not recived ok from client");
+
+            //Recive position of the enemy
+            sprintf(msg_sock, "obst");
+            n = write(newsockfd, msg_sock, sizeof(msg_sock));
+            if (n < 0) log_error("ERROR writing to socket");
+
+            memset(msg_sock, 0, sizeof(msg_sock));
+            n = read(newsockfd, msg_sock, sizeof(msg_sock));
+            if (n < 0) log_error("ERROR reading from socket");
+            sscanf(msg_sock, "%d, %d", &xEnemy, &yEnemy);
+
+            sprintf(msg_sock, "pok");
+            n = write(newsockfd, msg_sock, sizeof(msg_sock));
+            if (n < 0) log_error("ERROR writing to socket");
+
+        }
+        if(typeGame == 2)       //----Client----
+        {
+            memset(msg_sock, 0, sizeof(msg_sock));
+            n = read(sockfd, msg_sock, sizeof(msg_sock));
+            if (n < 0) log_error("ERROR reading from socket");
+
+            switch (msg_sock[0])
+            {
+            case 'd':           //Recive position of the enemy
+                memset(msg_sock, 0, sizeof(msg_sock));
+                n = read(sockfd,msg_sock, sizeof(msg_sock));
+                if (n < 0) log_error("ERROR reading from socket");
+                sscanf(msg_sock, "%d, %d", &xEnemy, &yEnemy);
+                
+                sprintf(msg_sock, "dok");
+                n = write(sockfd,msg_sock, sizeof(msg_sock));
+                if (n < 0) log_error("ERROR writing to socket");
+                break;
+
+            case 'o':           //Send my position
+                sprintf(msg_sock, "%d, %d", (int)xDrone, (int)yDrone);
+                n = write(sockfd,msg_sock, sizeof(msg_sock));
+                if (n < 0) log_error("ERROR writing to socket");
+
+                memset(msg_sock, 0, sizeof(msg_sock));
+                n = read(sockfd, msg_sock, sizeof(msg_sock));
+                if (n < 0) log_error("ERROR reading from socket");
+                if(strcmp(msg_sock, "pok")) log_error("Not recived ok from server");
+
+            default:
+                break;
+            }
         }
 
         //Print the values
