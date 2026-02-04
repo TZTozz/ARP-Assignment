@@ -10,6 +10,10 @@
 #include <fcntl.h>
 #include <sys/file.h>
 #include <sys/wait.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netdb.h>
+#include <strings.h>
 #include <errno.h>
 #include "logger.h"
 #include "parameter_file.h"
@@ -272,6 +276,12 @@ int main(int argc, char *argv[])
     //Obstacle and target array
     bool obstacle[MaxHeight][MaxWidth]; 
     int target[MaxHeight][MaxWidth];
+
+    //Socket variables
+    int sockfd, newsockfd, clilen;
+    struct sockaddr_in serv_addr, cli_addr;
+    struct hostent *server;
+    char msg_sock[100];
     
     //Window setting
     initscr(); 
@@ -288,6 +298,7 @@ int main(int argc, char *argv[])
     init_pair(2, COLOR_RED, -1);        //Color obstacles
     init_pair(3, COLOR_GREEN, -1);      //Color targets
     init_pair(4, COLOR_YELLOW, -1);      //Color victory
+
     
     
     if(typeGame == 0)
@@ -303,6 +314,92 @@ int main(int argc, char *argv[])
             perror("Error in ping_handler");
             exit(EXIT_FAILURE);
         }
+
+        //Timer for the redrawing
+        struct sigaction sa_alarm;
+        sa_alarm.sa_handler = redraw_routine;
+        sa_alarm.sa_flags = SA_RESTART;
+        sigemptyset(&sa_alarm.sa_mask);
+
+        if (sigaction(SIGALRM, &sa_alarm, NULL) == -1) 
+        {
+            perror("Errore sigaction alarm");
+            exit(EXIT_FAILURE);
+        }
+    }
+    else if(typeGame == 1)       //---------Socket part Client-------
+    {
+        sockfd = socket(AF_INET, SOCK_STREAM, 0);
+        if (sockfd < 0) log_error("ERROR opening socket");
+
+        server = gethostbyname(HOST_NAME);
+        if (server == NULL) 
+        {
+            log_error("ERROR, no such host\n");
+            exit(0);
+        }
+
+        memset(&serv_addr, 0, sizeof(serv_addr));
+        serv_addr.sin_family = AF_INET;
+        memcpy(&serv_addr.sin_addr.s_addr, 
+                server->h_addr_list[0], 
+                server->h_length);
+        serv_addr.sin_port = htons(PORTNUM);
+
+        if (connect(sockfd,(struct sockaddr *)&serv_addr,sizeof(serv_addr)) < 0) 
+        {
+            log_error("ERROR connecting");
+            exit(0);
+        }
+        log_debug("Connected to the server");
+
+        
+        memset(msg_sock, 0, sizeof(msg_sock));
+        int n = read(sockfd,msg_sock, sizeof(msg_sock));
+        if (n < 0) log_error("ERROR reading from socket");
+        
+        log_debug("Client recived: %s", msg_sock);
+        
+        sprintf(msg_sock, "Okk");
+        n = write(sockfd,msg_sock, sizeof(msg_sock));
+        if (n < 0) log_error("ERROR writing to socket");
+
+    }
+    else        //--------------Socket part Server-------------
+    {
+        sockfd = socket(AF_INET, SOCK_STREAM, 0);
+        if (sockfd < 0) 
+        log_error("ERROR opening socket");
+        memset(&serv_addr, 0, sizeof(serv_addr));
+        serv_addr.sin_family = AF_INET;
+        serv_addr.sin_addr.s_addr = INADDR_ANY;
+        serv_addr.sin_port = htons(PORTNUM);
+        if (bind(sockfd, (struct sockaddr *) &serv_addr,
+                sizeof(serv_addr)) < 0) 
+                log_error("ERROR on binding");
+        listen(sockfd,5);
+        clilen = sizeof(cli_addr);
+
+        // Accept the connection
+        newsockfd = accept(sockfd, (struct sockaddr *) &cli_addr, &clilen);
+        if (newsockfd < 0) 
+        {
+            log_error("ERROR connecting");
+            exit(0);
+        }
+        log_debug("Connected to the server");
+
+        
+        sprintf(msg_sock, "Ok");
+        int n = write(newsockfd,msg_sock, sizeof(msg_sock));
+        if (n < 0) log_error("ERROR writing to socket");
+
+        memset(msg_sock, 0, sizeof(msg_sock));
+        n = read(newsockfd,msg_sock, sizeof(msg_sock));
+        if (n < 0) log_error("ERROR reading from socket");
+
+        log_debug("Server recived: %s", msg_sock);
+
     }
     
     //Signal for the risize  
@@ -316,22 +413,6 @@ int main(int argc, char *argv[])
         perror("Error in sigaction SIGWINCH");
         exit(EXIT_FAILURE);
     }
-
-    if(typeGame == 0)
-    {
-        //Timer for the redrawing
-        struct sigaction sa_alarm;
-        sa_alarm.sa_handler = redraw_routine;
-        sa_alarm.sa_flags = SA_RESTART;
-        sigemptyset(&sa_alarm.sa_mask);
-
-        if (sigaction(SIGALRM, &sa_alarm, NULL) == -1) 
-        {
-            perror("Errore sigaction alarm");
-            exit(EXIT_FAILURE);
-        }
-    }
-
     
     //Create window
     size.height = 15;
