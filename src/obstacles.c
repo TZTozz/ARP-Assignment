@@ -308,9 +308,9 @@ int main(int argc, char *argv[])
                 enemy_y = (int)msg_float_in.b;
                 ClearArray(obstacle);
                 PositioningEnemy(obstacle, enemy_x, enemy_y);
+                break;
             default:
                 log_error("Error: wrong format of the message recived");
-                perror("Format not correct");
                 break;
         }
 

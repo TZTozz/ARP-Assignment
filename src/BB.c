@@ -270,7 +270,7 @@ int main(int argc, char *argv[])
     int targetReached = 0;
     
     //Useful flags
-    bool isExiting = false;
+    bool isExiting = false, serverExiting = false;
     bool redraw_target = false, redraw_drone = false;
     bool firstLoss = true;
 
@@ -548,6 +548,16 @@ int main(int argc, char *argv[])
             redraw_target = false;
         }
 
+        if(typeGame != 0)
+        {
+            werase(my_win);
+            box(my_win, 0, 0);
+            
+            //Redraw obstacles
+            mvwaddch(my_win, yEnemy, xEnemy, '0' | COLOR_PAIR(2));
+            redraw_drone = true;
+        }
+
         if(redraw_drone)
         {
             //Print the drone
@@ -560,6 +570,26 @@ int main(int argc, char *argv[])
         //Multiplayer enemy position
         if(typeGame == 1)           //----Server----
         {
+            if(serverExiting)
+            {
+                sprintf(msg_sock, "q");
+                n = write(newsockfd, msg_sock, sizeof(msg_sock));
+                if (n < 0) log_error("ERROR writing to socket");
+
+                memset(msg_sock, 0, sizeof(msg_sock));
+                n = read(newsockfd, msg_sock, sizeof(msg_sock));
+                if (n < 0) log_error("ERROR reading from socket");
+                if(strcmp(msg_sock, "qok")) 
+                {
+                    log_error("Not recived ok from client");
+                }
+                else 
+                {
+                    isExiting = true;
+                    break;
+                }
+            }
+
             //Send my position
             sprintf(msg_sock, "drone");
             n = write(newsockfd, msg_sock, sizeof(msg_sock));
@@ -597,31 +627,41 @@ int main(int argc, char *argv[])
 
             switch (msg_sock[0])
             {
-            case 'd':           //Recive position of the enemy
-                memset(msg_sock, 0, sizeof(msg_sock));
-                n = read(sockfd,msg_sock, sizeof(msg_sock));
-                if (n < 0) log_error("ERROR reading from socket");
-                sscanf(msg_sock, "%d, %d", &xEnemy, &yEnemy);
-                
-                sprintf(msg_sock, "dok");
-                n = write(sockfd,msg_sock, sizeof(msg_sock));
-                if (n < 0) log_error("ERROR writing to socket");
-                break;
+                case 'd':           //Recive position of the enemy
+                    memset(msg_sock, 0, sizeof(msg_sock));
+                    n = read(sockfd,msg_sock, sizeof(msg_sock));
+                    if (n < 0) log_error("ERROR reading from socket");
+                    sscanf(msg_sock, "%d, %d", &xEnemy, &yEnemy);
+                    
+                    sprintf(msg_sock, "dok");
+                    n = write(sockfd,msg_sock, sizeof(msg_sock));
+                    if (n < 0) log_error("ERROR writing to socket");
+                    break;
 
-            case 'o':           //Send my position
-                sprintf(msg_sock, "%d, %d", (int)xDrone, (int)yDrone);
-                n = write(sockfd,msg_sock, sizeof(msg_sock));
-                if (n < 0) log_error("ERROR writing to socket");
+                case 'o':           //Send my position
+                    sprintf(msg_sock, "%d, %d", (int)xDrone, (int)yDrone);
+                    n = write(sockfd,msg_sock, sizeof(msg_sock));
+                    if (n < 0) log_error("ERROR writing to socket");
 
-                memset(msg_sock, 0, sizeof(msg_sock));
-                n = read(sockfd, msg_sock, sizeof(msg_sock));
-                if (n < 0) log_error("ERROR reading from socket");
-                if(strcmp(msg_sock, "pok")) log_error("Not recived ok from server");
+                    memset(msg_sock, 0, sizeof(msg_sock));
+                    n = read(sockfd, msg_sock, sizeof(msg_sock));
+                    if (n < 0) log_error("ERROR reading from socket");
+                    if(strcmp(msg_sock, "pok")) log_error("Not recived ok from server");
+                    break;
 
-            default:
-                break;
+                case 'q':
+                    isExiting = true;
+                    sprintf(msg_sock, "qok");
+                    n = write(sockfd,msg_sock, sizeof(msg_sock));
+                    if (n < 0) log_error("ERROR writing to socket");
+                    break;
+                default:
+                    break;
             }
+
         }
+
+        if (isExiting) break;
 
         //Print the values
         move(0, 0);
@@ -654,7 +694,12 @@ int main(int argc, char *argv[])
                 switch(msg_int_in.type)
                 {
                     case 'q':           //The user want to exit
-                        isExiting = true;
+                        log_debug("Recived q");
+                        if(typeGame != 0)
+                        {
+                            serverExiting = true;   
+                        } 
+                        else isExiting = true;
                         break;
                     case 'f':           //New forces
                         Fx += (float)msg_int_in.a;
@@ -673,7 +718,7 @@ int main(int argc, char *argv[])
                         break;
                 }
 
-                if (isExiting) break;
+                if (isExiting) break;     //Exit only if is not a server
 
             }
 
@@ -696,6 +741,12 @@ int main(int argc, char *argv[])
                     Set_msg(msg_float_out, 's', (float)size.height, (float)size.width);
                     write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
                     sizeChanged = false;
+                }
+
+                if(typeGame != 0)
+                {
+                    Set_msg(msg_float_out, 'm', (float)xEnemy, (float)yEnemy);
+                    write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
                 }
 
                 //Ask the forces applied by the obstacles to the drone

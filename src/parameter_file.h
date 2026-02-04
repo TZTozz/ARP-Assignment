@@ -31,7 +31,7 @@
 #define SIG_STOP      (SIGRTMIN + 2)
 #define SIG_PING      (SIGRTMIN + 3)
 
-#define PORTNUM 50001
+#define PORTNUM 5600
 #define HOST_NAME "localhost"
 
 typedef struct{
