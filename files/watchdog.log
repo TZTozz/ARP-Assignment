@@ -1,9 +1,11 @@
-[2026-02-04 10:31:33] [DEBUG] [src/watchdog.c:122] Num_process: 1
-[2026-02-04 10:31:33] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (10:31:33) ---
-[2026-02-04 10:31:33] [DEBUG] [src/watchdog.c:122] Num_process: 2
-[2026-02-04 10:31:33] [DEBUG] [src/watchdog.c:122] Num_process: 3
-[2026-02-04 10:31:34] [DEBUG] [src/watchdog.c:122] Num_process: 4
-[2026-02-04 10:31:34] [DEBUG] [src/watchdog.c:122] Num_process: 5
-[2026-02-04 10:31:34] [DEBUG] [src/watchdog.c:40] Reading the PIDs
-[2026-02-04 10:31:38] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (10:31:38) ---
-[2026-02-04 10:31:43] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (10:31:43) ---
+[2026-02-05 14:10:57] [DEBUG] [src/watchdog.c:122] Num_process: 1
+[2026-02-05 14:10:57] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (14:10:57) ---
+[2026-02-05 14:10:57] [DEBUG] [src/watchdog.c:122] Num_process: 2
+[2026-02-05 14:10:57] [DEBUG] [src/watchdog.c:122] Num_process: 3
+[2026-02-05 14:10:57] [DEBUG] [src/watchdog.c:122] Num_process: 4
+[2026-02-05 14:10:57] [DEBUG] [src/watchdog.c:122] Num_process: 5
+[2026-02-05 14:10:57] [DEBUG] [src/watchdog.c:40] Reading the PIDs
+[2026-02-05 14:11:02] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (14:11:02) ---
+[2026-02-05 14:11:07] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (14:11:07) ---
+[2026-02-05 14:11:07] [ERROR] [src/watchdog.c:284] ALERT: BB dosen't respond!
+[2026-02-05 14:11:07] [ERROR] [src/watchdog.c:328] ALERT: Input dosen't respond!

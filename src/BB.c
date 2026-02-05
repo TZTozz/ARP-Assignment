@@ -282,7 +282,7 @@ int main(int argc, char *argv[])
     int sockfd, newsockfd, clilen, n;
     struct sockaddr_in serv_addr, cli_addr;
     struct hostent *server;
-    char msg_sock[100];
+    char msg_sock[256];
     
     //Window setting
     initscr(); 
@@ -371,7 +371,7 @@ int main(int argc, char *argv[])
         log_debug("Connected to the server");
         
         
-        sprintf(msg_sock, "Ok");
+        sprintf(msg_sock, "ok");
         n = write(newsockfd, msg_sock, sizeof(msg_sock));
         if (n < 0) log_error("ERROR writing to socket");
         
@@ -415,9 +415,10 @@ int main(int argc, char *argv[])
         
         log_debug("Client recived: %s", msg_sock);
         
-        sprintf(msg_sock, "Okk");
+        sprintf(msg_sock, "ook");
         n = write(sockfd,msg_sock, sizeof(msg_sock));
         if (n < 0) log_error("ERROR writing to socket");
+        log_debug("Messaggio -%s- inviato", msg_sock);
 
     }
     
@@ -453,6 +454,7 @@ int main(int argc, char *argv[])
         n = read(sockfd,msg_sock, sizeof(msg_sock));
         if (n < 0) log_error("ERROR reading from socket");
         sscanf(msg_sock, "size %d, %d", &size.width, &size.height);
+        log_debug("Size: %d, %d", size.width, size.height);
 
         //Crete the window with the informations recived
         starty = (LINES - size.height) / 2;	
@@ -467,6 +469,7 @@ int main(int argc, char *argv[])
         if (n < 0) log_error("ERROR writing to socket");
 
         log_debug("height: %d Width: %d", size.height, size.width);
+        log_debug("Messaggio -%s- inviato", msg_sock);
     }
 
 
@@ -624,6 +627,7 @@ int main(int argc, char *argv[])
             memset(msg_sock, 0, sizeof(msg_sock));
             n = read(sockfd, msg_sock, sizeof(msg_sock));
             if (n < 0) log_error("ERROR reading from socket");
+            log_warn("Char ricevuto: %s", msg_sock);
 
             switch (msg_sock[0])
             {

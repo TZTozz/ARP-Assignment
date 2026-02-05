@@ -31,8 +31,10 @@
 #define SIG_STOP      (SIGRTMIN + 2)
 #define SIG_PING      (SIGRTMIN + 3)
 
-#define PORTNUM 5600
-#define HOST_NAME "localhost"
+#define PORTNUM 8080
+//#define HOST_NAME "localhost"
+#define HOST_NAME "130.251.243.203"       //Greg
+//#define HOST_NAME "130.251.244.54"        //Chiara
 
 typedef struct{
     char type;   // 'f', 's', 'q'
