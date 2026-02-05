@@ -33,7 +33,7 @@
 
 #define PORTNUM 8080
 //#define HOST_NAME "localhost"
-#define HOST_NAME "130.251.243.203"       //Greg
+#define HOST_NAME "10.108.195.44"       //Greg
 //#define HOST_NAME "130.251.244.54"        //Chiara
 
 typedef struct{

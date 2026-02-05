@@ -99,6 +99,8 @@ ssize_t read_exact(int fd, void *buf, size_t count)
     return bytes_read;
 }
 
+
+
 WINDOW *create_newwin(int height, int width, int starty, int startx){	
 
 	WINDOW *local_win;
@@ -147,6 +149,25 @@ static winDimension layout_and_draw(WINDOW *win)
     refresh();
     wrefresh(win);
     return size;
+}
+
+ssize_t read_line(int fd, char *buf, size_t maxlen) {
+    size_t i = 0;
+    char c;
+
+    while (i < maxlen - 1) {
+        ssize_t n = read(fd, &c, 1);
+        if (n == 1) {
+            buf[i++] = c;
+            if (c == '\0') break;
+        } else if (n == 0) {
+            return 0;   // connection closed
+        } else {
+            return -1;  // error
+        }
+    }
+    buf[i] = '\0';
+    return i;
 }
 
 void PrintObstacle(WINDOW *win, bool array[][MaxWidth], int height, int width)
@@ -372,11 +393,11 @@ int main(int argc, char *argv[])
         
         
         sprintf(msg_sock, "ok");
-        n = write(newsockfd, msg_sock, sizeof(msg_sock));
+        n = write(newsockfd, msg_sock, strlen(msg_sock) + 1);
         if (n < 0) log_error("ERROR writing to socket");
         
         memset(msg_sock, 0, sizeof(msg_sock));
-        n = read(newsockfd, msg_sock, sizeof(msg_sock));
+        n = read_line(newsockfd, msg_sock, sizeof(msg_sock));
         if (n < 0) log_error("ERROR reading from socket");
         
         log_debug("Server recived: %s", msg_sock);
@@ -410,13 +431,13 @@ int main(int argc, char *argv[])
     
         
         memset(msg_sock, 0, sizeof(msg_sock));
-        n = read(sockfd, msg_sock, sizeof(msg_sock));
+        n = read_line(sockfd, msg_sock, sizeof(msg_sock));
         if (n < 0) log_error("ERROR reading from socket");
         
         log_debug("Client recived: %s", msg_sock);
         
         sprintf(msg_sock, "ook");
-        n = write(sockfd,msg_sock, sizeof(msg_sock));
+        n = write(sockfd,msg_sock, strlen(msg_sock) + 1);
         if (n < 0) log_error("ERROR writing to socket");
         log_debug("Messaggio -%s- inviato", msg_sock);
 
@@ -437,21 +458,22 @@ int main(int argc, char *argv[])
         if(typeGame == 1)
         {
             sprintf(msg_sock, "size %d, %d", size.width, size.height);
-            n = write(newsockfd, msg_sock, sizeof(msg_sock));
+            n = write(newsockfd, msg_sock, strlen(msg_sock) + 1);
             if (n < 0) log_error("ERROR writing to socket");
 
             memset(msg_sock, 0, sizeof(msg_sock));
-            n = read(newsockfd, msg_sock, sizeof(msg_sock));
+            n = read_line(newsockfd, msg_sock, sizeof(msg_sock));
             if (n < 0) log_error("ERROR reading from socket");
 
-            if(strcmp(msg_sock, "sok")) log_error("Not recived ok from client");
+            if(strcmp(msg_sock, "sok\n")) log_error("Not recived sok from client");
+            log_debug("Should be sok: %s", msg_sock);
         }
 
     }
     else
     {
         memset(msg_sock, 0, sizeof(msg_sock));
-        n = read(sockfd,msg_sock, sizeof(msg_sock));
+        n = read_line(sockfd,msg_sock, sizeof(msg_sock));
         if (n < 0) log_error("ERROR reading from socket");
         sscanf(msg_sock, "size %d, %d", &size.width, &size.height);
         log_debug("Size: %d, %d", size.width, size.height);
@@ -465,7 +487,7 @@ int main(int argc, char *argv[])
         wrefresh(my_win);
 
         sprintf(msg_sock, "sok");
-        n = write(sockfd,msg_sock, sizeof(msg_sock));
+        n = write(sockfd,msg_sock, strlen(msg_sock) + 1);
         if (n < 0) log_error("ERROR writing to socket");
 
         log_debug("height: %d Width: %d", size.height, size.width);
@@ -576,11 +598,11 @@ int main(int argc, char *argv[])
             if(serverExiting)
             {
                 sprintf(msg_sock, "q");
-                n = write(newsockfd, msg_sock, sizeof(msg_sock));
+                n = write(newsockfd, msg_sock, strlen(msg_sock) + 1);
                 if (n < 0) log_error("ERROR writing to socket");
 
                 memset(msg_sock, 0, sizeof(msg_sock));
-                n = read(newsockfd, msg_sock, sizeof(msg_sock));
+                n = read_line(newsockfd, msg_sock, sizeof(msg_sock));
                 if (n < 0) log_error("ERROR reading from socket");
                 if(strcmp(msg_sock, "qok")) 
                 {
@@ -595,37 +617,39 @@ int main(int argc, char *argv[])
 
             //Send my position
             sprintf(msg_sock, "drone");
-            n = write(newsockfd, msg_sock, sizeof(msg_sock));
+            n = write(newsockfd, msg_sock, strlen(msg_sock) + 1);
             if (n < 0) log_error("ERROR writing to socket");
 
-            sprintf(msg_sock, "%d, %d", (int)xDrone, (int)yDrone);
-            n = write(newsockfd, msg_sock, sizeof(msg_sock));
+            sprintf(msg_sock, "%d, %d", (int)xDrone, size.height -(int)yDrone);
+            n = write(newsockfd, msg_sock, strlen(msg_sock) + 1);
             if (n < 0) log_error("ERROR writing to socket");
             
             memset(msg_sock, 0, sizeof(msg_sock));
-            n = read(newsockfd, msg_sock, sizeof(msg_sock));
+            n = read_line(newsockfd, msg_sock, sizeof(msg_sock));
             if (n < 0) log_error("ERROR reading from socket");
-            if(strcmp(msg_sock, "dok")) log_error("Not recived ok from client");
+            if(strcmp(msg_sock, "dok")) log_error("Not recived dok from client");
+            log_debug("Should be dok: %s", msg_sock);
 
             //Recive position of the enemy
             sprintf(msg_sock, "obst");
-            n = write(newsockfd, msg_sock, sizeof(msg_sock));
+            n = write(newsockfd, msg_sock, strlen(msg_sock) + 1);
             if (n < 0) log_error("ERROR writing to socket");
 
             memset(msg_sock, 0, sizeof(msg_sock));
-            n = read(newsockfd, msg_sock, sizeof(msg_sock));
+            n = read_line(newsockfd, msg_sock, sizeof(msg_sock));
             if (n < 0) log_error("ERROR reading from socket");
             sscanf(msg_sock, "%d, %d", &xEnemy, &yEnemy);
+            yEnemy = size.height - yEnemy;
 
             sprintf(msg_sock, "pok");
-            n = write(newsockfd, msg_sock, sizeof(msg_sock));
+            n = write(newsockfd, msg_sock, strlen(msg_sock) + 1);
             if (n < 0) log_error("ERROR writing to socket");
 
         }
         if(typeGame == 2)       //----Client----
         {
             memset(msg_sock, 0, sizeof(msg_sock));
-            n = read(sockfd, msg_sock, sizeof(msg_sock));
+            n = read_line(sockfd, msg_sock, sizeof(msg_sock));
             if (n < 0) log_error("ERROR reading from socket");
             log_warn("Char ricevuto: %s", msg_sock);
 
@@ -633,31 +657,34 @@ int main(int argc, char *argv[])
             {
                 case 'd':           //Recive position of the enemy
                     memset(msg_sock, 0, sizeof(msg_sock));
-                    n = read(sockfd,msg_sock, sizeof(msg_sock));
-                    if (n < 0) log_error("ERROR reading from socket");
+                    n = read_line(sockfd,msg_sock, sizeof(msg_sock));
+                    if (n < 0) log_error("ERROR reading from socket after drone");
+                    log_debug("Drone coor: %s", msg_sock);
                     sscanf(msg_sock, "%d, %d", &xEnemy, &yEnemy);
+                    yEnemy = size.height - yEnemy;
                     
                     sprintf(msg_sock, "dok");
-                    n = write(sockfd,msg_sock, sizeof(msg_sock));
+                    n = write(sockfd,msg_sock, strlen(msg_sock) + 1);
                     if (n < 0) log_error("ERROR writing to socket");
                     break;
 
                 case 'o':           //Send my position
-                    sprintf(msg_sock, "%d, %d", (int)xDrone, (int)yDrone);
-                    n = write(sockfd,msg_sock, sizeof(msg_sock));
-                    if (n < 0) log_error("ERROR writing to socket");
+                    sprintf(msg_sock, "%d, %d", (int)xDrone, size.height - (int)yDrone);
+                    n = write(sockfd,msg_sock, strlen(msg_sock) + 1);
+                    if (n < 0) log_error("ERROR writing to socket after obst");
 
                     memset(msg_sock, 0, sizeof(msg_sock));
-                    n = read(sockfd, msg_sock, sizeof(msg_sock));
+                    n = read_line(sockfd, msg_sock, sizeof(msg_sock));
                     if (n < 0) log_error("ERROR reading from socket");
-                    if(strcmp(msg_sock, "pok")) log_error("Not recived ok from server");
+                    if(strcmp(msg_sock, "pok\n")) log_error("Not recived ok from server");
+                    log_warn("Recived afret obs: %s", msg_sock);
                     break;
 
                 case 'q':
                     isExiting = true;
                     sprintf(msg_sock, "qok");
-                    n = write(sockfd,msg_sock, sizeof(msg_sock));
-                    if (n < 0) log_error("ERROR writing to socket");
+                    n = write(sockfd,msg_sock, strlen(msg_sock) + 1);
+                    if (n < 0) log_error("ERROR writing to socket after quit");
                     break;
                 default:
                     break;
@@ -670,7 +697,7 @@ int main(int argc, char *argv[])
         //Print the values
         move(0, 0);
         clrtoeol();
-        printw("Fx: %.3f\tFy: %.3f\tx: %.3f\ty: %.3f\tF_obstacle_X: %.3f\tF_obstacle_Y: %.3f\tScore: %d   ", Fx, Fy, xDrone, yDrone, F_obstacle_X, F_obstacle_Y, score);
+        printw("xEnemy: %d\tyEnemy: %d\tx: %.3f\ty: %.3f\tF_obstacle_X: %.3f\tF_obstacle_Y: %.3f\tScore: %d   ", xEnemy, yEnemy, xDrone, yDrone, F_obstacle_X, F_obstacle_Y, score);
         refresh();
 
         //Waiting
