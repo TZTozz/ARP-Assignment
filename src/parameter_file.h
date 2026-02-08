@@ -32,9 +32,11 @@
 #define SIG_PING      (SIGRTMIN + 3)
 
 #define PORTNUM 8080
-//#define HOST_NAME "localhost"
-#define HOST_NAME "10.108.195.44"       //Greg
+#define HOST_NAME "localhost"
+//#define HOST_NAME "10.108.195.44"       //Greg
 //#define HOST_NAME "130.251.244.54"        //Chiara
+//#define HOST_NAME "130.251.38.111"        //Luca
+
 
 typedef struct{
     char type;   // 'f', 's', 'q'
@@ -57,6 +59,8 @@ typedef struct{
     int height;
 }winDimension;
 
+
+
 typedef struct
 {
     float x;
@@ -68,6 +72,5 @@ typedef struct
     float y_1;
     float y_2;
 }drone;
-
 
 #endif

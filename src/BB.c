@@ -10,13 +10,11 @@
 #include <fcntl.h>
 #include <sys/file.h>
 #include <sys/wait.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <netdb.h>
 #include <strings.h>
 #include <errno.h>
 #include "logger.h"
 #include "parameter_file.h"
+#include "Network.h"
 #include <signal.h>
 
 volatile sig_atomic_t need_resize = 0;
@@ -151,24 +149,6 @@ static winDimension layout_and_draw(WINDOW *win)
     return size;
 }
 
-ssize_t read_line(int fd, char *buf, size_t maxlen) {
-    size_t i = 0;
-    char c;
-
-    while (i < maxlen - 1) {
-        ssize_t n = read(fd, &c, 1);
-        if (n == 1) {
-            buf[i++] = c;
-            if (c == '\0') break;
-        } else if (n == 0) {
-            return 0;   // connection closed
-        } else {
-            return -1;  // error
-        }
-    }
-    buf[i] = '\0';
-    return i;
-}
 
 void PrintObstacle(WINDOW *win, bool array[][MaxWidth], int height, int width)
 {
@@ -250,20 +230,23 @@ void VictoryWindow(WINDOW *win, int score)
 int main(int argc, char *argv[])
 {
     //Handles the pipes
-    int fd_r_drone, fd_w_drone, fd_w_input, fd_r_obstacle, fd_w_obstacle, fd_r_target, fd_w_target, typeGame;
+    int fd_r_drone, fd_w_drone, fd_w_input, fd_r_obstacle, fd_w_obstacle, fd_r_target, fd_w_target, tempTypeGame;
+    
     sscanf(argv[1], "%d %d %d %d %d %d %d %d %d", &fd_r_drone, &fd_w_drone,
                                                 &fd_w_input,
                                                 &fd_r_obstacle, &fd_w_obstacle,
                                                 &fd_r_target, &fd_w_target,
                                                 &watchdogPid,
-                                                &typeGame);
-    
+                                                &tempTypeGame);
+                                                
+                                                
+    GameMode typeGame;
+    typeGame = (GameMode)tempTypeGame;
     
     log_config(FILENAME_LOG, LOG_DEBUG);
-
     //Write the pid in the PID_file and notify the watchdog
     WritePid();
-    if (typeGame == 0) kill(watchdogPid, SIG_WRITTEN);
+    if (typeGame == SINGLE_PLAYER) kill(watchdogPid, SIG_WRITTEN);
     
     //Set the select
     int max_fd = max(fd_w_drone, fd_w_input);
@@ -282,8 +265,10 @@ int main(int argc, char *argv[])
     
     
     //Blackboard data
-    float xDrone = 1, yDrone = 1;
-    int xEnemy = 1, yEnemy = 1;
+    Point_FLOAT Drone;
+    Drone.x = init_x;
+    Drone.y = init_y;
+    Point_INT Enemy, Virtual_pose;
     float Fx = 0, Fy = 0;
     float F_obstacle_X = 0, F_obstacle_Y = 0;
     float F_target_X = 0, F_target_Y = 0;
@@ -323,7 +308,7 @@ int main(int argc, char *argv[])
 
     
     
-    if(typeGame == 0)
+    if(typeGame == SINGLE_PLAYER)
     {
         //Signal from watchdog
         struct sigaction sa_ping;
@@ -363,7 +348,7 @@ int main(int argc, char *argv[])
         }
 
     }
-    else if(typeGame == 1)       //---------Socket part Server-------
+    else if(typeGame == SERVER)       //---------Socket part Server-------
     {
         sockfd = socket(AF_INET, SOCK_STREAM, 0);
         if (sockfd < 0) 
@@ -443,7 +428,7 @@ int main(int argc, char *argv[])
 
     }
     
-    if(typeGame == 0 || typeGame == 1)
+    if(typeGame == SINGLE_PLAYER || typeGame == SERVER)
     {
         //Create window
         size.height = 15;
@@ -455,7 +440,7 @@ int main(int argc, char *argv[])
         size = layout_and_draw(my_win);
         log_debug("height: %d Width: %d", size.height, size.width);
 
-        if(typeGame == 1)
+        if(typeGame == SERVER)
         {
             sprintf(msg_sock, "size %d, %d", size.width, size.height);
             n = write(newsockfd, msg_sock, strlen(msg_sock) + 1);
@@ -465,12 +450,12 @@ int main(int argc, char *argv[])
             n = read_line(newsockfd, msg_sock, sizeof(msg_sock));
             if (n < 0) log_error("ERROR reading from socket");
 
-            if(strcmp(msg_sock, "sok\n")) log_error("Not recived sok from client");
+            if(strcmp(msg_sock, "sok")) log_error("Not recived sok from client");
             log_debug("Should be sok: %s", msg_sock);
         }
 
     }
-    else
+    else            //Client creating window
     {
         memset(msg_sock, 0, sizeof(msg_sock));
         n = read_line(sockfd,msg_sock, sizeof(msg_sock));
@@ -492,11 +477,21 @@ int main(int argc, char *argv[])
 
         log_debug("height: %d Width: %d", size.height, size.width);
         log_debug("Messaggio -%s- inviato", msg_sock);
+
+        Drone.x = Drone.x + size.width / 3;
+        Drone.y = Drone.y + size.height / 3;
     }
 
 
-    //Communicate to the drone the window's dimensions
-    Set_msg(msg_int_out, 's', size.height, size.width);
+    //Communicate to the drone the window's dimensions with different position for server and client
+    if(typeGame != CLIENT) 
+    {
+        Set_msg(msg_int_out, 's', size.height, size.width);
+    }
+    else 
+    {
+        Set_msg(msg_int_out, 'S', size.height, size.width);
+    }
     write(fd_r_drone, &msg_int_out, sizeof(msg_int_out));
 
 
@@ -507,7 +502,7 @@ int main(int argc, char *argv[])
     PrintObstacle(my_win, obstacle, size.height, size.width);
     
     
-    if(typeGame == 0)
+    if(typeGame == SINGLE_PLAYER)
     {
         //Communicate to targets the window's dimensions and prints the targets
         Set_msg(msg_float_out, 't', size.height, size.width);
@@ -521,7 +516,7 @@ int main(int argc, char *argv[])
     }
 
     //Print the drone in the initial position
-    mvwaddch(my_win, yDrone, xDrone, skin | COLOR_PAIR(1));
+    mvwaddch(my_win, Drone.y, Drone.x, skin | COLOR_PAIR(1));
     wrefresh(my_win);
 
     while (1)
@@ -573,27 +568,27 @@ int main(int argc, char *argv[])
             redraw_target = false;
         }
 
-        if(typeGame != 0)
+        if(typeGame != SINGLE_PLAYER)
         {
             werase(my_win);
             box(my_win, 0, 0);
             
             //Redraw obstacles
-            mvwaddch(my_win, yEnemy, xEnemy, '0' | COLOR_PAIR(2));
+            mvwaddch(my_win, Enemy.y, Enemy.x, '0' | COLOR_PAIR(2));
             redraw_drone = true;
         }
 
         if(redraw_drone)
         {
             //Print the drone
-            mvwaddch(my_win, yDrone, xDrone, skin | COLOR_PAIR(1));
+            mvwaddch(my_win, Drone.y, Drone.x, skin | COLOR_PAIR(1));
             wrefresh(my_win);
             refresh();
             redraw_drone = false;
         }
 
         //Multiplayer enemy position
-        if(typeGame == 1)           //----Server----
+        if(typeGame == SERVER)           //----Server----
         {
             if(serverExiting)
             {
@@ -616,11 +611,12 @@ int main(int argc, char *argv[])
             }
 
             //Send my position
+            Virtual_pose = transform_coordinate_FLOAT(Drone, Origin, angleVirtual);
             sprintf(msg_sock, "drone");
             n = write(newsockfd, msg_sock, strlen(msg_sock) + 1);
             if (n < 0) log_error("ERROR writing to socket");
 
-            sprintf(msg_sock, "%d, %d", (int)xDrone, size.height -(int)yDrone);
+            sprintf(msg_sock, "%d, %d", Virtual_pose.x, Virtual_pose.y);
             n = write(newsockfd, msg_sock, strlen(msg_sock) + 1);
             if (n < 0) log_error("ERROR writing to socket");
             
@@ -638,56 +634,64 @@ int main(int argc, char *argv[])
             memset(msg_sock, 0, sizeof(msg_sock));
             n = read_line(newsockfd, msg_sock, sizeof(msg_sock));
             if (n < 0) log_error("ERROR reading from socket");
-            sscanf(msg_sock, "%d, %d", &xEnemy, &yEnemy);
-            yEnemy = size.height - yEnemy;
+            sscanf(msg_sock, "%d, %d", &Virtual_pose.x, &Virtual_pose.y);
+            Enemy = inverse_transform_coordinate_INT(Virtual_pose, Origin, angleVirtual);
 
             sprintf(msg_sock, "pok");
             n = write(newsockfd, msg_sock, strlen(msg_sock) + 1);
             if (n < 0) log_error("ERROR writing to socket");
 
         }
-        if(typeGame == 2)       //----Client----
+        if(typeGame == CLIENT)       //----Client----
         {
-            memset(msg_sock, 0, sizeof(msg_sock));
-            n = read_line(sockfd, msg_sock, sizeof(msg_sock));
-            if (n < 0) log_error("ERROR reading from socket");
-            log_warn("Char ricevuto: %s", msg_sock);
-
-            switch (msg_sock[0])
+            for (int i = 0; i < 2; i++)
             {
-                case 'd':           //Recive position of the enemy
-                    memset(msg_sock, 0, sizeof(msg_sock));
-                    n = read_line(sockfd,msg_sock, sizeof(msg_sock));
-                    if (n < 0) log_error("ERROR reading from socket after drone");
-                    log_debug("Drone coor: %s", msg_sock);
-                    sscanf(msg_sock, "%d, %d", &xEnemy, &yEnemy);
-                    yEnemy = size.height - yEnemy;
-                    
-                    sprintf(msg_sock, "dok");
-                    n = write(sockfd,msg_sock, strlen(msg_sock) + 1);
-                    if (n < 0) log_error("ERROR writing to socket");
-                    break;
+                memset(msg_sock, 0, sizeof(msg_sock));
+                n = read_line(sockfd, msg_sock, sizeof(msg_sock));
+                if (n < 0) log_error("ERROR reading from socket");
+                log_warn("Char ricevuto: %s", msg_sock);
+    
+                switch (msg_sock[0])
+                {
+                    case 'd':           //Recive position of the enemy
+                        memset(msg_sock, 0, sizeof(msg_sock));
+                        n = read_line(sockfd,msg_sock, sizeof(msg_sock));
+                        if (n < 0) log_error("ERROR reading from socket after drone");
+                        log_debug("Drone coor: %s", msg_sock);
+                        sscanf(msg_sock, "%d, %d", &Virtual_pose.x, &Virtual_pose.y);
+                        Enemy = inverse_transform_coordinate_INT(Virtual_pose, Origin, angleVirtual);
+                        
+                        sprintf(msg_sock, "dok");
+                        n = write(sockfd,msg_sock, strlen(msg_sock) + 1);
+                        if (n < 0) log_error("ERROR writing to socket");
+                        break;
+    
+                    case 'o':           //Send my position
+                        
+                        Virtual_pose = transform_coordinate_FLOAT(Drone, Origin, angleVirtual);
+                        sprintf(msg_sock, "%d, %d", Virtual_pose.x, Virtual_pose.y);
+                        n = write(sockfd,msg_sock, strlen(msg_sock) + 1);
+                        if (n < 0) log_error("ERROR writing to socket after obst");
+    
+                        memset(msg_sock, 0, sizeof(msg_sock));
+                        n = read_line(sockfd, msg_sock, sizeof(msg_sock));
+                        if (n < 0) log_error("ERROR reading from socket");
+                        if(strcmp(msg_sock, "pok")) log_error("Not recived ok from server");
+                        log_warn("Recived afret obs: %s", msg_sock);
+                        break;
+    
+                    case 'q':
+                        isExiting = true;
+                        sprintf(msg_sock, "qok");
+                        n = write(sockfd,msg_sock, strlen(msg_sock) + 1);
+                        if (n < 0) log_error("ERROR writing to socket after quit");
+                        break;
+                    default:
+                        break;
+                }
 
-                case 'o':           //Send my position
-                    sprintf(msg_sock, "%d, %d", (int)xDrone, size.height - (int)yDrone);
-                    n = write(sockfd,msg_sock, strlen(msg_sock) + 1);
-                    if (n < 0) log_error("ERROR writing to socket after obst");
+                if (isExiting) break;
 
-                    memset(msg_sock, 0, sizeof(msg_sock));
-                    n = read_line(sockfd, msg_sock, sizeof(msg_sock));
-                    if (n < 0) log_error("ERROR reading from socket");
-                    if(strcmp(msg_sock, "pok\n")) log_error("Not recived ok from server");
-                    log_warn("Recived afret obs: %s", msg_sock);
-                    break;
-
-                case 'q':
-                    isExiting = true;
-                    sprintf(msg_sock, "qok");
-                    n = write(sockfd,msg_sock, strlen(msg_sock) + 1);
-                    if (n < 0) log_error("ERROR writing to socket after quit");
-                    break;
-                default:
-                    break;
             }
 
         }
@@ -697,7 +701,10 @@ int main(int argc, char *argv[])
         //Print the values
         move(0, 0);
         clrtoeol();
-        printw("xEnemy: %d\tyEnemy: %d\tx: %.3f\ty: %.3f\tF_obstacle_X: %.3f\tF_obstacle_Y: %.3f\tScore: %d   ", xEnemy, yEnemy, xDrone, yDrone, F_obstacle_X, F_obstacle_Y, score);
+        if(typeGame == SINGLE_PLAYER)
+        printw("Fx: %.3f\tFy: %.3f\tx: %.3f\ty: %.3f\tF_obstacle_X: %.3f\tF_obstacle_Y: %.3f\tScore: %d   ", Fx, Fy, Drone.x, Drone.y, F_obstacle_X, F_obstacle_Y, score);
+        else
+        printw("xEnemy: %d\tyEnemy: %d\tx: %.3f\ty: %.3f\tF_obstacle_X: %.3f\tF_obstacle_Y: %.3f\tScore: %d   ", Enemy.x, Enemy.y, Drone.x, Drone.y, F_obstacle_X, F_obstacle_Y, score);
         refresh();
 
         //Waiting
@@ -726,7 +733,7 @@ int main(int argc, char *argv[])
                 {
                     case 'q':           //The user want to exit
                         log_debug("Recived q");
-                        if(typeGame != 0)
+                        if(typeGame != SINGLE_PLAYER)
                         {
                             serverExiting = true;   
                         } 
@@ -758,11 +765,11 @@ int main(int argc, char *argv[])
             {
                 //Update the position of the drone
                 read(fd_w_drone, &msg_float_in, sizeof(msg_float_in));
-                mvwprintw(my_win, yDrone, xDrone, " ");
-                xDrone = msg_float_in.a;
-                yDrone = msg_float_in.b;
+                mvwprintw(my_win, Drone.y, Drone.x, " ");
+                Drone.x = msg_float_in.a;
+                Drone.y = msg_float_in.b;
 
-                mvwaddch(my_win, yDrone, xDrone, skin | COLOR_PAIR(1));
+                mvwaddch(my_win, Drone.y, Drone.x, skin | COLOR_PAIR(1));
                 wrefresh(my_win);
 
                 //If the size of the window changed send to drone the new dimensions
@@ -774,23 +781,23 @@ int main(int argc, char *argv[])
                     sizeChanged = false;
                 }
 
-                if(typeGame != 0)
+                if(typeGame != SINGLE_PLAYER)
                 {
-                    Set_msg(msg_float_out, 'm', (float)xEnemy, (float)yEnemy);
+                    Set_msg(msg_float_out, 'm', (float)Enemy.x, (float)Enemy.y);
                     write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
                 }
 
                 //Ask the forces applied by the obstacles to the drone
-                Set_msg(msg_float_out, 'f', xDrone, yDrone);
+                Set_msg(msg_float_out, 'f', Drone.x, Drone.y);
                 write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
                 read(fd_w_obstacle, &msg_float_in, sizeof(msg_float_in));
                 F_obstacle_X = msg_float_in.a;
                 F_obstacle_Y = msg_float_in.b;
 
-                if(typeGame == 0)
+                if(typeGame == SINGLE_PLAYER)
                 {
                     //Ask the forces applied by the targets to the drone
-                    Set_msg(msg_float_out, 'f', xDrone, yDrone);
+                    Set_msg(msg_float_out, 'f', Drone.x, Drone.y);
                     write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
                     read(fd_w_target, &msg_float_in, sizeof(msg_float_in));
                     F_target_X = msg_float_in.a;
@@ -856,7 +863,7 @@ int main(int argc, char *argv[])
         Set_msg(msg_float_out, 'q', 0, 0);
         write(fd_r_drone, &msg_float_out, sizeof(msg_float_out));
         write(fd_r_obstacle, &msg_float_out, sizeof(msg_float_out));
-        if(typeGame == 0)
+        if(typeGame == SINGLE_PLAYER)
         {
             write(fd_r_target, &msg_float_out, sizeof(msg_float_out));
             kill(watchdogPid, SIG_STOP);

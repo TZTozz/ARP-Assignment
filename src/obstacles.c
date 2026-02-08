@@ -84,6 +84,8 @@ void ObstacleRepulsion(bool array[][MaxWidth], float x, float y, float *Fx, floa
 
     if (min_c < 0) min_c = 0;
     if (min_r < 0) min_r = 0;
+
+    log_debug("Calculating obstacle repulsion for position: %f, %f", x, y);
     
     for (int r = min_r; r <= max_r; r++)
     {
@@ -236,7 +238,7 @@ void Positioning(bool array[][MaxWidth], int height, int width)
 
 void PositioningEnemy(bool array[][MaxWidth], int x, int y)
 {
-    array[x][y] = 1;
+    array[y][x] = true;
 }
 
 int main(int argc, char *argv[])

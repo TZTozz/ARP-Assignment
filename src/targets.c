@@ -85,7 +85,7 @@ void ClearArray(int array[MaxHeight][MaxWidth])
 {
     for(int i = 0; i < MaxHeight; i++)
     {
-        for(int j; j < MaxWidth; j++)
+        for(int j = 0; j < MaxWidth; j++)
         {
             array[i][j] = 0;
         }
