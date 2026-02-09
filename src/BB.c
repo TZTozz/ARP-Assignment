@@ -636,6 +636,7 @@ int main(int argc, char *argv[])
             if (n < 0) log_error("ERROR reading from socket");
             sscanf(msg_sock, "%d, %d", &Virtual_pose.x, &Virtual_pose.y);
             Enemy = inverse_transform_coordinate_INT(Virtual_pose, Origin, angleVirtual);
+            log_debug("Enemy coor: %s", msg_sock);
 
             sprintf(msg_sock, "pok");
             n = write(newsockfd, msg_sock, strlen(msg_sock) + 1);

@@ -1,8 +1,9 @@
-[2026-02-08 12:52:22] [DEBUG] [src/watchdog.c:122] Num_process: 1
-[2026-02-08 12:52:22] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (12:52:22) ---
-[2026-02-08 12:52:22] [DEBUG] [src/watchdog.c:122] Num_process: 2
-[2026-02-08 12:52:22] [DEBUG] [src/watchdog.c:122] Num_process: 3
-[2026-02-08 12:52:23] [DEBUG] [src/watchdog.c:122] Num_process: 4
-[2026-02-08 12:52:23] [DEBUG] [src/watchdog.c:122] Num_process: 5
-[2026-02-08 12:52:23] [DEBUG] [src/watchdog.c:40] Reading the PIDs
-[2026-02-08 12:52:27] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (12:52:27) ---
+[2026-02-09 18:13:02] [DEBUG] [src/watchdog.c:122] Num_process: 1
+[2026-02-09 18:13:02] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (18:13:02) ---
+[2026-02-09 18:13:02] [DEBUG] [src/watchdog.c:122] Num_process: 2
+[2026-02-09 18:13:02] [DEBUG] [src/watchdog.c:122] Num_process: 3
+[2026-02-09 18:13:02] [DEBUG] [src/watchdog.c:122] Num_process: 4
+[2026-02-09 18:13:02] [DEBUG] [src/watchdog.c:122] Num_process: 5
+[2026-02-09 18:13:02] [DEBUG] [src/watchdog.c:40] Reading the PIDs
+[2026-02-09 18:13:07] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (18:13:07) ---
+[2026-02-09 18:13:12] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (18:13:12) ---

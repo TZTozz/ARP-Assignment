@@ -31,11 +31,11 @@
 #define SIG_STOP      (SIGRTMIN + 2)
 #define SIG_PING      (SIGRTMIN + 3)
 
-#define PORTNUM 8080
-#define HOST_NAME "localhost"
-//#define HOST_NAME "10.108.195.44"       //Greg
-//#define HOST_NAME "130.251.244.54"        //Chiara
-//#define HOST_NAME "130.251.38.111"        //Luca
+#define PORTNUM 9090
+//#define HOST_NAME "localhost"
+#define HOST_NAME "10.40.116.44"       //Greg
+//#define HOST_NAME "10.40.116.135"        //Chiara
+//#define HOST_NAME "172.30.228.47"        //Luca
 
 
 typedef struct{
