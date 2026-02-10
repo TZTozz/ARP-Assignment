@@ -14,6 +14,7 @@
 
 int main() {
 
+    //Pipes
     int fd_r_drone[2], fd_w_drone[2];           //pipes for drone
     int fd_w_input[2];                          //pipes for input
     int fd_r_obstacle[2], fd_w_obstacle[2];     //pipes for obstacles
@@ -27,14 +28,62 @@ int main() {
     pipe(fd_r_target);
     pipe(fd_w_target);
 
+    //Pid
+    pid_t watchdog = -1;
+    pid_t target = -1;
 
-    pid_t watchdog = fork();
-    if (watchdog== 0) 
+    //Socket variables
+    char bufferAsk[100];
+    long num;
+    char *endptr;
+    int typeGame = 0;
+
+    printf("Single player (1) or multiplayer(2)?\n");
+    if (fgets(bufferAsk, sizeof(bufferAsk), stdin) != NULL) 
     {
-        execlp("./watchdog", "./watchdog", NULL);
-        perror("exec watchdog");
-        exit(1);
+        num = strtol(bufferAsk, &endptr, 10);
+
+        if (bufferAsk == endptr) 
+        {
+            printf("Error: No number, proced with single player mode.\n");
+        } 
+        else if (num == 2)      //Multiplayer
+        {
+            printf("Server (1) or client (2)?\n");
+            if (fgets(bufferAsk, sizeof(bufferAsk), stdin) != NULL) 
+            {
+                num = strtol(bufferAsk, &endptr, 10);
+
+                if (bufferAsk == endptr) 
+                {
+                    printf("Error: No number, proced with single player mode.\n");
+                } 
+                else if (num == 1)      //Client
+                {
+                    typeGame = 1;
+                }
+                else if (num == 2)      //Server
+                {
+                    typeGame = 2;
+                }
+                else printf("Error: Number not valid, proced with single player mode.\n");
+
+            }
+        }
+        else if (num != 1) printf("Error: Number not valid, proced with single player mode.\n");
     }
+
+    if (typeGame == 0)
+    {
+        watchdog = fork();
+        if (watchdog== 0) 
+        {
+            execlp("./watchdog", "./watchdog", NULL);
+            perror("exec watchdog");
+            exit(1);
+        }
+    }
+    
 
 
     pid_t BB = fork();
@@ -46,11 +95,12 @@ int main() {
         close(fd_r_obstacle[0]);
         close(fd_w_obstacle[1]);
         char fd_str[80];
-        sprintf(fd_str, "%d %d %d %d %d %d %d %d",  fd_r_drone[1], fd_w_drone[0],
+        sprintf(fd_str, "%d %d %d %d %d %d %d %d %d",  fd_r_drone[1], fd_w_drone[0],
                                                     fd_w_input[0],
                                                     fd_r_obstacle[1], fd_w_obstacle[0],
                                                     fd_r_target[1], fd_w_target[0],
-                                                    watchdog);
+                                                    watchdog,
+                                                    typeGame);
         execlp("konsole", "konsole", "-e", "./BB", fd_str, NULL);
         perror("exec BlackBoard");
         exit(1);
@@ -90,18 +140,22 @@ int main() {
         perror("exec obstacles");
         exit(1);
     }
-
-    pid_t target = fork();
-    if (target == 0) 
+    
+    if(typeGame == 0)
     {
-        close(fd_r_target[1]);
-        close(fd_w_target[0]);
-        char fd_str[80];
-        sprintf(fd_str, "%d %d %d", fd_r_target[0], fd_w_target[1], watchdog);
-        execlp("./targets", "./targets", fd_str, NULL);
-        perror("exec targets");
-        exit(1);
+        target = fork();
+        if (target == 0) 
+        {
+            close(fd_r_target[1]);
+            close(fd_w_target[0]);
+            char fd_str[80];
+            sprintf(fd_str, "%d %d %d", fd_r_target[0], fd_w_target[1], watchdog);
+            execlp("./targets", "./targets", fd_str, NULL);
+            perror("exec targets");
+            exit(1);
+        }
     }
+
 
     //Creation file with all PID
     FILE *fp = fopen(FILENAME_PID, "w");
@@ -157,17 +211,21 @@ int main() {
     }
     fclose(fp_l);
 
-    //Creation watchdog log
-    FILE *fp_w = fopen(FILENAME_WATCHDOG, "w");
-    if (fp_w == NULL) 
+    if (typeGame == 0)
     {
-        perror("Errore nell'apertura del file");
-        return 1;
-    }
-    fclose(fp_w);
+        //Creation watchdog log
+        FILE *fp_w = fopen(FILENAME_WATCHDOG, "w");
+        if (fp_w == NULL) 
+        {
+            perror("Errore nell'apertura del file");
+            return 1;
+        }
+        fclose(fp_w);
 
-    int status;
-    waitpid(watchdog, &status, 0);
+        int status;
+        waitpid(watchdog, &status, 0);
+    }
+    
 
     close(fd_r_drone[0]);
     close(fd_r_drone[1]);

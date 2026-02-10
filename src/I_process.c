@@ -122,7 +122,7 @@ int main(int argc, char *argv[]) {
     log_config(FILENAME_LOG, LOG_DEBUG);
 
     WritePid();
-    kill(watchdogPid, SIG_WRITTEN);
+    if (watchdogPid != -1) kill(watchdogPid, SIG_WRITTEN);
 
     //Protocol variable 
     Msg_int msg_int_out;
@@ -137,15 +137,18 @@ int main(int argc, char *argv[]) {
     bool wrongKey = false;
     bool isBreaking = false;
 
-    //Signal from watchdog
-    struct sigaction sa_ping;
-    sa_ping.sa_handler = ping_handler;
-    sa_ping.sa_flags = SA_RESTART;
-    sigemptyset(&sa_ping.sa_mask);
-    
-    if (sigaction(SIG_PING, &sa_ping, NULL) == -1) {
-        perror("Error in ping_handler");
-        exit(EXIT_FAILURE);
+    if (watchdogPid != -1)
+    {    
+        //Signal from watchdog
+        struct sigaction sa_ping;
+        sa_ping.sa_handler = ping_handler;
+        sa_ping.sa_flags = SA_RESTART;
+        sigemptyset(&sa_ping.sa_mask);
+        
+        if (sigaction(SIG_PING, &sa_ping, NULL) == -1) {
+            perror("Error in ping_handler");
+            exit(EXIT_FAILURE);
+        }
     }
 
 	//Window setting

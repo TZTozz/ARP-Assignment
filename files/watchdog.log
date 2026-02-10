@@ -1,13 +1,18 @@
-[2025-12-29 12:44:13] [DEBUG] [src/watchdog.c:122] Num_process: 1
-[2025-12-29 12:44:13] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (12:44:13) ---
-[2025-12-29 12:44:13] [DEBUG] [src/watchdog.c:122] Num_process: 2
-[2025-12-29 12:44:13] [DEBUG] [src/watchdog.c:122] Num_process: 3
-[2025-12-29 12:44:14] [DEBUG] [src/watchdog.c:122] Num_process: 4
-[2025-12-29 12:44:14] [DEBUG] [src/watchdog.c:122] Num_process: 5
-[2025-12-29 12:44:14] [DEBUG] [src/watchdog.c:40] Reading the PIDs
-[2025-12-29 12:44:18] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (12:44:18) ---
-[2025-12-29 12:44:23] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (12:44:23) ---
-[2025-12-29 12:44:28] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (12:44:28) ---
-[2025-12-29 12:44:33] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (12:44:33) ---
-[2025-12-29 12:44:38] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (12:44:38) ---
-[2025-12-29 12:44:38] [ERROR] [src/watchdog.c:284] ALERT: BB dosen't respond!
+[2026-02-10 08:43:36] [DEBUG] [src/watchdog.c:122] Num_process: 1
+[2026-02-10 08:43:36] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (08:43:36) ---
+[2026-02-10 08:43:36] [DEBUG] [src/watchdog.c:122] Num_process: 2
+[2026-02-10 08:43:36] [DEBUG] [src/watchdog.c:122] Num_process: 3
+[2026-02-10 08:43:37] [DEBUG] [src/watchdog.c:122] Num_process: 4
+[2026-02-10 08:43:37] [DEBUG] [src/watchdog.c:122] Num_process: 5
+[2026-02-10 08:43:37] [DEBUG] [src/watchdog.c:40] Reading the PIDs
+[2026-02-10 08:43:41] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (08:43:41) ---
+[2026-02-10 08:43:46] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (08:43:46) ---
+[2026-02-10 08:43:51] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (08:43:51) ---
+[2026-02-10 08:43:56] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (08:43:56) ---
+[2026-02-10 08:44:01] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (08:44:01) ---
+[2026-02-10 08:44:06] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (08:44:06) ---
+[2026-02-10 08:44:11] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (08:44:11) ---
+[2026-02-10 08:44:16] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (08:44:16) ---
+[2026-02-10 08:44:21] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (08:44:21) ---
+[2026-02-10 08:44:26] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (08:44:26) ---
+[2026-02-10 08:44:31] [DEBUG] [src/watchdog.c:225] --- WATCHDOG CHECK (08:44:31) ---

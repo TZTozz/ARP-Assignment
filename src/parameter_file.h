@@ -18,7 +18,8 @@
 
 #define T 0.1           //Integration time value (s)
 #define K 5             //Air coefficient
-#define eta 10        //Coefficient Latombe formula
+#define eta_obstacle 10        //Coefficient Latombe formula
+#define eta_target 5   //Coefficient target attraction 
 #define rho 5           //Distance of sensibility obstacles
 #define MaxAttraction 10     //Max repulsive force by the obstacles
 
@@ -30,6 +31,13 @@
 #define SIG_WRITTEN   (SIGRTMIN + 1)
 #define SIG_STOP      (SIGRTMIN + 2)
 #define SIG_PING      (SIGRTMIN + 3)
+
+#define PORTNUM 9090
+//#define HOST_NAME "localhost"
+#define HOST_NAME "10.40.116.44"            //Greg
+//#define HOST_NAME "10.40.116.135"         //Chiara
+//#define HOST_NAME "172.30.228.47"         //Luca
+
 
 typedef struct{
     char type;   // 'f', 's', 'q'
@@ -52,6 +60,8 @@ typedef struct{
     int height;
 }winDimension;
 
+
+
 typedef struct
 {
     float x;
@@ -63,6 +73,5 @@ typedef struct
     float y_1;
     float y_2;
 }drone;
-
 
 #endif

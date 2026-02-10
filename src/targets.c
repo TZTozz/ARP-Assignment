@@ -85,7 +85,7 @@ void ClearArray(int array[MaxHeight][MaxWidth])
 {
     for(int i = 0; i < MaxHeight; i++)
     {
-        for(int j; j < MaxWidth; j++)
+        for(int j = 0; j < MaxWidth; j++)
         {
             array[i][j] = 0;
         }
@@ -199,7 +199,7 @@ void TargetAttraction(int array[][MaxWidth], float x, float y, float *Fx, float 
                     //Latombe's formula
                     //F = eta * (1/d - 1/rho) * (1/d^2)
                     float term1 = (1.0f / d) - (1.0f / rho);
-                    float F = eta * term1 * (1.0f / (d * d));
+                    float F = eta_target * term1 * (1.0f / (d * d));
 
                     if (F > MaxAttraction) F = MaxAttraction;
 
