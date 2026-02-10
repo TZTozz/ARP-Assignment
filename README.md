@@ -133,6 +133,17 @@ Subsequently, the acquired IP address, together with the designated port number,
 
 During multiplayer operation, a repulsive interaction force is applied between the two drones, as each agent models the other as a dynamic obstacle.
 
+## Network Testing
+
+The network protocol has been **tested and verified** with the following projects:
+
+<div align="center">
+  <a href="https://github.com/Chiaera"><img src="https://github.com/Chiaera.png" width="70"/></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/Greg-0-0"><img src="https://github.com/Greg-0-0.png" width="70"/></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/luktax"><img src="https://github.com/luktax.png" width="70"/></a>
+</div>
 
 
 
