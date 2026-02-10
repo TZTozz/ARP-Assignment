@@ -106,7 +106,7 @@ void ObstacleRepulsion(bool array[][MaxWidth], float x, float y, float *Fx, floa
                     //Latombe's formula
                     //F = eta * (1/d - 1/rho) * (1/d^2)
                     float term1 = (1.0f / d) - (1.0f / rho);
-                    float F = eta * term1 * (1.0f / (d * d));
+                    float F = eta_obstacle * term1 * (1.0f / (d * d));
 
                     //(dx/d) is the cosine
                     //(dy/d) is the sine
@@ -134,7 +134,7 @@ void WallRepulsion(float x, float y, float *Fx, float *Fy, int height, int width
 
         //Calculate relative distance 
         float term1 = (1.0f / d) - (1.0f / rho);
-        float F = eta * term1 * (1.0f / (d * d));
+        float F = eta_obstacle * term1 * (1.0f / (d * d));
 
         //if (F > MaxRepulsive) F = MaxRepulsive;
         log_debug("The d from wall LEFT is %f and the force is %f", d, F);
@@ -151,7 +151,7 @@ void WallRepulsion(float x, float y, float *Fx, float *Fy, int height, int width
 
         //Calculate relative distance 
         float term1 = (1.0f / d) - (1.0f / rho);
-        float F = eta * term1 * (1.0f / (d * d));
+        float F = eta_obstacle * term1 * (1.0f / (d * d));
 
         //if (F > MaxRepulsive) F = MaxRepulsive;
         log_debug("The d from wall RIGHT is %f and the force is %f", d, F);
@@ -168,7 +168,7 @@ void WallRepulsion(float x, float y, float *Fx, float *Fy, int height, int width
 
         //Calculate relative distance 
         float term1 = (1.0f / d) - (1.0f / rho);
-        float F = eta * term1 * (1.0f / (d * d));
+        float F = eta_obstacle * term1 * (1.0f / (d * d));
 
         //if (F > MaxRepulsive) F = MaxRepulsive;
         log_debug("The d from wall UP is %f and the force is %f", d, F);
@@ -185,7 +185,7 @@ void WallRepulsion(float x, float y, float *Fx, float *Fy, int height, int width
 
         //Calculate relative distance 
         float term1 = (1.0f / d) - (1.0f / rho);
-        float F = eta * term1 * (1.0f / (d * d));
+        float F = eta_obstacle * term1 * (1.0f / (d * d));
 
         //if (F > MaxRepulsive) F = MaxRepulsive;
         log_debug("The dfrom wall BOTTOM is %f and the force is %f", d, F);
