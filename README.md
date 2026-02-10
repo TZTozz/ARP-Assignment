@@ -3,6 +3,8 @@
 ## Overview
 This project is a multi-process interactive simulator designed to operate a drone within a 2D environment.
 The system simulates the physical dynamics of a drone (inertia and viscous resistance), allowing the user to navigate through obstacles and reach targets using keyboard controls.
+The simulator supports both single-player and online multiplayer modes. In single-player mode, the objective is to reach the targets in sequence in the shortest possible time.
+In multiplayer mode, the other player act as dynamic obstacle.
 
 <img width="1325" height="597" alt="image" src="https://github.com/user-attachments/assets/cdb89ebe-8222-45cd-a9d1-44967935e371" />
 
@@ -12,12 +14,12 @@ The visual interface is built using the `ncurses` library, providing a lightweig
 ## System Architecture
 The application is designed as a distributed system involving six active concurrent processes communicating mainly via Pipes.
 
-<img width="80%" height="80%" alt="Blackboard(3)(1)" src="https://github.com/user-attachments/assets/98f103e1-a11e-455b-8d3a-2a38bf8bcc4a" />
+<img width="80%" height="80%" alt="Blackboard(5)(1)" src="https://github.com/user-attachments/assets/cf815792-68fa-4990-a38d-df4bd5a0e885" />
 
 
 ### Components
 The system follows a blackboard architecture:
-1.  **Blackboard:** The central server. It maintains the geometrical state of the world (drone position, map, targets, obstacles) and manages communication between processes.
+1.  **Blackboard:** The central server. It maintains the geometrical state of the world (drone position, map, targets, obstacles) and manages communication between processes. When in multiplayer mode, it handle the communication via socket.
 2.  **Drone:** Calculates the physics of the drone, including mass, friction, and external forces, solving the motion equations.
 3.  **Input:** Captures keyboard inputs from the user and sends command forces to the server.
 4.  **Obstacles:** Spawns obstacles at random locations that repel the drone.
@@ -116,10 +118,20 @@ The key D is the brake and halves the force.
 * ${\color{green}"1"}$: targets
 * ${\color{red}"0"}$: obstacles
 
-### How to play
+### How to play (Single-player)
 Use the keyboard to reach the target in the right order. Pay attention to not go too close the wrong target or you will need a great amount of force to escape from it (10N) and you will lose points. You need to be fast, there is a malus for the time. Once you reach the final target the final window will appear.
 
 <img width="935" height="366" alt="image" src="https://github.com/user-attachments/assets/143d74f7-c860-4829-b5d5-90357d9e2ef2" />
+
+### How to play (Multi-player)
+Prior to initiating a multiplayer session, it is necessary to designate one participant as the server and the other as the client. 
+The client must obtain the server’s IP address, which can be retrieved by executing the following command and identifying the corresponding `inet` entry:
+```
+ip addr
+```
+Subsequently, the acquired IP address, together with the designated port number, must be specified within the system’s parameter file. After that, both participants may launch the application and engage in a synchronized multiplayer session.
+
+During multiplayer operation, a repulsive interaction force is applied between the two drones, as each agent models the other as a dynamic obstacle.
 
 
 
@@ -148,9 +160,12 @@ Use the keyboard to reach the target in the right order. Pay attention to not go
     ├── logger.c
     ├── logger.h
     ├── master.c
+    ├── Network.c
+    ├── Network.h
     ├── obstacles.c
     ├── parameter_file.h
     ├── targets.c
     └── watchdog.c
+
 
 ```
